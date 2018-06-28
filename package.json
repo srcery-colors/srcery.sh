@@ -5,8 +5,11 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^8.6.4",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
     "postcss-cli": "^5.0.1",
     "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
     "tailwindcss": "^0.6.1",
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8"

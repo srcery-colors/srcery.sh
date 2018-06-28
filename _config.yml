@@ -27,10 +27,12 @@ url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://ex
 # rss: RSS
 
 # # Build settings
-# markdown: kramdown
-# theme: minima
+markdown: kramdown
+# https://github.com/github/pages-gem/issues/482
+theme: null
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jemoji
 
 keep_files:
@@ -40,6 +42,7 @@ keep_files:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - src
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -48,8 +51,8 @@ exclude:
   - package.json
   - package-lock.json
   - public
-  - assets
-  - webpack
+  - assets/images
+  - assets/js
   - webpack.config.js
 #   - vendor/bundle/
 #   - vendor/cache/

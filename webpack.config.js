@@ -1,21 +1,27 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path')
+
 module.exports = {
-  // webpack folder's entry js - excluded from jekll's build process.
-  entry: "./webpack/entry.js",
+  entry: './index.js',
   output: {
-    // we're going to put the generated file in the assets folder so jekyll will grab it.
-      path: 'src/assets/js/',
-      filename: "bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'styles.css',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
-        query: {
-          presets: ['react', 'es2015']
-        }
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+          ]
+        })
       }
     ]
-  }
-};
+  },
+  plugins: [
+    new ExtractTextPlugin('styles.css')
+  ]
+}
