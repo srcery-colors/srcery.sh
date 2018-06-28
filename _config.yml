@@ -20,7 +20,7 @@ email: contact+site@mindtooth.no
 description: >- # this means to ignore newlines until "baseurl:"
   Some info will come at a later day.
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
+url: "mindtooth.no/srcery.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # # Social Accounts
 # github_username:  MindTooth
