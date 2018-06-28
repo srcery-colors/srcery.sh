@@ -19,7 +19,7 @@ author: MindTooth
 email: contact+site@mindtooth.no
 description: >- # this means to ignore newlines until "baseurl:"
   Some info will come at a later day.
-baseurl: "srcery.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/srcery.github.io" # the subpath of your site, e.g. /blog
 url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
 
 # # Social Accounts
@@ -33,22 +33,20 @@ plugins:
   - jekyll-feed
   - jemoji
 
+# include:
+#   - _includes
+#   - _layouts
+#   - _posts
+
+keep_files:
+  - assets
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - package.json
-  - package-lock.json
-  - public
-  - webpack
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-#
+  - assets
+
 source:          src
 destination:     public
 collections_dir: src
