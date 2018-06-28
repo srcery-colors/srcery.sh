@@ -33,11 +33,6 @@ plugins:
   - jekyll-feed
   - jemoji
 
-# include:
-#   - _includes
-#   - _layouts
-#   - _posts
-
 keep_files:
   - assets
 
@@ -45,12 +40,18 @@ keep_files:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - public
   - assets
-
-source:          src
-destination:     public
-collections_dir: src
-plugins_dir:     _plugins
-layouts_dir:     _layouts
-data_dir:        _data
-includes_dir:    _includes
+  - webpack
+  - webpack.config.js
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
