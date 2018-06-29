@@ -3,17 +3,23 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body class="bg-hard_black text-brightwhite">
 
-    {%- include header.html -%}
+    <div class="flex flex-col">
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+      {%- include header.html -%}
 
-    {%- include footer.html -%}
+      <main class="container mx-auto flex-grow w-5/6">
+          {{ content }}
+      </main>
+
+      {%- include footer.html -%}
+
+    </div>
+
+    {%- if page.scripts -%}
+      {%- include scripts.html -%}
+    {%- endif -%}
 
   </body>
 
