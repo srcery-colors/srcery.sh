@@ -7,9 +7,11 @@
     "autoprefixer": "^8.6.4",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
+    "cssnano": "^3.10.0",
     "mini-css-extract-plugin": "^0.4.0",
     "postcss-cli": "^5.0.1",
     "postcss-loader": "^2.1.5",
+    "postcss-preset-env": "^5.2.1",
     "postcss-scss": "^1.0.6",
     "style-loader": "^0.21.0",
     "tailwindcss": "^0.6.1",
@@ -25,8 +27,5 @@
     "url": "https://github.com/MindTooth/srcery.github.io.git"
   },
   "author": "Birger J. Nordølum",
-  "license": "MIT",
-  "dependencies": {
-    "@typopro/web-iosevka": "^3.7.5"
-  }
+  "license": "MIT"
 }
