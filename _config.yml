@@ -14,13 +14,17 @@ encoding: UTF-8
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Srcery - Dark Color Scheme
-author: MindTooth
+title: srcery - Dark Color Scheme
+author: srcery team
 email: contact+site@mindtooth.no
-description: >- # this means to ignore newlines until "baseurl:"
-  Some info will come at a later day.
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Some info will come at a later day.
 baseurl: "/srcery.github.io" # the subpath of your site, e.g. /blog
 url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
+
+github:
+  url:
+  - https://github.com/srcery-colors
 
 # # Social Accounts
 # github_username:  MindTooth
