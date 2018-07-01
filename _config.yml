@@ -56,7 +56,7 @@ exclude:
   - webpack.config.js
   - tailwind.js
   - postcss.config.js
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
