@@ -7,7 +7,7 @@
 #
 layout: master
 title:
-scripts: no
+scripts: yes
 ---
 
 <main class="container mx-auto flex-grow w-5/6">

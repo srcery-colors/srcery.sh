@@ -61,7 +61,7 @@ exclude:
   - package-lock.json
   - public
   # - assets/images
-  - assets/js
+  # - assets/js
   - webpack.config.js
   - tailwind.js
   - postcss.config.js
