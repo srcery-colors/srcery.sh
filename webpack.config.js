@@ -27,9 +27,7 @@ module.exports = {
             options: {
               ident: 'postcss',
               plugins: (loader) => [
-                require('postcss-import')({
-                  root: loader.resourcePath
-                }),
+                require('postcss-import'),
                 require('tailwindcss')('./tailwind.js'),
                 require('postcss-preset-env')
               ]
