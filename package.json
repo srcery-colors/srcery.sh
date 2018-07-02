@@ -1,4 +1,6 @@
 {
+  "author": "Birger J. Nordølum",
+  "license": "MIT",
   "name": "srcery.github.io",
   "version": "0.0.1",
   "description": "Jekyll test site for srcery",
@@ -8,24 +10,37 @@
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
-    "mini-css-extract-plugin": "^0.4.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "postcss-cli": "^5.0.1",
+    "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
     "postcss-preset-env": "^5.2.1",
     "postcss-scss": "^1.0.6",
     "style-loader": "^0.21.0",
     "tailwindcss": "^0.6.1",
-    "webpack": "^4.12.2",
+    "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8"
   },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
+    "jquery": "^3.3.1"
+  },
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules",
+    "start": "NODE_ENV=development webpack-dev-server",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MindTooth/srcery.github.io.git"
   },
-  "author": "Birger J. Nordølum",
-  "license": "MIT"
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not dead"
+  ]
 }

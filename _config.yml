@@ -17,17 +17,22 @@ encoding: UTF-8
 title: srcery - Dark Color Scheme
 author: srcery team
 email: contact+site@mindtooth.no
-# description: >- # this means to ignore newlines until "baseurl:"
-#   Some info will come at a later day.
+description: >- # this means to ignore newlines until "baseurl:"
+  Website for the srcery color scheme.  The site show a preview of what to expect.
 baseurl: "/srcery.github.io" # the subpath of your site, e.g. /blog
 url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
 
+github: [metadata]
 github:
   url:
   - https://github.com/srcery-colors
 
+
 # # Social Accounts
 # github_username:  MindTooth
+# rss: RSS
+# Social Accounts
+github_username:  srcery-colors
 # rss: RSS
 
 # # Build settings
@@ -35,7 +40,7 @@ markdown: kramdown
 # https://github.com/github/pages-gem/issues/482
 theme: null
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-seo-tag
   - jemoji
 

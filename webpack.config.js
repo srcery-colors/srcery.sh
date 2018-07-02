@@ -12,7 +12,29 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+        use: [
+          // MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: (loader) => [
+                require('postcss-import')({
+                  root: loader.resourcePath
+                }),
+                require('tailwindcss')('./tailwind.js'),
+                require('postcss-preset-env')
+              ]
+            }
+          }
+        ]
       }
     ]
   },
