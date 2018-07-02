@@ -32,7 +32,7 @@ github:
 # github_username:  MindTooth
 # rss: RSS
 # Social Accounts
-github_username:  srcery-colors
+# github_username:  srcery-colors
 # rss: RSS
 
 # # Build settings
@@ -44,14 +44,15 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 
-keep_files:
-  - assets
+# keep_files:
+#   - assets
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  - src
+  # - src
+  - dist
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -62,6 +63,7 @@ exclude:
   - public
   # - assets/images
   # - assets/js
+  - webpack
   - webpack.config.js
   - tailwind.js
   - postcss.config.js
@@ -69,3 +71,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+source: src
+
+destination: dist
