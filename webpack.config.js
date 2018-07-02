@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   entry: './webpack/index.js',
   output: {
-    path: path.resolve(__dirname, 'src/assets'),
+    path: path.resolve(__dirname, 'assets'),
     filename: './js/bundle.js'
   },
   module: {
