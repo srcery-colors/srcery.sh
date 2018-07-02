@@ -8,3 +8,4 @@ src/assets/js/bundle.js
 Gemfile.lock
 package-lock.json
 vendor
+dist
