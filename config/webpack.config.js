@@ -4,9 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './webpack/index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'assets'),
+    path: path.resolve(__dirname, '../assets'),
     filename: './js/bundle.js'
   },
   module: {
@@ -28,8 +28,10 @@ module.exports = {
               ident: 'postcss',
               plugins: (loader) => [
                 require('postcss-import'),
-                require('tailwindcss')('./tailwind.js'),
-                require('postcss-preset-env')
+                require('tailwindcss')('./config/tailwind.js'),
+                require('postcss-preset-env'),
+                require('autoprefixer'),
+                // require('cssnano')
               ]
             }
           }
