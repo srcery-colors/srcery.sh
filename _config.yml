@@ -10,8 +10,8 @@ author: srcery team
 email: contact+site@mindtooth.no
 description: >- # this means to ignore newlines until "baseurl:"
   Website for the srcery color scheme.  The site show a preview of what to expect.
-baseurl: "/srcery.github.io" # the subpath of your site, e.g. /blog
-url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/srcery" # the subpath of your site, e.g. /blog
+url: "github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # # Build settings
 markdown: kramdown

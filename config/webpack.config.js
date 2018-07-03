@@ -28,19 +28,19 @@ module.exports = (env = {}) => {
               loader: 'postcss-loader',
               options: {
                 ident: 'postcss',
-                plugins: (loader) => env.production
-                  ? [
-                    require('postcss-import'),
-                    require('tailwindcss')('./config/tailwind.js'),
-                    require('postcss-preset-env'),
-                    // require('autoprefixer'),
-                    require('cssnano')
-                  ]
-                  : [
-                    require('postcss-import'),
-                    require('tailwindcss')('./config/tailwind.js'),
-                    require('postcss-preset-env')
-                  ]
+                plugins: loader =>
+                  env.production
+                    ? [
+                      require('postcss-import'),
+                      require('tailwindcss')('./config/tailwind.js'),
+                      require('postcss-preset-env'),
+                      require('cssnano')
+                    ]
+                    : [
+                      require('postcss-import'),
+                      require('tailwindcss')('./config/tailwind.js'),
+                      require('postcss-preset-env')
+                    ]
               }
             }
           ]
