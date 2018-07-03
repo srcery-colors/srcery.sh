@@ -13,8 +13,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/srcery.github.io" # the subpath of your site, e.g. /blog
 url: "mindtooth.no" # the base hostname & protocol for your site, e.g. http://example.com
 
-# github: [metadata]
-
 # # Build settings
 markdown: kramdown
 # https://github.com/github/pages-gem/issues/482
@@ -24,36 +22,24 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 
-# keep_files:
-#   - assets
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
   # - src
-  - dist
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
+  - config
   - node_modules
-  - package.json
   - package-lock.json
-  - public
-  # - assets/images
-  # - assets/js
-  - webpack
-  - webpack.config.js
-  - tailwind.js
-  - postcss.config.js
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - package.json
+  - vendor
 
-defaults:
-  - scope:
-      path: "assets/images"
-    values:
-      image: true

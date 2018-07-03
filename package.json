@@ -7,7 +7,6 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^8.6.4",
-    "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "mini-css-extract-plugin": "^0.4.1",
@@ -26,13 +25,13 @@
     "jquery": "^3.3.1"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=config/webpack.config.js",
+    "build": "node_modules/webpack/bin/webpack.js --env.development --progress --hide-modules --config=config/webpack.config.js",
     "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=config/webpack.config.js",
+    "development": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=config/webpack.config.js",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=config/webpack.config.js",
+    "production": "node_modules/webpack/bin/webpack.js --env.production --no-progress --hide-modules --config=config/webpack.config.js",
     "jekyll-watch": "bundle exec jekyll serve --watch -V",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=config/webpack.config.js"
+    "watch": "node_modules/webpack/bin/webpack.js --env.development --watch --progress --hide-modules --config=config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +40,10 @@
   "browserslist": [
     "last 2 version",
     "> 1%",
-    "not dead"
+    "Firefox ESR",
+    "not ie <= 10",
+    "not ie_mob <= 10",
+    "not bb <= 10",
+    "not op_mob <= 12.1"
   ]
 }
