@@ -27,12 +27,13 @@
     "jquery": "^3.3.1"
   },
   "scripts": {
-    "build": "node_modules/webpack/bin/webpack.js --env.development --progress --hide-modules --config=config/webpack.config.js",
     "dev": "npm run development",
-    "development": "node_modules/webpack/bin/webpack.js --progress --hide-modules --config=config/webpack.config.js",
+    "development": "node_modules/webpack/bin/webpack.js --env.development --progress --hide-modules --config=config/webpack.config.js",
+    "jekyll-watch": "bundle exec jekyll serve --watch -V",
+    "js-lint": "node_modules/standard/bin/cmd.js src/index.js",
+    "js-pretty": "node_modules/prettier-standard/src/index.js src/index.js",
     "prod": "npm run production",
     "production": "node_modules/webpack/bin/webpack.js --env.production --no-progress --hide-modules --config=config/webpack.config.js",
-    "jekyll-watch": "bundle exec jekyll serve --watch -V",
     "watch": "node_modules/webpack/bin/webpack.js --env.development --watch --progress --hide-modules --config=config/webpack.config.js"
   },
   "repository": {
