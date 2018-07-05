@@ -18,4 +18,5 @@ Building the CSS.  This needs to be run whenever changes is done to src/styles.s
     npm run prod
 
 To build the Jekyll site locally and watch for changes done to the HTML.
+
     bundle exec jekyll serve --watch -V
