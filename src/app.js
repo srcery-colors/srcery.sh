@@ -1,4 +1,4 @@
 // import $ from 'jquery'
 import '@fancyapps/fancybox'
 
-import './styles.scss'
+import './style.scss'
