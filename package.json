@@ -1,8 +1,7 @@
 {
-  "author": "Birger J. Nordølum",
+  "author": "Srcery Team",
   "license": "MIT",
   "name": "srcery.github.io",
-  "version": "0.0.1",
   "description": "Jekyll test site for srcery",
   "private": true,
   "devDependencies": {
