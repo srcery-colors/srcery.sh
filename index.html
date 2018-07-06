@@ -9,75 +9,101 @@ layout: master
 title:
 scripts: yes
 ---
-
-<main class="container mx-auto flex-grow px-2">
-  <div class="flex flex-col items-center pt-16 pb-8">
-    <div class="flex flex-row mb-8">
-      <div class="w-6 m-1">
-        <div class="h-24 bg-red"></div>
+<main class="container mx-auto px-2 my-8 md:my-12 font-display text-center">
+  <div class="">
+    <div class="flex flex-row items-center justify-center mb-8 md:mb-12">
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-red"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightred"></div>
+        </div>
       </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightred"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-green"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightgreen"></div>
+        </div>
       </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-green"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-yellow"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightyellow"></div>
+        </div>
       </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightgreen"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-blue"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightblue"></div>
+        </div>
       </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-yellow"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-magenta"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightmagenta"></div>
+        </div>
       </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightyellow"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-blue"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightblue"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-magenta"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightmagenta"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-cyan"></div>
-      </div>
-      <div class="w-6 m-1">
-        <div class="h-24 bg-brightcyan"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-cyan"></div>
+        </div>
+        <div class="flex-none w-6 mx-1">
+          <div class="h-12 sm:h-24 bg-brightcyan"></div>
+        </div>
       </div>
     </div>
 
-    <p class="font-display display-block mb-12 text-justify">Add some intergration with GitHub here.</p>
+    <div>
+      <p class="text-lg mb-8 md:mb-12 leading-normal">
+        The
+        <a href="https://github.com/srcery-colors"
+          class="pb-1 leading-tight inline-block no-underline bold font-bold text-brightgreen hover:text-brightblue antialiased border-b-2">
+          srcery
+        </a>
+        color scheme with clearly defined contrasting colors and a slightly earthy tone.
+      </p>
+      <!-- <h3 class="font-display inline-block mb-6 border-b-2 border-white">Supported apps</h3>
+      <ul class="list-reset text-left">
+      {% for apps in site.data.apps %}
+        <li>
+          <a class="text-brightwhite no-underline" href="https://github.com/{{ apps.github }}">
+            {{ apps.name }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul> -->
+    </div>
 
-    <p class="font-display text-lg mb-12 leading-normal text-justify">
-      The <span class="px-2 bg-red rounded tracking-wide antialiased">srcery</span> color scheme with clearly defined contrasting colors and a slightly earthy tone.
-    </p>
-
-    <div class="text-center">
-      <h3 class="font-display inline-block mx-auto mb-6 border-b-2 border-white">Preview</h3>
+    <div>
+      <h3 class="font-display inline-block mb-6 border-b-2 border-white">Preview</h3>
       <div class="flex flex-col lg:flex-row flex-wrap sm:-mx-2">
         <div class="w-full lg:w-1/2 mb-4 px-2">
           <a data-fancybox="gallery" href="assets/images/bash_viml.png" data-caption="Shell / VimL">
-            <img src="assets/images/bash_viml.min.png">
+            <img alt="Bash/VimL" src="assets/images/bash_viml.min.png">
           </a>
         </div>
         <div class="w-full lg:w-1/2 mb-4 px-2">
           <a data-fancybox="gallery" href="assets/images/cljs_clj.png" data-caption="Clojure / Script">
-            <img src="assets/images/cljs_clj.min.png">
+            <img alt="Clojure" src="assets/images/cljs_clj.min.png">
           </a>
         </div>
         <div class="w-full lg:w-1/2 mb-4 px-2">
           <a data-fancybox="gallery" href="assets/images/c_rust.png" data-caption="C / Rust">
-            <img src="assets/images/c_rust.min.png">
+            <img alt="C/Rust" src="assets/images/c_rust.min.png">
           </a>
         </div>
         <div class="w-full lg:w-1/2 mb-4 px-2">
           <a data-fancybox="gallery" href="assets/images/py_js.png" data-caption="Python / JavaScript">
-            <img src="assets/images/py_js.min.png">
+            <img alt="Python/JavsScript" src="assets/images/py_js.min.png">
           </a>
         </div>
       </div>
