@@ -61,11 +61,11 @@ scripts: yes
     </div>
   </section>
 
-  <div class="m-auto md:w-3/4 mb-8 md:mb-12">
+  <div class="m-auto md:w-3/4 mb-8 md:mb-12 leading-normal">
     <section class="mb-8 md:mb-12">
-      <p class="text-base mb-4 leading-normal">
+      <p class="text-base mb-4">
         <a href="https://github.com/srcery-colors"
-           class="leading-tight inline-block no-underline text-brightgreen hover:text-brightblue antialiased">
+           class="inline-block no-underline text-brightgreen hover:text-brightblue antialiased">
           Srcery
         </a>
         is a color scheme with clearly defined contrasting colors and a slightly earthy tone.
@@ -87,7 +87,7 @@ scripts: yes
       </p>
       <ul class="list-reset">
         {% for apps in site.data.apps %}
-        <li class="mb-1">
+        <li>
           <a class="text-brightgreen hover:text-brightblue antialiased no-underline"
              href="https://github.com/srcery-colors/{{ apps.link }}">
             {{ apps.name }}
