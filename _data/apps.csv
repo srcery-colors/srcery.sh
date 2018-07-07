@@ -1,4 +1,7 @@
 name,link
-Vim,konklone
-tmux,parkr
-Emacs,liufengyun
+Vim,srcery-vim
+Tmux,srcery-tmux
+Emacs,srcery-emacs
+Terminal configurations,srcery-terminal
+GUI application configurations,srcery-gui
+Shell application configurations,srcery-shell
