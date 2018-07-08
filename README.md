@@ -1,19 +1,26 @@
-# srcery.github.io
-Testing-site for srcery color scheme
+# srcery-colors.github.io/srcery
 
-# Stack
-Jekyll
-Webpack
-PostCSS (postcss-preset-env, cssnano)
-TailwindCSS
+![Srcery Banner](/assets/images/title.png)
 
-# Running locally
+This is the repo for the `srcery` website.  All contributions are
+welcome.
+
+[View site](srcery-colors.github.io/srcery)
+
+# Web Stack
+
+* Jekyll
+* Webpack
+* PostCSS (postcss-preset-env, cssnano)
+* TailwindCSS
+
+# Running Locally
 
 Install dependencies:
 
     bundle install && npm install
 
-Building the CSS.  This needs to be run whenever changes is done to src/styles.scss.
+Building the CSS.  This needs to be run whenever changes is done to src/style.scss.
 
     npm run prod
 

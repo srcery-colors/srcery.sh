@@ -7,7 +7,6 @@ encoding: UTF-8
 # in the templates via {{ site.myvariable }}.
 title: srcery - Dark Color Scheme
 author: srcery team
-email: contact+site@mindtooth.no
 description: >- # this means to ignore newlines until "baseurl:"
   Preview site for the srcery color scheme.
 baseurl: "/srcery" # the subpath of your site, e.g. /blog
@@ -33,14 +32,14 @@ defaults:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-  # - src
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
+  - assets/images/title.png
   - config
   - node_modules
   - package-lock.json
   - package.json
+  - src
   - vendor
-
