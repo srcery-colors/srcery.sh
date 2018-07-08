@@ -5,6 +5,8 @@
 ![NPM Packages](https://img.shields.io/david/srcery-colors/srcery.svg)
 [![GitHub license](https://img.shields.io/github/license/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/issues)
+[![GitHub forks](https://img.shields.io/github/forks/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/network)
+[![GitHub stars](https://img.shields.io/github/stars/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/stargazers)
 
 Indroduction
 ------------
