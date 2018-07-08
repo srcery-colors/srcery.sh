@@ -1,5 +1,11 @@
 ![Srcery Banner](/assets/images/title.png)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/srcery-colors/srcery/badge.svg?targetFile=package.json)](https://snyk.io/test/github/srcery-colors/srcery?targetFile=package.json)
+![NPM Dev packages](https://img.shields.io/david/dev/srcery-colors/srcery.svg)
+![NPM Packages](https://img.shields.io/david/srcery-colors/srcery.svg)
+[![GitHub license](https://img.shields.io/github/license/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/srcery-colors/srcery.svg)](https://github.com/srcery-colors/srcery/issues)
+
 Indroduction
 ------------
 
@@ -11,10 +17,10 @@ welcome.
 Web Stack
 ---------
 
-* Jekyll
-* Webpack
-* PostCSS (postcss-preset-env, cssnano)
-* TailwindCSS
+*   Jekyll
+*   Webpack
+*   PostCSS (postcss-preset-env, cssnano)
+*   TailwindCSS
 
 Running Locally
 ---------------
