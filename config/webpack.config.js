@@ -39,7 +39,8 @@ module.exports = (env = {}) => {
                       require('postcss-import'),
                       require('tailwindcss')('./config/tailwind.js'),
                       require('postcss-preset-env')
-                    ]
+                    ],
+                syntax: 'postcss-scss'
               }
             }
           ]

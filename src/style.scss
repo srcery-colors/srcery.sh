@@ -1,17 +1,27 @@
-/* Importing Fancybox CSS */
+// Importing Fancybox CSS
 @import '@fancyapps/fancybox/dist/jquery.fancybox.css';
 
-/* Loading Iosevka font */
+// Loading Iosevka font
 @font-face {
   font-family: 'Iosevka Regular';
-  src: url("./fonts/iosevka-regular.woff2") format('woff2'),
-       url("./fonts/iosevka-regular.woff") format('woff'),
-       url("./fonts/iosevka-regular.ttf") format('truetype');
+  src: url('./fonts/iosevka-regular.woff2') format('woff2'),
+  url('./fonts/iosevka-regular.woff') format('woff'),
+  url('./fonts/iosevka-regular.ttf') format('truetype');
 }
 
-/* GitHub Panner */
+// GitHub Panner
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
+
+  @media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+      animation: none;
+    }
+
+    .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
 }
 
 @keyframes octocat-wave {
@@ -30,17 +40,8 @@
     transform: rotate(10deg);
   }
 }
-@media (max-width:500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
 
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
-
-/* TailwindCSS Import */
+// TailwindCSS Import
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
