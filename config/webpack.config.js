@@ -30,17 +30,19 @@ module.exports = (env = {}) => {
                 plugins: loader =>
                   env.production
                     ? [
-                      require('postcss-import'),
-                      require('tailwindcss')('./config/tailwind.js'),
+                      require('postcss-easy-import'),
+                      require('postcss-nested'),
                       require('postcss-preset-env'),
+                      require('tailwindcss')('./config/tailwind.js'),
                       require('cssnano')
                     ]
                     : [
-                      require('postcss-import'),
-                      require('tailwindcss')('./config/tailwind.js'),
-                      require('postcss-preset-env')
+                      require('postcss-easy-import'),
+                      require('postcss-nested'),
+                      require('postcss-preset-env'),
+                      require('tailwindcss')('./config/tailwind.js')
                     ],
-                syntax: 'postcss-scss'
+                parser: 'postcss-scss'
               }
             }
           ]
