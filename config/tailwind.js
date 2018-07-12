@@ -250,7 +250,7 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
-    'display': [
+    'iosevka': [
       'Iosevka Regular',
       'system-ui',
       'BlinkMacSystemFont',
