@@ -9,10 +9,22 @@
   url('./fonts/iosevka-regular.ttf') format('truetype');
 }
 
-// GitHub Panner
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
+// GitHub Banner
+
+.github-corner {
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  @media (max-width: 500px) {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+    &:hover .octo-arm {
+      animation: none;
+    }
+  }
 }
+
 @keyframes octocat-wave {
   0%,
   100% {
@@ -27,15 +39,6 @@
   40%,
   80% {
     transform: rotate(10deg);
-  }
-}
-@media (max-width:500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
   }
 }
 
