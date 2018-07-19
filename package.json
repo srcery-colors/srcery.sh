@@ -5,11 +5,11 @@
   "description": "Jekyll test site for srcery",
   "private": true,
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.2",
     "file-loader": "^1.1.11",
     "mini-css-extract-plugin": "^0.4.1",
-    "postcss-cli": "^5.0.1",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^2.1.6",
     "postcss-nested": "^3.0.0",
@@ -20,7 +20,7 @@
     "style-loader": "^0.21.0",
     "tailwindcss": "^0.6.3",
     "webpack": "^4.16.0",
-    "webpack-cli": "^3.0.8"
+    "webpack-command": "^0.4.1"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
@@ -28,17 +28,17 @@
   },
   "scripts": {
     "dev": "npm run development",
-    "development": "node_modules/webpack/bin/webpack.js --env.development --progress --hide-modules --config=config/webpack.config.js",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --config=config/webpack.config.js",
     "jekyll-watch": "bundle exec jekyll serve --watch -V",
     "js-lint": "node_modules/standard/bin/cmd.js src/index.js",
     "js-pretty": "node_modules/prettier-standard/src/index.js src/index.js",
     "prod": "npm run production",
-    "production": "node_modules/webpack/bin/webpack.js --env.production --no-progress --hide-modules --config=config/webpack.config.js",
-    "watch": "node_modules/webpack/bin/webpack.js --env.development --watch --progress --hide-modules --config=config/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch --config=config/webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MindTooth/srcery.github.io.git"
+    "url": "https://github.com/srcery-colors/srcery.git"
   },
   "browserslist": [
     "last 2 version",
