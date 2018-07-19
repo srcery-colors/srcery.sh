@@ -1,5 +1,3 @@
-/* global $ */
-
 // Import Fancybox
 import '@fancyapps/fancybox'
 

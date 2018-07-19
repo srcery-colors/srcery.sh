@@ -4,6 +4,10 @@
   "name": "srcery.github.io",
   "description": "Jekyll test site for srcery",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srcery-colors/srcery.git"
+  },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
@@ -18,6 +22,10 @@
     "prettier-standard": "^8.0.1",
     "standard": "^11.0.1",
     "style-loader": "^0.21.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.1",
+    "stylelint-scss": "^3.1.3",
     "tailwindcss": "^0.6.4",
     "webpack": "^4.16.1",
     "webpack-command": "^0.4.1"
@@ -31,23 +39,44 @@
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --config=config/webpack.config.js",
     "jekyll-watch": "bundle exec jekyll serve --watch -V",
-    "js-lint": "node_modules/standard/bin/cmd.js src/index.js",
-    "js-pretty": "node_modules/prettier-standard/src/index.js src/index.js",
+    "lint:js": "node_modules/standard/bin/cmd.js src/*.js",
+    "lint:style": "node_modules/stylelint/bin/stylelint.js src/**/*.css src/**/*.scss",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
+    "test": "npm run lint:js && npm run lint:style",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch --config=config/webpack.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/srcery-colors/srcery.git"
-  },
   "browserslist": [
+    "> 5%",
     "last 2 version",
-    "> 1%",
-    "Firefox ESR",
-    "not ie <= 10",
-    "not ie_mob <= 10",
-    "not bb <= 10",
-    "not op_mob <= 12.1"
-  ]
+    "not bb 7",
+    "not op_mini all"
+  ],
+  "standard": {
+    "globals": [
+      "$"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-no-unsupported-browser-features",
+      "stylelint-scss"
+    ],
+    "rules": {
+      "at-rule-no-unknown": null,
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "severity": "warning"
+        }
+      ],
+      "scss/at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": "tailwind"
+        }
+      ]
+    }
+  }
 }
