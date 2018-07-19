@@ -21,7 +21,6 @@
     "postcss-scss": "^2.0.0",
     "prettier-standard": "^8.0.1",
     "standard": "^11.0.1",
-    "style-loader": "^0.21.0",
     "stylelint": "^9.3.0",
     "stylelint-config-prettier": "^3.3.0",
     "stylelint-no-unsupported-browser-features": "^3.0.1",
