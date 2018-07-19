@@ -36,13 +36,13 @@
     "jquery-lazy": "^1.7.9"
   },
   "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --config=config/webpack.config.js",
-    "jekyll-watch": "bundle exec jekyll serve --watch -V",
+    "build:dev": "npm run build:development",
+    "build:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --config=config/webpack.config.js",
+    "build:prod": "npm run build:production",
+    "build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
+    "jekyll:watch": "bundle exec jekyll serve --watch -V",
     "lint:js": "node_modules/standard/bin/cmd.js src/*.js",
     "lint:style": "node_modules/stylelint/bin/stylelint.js src/**/*.css src/**/*.scss",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
     "test": "npm run lint:js && npm run lint:style",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch --config=config/webpack.config.js"
   },
