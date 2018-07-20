@@ -1,5 +1,10 @@
 language: node_js
 
+cache:
+  directories:
+    - "node_modules"
+    - "vendor"
+
 before_install:
   - npm install -g npm@latest
   - gem update --system
