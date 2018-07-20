@@ -9,8 +9,8 @@ cache:
     - "vendor"
 
 before_install:
-  - npm install -g npm@latest
   - gem update --system
+  - npm install -g npm@latest
 
 before_script:
   - bundle install
