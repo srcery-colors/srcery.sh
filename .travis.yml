@@ -11,7 +11,6 @@ cache:
 before_install:
   - npm install -g npm@latest
   - gem update --system
-  - gem update
 
 before_script:
   - bundle install
