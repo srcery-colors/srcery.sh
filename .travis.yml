@@ -1,0 +1,14 @@
+language: node_js
+
+before_install:
+  - npm install -g npm@latest
+  - gem update --system
+  - gem update
+
+before_script:
+  - bundle install
+  - npm install
+
+script:
+  - bundle exec jekyll build --profile
+  - npm test
