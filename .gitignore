@@ -5,6 +5,5 @@ _site
 node_modules
 public
 src/assets/js/bundle.js
-Gemfile.lock
 vendor
 dist
