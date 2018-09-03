@@ -32,7 +32,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.4.1",
     "jquery": "^3.3.1",
-    "jquery-lazy": "^1.7.9"
+    "jquery-lazy": "^1.7.10"
   },
   "scripts": {
     "build:dev": "npm run build:development",
