@@ -14,7 +14,7 @@ Indroduction
 This is the repo for the `srcery` website.  All contributions are
 welcome.
 
-[View site](https://srcery-colors.github.io/srcery)
+[View site](https://srcery-colors.github.io/)
 
 Web Stack
 ---------
