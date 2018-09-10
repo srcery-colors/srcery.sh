@@ -5,7 +5,7 @@ node_js:
 
 cache:
   directories:
-    - "node_modules"
+    # - "node_modules" // Because `npm ci` removes in anyways
     - "vendor"
 
 before_install:
