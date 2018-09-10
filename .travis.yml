@@ -14,7 +14,7 @@ before_install:
 
 before_script:
   - bundle install
-  - npm install
+  # - npm install
 
 script:
   - bundle exec jekyll build --profile
