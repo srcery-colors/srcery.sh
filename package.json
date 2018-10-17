@@ -17,7 +17,7 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.0",
-    "postcss-preset-env": "^6.1.0",
+    "postcss-preset-env": "^6.1.1",
     "postcss-scss": "^2.0.0",
     "prettier-standard": "^8.0.1",
     "standard": "^11.0.1",
