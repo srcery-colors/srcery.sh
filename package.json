@@ -13,7 +13,7 @@
     "css-loader": "^1.0.1",
     "cssnano": "^4.1.7",
     "file-loader": "^2.0.0",
-    "mini-css-extract-plugin": "^0.4.4",
+    "mini-css-extract-plugin": "^0.4.5",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.0",
