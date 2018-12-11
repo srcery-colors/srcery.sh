@@ -30,7 +30,7 @@
     "webpack-command": "^0.4.2"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.2",
+    "@fancyapps/fancybox": "^3.5.3",
     "jquery": "^3.3.1",
     "jquery-lazy": "^1.7.10"
   },
