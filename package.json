@@ -24,7 +24,7 @@
     "stylelint": "^9.10.1",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-no-unsupported-browser-features": "^3.0.2",
-    "stylelint-scss": "^3.5.1",
+    "stylelint-scss": "^3.5.2",
     "tailwindcss": "^0.7.4",
     "webpack": "^4.29.0",
     "webpack-command": "^0.4.2"
