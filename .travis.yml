@@ -5,7 +5,6 @@ node_js:
 
 cache:
   directories:
-    # - "node_modules" // Because `npm ci` removes in anyways
     - "vendor"
 
 before_install:
@@ -14,11 +13,9 @@ before_install:
 
 before_script:
   - bundle install
-  # - npm install
 
 script:
   - bundle exec jekyll build --profile
   - npm test
-  # Just testing this out.  Had some error undetected before
   - npm run build:dev
   - npm run build:prod
