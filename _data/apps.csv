@@ -1,7 +1,9 @@
 name,link
-Vim,srcery-vim
-Tmux,srcery-tmux
 Emacs,srcery-emacs
-Terminal configurations,srcery-terminal
 GUI application configurations,srcery-gui
 Shell application configurations,srcery-shell
+Terminal configurations,srcery-terminal
+Tmux,srcery-tmux
+Vim,srcery-vim
+Visual Studio Code,srcery-vscode
+Web Assets,srcery-web
