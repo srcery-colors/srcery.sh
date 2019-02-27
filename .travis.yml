@@ -29,6 +29,7 @@ jobs:
       script:
         - npm run build:prod
         - bundle exec jekyll build
+        - touch _site/.nojekyll
       deploy:
         provider: pages
         repo: srcery-colors/srcery-colors.github.io
