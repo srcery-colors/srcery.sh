@@ -9,7 +9,7 @@ title: srcery - Dark Color Scheme
 author: srcery team
 description: >- # this means to ignore newlines until "baseurl:"
   Preview site for the srcery color scheme.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 highlighter: rouge

@@ -14,8 +14,25 @@ before_install:
 before_script:
   - bundle install
 
-script:
-  - bundle exec jekyll build --profile
-  - npm test
-  - npm run build:dev
-  - npm run build:prod
+jobs:
+  include:
+    - stage: test
+      script:
+        - bundle exec jekyll build --profile
+        - npm test
+        - npm run build:dev
+        - npm run build:prod
+      name: Compile and check for style errors
+    - stage: deploy
+      name: Deploy to GitHub Pages
+      script:
+        - npm run build:prod
+        - bundle exec jekyll build
+      deploy:
+        provider: pages
+        local-dir: _site
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+        keep-history: true
+        on:
+          branch: master
