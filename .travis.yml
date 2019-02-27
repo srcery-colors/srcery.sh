@@ -5,6 +5,7 @@ node_js:
 
 cache:
   directories:
+    - "npm"
     - "vendor"
 
 before_install:
@@ -36,3 +37,6 @@ jobs:
         keep-history: true
         on:
           branch: test_travis # TODO: Change back
+
+notifications:
+    email: false
