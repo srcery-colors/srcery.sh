@@ -18,10 +18,10 @@ jobs:
   include:
     - stage: test
       script:
-        - bundle exec jekyll build --profile
         - npm test
         - npm run build:dev
         - npm run build:prod
+        - bundle exec jekyll build --profile
       name: Compile and check for style errors
     - stage: deploy
       name: Deploy to GitHub Pages
