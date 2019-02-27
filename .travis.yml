@@ -31,6 +31,8 @@ jobs:
         - bundle exec jekyll build
       deploy:
         provider: pages
+        repo: srcery-colors/srcery-colors.github.io
+        target-branch: master
         local-dir: _site/
         skip-cleanup: true
         github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
