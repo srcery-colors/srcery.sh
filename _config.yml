@@ -35,6 +35,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - README.deploy
   - README.md
   - assets/images/title.png
   - config
