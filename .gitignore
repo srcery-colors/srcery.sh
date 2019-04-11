@@ -4,6 +4,6 @@
 _site
 node_modules
 public
-src/assets/js/bundle.js
+assets/js/bundle.js
 vendor
 dist
