@@ -8,3 +8,4 @@ assets/css
 assets/js
 vendor
 dist
+.cache
