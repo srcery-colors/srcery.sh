@@ -9,7 +9,7 @@ module.exports = () => {
     mode: devMode ? 'development' : 'production',
     entry: './src/main.js',
     output: {
-      path: path.resolve(__dirname, '../assets'),
+      path: path.resolve(__dirname, './assets'),
       filename: './js/bundle.js'
     },
     module: {
@@ -55,7 +55,7 @@ module.exports = () => {
               options: {
                 name: '[name].[ext]',
                 outputPath: 'fonts/',
-                publicPath: '../fonts' // Take the directory into account
+                publicPath: './fonts' // Take the directory into account
               }
             }
           ]
