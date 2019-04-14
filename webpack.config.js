@@ -32,13 +32,13 @@ module.exports = () => {
                   devMode
                     ? [
                         require('postcss-import'),
-                        tailwindcss('./config/tailwind.js'),
+                        tailwindcss('./tailwind.config.js'),
                         require('precss'),
                         require('autoprefixer')
                       ]
                     : [
                         require('postcss-import'),
-                        tailwindcss('./config/tailwind.js'),
+                        tailwindcss('./tailwind.config.js'),
                         require('precss'),
                         require('autoprefixer'),
                         require('cssnano')

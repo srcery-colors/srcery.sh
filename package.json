@@ -29,11 +29,11 @@
   },
   "scripts": {
     "build:dev": "npm run build:development",
-    "build:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --config=config/webpack.config.js",
+    "build:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev",
     "build:prod": "npm run build:production",
-    "build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
+    "build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod",
     "jekyll:watch": "bundle exec jekyll serve --watch -V",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch --config=config/webpack.config.js"
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch"
   },
   "browserslist": [
     "> 5%",
