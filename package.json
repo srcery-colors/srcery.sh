@@ -9,30 +9,23 @@
     "url": "https://github.com/srcery-colors/srcery.git"
   },
   "devDependencies": {
+    "autoprefixer": "^9.5.1",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
     "file-loader": "^3.0.1",
     "mini-css-extract-plugin": "^0.6.0",
-    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.1.2",
-    "postcss-preset-env": "^6.6.0",
     "postcss-scss": "^2.0.0",
-    "prettier-standard": "^9.1.1",
-    "standard": "^11.0.1",
-    "stylelint": "^9.10.1",
-    "stylelint-config-prettier": "^5.0.0",
-    "stylelint-no-unsupported-browser-features": "^3.0.2",
-    "stylelint-scss": "^3.5.4",
+    "precss": "^4.0.0",
     "tailwindcss": "^0.7.4",
-    "webpack": "^4.29.6",
-    "webpack-command": "^0.4.2"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "jquery": "^3.4.0",
-    "jquery-lazy": "^1.7.10"
+    "jquery": "^3.4.0"
   },
   "scripts": {
     "build:dev": "npm run build:development",
@@ -40,9 +33,6 @@
     "build:prod": "npm run build:production",
     "build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod --config=config/webpack.config.js",
     "jekyll:watch": "bundle exec jekyll serve --watch -V",
-    "lint:js": "node_modules/standard/bin/cmd.js src/*.js",
-    "lint:style": "node_modules/stylelint/bin/stylelint.js src/**/*.css src/**/*.scss",
-    "test": "npm run lint:js && npm run lint:style",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch --config=config/webpack.config.js"
   },
   "browserslist": [
@@ -51,31 +41,9 @@
     "not bb 7",
     "not op_mini all"
   ],
-  "standard": {
-    "globals": [
-      "$"
-    ]
-  },
   "stylelint": {
-    "extends": "stylelint-config-prettier",
-    "plugins": [
-      "stylelint-no-unsupported-browser-features",
-      "stylelint-scss"
-    ],
-    "rules": {
-      "at-rule-no-unknown": null,
-      "plugin/no-unsupported-browser-features": [
-        true,
-        {
-          "severity": "warning"
-        }
-      ],
-      "scss/at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": "tailwind"
-        }
-      ]
-    }
+    "extends": [
+      "stylelint-prettier/recommended"
+    ]
   }
 }

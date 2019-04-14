@@ -2,11 +2,12 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
+const tailwindcss = require('tailwindcss')
 
 module.exports = () => {
   return {
     mode: devMode ? 'development' : 'production',
-    entry: './src/app.js',
+    entry: './src/main.js',
     output: {
       path: path.resolve(__dirname, '../assets'),
       filename: './js/bundle.js'
@@ -26,23 +27,22 @@ module.exports = () => {
             {
               loader: 'postcss-loader',
               options: {
-                ident: 'postcss',
+                parser: 'postcss-scss',
                 plugins: loader =>
                   devMode
                     ? [
-                      require('postcss-easy-import'),
-                      require('postcss-nested'),
-                      require('postcss-preset-env'),
-                      require('tailwindcss')('./config/tailwind.js')
-                    ]
+                        require('postcss-import'),
+                        tailwindcss('./config/tailwind.js'),
+                        require('precss'),
+                        require('autoprefixer')
+                      ]
                     : [
-                      require('postcss-easy-import'),
-                      require('postcss-nested'),
-                      require('postcss-preset-env'),
-                      require('tailwindcss')('./config/tailwind.js'),
-                      require('cssnano')
-                    ],
-                parser: 'postcss-scss'
+                        require('postcss-import'),
+                        tailwindcss('./config/tailwind.js'),
+                        require('precss'),
+                        require('autoprefixer'),
+                        require('cssnano')
+                      ]
               }
             }
           ]
