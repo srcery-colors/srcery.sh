@@ -55,7 +55,7 @@ module.exports = () => {
               options: {
                 name: '[name].[ext]',
                 outputPath: 'fonts/',
-                publicPath: './fonts' // Take the directory into account
+                publicPath: '../fonts' // Take the directory into account
               }
             }
           ]
