@@ -1,17 +1,21 @@
+// TailwindCSS Import
+@import "tailwindcss/preflight";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 // Importing Fancybox CSS
-@import '@fancyapps/fancybox/dist/jquery.fancybox.css';
+// @import "@fancyapps/fancybox/dist/jquery.fancybox.css";
+@import "@fancyapps/fancybox";
 
 // Loading Iosevka font
 @font-face {
-  font-family: 'Iosevka Regular';
-  src:
-    url('./fonts/iosevka-regular.woff2') format('woff2'),
-    url('./fonts/iosevka-regular.woff') format('woff'),
-    url('./fonts/iosevka-regular.ttf') format('truetype');
+  font-family: "Iosevka Regular";
+  src: url("./fonts/iosevka-regular.woff2") format("woff2"),
+    url("./fonts/iosevka-regular.woff") format("woff"),
+    url("./fonts/iosevka-regular.ttf") format("truetype");
 }
 
 // GitHub Banner
-
 .github-corner {
   &:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
@@ -44,8 +48,3 @@
     transform: rotate(10deg);
   }
 }
-
-// TailwindCSS Import
-@tailwind preflight;
-@tailwind components;
-@tailwind utilities;
