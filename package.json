@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "jquery": "^3.4.0"
+    "jquery": "^3.4.1"
   },
   "scripts": {
     "build:dev": "npm run build:development",
