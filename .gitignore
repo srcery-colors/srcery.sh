@@ -9,3 +9,5 @@ assets/js
 vendor
 dist
 .cache
+parcel-debug*
+dist
