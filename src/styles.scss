@@ -1,10 +1,12 @@
 // TailwindCSS Import
-@import "tailwindcss/preflight";
+// TODO: Rewrite this file.
+@import "tailwindcss/base";
+
 @import "tailwindcss/components";
+
 @import "tailwindcss/utilities";
 
 // Importing Fancybox CSS
-// @import "@fancyapps/fancybox/dist/jquery.fancybox.css";
 @import "@fancyapps/fancybox";
 
 // Loading Iosevka font

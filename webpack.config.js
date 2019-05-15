@@ -27,18 +27,19 @@ module.exports = () => {
             {
               loader: 'postcss-loader',
               options: {
+                ident: 'postcss',
                 parser: 'postcss-scss',
                 plugins: loader =>
                   devMode
                     ? [
                         require('postcss-import'),
-                        tailwindcss('./tailwind.config.js'),
+                        require('tailwindcss'),
                         require('precss'),
                         require('autoprefixer')
                       ]
                     : [
                         require('postcss-import'),
-                        tailwindcss('./tailwind.config.js'),
+                        require('tailwindcss'),
                         require('precss'),
                         require('autoprefixer'),
                         require('cssnano')
