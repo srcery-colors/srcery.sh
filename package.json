@@ -1,8 +1,9 @@
 {
   "author": "Srcery Team",
+  "description": "Web site for promoting the Srcery color scheme.",
   "license": "MIT",
+  "main": "src/index.html",
   "name": "srcery.github.io",
-  "description": "Jekyll test site for srcery",
   "private": true,
   "repository": {
     "type": "git",
@@ -10,30 +11,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
-    "cross-env": "^5.2.0",
-    "css-loader": "^2.1.1",
-    "cssnano": "^4.1.10",
-    "file-loader": "^3.0.1",
-    "mini-css-extract-plugin": "^0.6.0",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-scss": "^2.0.0",
+    "parcel-bundler": "^1.12.3",
     "precss": "^4.0.0",
-    "tailwindcss": "^1.0.1",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
-  },
-  "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "jquery": "^3.4.1"
+    "tailwindcss": "^1.0.1"
   },
   "scripts": {
-    "build:dev": "npm run build:development",
-    "build:development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev",
-    "build:prod": "npm run build:production",
-    "build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --run-prod",
-    "jekyll:watch": "bundle exec jekyll serve --watch -V",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --run-dev --watch"
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html --open",
+    "test": "parcel build src/index.html --detailed-report"
   },
   "browserslist": [
     "> 5%",
