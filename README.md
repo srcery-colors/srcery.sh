@@ -19,25 +19,20 @@ welcome.
 Web Stack
 ---------
 
-*   Jekyll
-*   Webpack
-*   PostCSS (postcss-preset-env, cssnano)
-*   TailwindCSS
+* [Parcel](https://parceljs.org)
+* [PostCSS](https://postcss.org) (autoprefixer,precss)
+* [TailwindCSS](https://tailwindcss.com)
 
 Running Locally
 ---------------
 
 Install dependencies:
 
-    bundle install && npm install
+    npm install
 
-Building the CSS.  This needs to be run whenever changes is done to src/style.scss.
+Building the site.  This opens the dev server in a new browser window/tab.
 
-    npm run prod
-
-To build the Jekyll site locally and watch for changes done to the HTML.
-
-    bundle exec jekyll serve --watch -V
+    npm run start
 
 License
 -------
