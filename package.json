@@ -4,11 +4,12 @@
   "license": "MIT",
   "main": "src/index.html",
   "name": "srcery.github.io",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery.git"
   },
+  "private": true,
+  "version": "2.0.0",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "parcel-bundler": "^1.12.3",
@@ -23,8 +24,7 @@
   "browserslist": [
     "> 5%",
     "last 2 version",
-    "not bb 7",
-    "not op_mini all"
+    "not dead"
   ],
   "stylelint": {
     "extends": [
