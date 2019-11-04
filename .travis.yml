@@ -19,8 +19,8 @@ jobs:
         - cp README.deploy dist/README.md
       deploy:
         provider: pages
-        # repo: srcery-colors/srcery-colors.github.io
-        target-branch: gh-pages
+        repo: srcery-colors/srcery-colors.github.io
+        target-branch: master
         local-dir: dist/
         skip-cleanup: true
         github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
