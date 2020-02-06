@@ -15,7 +15,7 @@
     "autoprefixer": "^9.7.4",
     "parcel-bundler": "^1.12.4",
     "precss": "^4.0.0",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.2.0"
   },
   "scripts": {
     "build": "parcel build src/index.html",
