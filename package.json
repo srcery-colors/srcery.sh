@@ -21,7 +21,7 @@
     "build": "parcel build src/index.html",
     "start": "parcel src/index.html --open",
     "test": "parcel build src/index.html --detailed-report",
-    "clean": "rm -r ./.cache ./dist"
+    "clean": "rm -fr ./.cache ./dist"
   },
   "browserslist": [
     "> 5%",
