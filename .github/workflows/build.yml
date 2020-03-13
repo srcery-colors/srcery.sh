@@ -1,0 +1,40 @@
+name: Test & Build
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  test_and_build:
+    name: Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Build site
+        run: npm run build --if-present
+
+      - name: Copy readme file
+        if: github.ref == 'master'
+        run: cp README.deploy dist/README.md
+
+      - name: Upload dist folder
+        if: github.ref == 'master'
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: ./dist
