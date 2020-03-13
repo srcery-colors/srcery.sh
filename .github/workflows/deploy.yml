@@ -33,6 +33,8 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
 
+    needs: build
+
     steps:
       - name: Download Compiled Files
         uses: actions/download-artifact@v1
