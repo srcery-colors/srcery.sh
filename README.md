@@ -1,8 +1,7 @@
 ![Srcery Banner](/assets/images/title.png)
 
+![Build & Deploy](https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json)](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src?targetFile=package.json)
-![NPM Dev packages](https://img.shields.io/david/dev/srcery-colors/srcery-colors.github.io-src.svg)
-![NPM Packages](https://img.shields.io/david/srcery-colors/srcery-colors.github.io-src.svg)
 [![GitHub license](https://img.shields.io/github/license/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/issues)
 [![GitHub forks](https://img.shields.io/github/forks/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/network)
