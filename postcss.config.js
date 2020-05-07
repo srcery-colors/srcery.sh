@@ -33,6 +33,7 @@ module.exports = {
   plugins: {
     tailwindcss: {
       config: {
+        purge: false,
         theme: {
           extend: { colors: colors },
           fontFamily: {
