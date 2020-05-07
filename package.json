@@ -13,7 +13,9 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "parcel-bundler": "^1.12.4",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^6.7.0"
+  },
+  "dependencies": {
     "tailwindcss": "^1.4.5"
   },
   "scripts": {
