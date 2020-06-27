@@ -11,7 +11,7 @@ Indroduction
 ------------
 
 This is the repo for the `srcery` website.  All contributions are
-welcome.
+welcome and encouraged.
 
 [View site](https://srcery-colors.github.io/)
 
@@ -19,7 +19,7 @@ Web Stack
 ---------
 
 * [Parcel](https://parceljs.org)
-* [PostCSS](https://postcss.org) (autoprefixer,precss)
+* [PostCSS](https://postcss.org)
 * [TailwindCSS](https://tailwindcss.com)
 
 Running Locally
@@ -31,7 +31,7 @@ Install dependencies:
 
 Building the site.  This opens the dev server in a new browser window/tab.
 
-    npm run start
+    npm run serve
 
 License
 -------
