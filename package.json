@@ -1,28 +1,20 @@
 {
-  "author": "Srcery Team",
-  "description": "Web site for promoting the Srcery color scheme.",
-  "license": "MIT",
-  "main": "src/index.html",
   "name": "srcery.github.io",
+  "version": "2.4.1",
+  "private": true,
+  "description": "Web site for promoting the Srcery color scheme.",
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery.git"
   },
-  "private": true,
-  "version": "2.4.0",
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
-    "parcel-bundler": "^1.12.4",
-    "postcss-preset-env": "^6.7.0"
-  },
-  "dependencies": {
-    "tailwindcss": "^1.4.6"
-  },
+  "license": "MIT",
+  "author": "Srcery Team",
+  "main": "src/index.html",
   "scripts": {
     "build": "parcel build src/index.html",
-    "start": "parcel src/index.html --open",
-    "test": "parcel build src/index.html --detailed-report",
-    "clean": "rm -fr ./.cache ./dist"
+    "clean": "rm -fr ./.cache ./dist",
+    "serve": "parcel src/index.html --open",
+    "test": "parcel build src/index.html --detailed-report"
   },
   "browserslist": [
     "> 5%",
@@ -33,5 +25,12 @@
     "extends": [
       "stylelint-prettier/recommended"
     ]
+  },
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "postcss-preset-env": "^6.7.0"
   }
 }
