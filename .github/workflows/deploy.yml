@@ -48,5 +48,5 @@ jobs:
         with:
           external_repository: srcery-colors/srcery-colors.github.io
           deploy_key: ${{ secrets.SRCERY_DEPLOY_KEY }}
-          publish_branch: master # deploying branch
+          publish_branch: site # deploying branch
           publish_dir: ./dist
