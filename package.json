@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "tailwindcss": "^1.8.12"
+    "tailwindcss": "^1.8.13"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
