@@ -46,7 +46,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          external_repository: srcery-colors/srcery-colors.github.io
           deploy_key: ${{ secrets.SRCERY_DEPLOY_KEY }}
           publish_branch: site # deploying branch
           publish_dir: ./dist
