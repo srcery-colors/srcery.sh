@@ -42,6 +42,7 @@ jobs:
         uses: actions/download-artifact@v2.0.5
         with:
           name: dist
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
