@@ -1,4 +1,4 @@
-![Srcery Banner](/assets/images/title.png)
+![Srcery Banner](https://raw.githubusercontent.com/srcery-colors/srcery-assets/master/title.png)
 
 ![Build & Deploy](https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json)](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src?targetFile=package.json)
