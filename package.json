@@ -26,11 +26,11 @@
       "stylelint-prettier/recommended"
     ]
   },
-  "dependencies": {
-    "tailwindcss": "^2.0.3"
-  },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.4",
-    "postcss-preset-env": "^6.7.0"
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   }
 }
