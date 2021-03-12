@@ -1,12 +1,14 @@
 @tailwind base;
-
 @tailwind components;
+@tailwind utilities;
 
-@font-face {
-  font-family: "Iosevka Regular";
-  src: url("../fonts/iosevka-regular.woff2") format("woff2"),
-    url("../fonts/iosevka-regular.woff") format("woff"),
-    url("../fonts/iosevka-regular.ttf") format("truetype");
+@layer base {
+  @font-face {
+    font-family: "Iosevka Regular";
+    src: url("../fonts/iosevka-regular.woff2") format("woff2"),
+      url("../fonts/iosevka-regular.woff") format("woff"),
+      url("../fonts/iosevka-regular.ttf") format("truetype");
+  }
 }
 
 .github-corner:hover .octo-arm {
@@ -48,5 +50,3 @@
     animation: octocat-wave 560ms ease-in-out;
   }
 }
-
-@tailwind utilities;
