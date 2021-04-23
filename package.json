@@ -30,7 +30,7 @@
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.5",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.12",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
   }
 }
