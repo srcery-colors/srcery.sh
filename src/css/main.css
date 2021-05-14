@@ -1,52 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* main.css */
 
-@layer base {
-  @font-face {
-    font-family: "Iosevka Regular";
-    src: url("../fonts/iosevka-regular.woff2") format("woff2"),
-      url("../fonts/iosevka-regular.woff") format("woff"),
-      url("../fonts/iosevka-regular.ttf") format("truetype");
-  }
-}
+@import "tailwindcss/base";
+@import "./base.css";
 
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
+@import "tailwindcss/components";
+@import "./components.css";
+@import "glightbox/dist/css/glightbox.min.css";
 
-@keyframes octocat-wave {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  20% {
-    transform: rotate(-25deg);
-  }
-
-  40% {
-    transform: rotate(10deg);
-  }
-
-  60% {
-    transform: rotate(-25deg);
-  }
-
-  80% {
-    transform: rotate(10deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
-
-  .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-  }
-}
+@import "tailwindcss/utilities";

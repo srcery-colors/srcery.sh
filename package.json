@@ -1,36 +1,35 @@
 {
-  "name": "srcery.github.io",
-  "version": "2.4.3",
+  "name": "srcery-colors-website",
+  "version": "3.0.0",
   "private": true,
-  "description": "Web site for promoting the Srcery color scheme.",
+  "description": "Website for promoting the Srcery color scheme.",
+  "homepage": "https://srcery-colors.github.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery-colors.github.io"
   },
   "license": "MIT",
   "author": "Srcery Team",
-  "main": "src/index.html",
   "scripts": {
     "build": "parcel build src/index.html",
-    "clean": "rm -fr ./.cache ./dist",
-    "serve": "parcel src/index.html --open",
-    "test": "parcel build src/index.html --detailed-report"
+    "clean": "rm -fr ./.parcel-cache ./dist",
+    "serve": "parcel src/index.html --open"
   },
   "browserslist": [
     "> 5%",
     "last 2 version",
     "not dead"
   ],
-  "stylelint": {
-    "extends": [
-      "stylelint-prettier/recommended"
-    ]
+  "dependencies": {
+    "glightbox": "^3.0.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.1.2",
-    "autoprefixer": "^9.8.6",
-    "parcel-bundler": "^1.12.5",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+    "@parcel/packager-raw-url": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
+    "autoprefixer": "^10.2.5",
+    "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.2.15",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.1.2"
   }
 }

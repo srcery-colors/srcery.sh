@@ -1,0 +1,8 @@
+/* base.css */
+
+@font-face {
+  font-family: "Iosevka Regular";
+  src: url("../fonts/iosevka-regular.woff2") format("woff2"),
+    url("../fonts/iosevka-regular.woff") format("woff"),
+    url("../fonts/iosevka-regular.ttf") format("truetype");
+}
