@@ -29,6 +29,8 @@ const colors = {
 };
 
 module.exports = {
+  mode: "jit",
+  purge: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.svg"],
   theme: {
     extend: { colors: colors },
     fontFamily: {
@@ -49,5 +51,4 @@ module.exports = {
       ],
     },
   },
-  purge: ["./src/**/*.html", "./src/**/*.svg", "./src/**/*.js"],
 };

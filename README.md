@@ -7,32 +7,33 @@
 [![GitHub forks](https://img.shields.io/github/forks/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/network)
 [![GitHub stars](https://img.shields.io/github/stars/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/stargazers)
 
-Indroduction
-------------
+## Introduction
 
 This is the repo for the `srcery` website.  All contributions are
 welcome and encouraged.
 
 [View site](https://srcery-colors.github.io/)
 
-Web Stack
----------
+## Web Stack
 
-* [Parcel](https://parceljs.org)
+* [Snowpack](https://snowpack.dev)
 * [PostCSS](https://postcss.org)
 * [TailwindCSS](https://tailwindcss.com)
 
-Running Locally
----------------
+## Running Locally
 
 Install dependencies:
 
-    npm install
+```sh
+npm install
+```
 
 Building the site.  This opens the dev server in a new browser window/tab.
 
-    npm run serve
+```sh
+npm run serve
+```
 
-License
--------
+## License
+
 MIT License. See `LICENSE` for more information.
