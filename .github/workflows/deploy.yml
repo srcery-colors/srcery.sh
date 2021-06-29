@@ -22,9 +22,6 @@ jobs:
       - name: Build Site
         run: npm run build --if-present
 
-      - name: Add README.md
-        run: cp README.deploy dist/README.md
-
       - name: Upload Compiled Files
         uses: actions/upload-artifact@v2.2.4
         with:
