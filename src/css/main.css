@@ -1,10 +1,10 @@
 /* main.css */
 
-@import "tailwindcss/base";
+@import "tailwindcss/base.css";
 @import "./base.css";
 
-@import "tailwindcss/components";
+@import "tailwindcss/components.css";
 @import "./components.css";
 @import "glightbox/dist/css/glightbox.min.css";
 
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities.css";
