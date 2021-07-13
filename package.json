@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@snowpack/plugin-postcss": "^1.4.3",
-    "autoprefixer": "^10.3.0",
+    "autoprefixer": "^10.3.1",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "snowpack": "^3.7.1",
