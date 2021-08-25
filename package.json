@@ -28,7 +28,7 @@
     "autoprefixer": "^10.3.2",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
-    "snowpack": "^3.8.6",
+    "snowpack": "^3.8.7",
     "tailwindcss": "^2.2.7"
   }
 }
