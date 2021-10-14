@@ -29,6 +29,6 @@
     "postcss": "^8.3.9",
     "postcss-import": "^14.0.2",
     "snowpack": "^3.8.8",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.17"
   }
 }
