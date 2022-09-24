@@ -30,7 +30,7 @@ const colors = {
 
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.svg"],
+  content: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.svg"],
   theme: {
     extend: { colors: colors },
     fontFamily: {
