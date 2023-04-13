@@ -1,8 +1,8 @@
 {
   "name": "srcery-colors-website",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
-  "description": "Website for promoting the Srcery color scheme.",
+  "description": "Srcery theme family website",
   "homepage": "https://srcery-colors.github.io",
   "repository": {
     "type": "git",
@@ -11,24 +11,10 @@
   "license": "MIT",
   "author": "Srcery Team",
   "scripts": {
-    "build": "NODE_ENV=production snowpack build",
-    "clean": "rm -fr ./dist",
-    "serve": "NODE_ENV=development snowpack dev"
+    "clean": "rm -fr ./dist"
   },
-  "browserslist": [
-    "> 5%",
-    "last 2 version",
-    "not dead"
-  ],
   "dependencies": {
-    "glightbox": "^3.2.0"
   },
   "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.4.3",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "postcss-import": "^15.1.0",
-    "snowpack": "^3.8.8",
-    "tailwindcss": "^3.3.1"
   }
 }
