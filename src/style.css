@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Iosevka Custom Web';
+    font-display: swap;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    src: url('../assets/fonts/iosevka-custom-regular.ttf') format('truetype'), url('../assets/fonts/iosevka-custom-regular.woff2') format('woff2');
+  }
+}
+
+html,body {
+  height: 100%;
+}

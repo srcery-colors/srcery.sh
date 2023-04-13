@@ -18,24 +18,25 @@
   "license": "MIT",
   "author": "Srcery Team",
   "devDependencies": {
-    "tailwindcss": "^3.3.1",
+    "@srcery-colors/srcery-palette": "^1.0.4",
     "autoprefixer": "^10.4.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^5.0.0",
+    "eslint": "^8.2.0",
+    "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "htmlhint": "^1.1.4",
     "mini-css-extract-plugin": "^2.4.4",
     "postcss": "^8.3.11",
     "postcss-loader": "^7.2.4",
     "style-loader": "^3.3.1",
+    "tailwindcss": "^3.3.1",
     "webpack": "^5.64.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.2",
-    "webpack-merge": "^5.8.0",
-    "eslint": "^8.2.0",
-    "handlebars": "^4.7.7",
-    "htmlhint": "^1.1.4"
+    "webpack-merge": "^5.8.0"
   }
 }

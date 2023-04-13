@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Iosevka': ['Iosevka Regular', ...defaultTheme.fontFamily.sans],
+        'iosevka': ['Iosevka Custom Web', ...defaultTheme.fontFamily.sans],
       },
     },
   },

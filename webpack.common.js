@@ -2,10 +2,6 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const webpack = require('webpack');
-const images = require("./images.json");
-
-const albums = require("./albums.json");
 
 module.exports = {
   entry: {
@@ -43,16 +39,6 @@ module.exports = {
           },
           'postcss-loader'
         ]
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
