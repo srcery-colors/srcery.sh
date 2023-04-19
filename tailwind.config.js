@@ -1,4 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const palette = require("@srcery-colors/srcery-palette");
+
+function parsePalette() {
+  return Object.entries(palette.primary).reduce((acc, [k, v]) => {
+    acc[v.termcol] = v.hex;
+    return acc;
+  }, {})
+}
 
 module.exports = {
   mode: 'jit',
@@ -17,6 +25,7 @@ module.exports = {
       fontFamily: {
         'iosevka': ['Iosevka Custom Web', ...defaultTheme.fontFamily.sans],
       },
+      colors: parsePalette(),
     },
   },
   plugins: [],
