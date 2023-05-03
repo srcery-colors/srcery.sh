@@ -3,8 +3,10 @@ const palette = require("@srcery-colors/srcery-palette");
 
 function parsePalette() {
   return Object.entries(palette.primary).reduce((acc, [k, v]) => {
-    acc[v.termcol] = v.hex;
-    return acc;
+    return {
+      ...acc,
+      [v.termcol]: v.hex
+    }
   }, {})
 }
 
