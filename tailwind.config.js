@@ -11,16 +11,11 @@ function parsePalette() {
 }
 
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './src/**/*.html',
-    './src/**/*.hbs',
-    './src/**/*.js',
-    './dist/**/*.html',
-    './dist/**/*.js',
+  content: [
+    './src/**/*.{js,html}',
   ],
   darkMode: true, // or 'media' or 'class'
-  content: [],
+  content: ["./src/**/*.{html,js}"],
 
   theme: {
     extend: {
