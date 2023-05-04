@@ -25,7 +25,8 @@ html,body {
   height: 100%;
 }
 
-.header {
+header {
+  height: 546px;
 }
 
 .glyph {
@@ -57,7 +58,7 @@ html,body {
   .title {
     margin-top: 1rem;
   }
-  .header {
+  header {
     padding-top: 8rem;
   }
   .triangle {
