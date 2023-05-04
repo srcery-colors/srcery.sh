@@ -9,7 +9,7 @@
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    src: url('../assets/fonts/iosevka-custom-regular.ttf') format('truetype'), url('../assets/fonts/iosevka-custom-regular.woff2') format('woff2');
+    src: url('fonts/iosevka-custom-regular.ttf') format('truetype'), url('fonts/iosevka-custom-regular.woff2') format('woff2');
   }
   @font-face {
     font-family: 'Iosevka Custom Web';
@@ -17,10 +17,54 @@
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
-    src: url('../assets/fonts/iosevka-custom-bold.ttf') format('truetype'), url('../assets/fonts/iosevka-custom-bold.woff2') format('woff2');
+    src: url('fonts/iosevka-custom-bold.ttf') format('truetype'), url('fonts/iosevka-custom-bold.woff2') format('woff2');
   }
 }
 
 html,body {
   height: 100%;
+}
+
+.header {
+}
+
+.glyph {
+  width: 220px;
+  height: 220px;
+}
+
+.triangle {
+  background-image: url('svg/triangle.svg');
+  min-width: 630px;
+  min-height: 546px;
+  padding-top: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circle {
+  display: none;
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+}
+
+.title {
+  margin-top: -18%;
+}
+
+@media (max-width: 631px) {
+  .title {
+    margin-top: 1rem;
+  }
+  .header {
+    padding-top: 8rem;
+  }
+  .triangle {
+    display: none;
+  }
+  .circle {
+    display: flex;
+  }
+
 }
