@@ -50,6 +50,13 @@ header {
   border-radius: 50%;
 }
 
+.dot {
+  width: 12px;
+  border-radius: 50%;
+  background: red;
+  height: 12px;
+}
+
 .title {
   margin-top: -18%;
 }
