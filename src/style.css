@@ -74,5 +74,9 @@ header {
   .circle {
     display: flex;
   }
-
+}
+@media (max-width: 320px) {
+  .dot {
+    display: none;
+  }
 }
