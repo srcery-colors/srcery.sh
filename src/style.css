@@ -26,9 +26,11 @@ html,body {
 }
 
 header {
-  height: 546px;
+  min-height: 546px;
 }
-
+main {
+  min-width: 630px;
+}
 .glyph {
   width: 220px;
   height: 220px;
@@ -36,9 +38,9 @@ header {
 
 .triangle {
   background-image: url('svg/triangle.svg');
-  min-width: 630px;
   min-height: 546px;
   padding-top: 30%;
+  min-width: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -65,7 +67,11 @@ header {
     margin-top: 1rem;
   }
   header {
-    padding-top: 8rem;
+    padding-top: 2rem;
+    min-height: auto;
+  }
+  main {
+    min-width: auto;
   }
   .triangle {
     display: none;
