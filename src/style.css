@@ -41,6 +41,13 @@ nav {
   height: 220px;
 }
 
+.bb {
+  border-bottom: 1px solid;
+}
+.bb:hover {
+  border-bottom: 1px dotted;
+}
+
 section {
 
 }
