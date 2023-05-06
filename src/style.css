@@ -30,10 +30,19 @@ header {
 }
 main {
   min-width: 630px;
+  max-width: 630px;
+}
+
+nav {
+  max-width: 100%;
 }
 .glyph {
   width: 220px;
   height: 220px;
+}
+
+section {
+
 }
 
 .triangle {
@@ -72,6 +81,10 @@ main {
   }
   main {
     min-width: auto;
+    max-width: 448px;
+  }
+  nav {
+    max-width: 384px;
   }
   .triangle {
     display: none;
