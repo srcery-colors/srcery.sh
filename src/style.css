@@ -25,10 +25,15 @@ html,body {
   height: 100%;
 }
 
-header {
+.logo {
   min-height: 546px;
 }
+
 main {
+  max-width: 780px;
+}
+
+header {
   min-width: 630px;
   max-width: 630px;
 }
@@ -36,6 +41,7 @@ main {
 nav {
   max-width: 100%;
 }
+
 .glyph {
   width: 220px;
   height: 220px;
@@ -82,12 +88,14 @@ section {
   .title {
     margin-top: 1rem;
   }
-  header {
-    padding-top: 2rem;
+  .logo {
     min-height: auto;
+    padding-top: 2rem;
+  }
+  header {
+    min-width: auto;
   }
   main {
-    min-width: auto;
     max-width: 448px;
   }
   nav {
