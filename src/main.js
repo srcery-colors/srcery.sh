@@ -39,9 +39,13 @@ function getLanguages() {
 function main() {
 
   window.Alpine = Alpine
-  Alpine.data("examples", () => ({
+  Alpine.data("state", () => ({
     languages: languages,
-    activeLang: "C"
+    activeLang: "C",
+    handleClick(e, lang) {
+      e.preventDefault();
+      this.activeLang = lang;
+    },
   }))
 
   Alpine.start()
