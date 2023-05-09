@@ -52,12 +52,14 @@
           background for long sessions using an editor or terminal emulator.
         </p>
       </section>
-      <section class="self-start">
-        <h2 class="uppercase">Preview</h1>
-        <pre id="preview" x-data="examples">
-          <code :class="js.class" x-text="js.data">
-          </code>
-        </pre>
+      <section class="code-examples w-full">
+        <h2 class="uppercase mb-4 ">Preview</h1>
+        <div class="border-2 border-bright_black p-4 rounded">
+          <pre id="preview" class="flex" x-data="examples">
+            <code :class="js.class" x-text="js.data">
+            </code>
+          </pre>
+        </div>
       </section>
     </main>
     <script type="module" src="main.js"></script>
