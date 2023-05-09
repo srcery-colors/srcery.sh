@@ -10,19 +10,38 @@ import "highlight.js/styles/srcery.css";
 
 import ctxt from "./examples/c.txt?raw";
 import jstxt from "./examples/js.txt?raw";
+import cljtxt from "./examples/clj.txt?raw";
+
+const languages = {
+  c: {
+    data: ctxt,
+    name: "C",
+    class: "language-c"
+  },
+  js: {
+    data: jstxt,
+    name: "JavaScript",
+    class: "language-js"
+  },
+  clj: {
+    data: cljtxt,
+    name: "Clojure",
+    class: "languages-clj"
+  }
+}
+
+function getLanguages() {
+  return Object.entries(examples).map(([k, v]) => {
+    return v.name
+  })
+}
 
 function main() {
 
   window.Alpine = Alpine
   Alpine.data("examples", () => ({
-    c: {
-      data: ctxt,
-      class: "language-c"
-    },
-    js: {
-      data: jstxt,
-      class: "language-js"
-    }
+    languages: languages,
+    activeLang: "C"
   }))
 
   Alpine.start()
