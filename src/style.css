@@ -38,6 +38,7 @@ pre > code {
 
 main {
   max-width: 780px;
+  min-width: 0;
 }
 
 header {
