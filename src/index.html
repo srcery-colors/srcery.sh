@@ -32,14 +32,14 @@
           </div>
         </div>
         <div class="flex justify-center">
-          <nav class="flex grow justify-between mb-4">
+          <nav class="flex grow justify-between mb-5">
             <a href="" class="uppercase bb">themes</a>
             <a href="" class="uppercase bb">resources</a>
             <a href="" class="uppercase bb">community</a>
           </nav>
         </div>
       </header>
-      <section class="text-justify">
+      <section class="text-justify mb-5">
         <p>
           Srcery is dark a color scheme with clearly defined contrasting colors
           and a slightly earthy tone.
@@ -51,6 +51,13 @@
           colors are designed to be easy on the eyes yet contrast well with the
           background for long sessions using an editor or terminal emulator.
         </p>
+      </section>
+      <section class="self-start">
+        <h2 class="uppercase">Preview</h1>
+        <pre id="preview" x-data="examples">
+          <code :class="js.class" x-text="js.data">
+          </code>
+        </pre>
       </section>
     </main>
     <script type="module" src="main.js"></script>
