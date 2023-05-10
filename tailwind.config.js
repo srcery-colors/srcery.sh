@@ -11,12 +11,7 @@ function parsePalette(palette) {
 }
 
 module.exports = {
-  content: [
-    './src/**/*.{js,html}',
-  ],
-  darkMode: true, // or 'media' or 'class'
   content: ["./src/**/*.{html,js}"],
-
   theme: {
     extend: {
       fontFamily: {
