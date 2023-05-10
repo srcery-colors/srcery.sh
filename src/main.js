@@ -4,7 +4,7 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import c from "highlight.js/lib/languages/c"
 hljs.registerLanguage('c', c);
-hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('js', javascript);
 
 import "highlight.js/styles/srcery.css";
 
@@ -26,7 +26,7 @@ const languages = {
   clj: {
     data: cljtxt,
     name: "Clojure",
-    class: "languages-clj"
+    class: "language-clj"
   }
 }
 
@@ -39,12 +39,13 @@ function getLanguages() {
 function main() {
 
   window.Alpine = Alpine
-  Alpine.data("state", () => ({
+  Alpine.data("tabs", () => ({
     languages: languages,
-    activeLang: "C",
+    activeTab: "c",
     handleClick(e, lang) {
       e.preventDefault();
-      this.activeLang = lang;
+      this.activeTab = lang;
+
     },
   }))
 
