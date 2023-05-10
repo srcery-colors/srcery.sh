@@ -1,10 +1,12 @@
 import Alpine from "alpinejs";
 
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
 import c from "highlight.js/lib/languages/c"
-hljs.registerLanguage('c', c);
-hljs.registerLanguage('js', javascript);
+import clj from "highlight.js/lib/languages/clojure"
+hljs.registerLanguage("c", c);
+hljs.registerLanguage("js", javascript);
+hljs.registerLanguage("clj", clj);
 
 import "highlight.js/styles/srcery.css";
 
@@ -14,16 +16,19 @@ import cljtxt from "./examples/clj.txt?raw";
 
 const languages = {
   c: {
+    html: hljs.highlight(ctxt, {language: "c"}).value,
     data: ctxt,
     name: "C",
     class: "language-c"
   },
   js: {
+    html: hljs.highlight(jstxt, {language: "js"}).value,
     data: jstxt,
     name: "JavaScript",
     class: "language-js"
   },
   clj: {
+    html: hljs.highlight(cljtxt, { language: "clj" }).value,
     data: cljtxt,
     name: "Clojure",
     class: "language-clj"
@@ -48,10 +53,7 @@ function main() {
 
     },
   }))
-
   Alpine.start()
-
-  hljs.highlightAll();
 }
 
 main();
