@@ -33,9 +33,9 @@
         </div>
         <div class="flex justify-center">
           <nav class="max-w-[384px] sm:max-w-full flex grow justify-between mb-5">
-            <a href="" class="link">themes</a>
-            <a href="" class="link">resources</a>
-            <a href="" class="link">community</a>
+            <a href="" class="link uppercase">themes</a>
+            <a href="" class="link uppercase">resources</a>
+            <a href="" class="link uppercase">community</a>
           </nav>
         </div>
       </header>
@@ -54,6 +54,13 @@
       </section>
       <section class="w-full" x-data="tabs">
         <h2 class="uppercase mb-2 ">Preview</h2>
+        <p class="mb-4">
+          Here's a select number of languages demoed with
+          <a class="link" href="https://highlightjs.org/">highlight.js</a>.
+          It'll give a general impression but see the
+          <a href="#" class="link">individual implementations</a>
+          for details about a specific editor.
+        </p>
         <ul class="hidden sm:flex text-center border-b-2 border-bright_black">
           <template x-for="(value, key) in languages">
             <li class="flex flex-1">

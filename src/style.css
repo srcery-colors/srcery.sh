@@ -26,7 +26,7 @@
     @apply hidden tiny:block w-dot h-dot rounded-full mr-2;
   }
   .link {
-    @apply uppercase border-b hover:border-dotted border-white;
+    @apply border-b border-dotted hover:text-white border-white;
   }
 }
 
