@@ -28,6 +28,11 @@ pre > code {
   font-family: "Iosevka Custom Web", monospace;
 }
 
+pre {
+  height: 416px;
+  overflow-y: auto;
+}
+
 .hljs {
   padding: 0 !important;
 }

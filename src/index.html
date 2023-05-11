@@ -54,7 +54,7 @@
       </section>
       <section class="w-full" x-data="tabs">
         <h2 class="uppercase mb-4 ">Preview</h1>
-        <ul class="flex flex-wrap text-center border-b-2 border-bright_black">
+        <ul class="flex text-center border-b-2 border-bright_black">
           <template x-for="(value, key) in languages">
             <li class="flex items-end">
               <template x-if="key === activeTab">
@@ -72,8 +72,8 @@
             </li>
           </template>
         </ul>
-        <div class="border-b-2 border-x-2 border-bright_black p-4">
-          <pre id="preview" class="flex">
+        <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
+          <pre id="preview" class="flex p-4">
             <code x-html="languages[activeTab].html">
             </code>
           </pre>
