@@ -20,6 +20,22 @@ module.exports = {
       colors: {
         ...parsePalette(palette.primary),
         ...parsePalette(palette.secondary)
+      },
+      screens: {
+        'tiny': '320px'
+      },
+      backgroundImage: {
+        'triangle': "url('svg/triangle.svg')",
+      },
+      width: {
+        'logo': '220px',
+        'circle': '272px',
+        'dot': '12px'
+      },
+      height: {
+        'logo': '220px',
+        'circle': '272px',
+        'dot': '12px'
       }
     },
   },

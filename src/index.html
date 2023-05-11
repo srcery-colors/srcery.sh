@@ -8,34 +8,34 @@
     <title>Srcery theme</title>
   </head>
   <body class="font-iosevka bg-black text-bright_white flex justify-center p-4">
-    <main class="flex items-center flex-col">
-      <header class="">
-        <div class="logo flex flex-col items-center mb-2 ">
-          <div class="circle border-2 border-bright_black justify-center items-center">
-            <img class="" src="svg/glyph.svg" class="glyph">
+    <main class="flex items-center flex-col max-width-[448px] sm:max-w-[780px] min-w-0">
+      <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px]">
+        <div class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
+          <div class="flex sm:hidden w-circle h-circle rounded-full border-2 border-bright_black justify-center items-center">
+            <img class="" src="svg/glyph.svg" class="glyph w-logo h-logo">
           </div>
-          <div class="triangle flex align-center justify-center">
-            <img src="svg/glyph.svg" class="glyph">
+          <div class="bg-triangle bg-no-repeat min-h-[546px] pt-[30%] hidden sm:flex min-w-full bg-center align-center justify-center">
+            <img src="svg/glyph.svg" class="glyph w-logo h-logo">
           </div>
-          <div class="title flex items-center">
+          <div class="mt-4 sm:mt-[-18%] flex items-center">
             <div class="flex mr-2">
-              <div class="dot bg-xgray2 mr-2"></div>
-              <div class="dot bg-xgray7 mr-2"></div>
-              <div class="dot bg-xgray10 mr-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray2 mr-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray7 mr-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray10 mr-2"></div>
             </div>
             <h1 class="uppercase text-6xl">Srcery</h1>
             <div class="flex ml-2">
-              <div class="bg-xgray10 dot ml-2"></div>
-              <div class="dot bg-xgray7 ml-2"></div>
-              <div class="dot bg-xgray2 ml-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray10 ml-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray7 ml-2"></div>
+              <div class="hidden tiny:block w-dot h-dot rounded-full bg-xgray2 ml-2"></div>
             </div>
           </div>
         </div>
         <div class="flex justify-center">
-          <nav class="flex grow justify-between mb-5">
-            <a href="" class="uppercase bb">themes</a>
-            <a href="" class="uppercase bb">resources</a>
-            <a href="" class="uppercase bb">community</a>
+          <nav class="max-w-[384px] sm:max-w-full flex grow justify-between mb-5">
+            <a href="" class="uppercase border-b hover:border-dotted border-white">themes</a>
+            <a href="" class="uppercase border-b hover:border-dotted border-white">resources</a>
+            <a href="" class="uppercase border-b hover:border-dotted border-white">community</a>
           </nav>
         </div>
       </header>
@@ -54,7 +54,7 @@
       </section>
       <section class="w-full" x-data="tabs">
         <h2 class="uppercase mb-4 ">Preview</h1>
-        <ul class="flex text-center border-b-2 border-bright_black">
+        <ul class="hidden sm:flex text-center border-b-2 border-bright_black">
           <template x-for="(value, key) in languages">
             <li class="flex flex-1">
               <template x-if="key === activeTab">
@@ -74,7 +74,7 @@
         </ul>
         <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
           <pre id="preview" class="flex p-4">
-            <code x-html="languages[activeTab].html">
+            <code class="font-iosevka" x-html="languages[activeTab].html">
             </code>
           </pre>
         </div>
