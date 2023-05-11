@@ -21,6 +21,15 @@
   }
 }
 
+@layer components {
+  .dot {
+    @apply hidden tiny:block w-dot h-dot rounded-full mr-2;
+  }
+  .link {
+    @apply uppercase border-b hover:border-dotted border-white;
+  }
+}
+
 html,body {
   min-height: 100%;
 }
