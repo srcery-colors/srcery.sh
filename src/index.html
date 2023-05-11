@@ -56,16 +56,16 @@
         <h2 class="uppercase mb-4 ">Preview</h1>
         <ul class="flex text-center border-b-2 border-bright_black">
           <template x-for="(value, key) in languages">
-            <li class="flex items-end">
+            <li class="flex flex-1">
               <template x-if="key === activeTab">
 
-                <a href="#" class="relative block px-4 pt-1 border-e-2 border-s-2 border-t-2 border-bright_black">
+                <a href="#" class="relative block grow px-4 pt-1 border-e-2 border-s-2 border-t-2 border-bright_black">
                   <span class="absolute inset-x-0 -bottom-[2px] h-[2px] w-full bg-black"></span>
                   <span x-text="value.name"></span>
                 </a>
               </template>
               <template x-if="key !== activeTab">
-                <a href="#" class="px-4 block pt-1 hover:bg-xgray1" x-on:click="handleClick($event, key)">
+                <a href="#" class="px-4 block pt-1 grow hover:bg-xgray1" x-on:click="handleClick($event, key)">
                   <span x-text="value.name"></span>
                 </a>
               </template>
