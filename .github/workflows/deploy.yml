@@ -39,6 +39,7 @@ jobs:
           path: dist/
 
   deploy:
+    name: Deploy Dist Files
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
