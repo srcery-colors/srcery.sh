@@ -1,6 +1,8 @@
 import Alpine from "alpinejs";
-
+import "highlight.js/styles/srcery.css";
 import hljs from "highlight.js/lib/core";
+
+// Languages
 import javascript from "highlight.js/lib/languages/javascript";
 import c from "highlight.js/lib/languages/c";
 import clj from "highlight.js/lib/languages/clojure";
@@ -8,16 +10,8 @@ import lua from "highlight.js/lib/languages/lua";
 import rust from "highlight.js/lib/languages/rust";
 import bash from "highlight.js/lib/languages/bash";
 import vim from "highlight.js/lib/languages/vim";
-hljs.registerLanguage("c", c);
-hljs.registerLanguage("js", javascript);
-hljs.registerLanguage("clj", clj);
-hljs.registerLanguage("lua", lua);
-hljs.registerLanguage("rust", rust);
-hljs.registerLanguage("bash", bash);
-hljs.registerLanguage("vim", vim);
 
-import "highlight.js/styles/srcery.css";
-
+// Examples
 import ctxt from "./examples/c.txt?raw";
 import jstxt from "./examples/js.txt?raw";
 import cljtxt from "./examples/clj.txt?raw";
@@ -25,6 +19,15 @@ import luatxt from "./examples/lua.txt?raw";
 import rusttxt from "./examples/rust.txt?raw";
 import bashtxt from "./examples/bash.txt?raw";
 import vimtxt from "./examples/vim.txt?raw";
+
+// Register
+hljs.registerLanguage("c", c);
+hljs.registerLanguage("js", javascript);
+hljs.registerLanguage("clj", clj);
+hljs.registerLanguage("lua", lua);
+hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("bash", bash);
+hljs.registerLanguage("vim", vim);
 
 const languages = {
   c: {
