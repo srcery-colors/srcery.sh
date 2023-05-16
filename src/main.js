@@ -66,10 +66,8 @@ function main() {
   Alpine.data("tabs", () => ({
     languages: languages,
     activeTab: "c",
-    handleClick(e, lang) {
-      e.preventDefault();
+    handleClick(lang) {
       this.activeTab = lang;
-
     },
   }))
   Alpine.start()
