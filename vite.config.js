@@ -1,5 +1,6 @@
 const { defineConfig } = require('vite');
+import { resolve } from 'path'
 
 module.exports = defineConfig({
-  root: "src"
+  root: resolve(__dirname, 'src')
 })
