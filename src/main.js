@@ -66,13 +66,17 @@ const languages = {
 function main() {
 
   window.Alpine = Alpine
-  Alpine.data(
-    "state", () => ({
+  Alpine.data("tabs", () => ({
       languages: languages,
       activeTab: "c",
-      handleClick(lang) {
+      handleTab(lang) {
         this.activeTab = lang;
       },
+    }),
+  )
+
+  Alpine.data("main", () => ({
+    page: "home",
     }),
   )
   Alpine.start()
