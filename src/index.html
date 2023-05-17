@@ -67,12 +67,12 @@
           <template x-for="(value, key) in languages">
             <li class="flex flex-1">
               <template x-if="key === activeTab">
-                <a href="#" class="flex items-end justify-center grow px-4 pt-1 border-e-2 border-s-2 border-t-2 border-bright_black" @click.prevent="">
+                <a href="#" class="tab tab-active" @click.prevent="">
                   <span x-text="value.name"></span>
                 </a>
               </template>
               <template x-if="key !== activeTab">
-                <a href="#" class="px-4 flex border-b-2 border-bright_black items-end justify-center pt-1 grow hover:bg-xgray1" @click.prevent="handleClick(key)">
+                <a href="#" class="tab tab-inactive" @click.prevent="handleClick(key)">
                   <span x-text="value.name"></span>
                 </a>
               </template>

@@ -28,6 +28,15 @@
   .link {
     @apply border-b border-dotted hover:text-white border-white;
   }
+  .tab {
+    @apply px-4 flex border-bright_black items-end justify-center pt-1 grow
+  }
+  .tab-inactive {
+    @apply border-b-2 hover:bg-xgray1
+  }
+  .tab-active {
+    @apply border-e-2 border-s-2 border-t-2 border-b-transparent border-b-2
+  }
 }
 
 html,body {
