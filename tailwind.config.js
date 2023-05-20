@@ -29,12 +29,10 @@ module.exports = {
       },
       width: {
         'logo': '220px',
-        'circle': '272px',
         'dot': '12px'
       },
       height: {
         'logo': '220px',
-        'circle': '272px',
         'dot': '12px'
       }
     },
