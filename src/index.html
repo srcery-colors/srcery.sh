@@ -10,7 +10,7 @@
   <body class="font-iosevka bg-black text-bright_white flex justify-center p-4">
     <main x-data="main" class="flex items-center flex-col max-width-[448px] sm:max-w-[780px] min-w-0">
       <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
-        <a @click.prevent="" href="" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
+        <a @click.prevent="handleNav('home')" href="" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
           <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
             <img class="" src="svg/glyph.svg" class="glyph w-logo h-logo">
           </div>
@@ -32,60 +32,62 @@
           </div>
         </a>
         <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
-          <a href="" class="link uppercase">themes</a>
-          <a href="" class="link uppercase">resources</a>
-          <a href="" class="link uppercase">community</a>
+          <a @click.prevent="handleNav('themes')" href="" class="link uppercase">themes</a>
+          <a @click.prevent="handleNav('resources')" href="" class="link uppercase">resources</a>
+          <a @click.prevent="handleNav('community')" href="" class="link uppercase">community</a>
         </nav>
       </header>
-      <section class="w-full">
-        <div class="text-justify mb-8">
-          <p>
-            Srcery is dark syntax highlighting color scheme with clearly defined
-            contrasting colors and a slightly earthy tone.
-          </p>
-          </br>
-          <p>
-            Created using colors that logically adheres to the 16 color base
-            palette of a terminal, while trying to retain its own identity. The
-            colors are designed to be easy on the eyes yet contrast well with the
-            background for long sessions using an editor or terminal emulator.
-          </p>
-        </div>
-        <section class="w-full" x-data="tabs">
-          <h2 class="uppercase mb-4 ">Preview</h2>
-          <p class="mb-8">
-            Here's a a few
-            <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
-            examples demoed with
-            <a class="link" href="https://highlightjs.org/">highlight.js</a>.
-            It'll give a general impression but see the
-            <a href="#" class="link">themes</a>
-            for details about a specific editor/IDE.
-          </p>
-          <ul class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black">
-            <template x-for="(value, key) in languages">
-              <li class="flex flex-1">
-                <template x-if="key === activeTab">
-                  <a href="#" class="tab tab-active" @click.prevent="">
-                    <span x-text="value.name"></span>
-                  </a>
-                </template>
-                <template x-if="key !== activeTab">
-                  <a href="#" class="tab tab-inactive" @click.prevent="handleTab(key)">
-                    <span x-text="value.name"></span>
-                  </a>
-                </template>
-              </li>
-            </template>
-          </ul>
-          <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
-            <pre id="preview" class="flex p-4">
-              <code class="font-iosevka" x-html="languages[activeTab].html">
-              </code>
-            </pre>
+      <template x-if="page === 'home'">
+        <section class="w-full">
+          <div class="text-justify mb-8">
+            <p>
+              Srcery is dark syntax highlighting color scheme with clearly defined
+              contrasting colors and a slightly earthy tone.
+            </p>
+            </br>
+            <p>
+              Created using colors that logically adheres to the 16 color base
+              palette of a terminal, while trying to retain its own identity. The
+              colors are designed to be easy on the eyes yet contrast well with the
+              background for long sessions using an editor or terminal emulator.
+            </p>
+          </div>
+          <div class="w-full" x-data="tabs">
+            <h2 class="uppercase mb-4 ">Preview</h2>
+            <p class="mb-8">
+              Here's a a few
+              <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
+              examples demoed with
+              <a class="link" href="https://highlightjs.org/">highlight.js</a>.
+              It'll give a general impression but see the
+              <a href="#" class="link">themes</a>
+              for details about a specific editor/IDE.
+            </p>
+            <ul class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black">
+              <template x-for="(value, key) in languages">
+                <li class="flex flex-1">
+                  <template x-if="key === activeTab">
+                    <a href="#" class="tab tab-active" @click.prevent="">
+                      <span x-text="value.name"></span>
+                    </a>
+                  </template>
+                  <template x-if="key !== activeTab">
+                    <a href="#" class="tab tab-inactive" @click.prevent="handleTab(key)">
+                      <span x-text="value.name"></span>
+                    </a>
+                  </template>
+                </li>
+              </template>
+            </ul>
+            <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
+              <pre id="preview" class="flex p-4">
+                <code class="font-iosevka" x-html="languages[activeTab].html">
+                </code>
+              </pre>
+            </div>
           </div>
         </section>
-      </section>
+      </template>
     </main>
     <script type="module" src="main.js"></script>
   </body>

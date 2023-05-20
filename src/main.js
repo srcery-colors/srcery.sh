@@ -77,7 +77,16 @@ function main() {
 
   Alpine.data("main", () => ({
     page: "home",
-    }),
+    pages: [
+      "home",
+      "themes",
+      "resouces",
+      "community"
+    ],
+    handleNav(page) {
+      this.page = page;
+    }
+  }),
   )
   Alpine.start()
 }
