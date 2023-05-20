@@ -23,7 +23,7 @@
               <div class="dot bg-xgray7"></div>
               <div class="dot bg-xgray10"></div>
             </div>
-            <h1 class="uppercase text-6xl">Srcery</h1>
+            <h1 class="uppercase text-6xl">srcery</h1>
             <div class="flex ml-2">
               <div class="dot bg-xgray10"></div>
               <div class="dot bg-xgray7"></div>
@@ -31,60 +31,60 @@
             </div>
           </div>
         </a>
-        <div class="flex justify-center">
-          <nav class="max-w-[384px] sm:max-w-full flex grow justify-between">
-            <a href="" class="link uppercase">themes</a>
-            <a href="" class="link uppercase">resources</a>
-            <a href="" class="link uppercase">community</a>
-          </nav>
-        </div>
+        <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
+          <a href="" class="link uppercase">themes</a>
+          <a href="" class="link uppercase">resources</a>
+          <a href="" class="link uppercase">community</a>
+        </nav>
       </header>
-      <section class="text-justify mb-8">
-        <p>
-          Srcery is dark syntax highlighting color scheme with clearly defined
-          contrasting colors and a slightly earthy tone.
-        </p>
-        </br>
-        <p>
-          Created using colors that logically adheres to the 16 color base
-          palette of a terminal, while trying to retain its own identity. The
-          colors are designed to be easy on the eyes yet contrast well with the
-          background for long sessions using an editor or terminal emulator.
-        </p>
-      </section>
-      <section class="w-full" x-data="tabs">
-        <h2 class="uppercase mb-4 ">Preview</h2>
-        <p class="mb-8">
-          Here's a a few
-          <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
-          examples demoed with
-          <a class="link" href="https://highlightjs.org/">highlight.js</a>.
-          It'll give a general impression but see the
-          <a href="#" class="link">themes</a>
-          for details about a specific editor/IDE.
-        </p>
-        <ul class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black">
-          <template x-for="(value, key) in languages">
-            <li class="flex flex-1">
-              <template x-if="key === activeTab">
-                <a href="#" class="tab tab-active" @click.prevent="">
-                  <span x-text="value.name"></span>
-                </a>
-              </template>
-              <template x-if="key !== activeTab">
-                <a href="#" class="tab tab-inactive" @click.prevent="handleTab(key)">
-                  <span x-text="value.name"></span>
-                </a>
-              </template>
-            </li>
-          </template>
-        </ul>
-        <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
-          <pre id="preview" class="flex p-4">
-            <code class="font-iosevka" x-html="languages[activeTab].html">
-            </code>
-          </pre>
+      <section class="w-full">
+        <div class="text-justify mb-8">
+          <p>
+            Srcery is dark syntax highlighting color scheme with clearly defined
+            contrasting colors and a slightly earthy tone.
+          </p>
+          </br>
+          <p>
+            Created using colors that logically adheres to the 16 color base
+            palette of a terminal, while trying to retain its own identity. The
+            colors are designed to be easy on the eyes yet contrast well with the
+            background for long sessions using an editor or terminal emulator.
+          </p>
         </div>
+        <section class="w-full" x-data="tabs">
+          <h2 class="uppercase mb-4 ">Preview</h2>
+          <p class="mb-8">
+            Here's a a few
+            <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
+            examples demoed with
+            <a class="link" href="https://highlightjs.org/">highlight.js</a>.
+            It'll give a general impression but see the
+            <a href="#" class="link">themes</a>
+            for details about a specific editor/IDE.
+          </p>
+          <ul class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black">
+            <template x-for="(value, key) in languages">
+              <li class="flex flex-1">
+                <template x-if="key === activeTab">
+                  <a href="#" class="tab tab-active" @click.prevent="">
+                    <span x-text="value.name"></span>
+                  </a>
+                </template>
+                <template x-if="key !== activeTab">
+                  <a href="#" class="tab tab-inactive" @click.prevent="handleTab(key)">
+                    <span x-text="value.name"></span>
+                  </a>
+                </template>
+              </li>
+            </template>
+          </ul>
+          <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
+            <pre id="preview" class="flex p-4">
+              <code class="font-iosevka" x-html="languages[activeTab].html">
+              </code>
+            </pre>
+          </div>
+        </section>
       </section>
     </main>
     <script type="module" src="main.js"></script>
