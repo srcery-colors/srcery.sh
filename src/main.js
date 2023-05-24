@@ -76,13 +76,7 @@ function main() {
   )
 
   Alpine.data("main", () => ({
-    page: "home",
-    pages: [
-      "home",
-      "themes",
-      "resouces",
-      "community"
-    ],
+    page: location.hash,
     handleNav(page) {
       this.page = page;
     }
