@@ -61,7 +61,7 @@
           </p>
         </div>
         <div class="w-full" x-data="tabs">
-          <h2 class="uppercase mb-4 ">Preview</h2>
+          <h2 class="uppercase mb-4">Preview</h2>
           <p class="mb-8">
             Here's a a few
             <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
@@ -95,8 +95,14 @@
           </div>
         </div>
       </section>
-      <section class="w-full" x-show="page === '#themes'">
-        hello themes
+      <section id="themes" class="w-full" x-show="page === '#themes'">
+        <div class="columns-4">
+          <div class="svg" x-html="themes.vim.icon">
+          </div>
+          <!-- <template x-for="theme in themes"> -->
+          <!--   <div>hello</div> -->
+          <!-- </template> -->
+        </div>
       </section>
 
       <section class="w-full" x-show="page === '#resources'">

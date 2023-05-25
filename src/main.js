@@ -29,6 +29,9 @@ hljs.registerLanguage("rust", rust);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("vim", vim);
 
+
+import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
+
 const languages = {
   c: {
     html: hljs.highlight(ctxt, {language: "c"}).value,
@@ -63,11 +66,38 @@ const languages = {
   }
 }
 
+const themes = {
+  vim: {
+    icon: vimsvg,
+    url: "https://www.vim.org/",
+    homepage: "https://github.com/srcery-colors/srcery-vim",
+    download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip"
+  },
+  emacs: {
+    icon: null,
+    url: null,
+    homepage: null,
+    download: null,
+  },
+  vscode: {
+    icon: null,
+    url: null,
+    homepage: null,
+    download: null,
+  },
+  intellij: {
+    icon: null,
+    url: null,
+    homepage: null,
+    download: null,
+  }
+}
+
 function main() {
 
   window.Alpine = Alpine
   Alpine.data("tabs", () => ({
-      languages: languages,
+      languages,
       activeTab: "c",
       handleTab(lang) {
         this.activeTab = lang;
@@ -77,6 +107,7 @@ function main() {
 
   Alpine.data("main", () => ({
     page: location.hash,
+    themes,
     handleNav(page) {
       this.page = page;
     }
