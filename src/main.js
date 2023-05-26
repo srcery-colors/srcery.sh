@@ -1,8 +1,10 @@
 import Alpine from "alpinejs";
-import "highlight.js/styles/srcery.css";
-import hljs from "highlight.js/lib/core";
 
-// Languages
+// Highlight.js + theme (yay, srcery is builtin!)
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/srcery.css";
+
+// highlight.js languages
 import javascript from "highlight.js/lib/languages/javascript";
 import c from "highlight.js/lib/languages/c";
 import clj from "highlight.js/lib/languages/clojure";
@@ -20,7 +22,7 @@ import rusttxt from "./examples/rust.txt?raw";
 import bashtxt from "./examples/bash.txt?raw";
 import vimtxt from "./examples/vim.txt?raw";
 
-// Register
+// Register languages
 hljs.registerLanguage("c", c);
 hljs.registerLanguage("js", javascript);
 hljs.registerLanguage("clj", clj);
@@ -29,8 +31,11 @@ hljs.registerLanguage("rust", rust);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("vim", vim);
 
-
+// icons
 import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
+import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
+import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
+import emacssvg from "./svg/emacs.svg?raw";
 
 const languages = {
   c: {
@@ -74,22 +79,22 @@ const themes = {
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip"
   },
   emacs: {
-    icon: null,
-    url: null,
-    homepage: null,
-    download: null,
+    icon: emacssvg,
+    url: "https://www.gnu.org/software/emacs/",
+    homepage: "https://github.com/srcery-colors/srcery-emacs",
+    download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip"
   },
   vscode: {
-    icon: null,
-    url: null,
-    homepage: null,
-    download: null,
+    icon: vscodesvg,
+    url: "https://code.visualstudio.com/",
+    homepage: "https://github.com/srcery-colors/srcery-vscode",
+    download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors"
   },
   intellij: {
-    icon: null,
-    url: null,
-    homepage: null,
-    download: null,
+    icon: intellijsvg,
+    url: "https://www.jetbrains.com/idea/",
+    homepage: "https://github.com/srcery-colors/srcery-intellij",
+    download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
   }
 }
 

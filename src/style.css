@@ -37,7 +37,7 @@
   .tab-active {
     @apply border-e-2 border-s-2 border-t-2 border-b-transparent border-b-2
   }
-  .svg > svg > path {
+  .svg > svg > * {
     @apply fill-bright_white
   }
 }

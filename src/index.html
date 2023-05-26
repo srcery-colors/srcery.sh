@@ -96,12 +96,15 @@
         </div>
       </section>
       <section id="themes" class="w-full" x-show="page === '#themes'">
-        <div class="columns-4">
-          <div class="svg" x-html="themes.vim.icon">
-          </div>
-          <!-- <template x-for="theme in themes"> -->
-          <!--   <div>hello</div> -->
-          <!-- </template> -->
+        <div class="grid grid-cols-4 gap-5">
+          <template x-for="[k, v] in Object.entries(themes)">
+            <div class="flex flex-col items-center border-bright_black p-5 border">
+              <div class="svg w-24 h-24 mb-5" x-html="v.icon"></div>
+              <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="k"></a>
+              <a :href="v.homepage" target="_blank" class="link uppercase mb-5">homepage</a>
+              <a :href="v.download" target="_blank" class="link uppercase mb-5">download</a>
+            </div>
+          </template>
         </div>
       </section>
 
