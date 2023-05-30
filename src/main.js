@@ -37,6 +37,7 @@ import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
 import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
 import emacssvg from "./svg/emacs.svg?raw";
 import tmuxsvg from "./svg/tmux.svg?raw";
+import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
 
 const languages = {
   c: {
@@ -102,6 +103,12 @@ const themes = {
     url: "https://github.com/tmux/tmux",
     homepage: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip"
+  },
+  terminal: {
+    icon: bashsvg,
+    url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
+    homepage: "https://github.com/srcery-colors/srcery-terminal",
+    download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip"
   }
 }
 
