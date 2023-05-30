@@ -36,6 +36,7 @@ import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
 import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
 import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
 import emacssvg from "./svg/emacs.svg?raw";
+import tmuxsvg from "./svg/tmux.svg?raw";
 
 const languages = {
   c: {
@@ -95,6 +96,12 @@ const themes = {
     url: "https://www.jetbrains.com/idea/",
     homepage: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
+  },
+  tmux: {
+    icon: tmuxsvg,
+    url: "https://github.com/tmux/tmux",
+    homepage: "https://github.com/srcery-colors/srcery-tmux",
+    download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip"
   }
 }
 
