@@ -38,6 +38,7 @@ import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
 import emacssvg from "./svg/emacs.svg?raw";
 import tmuxsvg from "./svg/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
+import steamdecksvg from "./svg/steamdeck.svg?raw";
 
 const languages = {
   c: {
@@ -77,42 +78,42 @@ const themes = {
   vim: {
     icon: vimsvg,
     url: "https://www.vim.org/",
-    repository: "https://github.com/srcery-colors/srcery-vim",
+    repo: "https://github.com/srcery-colors/srcery-vim",
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
     keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"]
   },
   emacs: {
     icon: emacssvg,
     url: "https://www.gnu.org/software/emacs/",
-    repository: "https://github.com/srcery-colors/srcery-emacs",
+    repo: "https://github.com/srcery-colors/srcery-emacs",
     download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
     keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"]
   },
   vscode: {
     icon: vscodesvg,
     url: "https://code.visualstudio.com/",
-    repository: "https://github.com/srcery-colors/srcery-vscode",
+    repo: "https://github.com/srcery-colors/srcery-vscode",
     download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
     keywords: ["visual studio", "vscode", "microsoft", "code", "windows"]
   },
   intellij: {
     icon: intellijsvg,
     url: "https://www.jetbrains.com/idea/",
-    repository: "https://github.com/srcery-colors/srcery-intellij",
+    repo: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
     keywords: ["idea", "java", "intellij", "ide"]
   },
   tmux: {
     icon: tmuxsvg,
     url: "https://github.com/tmux/tmux",
-    repository: "https://github.com/srcery-colors/srcery-tmux",
+    repo: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
     keywords: ["tmux", "terminal", "multiplexer"]
   },
   terminal: {
     icon: bashsvg,
     url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
-    repository: "https://github.com/srcery-colors/srcery-terminal",
+    repo: "https://github.com/srcery-colors/srcery-terminal",
     download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
     keywords: [
       "terminal",
@@ -144,6 +145,13 @@ const themes = {
       "x11",
       "xorg"
     ]
+  },
+  steamdeck: {
+    icon: steamdecksvg,
+    url: "https://www.steamdeck.com/en/",
+    repo: "https://github.com/srcery-colors/srcery-steam-deck",
+    download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
+    keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"]
   }
 }
 
