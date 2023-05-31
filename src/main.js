@@ -39,6 +39,7 @@ import emacssvg from "./svg/emacs.svg?raw";
 import tmuxsvg from "./svg/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
 import steamdecksvg from "./svg/steamdeck.svg?raw";
+import insomniasvg from "./svg/insomnia.svg?raw";
 
 const languages = {
   c: {
@@ -159,6 +160,13 @@ const themes = {
     repo: "https://github.com/srcery-colors/srcery-steam-deck",
     download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"]
+  },
+  insomnia: {
+    icon: insomniasvg,
+    label: "insomnia",
+    url: "https://insomnia.rest/",
+    repo: "https://github.com/srcery-colors/srcery-insomnia",
+    download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip"
   }
 }
 
