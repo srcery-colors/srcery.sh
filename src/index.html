@@ -101,7 +101,7 @@
           <template x-for="[k, v] in Object.entries(themes)">
             <div class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border">
               <div class="svg w-24 h-24 mb-5" x-html="v.icon"></div>
-              <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="k"></a>
+              <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="v.label"></a>
               <a :href="v.repo" target="_blank" class="link uppercase mb-5">repository</a>
               <a :href="v.download" target="_blank" class="link uppercase mb-5">download</a>
             </div>

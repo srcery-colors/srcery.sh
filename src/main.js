@@ -77,6 +77,7 @@ const languages = {
 const themes = {
   vim: {
     icon: vimsvg,
+    label: "vim",
     url: "https://www.vim.org/",
     repo: "https://github.com/srcery-colors/srcery-vim",
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
@@ -84,6 +85,7 @@ const themes = {
   },
   emacs: {
     icon: emacssvg,
+    label: "emacs",
     url: "https://www.gnu.org/software/emacs/",
     repo: "https://github.com/srcery-colors/srcery-emacs",
     download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
@@ -91,6 +93,7 @@ const themes = {
   },
   vscode: {
     icon: vscodesvg,
+    label: "vscode",
     url: "https://code.visualstudio.com/",
     repo: "https://github.com/srcery-colors/srcery-vscode",
     download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
@@ -98,6 +101,7 @@ const themes = {
   },
   intellij: {
     icon: intellijsvg,
+    label: "intellij",
     url: "https://www.jetbrains.com/idea/",
     repo: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
@@ -105,6 +109,7 @@ const themes = {
   },
   tmux: {
     icon: tmuxsvg,
+    label: "tmux",
     url: "https://github.com/tmux/tmux",
     repo: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
@@ -112,6 +117,7 @@ const themes = {
   },
   terminal: {
     icon: bashsvg,
+    label: "terminals",
     url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
     repo: "https://github.com/srcery-colors/srcery-terminal",
     download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
@@ -148,6 +154,7 @@ const themes = {
   },
   steamdeck: {
     icon: steamdecksvg,
+    label: "steam deck",
     url: "https://www.steamdeck.com/en/",
     repo: "https://github.com/srcery-colors/srcery-steam-deck",
     download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
