@@ -77,42 +77,42 @@ const themes = {
   vim: {
     icon: vimsvg,
     url: "https://www.vim.org/",
-    homepage: "https://github.com/srcery-colors/srcery-vim",
+    repository: "https://github.com/srcery-colors/srcery-vim",
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
     keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"]
   },
   emacs: {
     icon: emacssvg,
     url: "https://www.gnu.org/software/emacs/",
-    homepage: "https://github.com/srcery-colors/srcery-emacs",
+    repository: "https://github.com/srcery-colors/srcery-emacs",
     download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
     keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"]
   },
   vscode: {
     icon: vscodesvg,
     url: "https://code.visualstudio.com/",
-    homepage: "https://github.com/srcery-colors/srcery-vscode",
+    repository: "https://github.com/srcery-colors/srcery-vscode",
     download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
     keywords: ["visual studio", "vscode", "microsoft", "code", "windows"]
   },
   intellij: {
     icon: intellijsvg,
     url: "https://www.jetbrains.com/idea/",
-    homepage: "https://github.com/srcery-colors/srcery-intellij",
+    repository: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
     keywords: ["idea", "java", "intellij", "ide"]
   },
   tmux: {
     icon: tmuxsvg,
     url: "https://github.com/tmux/tmux",
-    homepage: "https://github.com/srcery-colors/srcery-tmux",
+    repository: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
     keywords: ["tmux", "terminal", "multiplexer"]
   },
   terminal: {
     icon: bashsvg,
     url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
-    homepage: "https://github.com/srcery-colors/srcery-terminal",
+    repository: "https://github.com/srcery-colors/srcery-terminal",
     download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
     keywords: [
       "terminal",
