@@ -7,11 +7,11 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <title>Srcery Theme - Syntax theme with clearly defined contrasting colors and a slightly earthy tone</title>
   </head>
-  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4">
+  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
     <main
       x-data="main"
       @hashchange.window="page = location.hash"
-      class="flex items-center flex-col width-[448px] sm:w-[780px] min-w-0">
+      class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
       <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
         <a href="/" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
           <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
@@ -95,10 +95,10 @@
           </div>
         </div>
       </section>
-      <section id="themes" class="w-full" x-show="page === '#themes'">
-        <div class="grid grid-cols-4 gap-5">
+      <section class="w-full" x-show="page === '#themes'">
+        <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5">
           <template x-for="[k, v] in Object.entries(themes)">
-            <div class="flex flex-col items-center border-bright_black p-5 border">
+            <div class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border">
               <div class="svg w-24 h-24 mb-5" x-html="v.icon"></div>
               <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="k"></a>
               <a :href="v.homepage" target="_blank" class="link uppercase mb-5">homepage</a>
