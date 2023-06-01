@@ -199,9 +199,16 @@ function main() {
 
   Alpine.data("themes", () => ({
     query: "",
-    themes: themes.filter((theme) => {
-      return true
-    }),
+    themes() {
+      return themes.filter((theme) => {
+        const q = this.query.toLowerCase();
+        const matchesName = theme.name.includes(q);
+        const matchesKeyword = theme.keywords.some(kw => {
+          return kw.includes(q);
+        })
+        return matchesName || matchesKeyword;
+      })
+    },
     logQuery() {
       console.log(this.query);
     }
