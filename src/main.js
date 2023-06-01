@@ -201,7 +201,10 @@ function main() {
     query: "",
     themes: themes.filter((theme) => {
       return true
-    })
+    }),
+    logQuery() {
+      console.log(this.query);
+    }
   }))
 
   Alpine.data("main", () => ({
