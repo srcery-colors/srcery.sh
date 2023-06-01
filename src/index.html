@@ -100,8 +100,13 @@
         <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5">
           <template x-for="[k, v] in Object.entries(themes)">
             <div class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border">
-              <div class="svg w-24 h-24 mb-5" x-html="v.icon"></div>
-              <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="v.label"></a>
+              <div class="svg w-24 mb-5" x-html="v.icon"></div>
+              <template x-if="v.url">
+                <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="v.label"></a>
+              </template>
+              <template x-if="!v.url">
+                <span :href="v.url" target="_blank" class="uppercase mb-5" x-text="v.label"></span>
+              </template>
               <a :href="v.repo" target="_blank" class="link uppercase mb-5">repository</a>
               <a :href="v.download" target="_blank" class="link uppercase mb-5">download</a>
             </div>
