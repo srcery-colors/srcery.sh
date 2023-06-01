@@ -40,6 +40,8 @@ import tmuxsvg from "./svg/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
 import steamdecksvg from "./svg/steamdeck.svg?raw";
 import insomniasvg from "./svg/insomnia.svg?raw";
+import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
+import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
 
 const languages = {
   c: {
@@ -166,7 +168,22 @@ const themes = {
     label: "insomnia",
     url: "https://insomnia.rest/",
     repo: "https://github.com/srcery-colors/srcery-insomnia",
-    download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip"
+    download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
+    keywords: ["insomnia", "rest", "api"]
+  },
+  gui: {
+    icon: guisvg,
+    label: "assorted gui themes",
+    repo: "https://github.com/srcery-colors/srcery-gui",
+    download: "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
+    keywords: ["awesomewm", "bspwm", "i3wm", "oomox", "polybar", "qutebrowser", "rofi", "slack", "zathura"]
+  },
+  shell: {
+    icon: shellsvg,
+    label: "assorted shell themes",
+    repo: "https://github.com/srcery-colors/srcery-shell",
+    download: "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
+    keywords: ["broot", "cmus", "mutt", "newsboat", "vifm", "zellij"]
   }
 }
 
