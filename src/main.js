@@ -77,50 +77,50 @@ const languages = {
   }
 }
 
-const themes = {
-  vim: {
+const themes = [
+  {
+    name: "vim",
     icon: vimsvg,
-    label: "vim",
     url: "https://www.vim.org/",
     repo: "https://github.com/srcery-colors/srcery-vim",
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
     keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"]
   },
-  emacs: {
+  {
+    name: "emacs",
     icon: emacssvg,
-    label: "emacs",
     url: "https://www.gnu.org/software/emacs/",
     repo: "https://github.com/srcery-colors/srcery-emacs",
     download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
     keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"]
   },
-  vscode: {
+  {
+    name: "vscode",
     icon: vscodesvg,
-    label: "vscode",
     url: "https://code.visualstudio.com/",
     repo: "https://github.com/srcery-colors/srcery-vscode",
     download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
     keywords: ["visual studio", "vscode", "microsoft", "code", "windows"]
   },
-  intellij: {
+  {
+    name: "intellij",
     icon: intellijsvg,
-    label: "intellij",
     url: "https://www.jetbrains.com/idea/",
     repo: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
     keywords: ["idea", "java", "intellij", "ide"]
   },
-  tmux: {
+  {
+    name: "tmux",
     icon: tmuxsvg,
-    label: "tmux",
     url: "https://github.com/tmux/tmux",
     repo: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
     keywords: ["tmux", "terminal", "multiplexer"]
   },
-  terminal: {
+  {
+    name: "terminals",
     icon: bashsvg,
-    label: "terminals",
     url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
     repo: "https://github.com/srcery-colors/srcery-terminal",
     download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
@@ -155,37 +155,37 @@ const themes = {
       "xorg"
     ]
   },
-  steamdeck: {
+  {
+    name: "steam deck",
     icon: steamdecksvg,
-    label: "steam deck",
     url: "https://www.steamdeck.com/en/",
     repo: "https://github.com/srcery-colors/srcery-steam-deck",
     download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"]
   },
-  insomnia: {
+  {
+    name: "insomnia",
     icon: insomniasvg,
-    label: "insomnia",
     url: "https://insomnia.rest/",
     repo: "https://github.com/srcery-colors/srcery-insomnia",
     download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
     keywords: ["insomnia", "rest", "api"]
   },
-  gui: {
+  {
+    name: "assorted gui themes",
     icon: guisvg,
-    label: "assorted gui themes",
     repo: "https://github.com/srcery-colors/srcery-gui",
     download: "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
     keywords: ["awesomewm", "bspwm", "i3wm", "oomox", "polybar", "qutebrowser", "rofi", "slack", "zathura"]
   },
-  shell: {
+  {
+    name: "assorted shell themes",
     icon: shellsvg,
-    label: "assorted shell themes",
     repo: "https://github.com/srcery-colors/srcery-shell",
     download: "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
     keywords: ["broot", "cmus", "mutt", "newsboat", "vifm", "zellij"]
   }
-}
+]
 
 function main() {
 
@@ -195,18 +195,20 @@ function main() {
       activeTab: "c",
       handleTab(lang) {
         this.activeTab = lang;
-      },
-    }),
-  )
+      }}))
+
+  Alpine.data("themes", () => ({
+    query: "",
+    themes: themes.filter((theme) => {
+      return true
+    })
+  }))
 
   Alpine.data("main", () => ({
     page: location.hash,
-    themes,
     handleNav(page) {
       this.page = page;
-    }
-  }),
-  )
+    }}))
   Alpine.start()
 }
 

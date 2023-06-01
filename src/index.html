@@ -96,19 +96,19 @@
           </div>
         </div>
       </section>
-      <section class="w-full" x-show="page === '#themes'">
+      <section class="w-full" x-show="page === '#themes'" x-data="themes">
         <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5">
-          <template x-for="[k, v] in Object.entries(themes)">
+          <template x-for="theme in themes">
             <div class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border">
-              <div class="svg w-24 mb-5" x-html="v.icon"></div>
-              <template x-if="v.url">
-                <a :href="v.url" target="_blank" class="link uppercase mb-5" x-text="v.label"></a>
+              <div class="svg w-24 mb-5" x-html="theme.icon"></div>
+              <template x-if="theme.url">
+                <a :href="theme.url" target="_blank" class="link uppercase mb-5" x-text="theme.name"></a>
               </template>
-              <template x-if="!v.url">
-                <span :href="v.url" target="_blank" class="uppercase mb-5" x-text="v.label"></span>
+              <template x-if="!theme.url">
+                <span :href="theme.url" target="_blank" class="uppercase mb-5" x-text="theme.name"></span>
               </template>
-              <a :href="v.repo" target="_blank" class="link uppercase mb-5">repository</a>
-              <a :href="v.download" target="_blank" class="link uppercase mb-5">download</a>
+              <a :href="theme.repo" target="_blank" class="link uppercase mb-5">repository</a>
+              <a :href="theme.download" target="_blank" class="link uppercase mb-5">download</a>
             </div>
           </template>
         </div>
