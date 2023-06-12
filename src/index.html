@@ -136,9 +136,37 @@
       </section>
 
       <section class="w-full" x-show="page === '#resources'">
-        hello resources
-      </section>
+        <h2 class="text-xl mb-3">Resources</h2>
+        <p class="text-justify mb-5">
+          Here are collected miscellaneous Srcery resources. In addition to
+          themes Srcery has some tools and packages to assist in creating
+          new themes, or things that didn't fit anywhere else.
+        </p>
+        <h3 class="mb-3">Palette</h3>
+        <p class="mb-3">
+          In an attempt to create a single source of truth concerning the
+          palette used in various themes, an npm package was created that
+          contains a JSON with all color information.
+        </p>
+        <p class="mb-3">
+          It isn't used in every project, but every change to the palette will
+          happen there first, and produce a new version of this package going
+          forward.
+        </p>
+        <p class="mb-3">Install using this command or check out the links below:</p>
 
+        <code class="flex mb-3 p-4 bg-hard_black">
+          npm i @srcery-colors/srcery-palette
+        </code>
+        <ul class="list-disc list-inside">
+          <li class="mb-2">
+            <a class="link" href="https://github.com/srcery-colors/srcery-palette">Repository</a>
+          </li>
+          <li>
+            <a class="link" href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">npm package</a>
+          </li>
+        </ul>
+      </section>
       <section class="w-full" x-show="page === '#community'">
         hello community
       </section>
