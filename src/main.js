@@ -159,8 +159,8 @@ const themes = [
     name: "steam",
     icon: steamsvg,
     url: "https://www.steampowered.com",
-    repo: "https://github.com/srcery-colors/srcery-steam-deck",
-    download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
+    repo: "https://github.com/srcery-colors/srcery-steam-themes",
+    download: "https://github.com/srcery-colors/srcery-steam-themes/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"]
   },
   {
