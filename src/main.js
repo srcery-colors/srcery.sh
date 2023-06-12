@@ -43,6 +43,9 @@ import insomniasvg from "./svg/insomnia.svg?raw";
 import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
 import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
 
+import githubsvg from "@fortawesome/fontawesome-free/svgs/brands/github.svg?raw";
+import npmsvg from "@fortawesome/fontawesome-free/svgs/brands/npm.svg?raw";
+
 const languages = {
   c: {
     html: hljs.highlight(ctxt, {language: "c"}).value,
@@ -75,6 +78,11 @@ const languages = {
     html: hljs.highlight(vimtxt, { language: "vim" }).value,
     name: "Vim"
   }
+}
+
+const icons = {
+  github: githubsvg,
+  npm: npmsvg
 }
 
 const themes = [
@@ -187,6 +195,11 @@ const themes = [
   }
 ]
 
+function fetchPkgVersion() {
+
+}
+
+
 function main() {
 
   window.Alpine = Alpine
@@ -216,6 +229,7 @@ function main() {
 
   Alpine.data("main", () => ({
     page: location.hash,
+    icons,
     handleNav(page) {
       this.page = page;
     }}))

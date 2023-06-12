@@ -136,13 +136,13 @@
       </section>
 
       <section class="w-full" x-show="page === '#resources'">
-        <h2 class="text-xl mb-3">Resources</h2>
+        <h2 class="text-xl mb-3 text-center sm:text-left uppercase">Resources</h2>
         <p class="text-justify mb-5">
           Here are collected miscellaneous Srcery resources. In addition to
           themes Srcery has some tools and packages to assist in creating
           new themes, or things that didn't fit anywhere else.
         </p>
-        <h3 class="mb-3">Palette</h3>
+        <h3 class="mb-3 text-center sm:text-left uppercase">Palette</h3>
         <p class="mb-3">
           In an attempt to create a single source of truth concerning the
           palette used in various themes, an npm package was created that
@@ -155,15 +155,23 @@
         </p>
         <p class="mb-3">Install using this command or check out the links below:</p>
 
-        <code class="flex mb-3 p-4 bg-hard_black">
+        <code class="whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black">
           npm i @srcery-colors/srcery-palette
         </code>
-        <ul class="list-disc list-inside">
-          <li class="mb-2">
-            <a class="link" href="https://github.com/srcery-colors/srcery-palette">Repository</a>
+        <ul class="list-disc">
+          <li class="mb-2 flex items-center">
+            <div class="list-dot"></div>
+            <a target="_blank" class="link flex items-center" href="https://github.com/srcery-colors/srcery-palette">
+              <div class="svg mr-2 w-5" x-html="icons.github"></div>
+              Github repository
+            </a>
           </li>
-          <li>
-            <a class="link" href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">npm package</a>
+          <li class="flex items-center">
+            <div class="list-dot"></div>
+            <a target="_blank" class="flex items-center link" href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">
+              <div class="svg mr-2 w-8" x-html="icons.npm"></div>
+              npm package
+            </a>
           </li>
         </ul>
       </section>

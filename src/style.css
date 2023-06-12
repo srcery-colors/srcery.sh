@@ -40,6 +40,12 @@
   .svg > svg > * {
     @apply fill-bright_white
   }
+  .code {
+    @apply whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black
+  }
+  .list-dot {
+    @apply w-[5px] h-[5px] bg-bright_white rounded-full mr-2
+  }
 }
 
 html,body {
