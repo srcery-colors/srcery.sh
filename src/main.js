@@ -38,7 +38,7 @@ import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
 import emacssvg from "./svg/emacs.svg?raw";
 import tmuxsvg from "./svg/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
-import steamdecksvg from "./svg/steamdeck.svg?raw";
+import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
 import insomniasvg from "./svg/insomnia.svg?raw";
 import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
 import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
@@ -156,9 +156,9 @@ const themes = [
     ]
   },
   {
-    name: "steam deck",
-    icon: steamdecksvg,
-    url: "https://www.steamdeck.com/en/",
+    name: "steam",
+    icon: steamsvg,
+    url: "https://www.steampowered.com",
     repo: "https://github.com/srcery-colors/srcery-steam-deck",
     download: "https://github.com/srcery-colors/srcery-steam-deck/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"]
