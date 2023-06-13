@@ -195,11 +195,6 @@ const themes = [
   }
 ]
 
-function fetchPkgVersion() {
-
-}
-
-
 function main() {
 
   window.Alpine = Alpine
@@ -230,6 +225,17 @@ function main() {
   Alpine.data("main", () => ({
     page: location.hash,
     icons,
+    init() {
+      this.fetchPkgVersion();
+    },
+    version: false,
+    fetchPkgVersion() {
+      const json = fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette").then(res => {
+        return res.json().then(json => {
+          this.version = json["dist-tags"].latest;
+        })
+      });
+    },
     handleNav(page) {
       this.page = page;
     }}))
