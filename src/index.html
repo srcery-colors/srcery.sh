@@ -143,7 +143,7 @@
           new themes, or things that didn't fit anywhere else.
         </p>
         <h3 class="mb-3 text-center sm:text-left uppercase">Palette</h3>
-        <p class="mb-3">
+        <p class="mb-3" x-show="version">
           <span class="">Latest version:</span>
           <a
             href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
@@ -165,7 +165,7 @@
         <code class="whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black">
           npm i @srcery-colors/srcery-palette
         </code>
-        <ul class="list-disc">
+        <ul class="mb-5">
           <li class="mb-2 flex items-center">
             <div class="list-dot"></div>
             <a target="_blank" class="link flex items-center" href="https://github.com/srcery-colors/srcery-palette">
@@ -181,6 +181,25 @@
                 <span class="mr-1">npm package</span>
                 <span x-show="version">(<strong x-show="version" x-text="version"></strong>)</span>
               </div>
+            </a>
+          </li>
+        </ul>
+        <h2 class="text-xl mb-3 text-center sm:text-left uppercase">Web assets</h2>
+        <p class="mb-3">Aside from the palette itself, here are some useful web assets</p>
+        <ul class="mb-5 list-disc list-inside">
+          <li class="mb-2">
+            <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/tailwind">
+              Tailwind config
+            </a>
+          </li>
+          <li class="mb-2">
+            <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/tridactyl">
+              Tridactyl theme <span class="text-sm text-white">(this will be moved to a new repo soon)</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/userstyles">
+              User styles <span class="text-sm text-white">(using stylish extension for example)</span>
             </a>
           </li>
         </ul>
