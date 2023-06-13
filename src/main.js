@@ -228,11 +228,11 @@ function main() {
     init() {
       this.fetchPkgVersion();
     },
-    version: false,
+    version: undefined,
     fetchPkgVersion() {
-      const json = fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette").then(res => {
-        return res.json().then(json => {
-          this.version = json["dist-tags"].latest;
+      fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette").then(res => {
+        res.json().then(json => {
+          this.version = json?.["dist-tags"]?.latest;
         })
       });
     },
