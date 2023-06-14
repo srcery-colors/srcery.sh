@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta name="description" content="Homepage to the srcery syntax theme">
+    <title>Srcery Theme - Syntax theme with clearly defined contrasting colors and a slightly earthy tone</title>
+  </head>
+  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
+    <main x-data="state" class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
+      <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
+        <a href="/" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
+          <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
+            <img alt="srcery glyph" class="" src="../svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="bg-triangle bg-no-repeat min-h-[546px] pt-[30%] hidden sm:flex min-w-full bg-center align-center justify-center">
+            <img alt="srcery glyph" src="../svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="mt-4 sm:mt-[-18%] flex items-center">
+            <div class="flex mr-2">
+              <div class="dot bg-xgray2"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray10"></div>
+            </div>
+            <h1 class="uppercase text-6xl">srcery</h1>
+            <div class="flex ml-2">
+              <div class="dot bg-xgray10"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray2"></div>
+            </div>
+          </div>
+        </a>
+        <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
+          <span class="w-full text-left">
+            <a href="/themes/" class="link uppercase">themes</a>
+          </span>
+          <span class="w-full text-center">
+            <a href="/resources/" class="link uppercase">resources</a>
+          </span>
+          <span class="w-full text-right">
+            <a href="/community/" class="link uppercase">community</a>
+          </span>
+        </nav>
+      </header>
+      <section class="flex flex-col w-full">
+        <form class="flex justify-center">
+          <div class="relative mb-8 max-w-sm sm:max-w-full w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-bright_black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <input
+              type="filter"
+              x-model="query"
+              class="block w-full p-4 pl-10 placeholder-bright_black text-sm text-bright_white border-2 border-bright_black bg-black focus:border-bright_white focus:outline-none"
+              placeholder="Search for a theme..."
+              required>
+          </div>
+        </form>
+        <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <template x-for="theme in themes">
+            <div class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border-2">
+              <div class="svg w-24 mb-5" x-html="theme.icon"></div>
+              <template x-if="theme.url">
+                <a :href="theme.url" target="_blank" class="link uppercase mb-5" x-text="theme.name"></a>
+              </template>
+              <template x-if="!theme.url">
+                <span :href="theme.url" target="_blank" class="uppercase mb-5" x-text="theme.name"></span>
+              </template>
+              <a :href="theme.repo" target="_blank" class="link uppercase mb-5">repository</a>
+              <a :href="theme.download" target="_blank" class="link uppercase mb-5">download</a>
+            </div>
+          </template>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
