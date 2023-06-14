@@ -29,22 +29,25 @@
     @apply border-b border-dotted hover:text-white border-white;
   }
   .tab {
-    @apply px-4 flex border-bright_black items-end justify-center pt-1 grow
+    @apply px-4 flex border-bright_black items-end justify-center pt-1 grow;
   }
   .tab-inactive {
-    @apply border-b-2 hover:bg-xgray1
+    @apply border-b-2 hover:bg-xgray1;
   }
   .tab-active {
-    @apply border-e-2 border-s-2 border-t-2 border-b-transparent border-b-2
+    @apply border-e-2 border-s-2 border-t-2 border-b-transparent border-b-2;
   }
   .svg > svg > * {
-    @apply fill-bright_white
+    @apply fill-bright_white;
   }
   .code {
-    @apply whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black
+    @apply whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black;
+  }
+  .inline-code {
+    @apply whitespace-nowrap bg-hard_black p-1;
   }
   .list-dot {
-    @apply w-[5px] h-[5px] bg-bright_white rounded-full mr-2
+    @apply w-[5px] h-[5px] bg-bright_white rounded-full mr-2;
   }
 }
 
