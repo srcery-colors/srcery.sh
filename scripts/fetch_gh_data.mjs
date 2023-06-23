@@ -8,9 +8,13 @@ import fs from 'node:fs';
 import { resolve, dirname, join } from 'path'
 import { fileURLToPath } from 'url';
 
+// ECMAScript doesn't define __dirname, this is a workaround
+// https://stackoverflow.com/a/64383997/4306379
+// Might not need this, can use relative paths but I've been burned before
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Define options passed to a get request using octokit
 const options = {
   org: "srcery-colors",
   headers: {
@@ -18,6 +22,11 @@ const options = {
   },
 }
 
+// If you want to use this script locally you need to define an environment var
+// named GH_TOKEN. It can be a personal access token with no permissions other
+// than public info. We just need to get around the rate limit, all the data is
+// available publicly, but this script without auth hits the rate limit after
+// two passes.
 const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
 });
@@ -51,7 +60,11 @@ async function fetchMembers() {
   let resp = await octokit .request("GET /orgs/{org}/public_members", options);
   return resp.data;
 }
-// Entry
+
+// ENTRY:
+// Fetch and compile data then write to src/github.json. This file is not
+// tracked, so it needs be generated either by manually calling the script, or
+// via a build action (remember to define GH_TOKEN)
 async function main() {
   const contributors = await fetchContributors();
   const members = await fetchMembers();
