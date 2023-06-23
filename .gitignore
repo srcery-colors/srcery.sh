@@ -12,3 +12,4 @@ dist
 parcel-debug*
 dist
 .parcel-cache
+*.tmp
