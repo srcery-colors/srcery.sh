@@ -71,10 +71,19 @@ async function main() {
         error = true;
         console.error(err)
       };
-      console.log("Github organization contribution data written to file!");
   });
   if (error) return 1
+  console.log("Github organization contribution data written to file!");
   return 0;
 }
 
-ps.exit(await main());
+try {
+  ps.exit(await main());
+} catch (error) {
+  if (error.response) {
+    console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
+  }
+  console.error(error)
+  ps.exit(1);
+}
+
