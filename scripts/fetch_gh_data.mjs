@@ -42,10 +42,22 @@ async function fetchContributors() {
   return uniqBy(f, x =>  x.login)
 }
 
+async function fetchMembers() {
+  let resp = await octokit .request("GET /orgs/{org}/public_members", options);
+  return resp.data;
+}
 // Entry
 async function main() {
-  const contibutors = await fetchContributors();
-  console.log(contibutors)
+  const contributors = await fetchContributors();
+  const members = await fetchMembers();
+  const memberIds = members.map(x => x.id);
+  const obj = {
+    members: await fetchMembers(),
+    contributors: contributors.filter(c => {
+      return !memberIds.includes(c.id)
+    })
+  }
+  console.log(obj);
   return 0;
 }
 
