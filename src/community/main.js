@@ -1,5 +1,13 @@
+import Alpine from "alpinejs";
+import github from "../github.json";
 function main() {
-  console.log("hello community")
+  window.Alpine = Alpine
+  Alpine.data("state", () => ({
+    github
+  }))
+
+  Alpine.start()
+  console.log(github);
 }
 
 main();
