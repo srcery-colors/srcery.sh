@@ -60,7 +60,7 @@
                 :href="user.html_url"
                 target="_blank"
                 class="flex flex-col items-center border-2 border-bright_black hover:border-bright_white hover:cursor-pointer p-4">
-                <img :src="user.avatar_url" alt="github user avatar" class="w-1/2 rounded-full mb-2">
+                <img :src="user.avatar_url" alt="github user avatar" class="p-1 border-4 border-bright_black w-1/2 rounded-full mb-2">
                 <div x-text="user.login"></div>
               </a>
             </template>
@@ -76,7 +76,7 @@
                 :href="user.html_url"
                 target="_blank"
                 class="flex break-all flex-col items-center border-2 border-bright_black hover:border-bright_white hover:cursor-pointer p-4">
-                <img :src="user.avatar_url" alt="github user avatar" class="w-1/2 rounded-full mb-2">
+                <img :src="user.avatar_url" alt="github user avatar" class="p-1 w-1/2 border-4 border-bright_black rounded-full mb-2">
                 <div class="break-word" x-text="user.login"></div>
               </a>
             </template>
