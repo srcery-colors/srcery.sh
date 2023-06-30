@@ -33,29 +33,40 @@ function newOctokit() {
       auth: process.env.GH_TOKEN,
     });
   }
-
   console.error("No GH_TOKEN found, proceeding with no authentication...")
   return new Octokit({});
 }
 
 const octokit = newOctokit();
 
-// Takes a url, passes it to octokit
-async function fetchUrl(url) {
-  const resp = await octokit.request(url, options)
-  return resp.data;
+function printExit(error) {
+  if (error.response) {
+    console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`);
+  }
+  console.error(error);
+  ps.exit(1);
 }
 
-// Fetch a list of contributors
-// Iterate through all public repos, getting contributors, flatten, and filter
-// out dups
+
+// Dispatch request and handle error
+// Will exit on first error
+async function fetchUrl(url) {
+  try {
+    return await octokit.request(url, options)
+  } catch(error) {
+    printExit(error);
+  }
+}
+
+// Fetch a list of contributors. Iterate through all public repos, getting
+// contributors, flatten, and filter out dups
 async function fetchContributors() {
-  let resp = await octokit.request("GET /orgs/{org}/repos", options);
+  let resp = await fetchUrl("GET /orgs/{org}/repos");
   const urls = resp.data.map(x => x.contributors_url);
 
   resp = await Promise.all(
     urls.map(url => {
-      return octokit.request(url, options).then(result => {
+      return fetchUrl(url).then(result => {
         return result.data;
       });
     })
@@ -66,10 +77,9 @@ async function fetchContributors() {
 
 // Fetch members, used to filter out from contributors
 async function fetchMembers() {
-  let resp = await octokit.request("GET /orgs/{org}/public_members", options);
+  let resp = await fetchUrl("GET /orgs/{org}/public_members");
   return resp.data;
 }
-
 // ENTRY:
 // Fetch and compile data then write to src/github.json. This file is not
 // tracked, so it needs be generated either by manually calling the script, or
@@ -99,13 +109,4 @@ async function main() {
   return 0;
 }
 
-try {
-  ps.exit(await main());
-} catch (error) {
-  if (error.response) {
-    console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
-  }
-  console.error(error)
-  ps.exit(1);
-}
-
+ps.exit(await main());
