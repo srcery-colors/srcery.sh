@@ -5,8 +5,8 @@
   "description": "Srcery theme landing page",
   "homepage": "https://srcery.sh",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "start": "node scripts/fetch_gh_data.mjs && vite",
+    "build": "node scripts/fetch_gh_data.mjs && vite build",
     "preview": "vite preview",
     "clean": "rm src/github.json"
   },
