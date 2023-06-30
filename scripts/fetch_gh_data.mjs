@@ -27,9 +27,18 @@ const options = {
 // than public info. We just need to get around the rate limit, all the data is
 // available publicly, but this script without auth hits the rate limit after
 // two passes.
-const octokit = new Octokit({
-  auth: process.env.GH_TOKEN,
-});
+function newOctokit() {
+  if (process.env.GH_TOKEN) {
+    return new Octokit({
+      auth: process.env.GH_TOKEN,
+    });
+  }
+
+  console.error("No GH_TOKEN found, proceeding with no authentication...")
+  return new Octokit({});
+}
+
+const octokit = newOctokit();
 
 // Takes a url, passes it to octokit
 async function fetchUrl(url) {
