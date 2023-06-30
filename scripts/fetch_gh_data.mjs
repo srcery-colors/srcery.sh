@@ -92,6 +92,7 @@ async function main() {
     members: members,
     contributors: contributors.filter(c => {
       return !memberIds.includes(c.id)
+        && !c.login.includes("dependabot");
     })
   }
   let error = false;
