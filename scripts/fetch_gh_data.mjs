@@ -66,7 +66,7 @@ async function fetchContributors() {
 
 // Fetch members, used to filter out from contributors
 async function fetchMembers() {
-  let resp = await octokit .request("GET /orgs/{org}/public_members", options);
+  let resp = await octokit.request("GET /orgs/{org}/public_members", options);
   return resp.data;
 }
 
