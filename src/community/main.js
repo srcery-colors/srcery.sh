@@ -10,7 +10,6 @@ function main() {
   }))
 
   Alpine.start()
-  console.log(github);
 }
 
 main();
