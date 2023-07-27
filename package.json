@@ -9,7 +9,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm src/github.json"
+    "clean": "rm -f src/github.json"
   },
   "repository": {
     "type": "git",
