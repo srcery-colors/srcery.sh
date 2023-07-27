@@ -77,7 +77,7 @@ To build for production, make sure you have a copy of the `github.json` file in 
 npm run build
 ```
 
-Alternatively you can run
+Alternatively you can run:
 
 ```
 npm run preview
