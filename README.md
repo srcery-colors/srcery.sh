@@ -44,7 +44,7 @@ Install dependencies:
 npm install
 ```
 
-Fetch github data
+Fetch GitHub data
 
 ```
 npm run fetch
