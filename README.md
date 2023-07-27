@@ -56,7 +56,7 @@ Running the development server
 npm start
 ```
 
-Runs a live reload vite server, see `stdout` for port
+Runs a live reload Vite server, see `stdout` for port
 
 ### Github token
 
