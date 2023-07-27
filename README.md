@@ -60,8 +60,8 @@ Runs a live reload Vite server, see `stdout` for port
 
 ### Github token
 
-The fetch script fetches github data, you should be able to fetch a few times
-before the rate limit it reached
+The fetch script fetches GitHub data, you should be able to fetch a few times
+before the rate limit it reached.
 
 If you do hit the rate limit when trying to fetch data, create a scoped auth
 token, doesn't need any permissions, and define it in the environment variable
