@@ -83,7 +83,7 @@ Alternatively you can run:
 npm run preview
 ```
 
-To preview the production build on a local server
+To preview the production build on a local server.
 
 ## License
 
