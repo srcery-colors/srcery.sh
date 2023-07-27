@@ -17,5 +17,8 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Fetch data
+        run: npm run fetch
+
       - name: Run tests (build is okay)
         run: npm run build
