@@ -58,7 +58,7 @@ npm start
 
 Runs a live reload Vite server, see `stdout` for port
 
-### Github token
+### GitHub token
 
 The fetch script fetches GitHub data, you should be able to fetch a few times
 before the rate limit it reached.
