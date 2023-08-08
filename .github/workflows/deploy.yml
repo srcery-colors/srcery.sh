@@ -32,7 +32,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
       - run: npm ci
-      - run: npm fetch
+      - run: npm run fetch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run build --if-present
