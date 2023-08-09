@@ -77,13 +77,14 @@ To build for production, make sure you have a copy of the `github.json` file in 
 npm run build
 ```
 
-Alternatively you can run:
+If you want to serve the dist output you can run:
 
 ```
 npm run preview
 ```
 
-To preview the production build on a local server.
+> NOTE: ./dist folder needs to be built for the preview server to work
+
 
 ## License
 
