@@ -7,7 +7,7 @@
   "scripts": {
     "fetch": "node scripts/fetch_gh_data.mjs",
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "clean": "rm -f src/github.json"
   },
