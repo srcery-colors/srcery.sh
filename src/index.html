@@ -1,461 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Srcery - Dark Color Scheme</title>
-    <meta name="author" content="Srcery Team" />
-    <meta
-      name="description"
-      content="Site made to preview the Srcery color scheme. Includes
-      screenshots for various languages."
-    />
-    <meta property="og:title" content="Srcery - Dark Color Scheme" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://srcery-colors.github.io" />
-    <meta
-      property="og:description"
-      content="Site made to preview the Srcery color scheme. Includes
-      screenshots for various languages."
-    />
-    <link rel="canonical" href="https://srcery-colors.github.io" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./images/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="./images/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-config"
-      content="./images/favicon/browserconfig.xml"
-    />
-    <meta name="theme-color" content="#ffffff" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="description" content="Homepage to the Srcery syntax theme">
+    <title>Srcery Theme - Syntax theme with clearly defined contrasting colors and a slightly earthy tone</title>
   </head>
-  <body class="bg-hard_black text-brightwhite">
-    <div class="fixed right-0 top-0 h-16 w-16 md:h-24 md:w-24">
-      <a
-        href="https://github.com/srcery-colors"
-        class="github-corner"
-        aria-label="View source on Github"
-      >
-        <svg class="text-brightwhite" viewBox="0 0 250 250" aria-hidden="true">
-          <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-          <path
-            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-            fill="currentColor"
-            style="transform-origin: 130px 106px"
-            class="octo-arm"
-          ></path>
-          <path
-            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-            fill="currentColor"
-            class="octo-body"
-          ></path>
-        </svg>
-      </a>
-    </div>
-
-    <div>
-      <header
-        class="border-b-2 border-brightwhite bg-xgray2 text-center font-iosevka"
-      >
-        <div class="py-4 md:py-6">
-          <h1 class="text-2xl uppercase md:text-4xl lg:text-5xl">srcery</h1>
-          <p>a dark color scheme</p>
-        </div>
+  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
+    <main
+      x-data="state"
+      class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
+      <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
+        <a href="/" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
+          <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
+            <img alt="Srcery glyph" src="svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="bg-triangle bg-no-repeat min-h-[546px] pt-[30%] hidden sm:flex min-w-full bg-center align-center justify-center">
+            <img alt="Srcery glyph" src="svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="mt-4 sm:mt-[-18%] flex items-center">
+            <div class="flex mr-2">
+              <div class="dot bg-xgray2"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray10"></div>
+            </div>
+            <h1 class="uppercase text-6xl">Srcery</h1>
+            <div class="flex ml-2">
+              <div class="dot bg-xgray10"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray2"></div>
+            </div>
+          </div>
+        </a>
+        <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
+          <span class="w-full text-left">
+            <a href="/themes/" class="link uppercase">themes</a>
+          </span>
+          <span class="w-full text-center">
+            <a href="/resources/" class="link uppercase">resources</a>
+          </span>
+          <span class="w-full text-right">
+            <a href="/community/" class="link uppercase">community</a>
+          </span>
+        </nav>
       </header>
-      <main
-        class="container mx-auto my-8 flex flex-col items-center px-2 text-center font-iosevka sm:px-0 md:my-12"
-      >
-        <div class="flex flex-row items-center justify-center">
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-red sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightred sm:h-24"></div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-green sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightgreen sm:h-24"></div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-yellow sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightyellow sm:h-24"></div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-blue sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightblue sm:h-24"></div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-magenta sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightmagenta sm:h-24"></div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-cyan sm:h-24"></div>
-            </div>
-            <div class="mx-1 w-6 flex-none">
-              <div class="h-12 bg-brightcyan sm:h-24"></div>
-            </div>
+      <section class="w-full">
+        <div class="text-justify mb-8">
+          <p class="mb-4">
+            Srcery is dark syntax highlighting color scheme with clearly defined
+            contrasting colors and a slightly earthy tone.
+          </p>
+          <p>
+            Created using colors that logically adheres to the 16 color base
+            palette of a terminal, while trying to retain its own identity. The
+            colors are designed to be easy on the eyes, yet contrast well with the
+            background for long sessions using an editor or terminal emulator.
+          </p>
+        </div>
+        <div class="w-full">
+          <h2 class="uppercase mb-4">Preview</h2>
+          <p class="mb-8">
+            Here's a few
+            <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code">Rosetta Code</a>
+            examples demoed using
+            <a class="link" href="https://highlightjs.org/">highlight.js</a>.
+            It'll give a general impression but see the
+            <a href="/themes/" class="link">themes</a>
+            for details about a specific editor/IDE.
+          </p>
+          <ul class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black">
+            <template x-for="(value, key) in languages">
+              <li class="flex flex-1">
+                <template x-if="key === activeTab">
+                  <a href="#" class="tab tab-active" @click.prevent="">
+                    <span x-text="value.name"></span>
+                  </a>
+                </template>
+                <template x-if="key !== activeTab">
+                  <a href="#" class="tab tab-inactive" @click.prevent="handleTab(key)">
+                    <span x-text="value.name"></span>
+                  </a>
+                </template>
+              </li>
+            </template>
+          </ul>
+          <div class="border-b-2 border-x-2 border-bright_black overflow-x-auto">
+            <pre id="preview" class="flex p-4">
+                <code class="font-iosevka" x-html="languages[activeTab].html">
+                </code>
+            </pre>
           </div>
         </div>
-        <section class="mt-8 max-w-2xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Introduction
-          </h2>
-          <p class="mb-4 text-justify">
-            <a
-              href="https://github.com/srcery-colors"
-              class="inline-block text-brightgreen no-underline antialiased hover:text-brightblue"
-            >
-              Srcery
-            </a>
-            is a color scheme with clearly defined contrasting colors and a
-            slightly earthy tone.
-          </p>
-          <p class="mb-4 sm:mb-8">~~~</p>
-          <p class="text-justify">
-            Created using colors that logically adheres to the 16 color base
-            palette of a given terminal, while trying to retain its own
-            identity. The colors are designed to be easy on the eyes yet
-            contrast well with the background for long sessions using an editor
-            or terminal emulator.
-          </p>
-        </section>
-        <section class="mt-8 max-w-2xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Implementations
-          </h2>
-          <p class="mb-4 text-justify">
-            Srcery initially started as a vim colorscheme, but has since then
-            branched out to multiple ports and implementations. It's an ongoing
-            process, and contributors are welcome.
-          </p>
-          <ul class="list-reset">
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-emacs"
-              >
-                Emacs
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-gui"
-              >
-                GUI Application Configurations
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-insomnia"
-              >
-                Insomnia
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-intellij"
-              >
-                IntelliJ
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-shell"
-              >
-                Shell Application Configurations
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-terminal"
-              >
-                Terminal Configurations
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-tmux"
-              >
-                tmux
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-vim"
-              >
-                Vim
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-vscode"
-              >
-                Visual Studio Code
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/srcery-colors/srcery-web"
-              >
-                Web Assets
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="mt-8 max-w-2xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Social
-          </h2>
-          <a
-            href="https://discord.gg/G6vBMmZ"
-            aria-label="Join our
-          Discord!"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-40 fill-current"
-              viewBox="0 0 800 272.1"
-            >
-              <path
-                class="st0"
-                d="M142.8 120.1c-5.7 0-10.2 4.9-10.2 11s4.6 11 10.2 11c5.7 0 10.2-4.9 10.2-11s-4.6-11-10.2-11zM106.3 120.1c-5.7 0-10.2 4.9-10.2 11s4.6 11 10.2 11c5.7 0 10.2-4.9 10.2-11 .1-6.1-4.5-11-10.2-11z"
-              />
-              <path
-                class="st0"
-                d="M191.4 36.9h-134c-11.3 0-20.5 9.2-20.5 20.5v134c0 11.3 9.2 20.5 20.5 20.5h113.4l-5.3-18.3 12.8 11.8 12.1 11.1 21.6 18.7V57.4c-.1-11.3-9.3-20.5-20.6-20.5zm-38.6 129.5s-3.6-4.3-6.6-8c13.1-3.7 18.1-11.8 18.1-11.8-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.4-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.6-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.2-1.8-1-2.8-1.7-2.8-1.7s4.8 7.9 17.5 11.7c-3 3.8-6.7 8.2-6.7 8.2-22.1-.7-30.5-15.1-30.5-15.1 0-31.9 14.4-57.8 14.4-57.8 14.4-10.7 28-10.4 28-10.4l1 1.2c-18 5.1-26.2 13-26.2 13s2.2-1.2 5.9-2.8c10.7-4.7 19.2-5.9 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.5 0 0-7.9-7.5-24.9-12.6l1.4-1.6s13.7-.3 28 10.4c0 0 14.4 25.9 14.4 57.8 0-.1-8.4 14.3-30.5 15zM303.8 79.7h-33.2V117l22.1 19.9v-36.2h11.8c7.5 0 11.2 3.6 11.2 9.4v27.7c0 5.8-3.5 9.7-11.2 9.7h-34v21.1h33.2c17.8.1 34.5-8.8 34.5-29.2v-29.8c.1-20.8-16.6-29.9-34.4-29.9zm174 59.7v-30.6c0-11 19.8-13.5 25.8-2.5l18.3-7.4c-7.2-15.8-20.3-20.4-31.2-20.4-17.8 0-35.4 10.3-35.4 30.3v30.6c0 20.2 17.6 30.3 35 30.3 11.2 0 24.6-5.5 32-19.9l-19.6-9c-4.8 12.3-24.9 9.3-24.9-1.4zM417.3 113c-6.9-1.5-11.5-4-11.8-8.3.4-10.3 16.3-10.7 25.6-.8l14.7-11.3c-9.2-11.2-19.6-14.2-30.3-14.2-16.3 0-32.1 9.2-32.1 26.6 0 16.9 13 26 27.3 28.2 7.3 1 15.4 3.9 15.2 8.9-.6 9.5-20.2 9-29.1-1.8l-14.2 13.3c8.3 10.7 19.6 16.1 30.2 16.1 16.3 0 34.4-9.4 35.1-26.6 1-21.7-14.8-27.2-30.6-30.1zm-67 55.5h22.4V79.7h-22.4v88.8zM728 79.7h-33.2V117l22.1 19.9v-36.2h11.8c7.5 0 11.2 3.6 11.2 9.4v27.7c0 5.8-3.5 9.7-11.2 9.7h-34v21.1H728c17.8.1 34.5-8.8 34.5-29.2v-29.8c0-20.8-16.7-29.9-34.5-29.9zm-162.9-1.2c-18.4 0-36.7 10-36.7 30.5v30.3c0 20.3 18.4 30.5 36.9 30.5 18.4 0 36.7-10.2 36.7-30.5V109c0-20.4-18.5-30.5-36.9-30.5zm14.4 60.8c0 6.4-7.2 9.7-14.3 9.7-7.2 0-14.4-3.1-14.4-9.7V109c0-6.5 7-10 14-10 7.3 0 14.7 3.1 14.7 10v30.3zM682.4 109c-.5-20.8-14.7-29.2-33-29.2h-35.5v88.8h22.7v-28.2h4l20.6 28.2h28L665 138.1c10.7-3.4 17.4-12.7 17.4-29.1zm-32.6 12h-13.2v-20.3h13.2c14.1 0 14.1 20.3 0 20.3z"
-              />
-            </svg>
-          </a>
-        </section>
-        <section class="mt-8 max-w-2xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Merch
-          </h2>
-          <p class="mb-4 text-justify">
-            Get our brand new merchandise featuring the Srcery color scheme!
-            We're not making any profit from the sales, so you can show your
-            support by wearing and using the merch. Thank you for helping us
-            develop and improve our color scheme.
-          </p>
-          <ul class="list-reset">
-            <li>
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://merch.srcery.sh"
-              >
-                Teespring Storefront
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="mt-8 max-w-5xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Preview
-          </h2>
-          <div
-            class="flex flex-col flex-wrap px-1 sm:-mx-2 sm:px-2 lg:flex-row"
-          >
-            <div class="mb-4 w-full px-2 lg:w-1/2">
-              <a
-                class="glightbox outline-none"
-                data-gallery="gallery1"
-                data-glightbox="title: Bash / VimL"
-                href="./images/viml_bash.png"
-              >
-                <img alt="Bash/VimL" src="./images/viml_bash.min.png" />
-              </a>
-            </div>
-            <div class="mb-4 w-full px-2 lg:w-1/2">
-              <a
-                class="glightbox outline-none"
-                data-gallery="gallery1"
-                data-glightbox="title: Clojure / Elisp"
-                href="./images/lisp.png"
-              >
-                <img alt="Clojure" src="./images/lisp.min.png" />
-              </a>
-            </div>
-            <div class="mb-4 w-full px-2 lg:w-1/2">
-              <a
-                class="glightbox outline-none"
-                data-gallery="gallery1"
-                data-glightbox="title: C / Rust"
-                href="./images/c_rust.png"
-              >
-                <img alt="C/Rust" src="./images/c_rust.min.png" />
-              </a>
-            </div>
-            <div class="mb-4 w-full px-2 lg:w-1/2">
-              <a
-                class="glightbox outline-none"
-                data-gallery="gallery1"
-                data-glightbox="title: Python / JavaScript"
-                href="./images/py_js.png"
-              >
-                <img alt="Python/JavsScript" src="./images/py_js.min.png" />
-              </a>
-            </div>
-            <div class="mb-4 w-full px-2 lg:w-1/2">
-              <a
-                class="glightbox outline-none"
-                data-gallery="gallery1"
-                data-glightbox="title: Git / Terminal"
-                href="./images/git_term.png"
-              >
-                <img alt="Python/JavsScript" src="./images/git_term.min.png" />
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="mt-8 max-w-2xl md:mt-12">
-          <h2
-            class="mb-6 inline-block border-b-2 border-white font-iosevka text-2xl"
-          >
-            Attribution
-          </h2>
-          <p class="mb-4 text-justify">
-            This project started as essentially a palette swap of
-            <a
-              class="text-brightgreen no-underline antialiased hover:text-brightblue"
-              href="https://github.com/morhetz/gruvbox"
-              >Gruvbox</a
-            >
-            and all credit goes to the maintainers of that fantastic color
-            scheme. Project author wanted something a bit sharper, but loved the
-            syntax color choices of Gruvbox. He also tried to make the theme as
-            simple to use as possible, which was inspired by
-            <a
-              class="text-brightgreen no-underline antialiased hover:text-brightblue"
-              href="https://github.com/romainl/flattened"
-              >Flattened</a
-            >.
-          </p>
-          <p class="mb-1">Other influences:</p>
-          <ul class="list-reset">
-            <li class="inline-block">
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/sjl/badwolf"
-                >Badwolf</a
-              >
-            </li>
-            <li class="inline-block">
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="http://chriskempson.com/projects/base16/"
-                >Base16</a
-              >
-            </li>
-
-            <li class="inline-block">
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/nanotech/jellybeans.vim"
-                >Jellybeans</a
-              >
-            </li>
-            <li class="inline-block">
-              <a
-                class="text-brightgreen no-underline antialiased hover:text-brightblue"
-                href="https://github.com/tomasr/molokai"
-                >Molokai</a
-              >
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="bg-xgray2 p-4">
-        <p class="text-center tracking-wide">
-          Made with
-          <svg
-            class="inline-block h-3 w-3 fill-current align-middle text-red hover:text-green"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z"
-            />
-            <title>LOVE</title>
-          </svg>
-          by the
-          <a
-            class="text-yellow no-underline hover:text-magenta"
-            href="https://github.com/srcery-colors"
-            >srcery team</a
-          >.
-        </p>
-      </footer>
-    </div>
-    <script type="module" src="./js/main.js"></script>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

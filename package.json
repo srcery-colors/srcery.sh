@@ -1,34 +1,38 @@
 {
   "name": "srcery-colors-website",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
-  "description": "Website for promoting the Srcery color scheme.",
-  "homepage": "https://srcery-colors.github.io",
+  "description": "Srcery theme landing page",
+  "homepage": "https://srcery.sh",
+  "scripts": {
+    "fetch": "node scripts/fetch_gh_data.mjs",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -f src/github.json"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery-colors.github.io"
   },
   "license": "MIT",
   "author": "Srcery Team",
-  "scripts": {
-    "build": "NODE_ENV=production snowpack build",
-    "clean": "rm -fr ./dist",
-    "serve": "NODE_ENV=development snowpack dev"
-  },
-  "browserslist": [
-    "> 5%",
-    "last 2 version",
-    "not dead"
-  ],
-  "dependencies": {
-    "glightbox": "^3.2.0"
-  },
   "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.4.3",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
-    "postcss-import": "^15.1.0",
-    "snowpack": "^3.8.8",
-    "tailwindcss": "^3.3.3"
+    "eslint": "^8.42.0",
+    "htmlhint": "^1.1.4",
+    "lodash": "^4.17.21",
+    "octokit": "^2.1.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.4"
+
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@srcery-colors/srcery-palette": "^1.0.4",
+    "alpinejs": "^3.12.2",
+    "devicon": "^2.15.1",
+    "highlight.js": "^11.8.0"
   }
 }

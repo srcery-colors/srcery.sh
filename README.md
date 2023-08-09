@@ -1,22 +1,38 @@
-![Srcery Banner](https://raw.githubusercontent.com/srcery-colors/srcery-assets/master/title.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/srcery-colors/srcery-assets/master/src/logo_border.svg">
+</p>
 
-![Build & Deploy](https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg)
-[![Known Vulnerabilities](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json)](https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src?targetFile=package.json)
-[![GitHub license](https://img.shields.io/github/license/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/issues)
-[![GitHub forks](https://img.shields.io/github/forks/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/network)
-[![GitHub stars](https://img.shields.io/github/stars/srcery-colors/srcery-colors.github.io-src.svg)](https://github.com/srcery-colors/srcery-colors.github.io-src/stargazers)
+<p align="center">
+  <img src="https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg">
+  <a href="https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src?targetFile=package.json">
+    <img src="https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json">
+  </a>
+  <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg">
+  </a>
+  <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/issues">
+    <img src="https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg">
+  </a>
+  <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/network">
+    <img src="https://img.shields.io/github/forks/srcery-colors/srcery-colors.github.io-src.svg">
+  </a>
+  <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/stargazers">
+    <img src="https://img.shields.io/github/stars/srcery-colors/srcery-colors.github.io-src.svg">
+  </a>
+</p>
+
 
 ## Introduction
 
 This is the repo for the `srcery` website.  All contributions are
 welcome and encouraged.
 
-[View site](https://srcery-colors.github.io/)
+[View site](https://srcery.sh)
 
 ## Web Stack
 
-* [Snowpack](https://snowpack.dev)
+* [Vite](https://vitejs.dev/)
+* [Alpine.js](https://alpinejs.dev/)
 * [PostCSS](https://postcss.org)
 * [TailwindCSS](https://tailwindcss.com)
 
@@ -28,11 +44,46 @@ Install dependencies:
 npm install
 ```
 
-Building the site.  This opens the dev server in a new browser window/tab.
+Fetch GitHub data
+
+```
+npm run fetch
+```
+
+Running the development server
 
 ```sh
-npm run serve
+npm start
 ```
+
+Runs a live reload Vite server, see `stdout` for port
+
+### GitHub token
+
+The fetch script fetches GitHub data, you should be able to fetch a few times
+before the rate limit it reached.
+
+If you do hit the rate limit when trying to fetch data, create a scoped auth
+token, doesn't need any permissions, and define it in the environment variable
+`$GH_TOKEN` when running the fetch script.
+
+## Building for production
+
+- [Vite documentation](https://vitejs.dev/guide/build.html)
+
+To build for production, make sure you have a copy of the `github.json` file in `src`, then run:
+
+```
+npm run build
+```
+
+Alternatively you can run:
+
+```
+npm run preview
+```
+
+To preview the production build on a local server.
 
 ## License
 

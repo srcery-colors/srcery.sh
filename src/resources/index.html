@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <meta name="description" content="Look up various Srcery resources, here lives everything that is not a theme">
+    <title>Srcery Theme - Various resources</title>
+  </head>
+  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
+    <main x-data="state" class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
+      <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
+        <a href="/" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
+          <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
+            <img alt="Srcery glyph" src="../svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="bg-triangle bg-no-repeat min-h-[546px] pt-[30%] hidden sm:flex min-w-full bg-center align-center justify-center">
+            <img alt="Srcery glyph" src="../svg/glyph.svg" class="glyph w-logo h-logo">
+          </div>
+          <div class="mt-4 sm:mt-[-18%] flex items-center">
+            <div class="flex mr-2">
+              <div class="dot bg-xgray2"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray10"></div>
+            </div>
+            <h1 class="uppercase text-6xl">Srcery</h1>
+            <div class="flex ml-2">
+              <div class="dot bg-xgray10"></div>
+              <div class="dot bg-xgray7"></div>
+              <div class="dot bg-xgray2"></div>
+            </div>
+          </div>
+        </a>
+        <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
+          <span class="w-full text-left">
+            <a href="/themes/" class="link uppercase">themes</a>
+          </span>
+          <span class="w-full text-center">
+            <a href="/resources/" class="link uppercase text-bright_blue border-bright_blue">resources</a>
+          </span>
+          <span class="w-full text-right">
+            <a href="/community/" class="link uppercase">community</a>
+          </span>
+        </nav>
+      </header>
+
+      <section class="w-full">
+        <div class="mb-8">
+          <h2 class="text-xl mb-3 text-center sm:text-left uppercase">Resources</h2>
+          <p class="text-justify">
+            Here are collected miscellaneous Srcery resources. In addition to
+            themes, Srcery has some tools and packages to assist in creating
+            new themes, or things that didn't fit anywhere else.
+          </p>
+        </div>
+        <div class="mb-8">
+          <h3 class="mb-3 text-center sm:text-left uppercase">Palette</h3>
+          <p class="mb-4" x-show="version">
+            <span class="">Latest version:</span>
+            <a
+              href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
+              class="link" x-text="version">
+            </a>
+          </p>
+          <p class="mb-4">
+            In an attempt to create a single source of truth concerning the
+            palette used in various themes, a npm package was created that
+            contains a JSON with all color information.
+          </p>
+          <p class="mb-4">
+            It isn't used in every project, but every change to the palette will
+            happen there first, and will produce a new version of this package going
+            forward.
+          </p>
+          <p class="mb-4">Install using this command or check out the links below:</p>
+
+          <code class="code">
+            npm i @srcery-colors/srcery-palette
+          </code>
+          <ul class="">
+            <li class="mb-2 flex items-center">
+              <div class="list-dot"></div>
+              <a target="_blank" class="link flex items-center" href="https://github.com/srcery-colors/srcery-palette">
+                <div class="svg mr-2 w-5" x-html="icons.github"></div>
+                GitHub repository
+              </a>
+            </li>
+            <li class="flex items-center">
+              <div class="list-dot"></div>
+              <a target="_blank" class="flex items-center link" href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">
+                <div class="svg mr-2 w-8" x-html="icons.npm"></div>
+                <div>
+                  <span class="mr-1">npm package</span>
+                  <span x-show="version">(<strong x-show="version" x-text="version"></strong>)</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">Web assets</h2>
+          <p class="mb-4">Aside from the palette itself, here are some useful web assets.</p>
+          <ul class="list-disc list-inside">
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/tailwind">
+                Tailwind config
+              </a>
+            </li>
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/tridactyl">Tridactyl theme</a>
+              <span class="text-sm text-white">- This will be moved to a new repo soon</span>
+            </li>
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/userstyles">User styles</a>
+              <span class="text-sm text-white">- Using stylish extension for example</span>
+            </li>
+
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-web/tree/master/palette">Palette</a>
+              <span class="text-sm text-white">this is deprected for the palette above, kept for compatibility</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">Graphic assets</h2>
+          <p class="mb-4">
+            We keep graphic assets in a separate repo so not to inflate the
+            size of each theme. Source for SVGs of various
+            assets are kept in the <code class="inline-code">src</code> folder.
+          </p>
+          <p class="mb-4">
+            If you are looking for icons, logo, screenshots, etcetera, this is the place.
+          </p>
+          <ul class="list-disc list-inside">
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-assets">
+                GitHub repository
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">Miscellaneous</h2>
+          <p class="mb-4">
+            Here are some miscellaneous projects that don't really fit anywhere
+            else. Mostly experiments and and other bits and bobs.
+          </p>
+          <ul class="list-disc list-inside">
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-convert">Srcery Website</a>
+              <span class="text-sm text-white">- Source code for this site</span>
+            </li>
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-convert">Srcery Convert</a>
+              <span class="text-sm text-white">- Rust program to convert an input image palette to Srcery colors, your milage may vary</span>
+            </li>
+            <li class="mb-2">
+              <a target="_blank" class="link" href="https://github.com/srcery-colors/srcery-misc">Srcery Miscellaneous</a>
+              <span class="text-sm text-white">- Mostly unused files in here</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

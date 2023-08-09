@@ -12,3 +12,5 @@ dist
 parcel-debug*
 dist
 .parcel-cache
+*.tmp
+src/github.json
