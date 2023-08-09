@@ -9,40 +9,7 @@
   </head>
   <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
     <main x-data="state" class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
-      <header class="min-w-auto sm:min-w-[640px] sm:max-w-[640px] mb-8">
-        <a href="/" class="min-h-auto pt-2 sm:pt-0 sm:min-h-[546px] flex flex-col items-center mb-2">
-          <div class="flex sm:hidden p-5 rounded-full border-2 border-bright_black justify-center items-center">
-            <img alt="Srcery glyph" src="../svg/glyph.svg" class="glyph w-logo h-logo">
-          </div>
-          <div class="bg-triangle bg-no-repeat min-h-[546px] pt-[30%] hidden sm:flex min-w-full bg-center align-center justify-center">
-            <img alt="Srcery glyph" src="../svg/glyph.svg" class="glyph w-logo h-logo">
-          </div>
-          <div class="mt-4 sm:mt-[-18%] flex items-center">
-            <div class="flex mr-2">
-              <div class="dot bg-xgray2"></div>
-              <div class="dot bg-xgray7"></div>
-              <div class="dot bg-xgray10"></div>
-            </div>
-            <h1 class="uppercase text-6xl">Srcery</h1>
-            <div class="flex ml-2">
-              <div class="dot bg-xgray10"></div>
-              <div class="dot bg-xgray7"></div>
-              <div class="dot bg-xgray2"></div>
-            </div>
-          </div>
-        </a>
-        <nav class="flex justify-center max-w-[384px] sm:max-w-full flex grow justify-between">
-          <span class="w-full text-left">
-            <a href="/themes/" class="link uppercase text-bright_blue border-bright_blue">themes</a>
-          </span>
-          <span class="w-full text-center">
-            <a href="/resources/" class="link uppercase">resources</a>
-          </span>
-          <span class="w-full text-right">
-            <a href="/community/" class="link uppercase">community</a>
-          </span>
-        </nav>
-      </header>
+      {{> header themes=true }}
       <section class="flex flex-col w-full">
         <form class="flex justify-center">
           <div class="relative mb-8 max-w-sm sm:max-w-full w-full">
@@ -85,3 +52,4 @@
     <script type="module" src="main.js"></script>
   </body>
 </html>
+{{!--  vim: set ts=2 sw=2 tw=0 et ft=handlebars : --}}

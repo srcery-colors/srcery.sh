@@ -49,6 +49,9 @@
   .list-dot {
     @apply w-[5px] h-[5px] bg-bright_white rounded-full mr-2;
   }
+  .sel {
+    @apply text-bright_blue border-bright_blue
+  }
 }
 
 html,body {
