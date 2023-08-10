@@ -21,20 +21,19 @@
   </a>
 </p>
 
-
 ## Introduction
 
-This is the repo for the `srcery` website.  All contributions are
+This is the repo for the `srcery` website. All contributions are
 welcome and encouraged.
 
 [View site](https://srcery.sh)
 
 ## Web Stack
 
-* [Vite](https://vitejs.dev/)
-* [Alpine.js](https://alpinejs.dev/)
-* [PostCSS](https://postcss.org)
-* [TailwindCSS](https://tailwindcss.com)
+- [Vite](https://vitejs.dev/)
+- [Alpine.js](https://alpinejs.dev/)
+- [PostCSS](https://postcss.org)
+- [TailwindCSS](https://tailwindcss.com)
 
 ## Running Locally
 
@@ -84,7 +83,6 @@ pnpm run preview
 ```
 
 > NOTE: ./dist folder needs to be built for the preview server to work
-
 
 ## License
 

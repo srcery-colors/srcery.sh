@@ -5,11 +5,11 @@ import npmsvg from "@fortawesome/fontawesome-free/svgs/brands/npm.svg?raw";
 
 const icons = {
   github: githubsvg,
-  npm: npmsvg
-}
+  npm: npmsvg,
+};
 
 function main() {
-  window.Alpine = Alpine
+  window.Alpine = Alpine;
   Alpine.data("state", () => ({
     icons,
     init() {
@@ -17,14 +17,16 @@ function main() {
     },
     version: undefined,
     fetchPkgVersion() {
-      fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette").then(res => {
-        res.json().then(json => {
-          this.version = json?.["dist-tags"]?.latest;
-        })
-      });
+      fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette").then(
+        (res) => {
+          res.json().then((json) => {
+            this.version = json?.["dist-tags"]?.latest;
+          });
+        },
+      );
     },
-    }))
-  Alpine.start()
+  }));
+  Alpine.start();
 }
 
 main();

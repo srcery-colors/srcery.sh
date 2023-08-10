@@ -4,19 +4,26 @@
   "private": true,
   "description": "Srcery theme landing page",
   "homepage": "https://srcery.sh",
-  "scripts": {
-    "fetch": "node scripts/fetch_gh_data.mjs",
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "preview": "vite preview",
-    "clean": "rm -f src/github.json"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery.sh"
   },
   "license": "MIT",
   "author": "Srcery Team",
+  "scripts": {
+    "build": "vite build --emptyOutDir",
+    "clean": "rm -f src/github.json",
+    "fetch": "node scripts/fetch_gh_data.mjs",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@srcery-colors/srcery-palette": "^1.0.4",
+    "alpinejs": "^3.12.3",
+    "devicon": "^2.15.1",
+    "highlight.js": "^11.8.0"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "eslint": "^8.46.0",
@@ -30,13 +37,6 @@
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.4",
     "vite-plugin-handlebars": "^1.6.0"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "@srcery-colors/srcery-palette": "^1.0.4",
-    "alpinejs": "^3.12.3",
-    "devicon": "^2.15.1",
-    "highlight.js": "^11.8.0"
   },
   "packageManager": "pnpm@8.6.12"
 }
