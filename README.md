@@ -8,7 +8,7 @@
     <img src="https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json">
   </a>
   <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg">
+    <img src="https://img.shields.io/github/license/srcery-colors/srcery-colors.github.io-src.svg">
   </a>
   <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/issues">
     <img src="https://img.shields.io/github/issues/srcery-colors/srcery-colors.github.io-src.svg">
