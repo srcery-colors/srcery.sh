@@ -29,13 +29,23 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Use Node.js
+      - name: Setup pnpm & install packages
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
-      - run: npm ci
-      - run: npm run fetch
+        with:
+          cache: pnpm
+
+      - name: Fetch GitHub data
+        run: pnpm run fetch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm run build --if-present
+
+      - name: Build Website
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
