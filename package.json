@@ -4,29 +4,18 @@
   "private": true,
   "description": "Srcery theme landing page",
   "homepage": "https://srcery.sh",
-  "scripts": {
-    "fetch": "node scripts/fetch_gh_data.mjs",
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "preview": "vite preview",
-    "clean": "rm -f src/github.json"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/srcery-colors/srcery.sh"
   },
   "license": "MIT",
   "author": "Srcery Team",
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.46.0",
-    "htmlhint": "^1.1.4",
-    "lodash": "^4.17.21",
-    "octokit": "^3.1.0",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.2",
-    "vite": "^4.3.4",
-    "vite-plugin-handlebars": "^1.6.0"
+  "scripts": {
+    "build": "vite build --emptyOutDir",
+    "clean": "rm -f src/github.json",
+    "fetch": "node scripts/fetch_gh_data.mjs",
+    "preview": "vite preview",
+    "start": "vite"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
@@ -34,6 +23,20 @@
     "alpinejs": "^3.12.3",
     "devicon": "^2.15.1",
     "highlight.js": "^11.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "htmlhint": "^1.1.4",
+    "lodash": "^4.17.21",
+    "octokit": "^3.1.0",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.4",
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "packageManager": "pnpm@8.6.12"
 }

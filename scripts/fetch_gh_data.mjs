@@ -3,10 +3,10 @@
 import { Octokit } from "octokit";
 import uniqBy from "lodash/uniqBy.js";
 import flatten from "lodash/flatten.js";
-import ps from 'node:process';
-import fs from 'node:fs';
-import { resolve, dirname, join } from 'path'
-import { fileURLToPath } from 'url';
+import ps from "node:process";
+import fs from "node:fs";
+import { resolve, dirname, join } from "path";
+import { fileURLToPath } from "url";
 
 // ECMAScript doesn't define __dirname, this is a workaround
 // https://stackoverflow.com/a/64383997/4306379
@@ -20,7 +20,7 @@ const options = {
   headers: {
     "X-GitHub-Api-Version": "2022-11-28",
   },
-}
+};
 
 // If you want to use this script locally you need to define an environment var
 // named GH_TOKEN. It can be a personal access token with no permissions other
@@ -33,7 +33,7 @@ function newOctokit() {
       auth: process.env.GH_TOKEN,
     });
   }
-  console.error("No GH_TOKEN found, proceeding with no authentication...")
+  console.error("No GH_TOKEN found, proceeding with no authentication...");
   return new Octokit({});
 }
 
@@ -41,19 +41,20 @@ const octokit = newOctokit();
 
 function printExit(error) {
   if (error.response) {
-    console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`);
+    console.error(
+      `Error! Status: ${error.response.status}. Message: ${error.response.data.message}`,
+    );
   }
   console.error(error);
   ps.exit(1);
 }
 
-
 // Dispatch request and handle error
 // Will exit on first error
 async function fetchUrl(url) {
   try {
-    return await octokit.request(url, options)
-  } catch(error) {
+    return await octokit.request(url, options);
+  } catch (error) {
     printExit(error);
   }
 }
@@ -62,17 +63,17 @@ async function fetchUrl(url) {
 // contributors, flatten, and filter out dups
 async function fetchContributors() {
   let resp = await fetchUrl("GET /orgs/{org}/repos");
-  const urls = resp.data.map(x => x.contributors_url);
+  const urls = resp.data.map((x) => x.contributors_url);
 
   resp = await Promise.all(
-    urls.map(url => {
-      return fetchUrl(url).then(result => {
+    urls.map((url) => {
+      return fetchUrl(url).then((result) => {
         return result.data;
       });
-    })
-  )
-  const f = flatten(resp)
-  return uniqBy(f, x =>  x.login)
+    }),
+  );
+  const f = flatten(resp);
+  return uniqBy(f, (x) => x.login);
 }
 
 // Fetch members, used to filter out from contributors
@@ -87,14 +88,13 @@ async function fetchMembers() {
 async function main() {
   const contributors = await fetchContributors();
   const members = await fetchMembers();
-  const memberIds = members.map(x => x.id);
+  const memberIds = members.map((x) => x.id);
   const obj = {
     members: members,
-    contributors: contributors.filter(c => {
-      return !memberIds.includes(c.id)
-        && !c.login.includes("dependabot");
-    })
-  }
+    contributors: contributors.filter((c) => {
+      return !memberIds.includes(c.id) && !c.login.includes("dependabot");
+    }),
+  };
   let error = false;
   fs.writeFileSync(
     join(resolve(__dirname, "../src"), "github.json"),
@@ -102,10 +102,11 @@ async function main() {
     (err) => {
       if (err) {
         error = true;
-        console.error(err)
-      };
-  });
-  if (error) return 1
+        console.error(err);
+      }
+    },
+  );
+  if (error) return 1;
   console.log("Github organization contribution data written to file!");
   return 0;
 }
