@@ -1,4 +1,6 @@
-module.exports = {
+// ESLint Config
+
+const config = {
   env: {
     browser: true,
     node: true,
@@ -14,3 +16,5 @@ module.exports = {
     "no-unused-vars": "warn",
   },
 };
+
+export default config;

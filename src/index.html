@@ -12,16 +12,16 @@
     </title>
   </head>
   <body
-    class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100"
+    class="w-100 flex justify-center bg-black p-4 font-iosevka text-bright_white"
   >
     {{> octocat }}
     <main
       x-data="state"
-      class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0"
+      class="width-[448px] flex min-w-0 grow flex-col items-center sm:w-[780px] sm:grow-0"
     >
       {{> header }}
       <section class="w-full">
-        <div class="text-justify mb-8">
+        <div class="mb-8 text-justify">
           <p class="mb-4">
             Srcery is dark syntax highlighting color scheme with clearly defined
             contrasting colors and a slightly earthy tone.
@@ -35,7 +35,7 @@
           </p>
         </div>
         <div class="w-full">
-          <h2 class="uppercase mb-4">Preview</h2>
+          <h2 class="mb-4 uppercase">Preview</h2>
           <p class="mb-8">
             Here's a few
             <a class="link" href="https://rosettacode.org/wiki/Rosetta_Code"
@@ -48,7 +48,7 @@
             for details about a specific editor/IDE.
           </p>
           <ul
-            class="flex overflow-x-auto overflow-y-hidden text-center border-bright_black"
+            class="flex overflow-x-auto overflow-y-hidden border-bright_black text-center"
           >
             <template x-for="(value, key) in languages">
               <li class="flex flex-1">
@@ -70,7 +70,7 @@
             </template>
           </ul>
           <div
-            class="border-b-2 border-x-2 border-bright_black overflow-x-auto"
+            class="overflow-x-auto border-x-2 border-b-2 border-bright_black"
           >
             <pre id="preview" class="flex p-4">
                 <code class="font-iosevka" x-html="languages[activeTab].html">

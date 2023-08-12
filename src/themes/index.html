@@ -11,23 +11,23 @@
     <title>Srcery Theme - Themes and configurations</title>
   </head>
   <body
-    class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100"
+    class="w-100 flex justify-center bg-black p-4 font-iosevka text-bright_white"
   >
     {{> octocat }}
     <main
       x-data="state"
-      class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0"
+      class="width-[448px] flex min-w-0 grow flex-col items-center sm:w-[780px] sm:grow-0"
     >
       {{> header themes=true }}
-      <section class="flex flex-col w-full">
+      <section class="flex w-full flex-col">
         <form class="flex justify-center">
-          <div class="relative mb-8 max-w-sm sm:max-w-full w-full">
+          <div class="relative mb-8 w-full max-w-sm sm:max-w-full">
             <div
-              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
             >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5 text-bright_black"
+                class="h-5 w-5 text-bright_black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -44,25 +44,25 @@
             <input
               type="filter"
               x-model="query"
-              class="block w-full p-4 pl-10 placeholder-bright_black text-sm text-bright_white border-2 border-bright_black bg-black focus:border-bright_white focus:outline-none"
+              class="block w-full border-2 border-bright_black bg-black p-4 pl-10 text-sm text-bright_white placeholder-bright_black focus:border-bright_white focus:outline-none"
               placeholder="Search for a theme, configuration, or application..."
               required
             />
           </div>
         </form>
         <div
-          class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5"
+          class="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3"
         >
           <template x-for="theme in themes">
             <div
-              class="flex w-full flex-col items-center max-w-sm border-bright_black p-5 border-2"
+              class="flex w-full max-w-sm flex-col items-center border-2 border-bright_black p-5"
             >
-              <div class="svg w-24 mb-5" x-html="theme.icon"></div>
+              <div class="svg mb-5 w-24" x-html="theme.icon"></div>
               <template x-if="theme.url">
                 <a
                   :href="theme.url"
                   target="_blank"
-                  class="link uppercase mb-5"
+                  class="link mb-5 uppercase"
                   x-text="theme.name"
                 ></a>
               </template>
@@ -70,17 +70,17 @@
                 <span
                   :href="theme.url"
                   target="_blank"
-                  class="uppercase mb-5"
+                  class="mb-5 uppercase"
                   x-text="theme.name"
                 ></span>
               </template>
-              <a :href="theme.repo" target="_blank" class="link uppercase mb-5"
+              <a :href="theme.repo" target="_blank" class="link mb-5 uppercase"
                 >repository</a
               >
               <a
                 :href="theme.download"
                 target="_blank"
-                class="link uppercase mb-5"
+                class="link mb-5 uppercase"
                 >download</a
               >
             </div>
