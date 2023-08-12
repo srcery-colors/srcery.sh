@@ -1,8 +1,10 @@
-import { defineConfig } from "vite";
+// Vite Config
+
 import { resolve } from "path";
 import handlebars from "vite-plugin-handlebars";
 
-module.exports = defineConfig({
+/** @type {import('vite').UserConfig} */
+const config = {
   root: resolve(__dirname, "src"),
   plugins: [
     handlebars({
@@ -20,4 +22,6 @@ module.exports = defineConfig({
       },
     },
   },
-});
+};
+
+export default config;
