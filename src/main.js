@@ -51,7 +51,7 @@ const languages = {
     html: hljs.highlight(luatxt, { language: "lua" }).value,
     name: "Lua",
   },
-  lua: {
+  rust: {
     html: hljs.highlight(rusttxt, { language: "rust" }).value,
     name: "Rust",
   },
