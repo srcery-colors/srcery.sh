@@ -12,17 +12,17 @@
     <title>Srcery Theme - Various resources</title>
   </head>
   <body
-    class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100"
+    class="w-100 flex justify-center bg-black p-4 font-iosevka text-bright_white"
   >
     {{> octocat }}
     <main
       x-data="state"
-      class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0"
+      class="width-[448px] flex min-w-0 grow flex-col items-center sm:w-[780px] sm:grow-0"
     >
       {{> header resources=true }}
       <section class="w-full">
         <div class="mb-8">
-          <h2 class="text-xl mb-3 text-center sm:text-left uppercase">
+          <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
             Resources
           </h2>
           <p class="text-justify">
@@ -32,7 +32,7 @@
           </p>
         </div>
         <div class="mb-8">
-          <h3 class="mb-3 text-center sm:text-left uppercase">Palette</h3>
+          <h3 class="mb-3 text-center uppercase sm:text-left">Palette</h3>
           <p class="mb-4" x-show="version">
             <span class="">Latest version:</span>
             <a
@@ -73,7 +73,7 @@
               <div class="list-dot"></div>
               <a
                 target="_blank"
-                class="flex items-center link"
+                class="link flex items-center"
                 href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
               >
                 <div class="svg mr-2 w-8" x-html="icons.npm"></div>
@@ -88,13 +88,13 @@
           </ul>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">
+          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
             Web assets
           </h2>
           <p class="mb-4">
             Aside from the palette itself, here are some useful web assets.
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-inside list-disc">
             <li class="mb-2">
               <a
                 target="_blank"
@@ -142,7 +142,7 @@
           </ul>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">
+          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
             Graphic assets
           </h2>
           <p class="mb-4">
@@ -154,7 +154,7 @@
             If you are looking for icons, logo, screenshots, etcetera, this is
             the place.
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-inside list-disc">
             <li class="mb-2">
               <a
                 target="_blank"
@@ -167,14 +167,14 @@
           </ul>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">
+          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
             Miscellaneous
           </h2>
           <p class="mb-4">
             Here are some miscellaneous projects that don't really fit anywhere
             else. Mostly experiments and and other bits and bobs.
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-inside list-disc">
             <li class="mb-2">
               <a
                 target="_blank"
