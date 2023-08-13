@@ -7,7 +7,7 @@
     <meta name="description" content="Search for Srcery implementations, themes, and configurations">
     <title>Srcery Theme - Themes and configurations</title>
   </head>
-  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100">
+  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100 pb-0">
     {{> octocat }}
     <main x-data="state" class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
       {{> header themes=true }}
@@ -49,10 +49,20 @@
           </template>
         </div>
       </section>
-      <footer style="margin-top: 40px; background-color: #1C1B26; color: #7C7895; padding: 20px; text-align: center;    min-width: -webkit-fill-available;">
-        <p>&copy; 2023 Srcery. All rights reserved.</p>
-        <p>Designed with &#x2764;&#xFE0F; using Srcery colors</p>
-      </footer>
+      <div class="pt-8 ">
+            
+        <footer class="bg-xgray2 p-4 w-screen ">
+          <p class="text-center tracking-wide">
+            Made with
+            <svg class="inline-block h-3 w-3 fill-current align-middle text-red hover:text-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z"></path>
+              <title>LOVE</title>
+            </svg>
+            by the
+            <a class="text-yellow no-underline hover:text-magenta" href="https://github.com/srcery-colors">srcery team</a>.
+          </p>
+        </footer>
+        </div>
     </main>
     <script type="module" src="main.js"></script>
   </body>
