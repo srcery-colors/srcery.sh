@@ -33,12 +33,12 @@ hljs.registerLanguage("vim", vim);
 
 const languages = {
   c: {
-    html: hljs.highlight(ctxt, {language: "c"}).value,
+    html: hljs.highlight(ctxt, { language: "c" }).value,
     data: ctxt,
     name: "C",
   },
   js: {
-    html: hljs.highlight(jstxt, {language: "js"}).value,
+    html: hljs.highlight(jstxt, { language: "js" }).value,
     data: jstxt,
     name: "JavaScript",
   },
@@ -51,31 +51,31 @@ const languages = {
     html: hljs.highlight(luatxt, { language: "lua" }).value,
     name: "Lua",
   },
-  lua: {
+  rust: {
     html: hljs.highlight(rusttxt, { language: "rust" }).value,
     name: "Rust",
   },
   bash: {
     html: hljs.highlight(bashtxt, { language: "bash" }).value,
-    name: "Bash"
+    name: "Bash",
   },
   vim: {
     html: hljs.highlight(vimtxt, { language: "vim" }).value,
-    name: "Vim"
-  }
-}
+    name: "Vim",
+  },
+};
 
 function main() {
-
-  window.Alpine = Alpine
+  window.Alpine = Alpine;
   Alpine.data("state", () => ({
-      languages,
-      activeTab: "c",
-      handleTab(lang) {
-        this.activeTab = lang;
-      }}))
+    languages,
+    activeTab: "c",
+    handleTab(lang) {
+      this.activeTab = lang;
+    },
+  }));
 
-  Alpine.start()
+  Alpine.start();
 }
 
 main();

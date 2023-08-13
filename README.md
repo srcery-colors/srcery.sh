@@ -21,39 +21,38 @@
   </a>
 </p>
 
-
 ## Introduction
 
-This is the repo for the `srcery` website.  All contributions are
+This is the repo for the `srcery` website. All contributions are
 welcome and encouraged.
 
 [View site](https://srcery.sh)
 
 ## Web Stack
 
-* [Vite](https://vitejs.dev/)
-* [Alpine.js](https://alpinejs.dev/)
-* [PostCSS](https://postcss.org)
-* [TailwindCSS](https://tailwindcss.com)
+- [Vite](https://vitejs.dev/)
+- [Alpine.js](https://alpinejs.dev/)
+- [PostCSS](https://postcss.org)
+- [TailwindCSS](https://tailwindcss.com)
 
 ## Running Locally
 
 Install dependencies:
 
 ```sh
-npm install
+pnpm install
 ```
 
 Fetch GitHub data
 
 ```
-npm run fetch
+pnpm run fetch
 ```
 
 Running the development server
 
 ```sh
-npm start
+pnpm start
 ```
 
 Runs a live reload Vite server, see `stdout` for port
@@ -74,17 +73,16 @@ token, doesn't need any permissions, and define it in the environment variable
 To build for production, make sure you have a copy of the `github.json` file in `src`, then run:
 
 ```
-npm run build
+pnpm run build
 ```
 
 If you want to serve the dist output you can run:
 
 ```
-npm run preview
+pnpm run preview
 ```
 
 > NOTE: ./dist folder needs to be built for the preview server to work
-
 
 ## License
 

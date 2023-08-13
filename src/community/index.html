@@ -1,38 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../style.css" />
     <link rel="icon" type="image/png" href="../favicon.png" />
-    <meta name="description" content="Engage with the Srcery community, meet us on Discord or contribute!">
+    <meta
+      name="description"
+      content="Engage with the Srcery community, meet us on Discord or contribute!"
+    />
     <title>Srcery Theme - Community activities and communications</title>
   </head>
   <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100 pb-0">
+
     {{> octocat }}
-    <main x-data="state" class="flex items-center flex-col grow sm:grow-0 width-[448px] sm:w-[780px] min-w-0">
+    <main
+      x-data="state"
+      class="width-[448px] flex min-w-0 grow flex-col items-center sm:w-[780px] sm:grow-0"
+    >
       {{> header community=true }}
       <section class="w-full">
         <div class="mb-8">
-          <h2 class="text-xl mb-3 text-center sm:text-left uppercase">
+          <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
             <!-- <div class="svg w-8 mr-2" x-html="icon"></div> -->
             Discord
           </h2>
-          <p class="text-justify mb-3">
-            We run a Discord server for those interested. You're welcome to join us there if you
-            have any burning questions or just wanna say hi.
+          <p class="mb-3 text-justify">
+            We run a Discord server for those interested. You're welcome to join
+            us there if you have any burning questions or just wanna say hi.
           </p>
-          <a href="https://discord.gg/G6vBMmZ" target="_blank" class="flex justify-center sm:justify-start">
-            <img src="https://img.shields.io/discord/714101903377694741?color=%232C78BF&label=discord&logo=discord">
+          <a
+            href="https://discord.gg/G6vBMmZ"
+            target="_blank"
+            class="flex justify-center sm:justify-start"
+          >
+            <img
+              src="https://img.shields.io/discord/714101903377694741?color=%232C78BF&label=discord&logo=discord"
+            />
           </a>
         </div>
 
         <div class="mb-8">
-          <h2 class="text-xl mb-3 text-center sm:text-left uppercase">Merchandise</h2>
-          <p class="text-justify mb-3">
+          <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
+            Merchandise
+          </h2>
+          <p class="mb-3 text-justify">
             Get our brand new merchandise featuring the Srcery color scheme!
-            We're not making any profit from the sales, so you are instead showing your
-            support by wearing and using the merch. Thank you for helping us
-            develop and improve our color scheme.
+            We're not making any profit from the sales, so you are instead
+            showing your support by wearing and using the merch. Thank you for
+            helping us develop and improve our color scheme.
           </p>
           <div class="flex justify-center sm:justify-start">
             <a class="link" target="_blank" href="https://merch.srcery.sh/">
@@ -41,7 +56,9 @@
           </div>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-3 text-center sm:text-left uppercase">Community</h2>
+          <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
+            Community
+          </h2>
           <p class="text-justify">
             Srcery is, by and large, a community effort. There's been numerous
             contributions and themes created by industrious maintainers and
@@ -49,28 +66,46 @@
           </p>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">Core team</h2>
-          <div class="grid grid-cols-2 justify-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
+            Core team
+          </h2>
+          <div
+            class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+          >
             <template x-for="user in github.members">
               <a
                 :href="user.html_url"
                 target="_blank"
-                class="flex flex-col items-center border-2 border-bright_black hover:border-bright_white hover:cursor-pointer p-4">
-                <img :src="user.avatar_url" alt="github user avatar" class="p-1 border-4 border-bright_black w-1/2 rounded-full mb-2">
+                class="flex flex-col items-center border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
+              >
+                <img
+                  :src="user.avatar_url"
+                  alt="github user avatar"
+                  class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
+                />
                 <div x-text="user.login"></div>
               </a>
             </template>
           </div>
         </div>
         <div class="mb-8">
-          <h2 class="text-xl mb-4 text-center sm:text-left uppercase">Contributors</h2>
-          <div class="grid grid-cols-2 justify-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
+            Contributors
+          </h2>
+          <div
+            class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+          >
             <template x-for="user in github.contributors">
               <a
                 :href="user.html_url"
                 target="_blank"
-                class="flex break-all flex-col items-center border-2 border-bright_black hover:border-bright_white hover:cursor-pointer p-4">
-                <img :src="user.avatar_url" alt="github user avatar" class="p-1 w-1/2 border-4 border-bright_black rounded-full mb-2">
+                class="flex flex-col items-center break-all border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
+              >
+                <img
+                  :src="user.avatar_url"
+                  alt="github user avatar"
+                  class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
+                />
                 <div class="break-word" x-text="user.login"></div>
               </a>
             </template>
@@ -95,4 +130,4 @@
     <script type="module" src="main.js"></script>
   </body>
 </html>
-{{!--  vim: set ts=2 sw=2 tw=0 et ft=handlebars : --}}
+{{!-- vim: set ts=2 sw=2 tw=0 et ft=handlebars : --}}

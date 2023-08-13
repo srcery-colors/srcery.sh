@@ -4,57 +4,62 @@
 
 @layer base {
   @font-face {
-    font-family: 'Iosevka Custom Web';
+    font-family: "Iosevka Custom Web";
     font-display: swap;
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    src: url('fonts/iosevka-custom-regular.ttf') format('truetype'), url('fonts/iosevka-custom-regular.woff2') format('woff2');
+    src:
+      url("fonts/iosevka-custom-regular.ttf") format("truetype"),
+      url("fonts/iosevka-custom-regular.woff2") format("woff2");
   }
   @font-face {
-    font-family: 'Iosevka Custom Web';
+    font-family: "Iosevka Custom Web";
     font-display: swap;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
-    src: url('fonts/iosevka-custom-bold.ttf') format('truetype'), url('fonts/iosevka-custom-bold.woff2') format('woff2');
+    src:
+      url("fonts/iosevka-custom-bold.ttf") format("truetype"),
+      url("fonts/iosevka-custom-bold.woff2") format("woff2");
   }
 }
 
 @layer components {
   .dot {
-    @apply hidden tiny:block w-dot h-dot rounded-full mr-2;
+    @apply mr-2 hidden h-dot w-dot rounded-full tiny:block;
   }
   .link {
-    @apply border-b border-dotted hover:text-white border-white;
+    @apply border-b border-dotted border-white hover:text-white;
   }
   .tab {
-    @apply px-4 flex border-bright_black items-end justify-center pt-1 grow;
+    @apply flex grow items-end justify-center border-bright_black px-4 pt-1;
   }
   .tab-inactive {
     @apply border-b-2 hover:bg-xgray1;
   }
   .tab-active {
-    @apply border-e-2 border-s-2 border-t-2 border-b-transparent border-b-2;
+    @apply border-b-2 border-e-2 border-s-2 border-t-2 border-b-transparent;
   }
   .svg > svg > * {
     @apply fill-bright_white;
   }
   .code {
-    @apply whitespace-nowrap overflow-x-auto flex mb-3 p-4 bg-hard_black;
+    @apply mb-3 flex overflow-x-auto whitespace-nowrap bg-hard_black p-4;
   }
   .inline-code {
     @apply whitespace-nowrap bg-hard_black p-1;
   }
   .list-dot {
-    @apply w-[5px] h-[5px] bg-bright_white rounded-full mr-2;
+    @apply mr-2 h-[5px] w-[5px] rounded-full bg-bright_white;
   }
   .sel {
-    @apply text-bright_blue border-bright_blue
+    @apply border-bright_blue text-bright_blue;
   }
 }
 
-html,body {
+html,
+body {
   min-height: 100%;
 }
 
