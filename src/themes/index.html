@@ -11,8 +11,9 @@
     <title>Srcery Theme - Themes and configurations</title>
   </head>
 
-  <body class="font-iosevka bg-black text-bright_white flex justify-center p-4 w-100 pb-0">
-
+  <body
+    class="w-100 flex justify-center bg-black p-4 pb-0 font-iosevka text-bright_white"
+  >
     {{> octocat }}
     <main
       x-data="state"
@@ -87,21 +88,9 @@
           </template>
         </div>
       </section>
-      <div class="pt-8 ">
-            
-        <footer class="bg-xgray2 p-4 w-screen ">
-          <p class="text-center tracking-wide">
-            Made with
-            <svg class="inline-block h-3 w-3 fill-current align-middle text-red hover:text-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z"></path>
-              <title>LOVE</title>
-            </svg>
-            by the
-            <a class="text-yellow no-underline hover:text-magenta" href="https://github.com/srcery-colors">Srcery team</a>.
-          </p>
-        </footer>
-        </div>
+      {{> footer }}
     </main>
+
     <script type="module" src="main.js"></script>
   </body>
 </html>
