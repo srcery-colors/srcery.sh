@@ -92,7 +92,10 @@ async function main() {
   const obj = {
     members: members,
     contributors: contributors.filter((c) => {
-      return !memberIds.includes(c.id) && !c.login.includes("dependabot");
+      return (
+        !memberIds.includes(c.id) &&
+        !(c.login.includes("dependabot") || c.login.includes("traviscibot"))
+      );
     }),
   };
   let error = false;
