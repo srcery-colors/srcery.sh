@@ -12,25 +12,27 @@
     </title>
   </head>
 
-  <body class="w-100 flex-col flex bg-black font-iosevka text-bright_white min-h-screen">
+  <body
+    class="w-100 flex min-h-screen flex-col bg-black font-iosevka text-bright_white"
+  >
     {{> octocat }}
-    <div class="flex p-4 grow justify-center">
+    <div class="flex grow justify-center p-4">
       <main
         x-data="state"
-        class="max-w-[448px] flex flex-col items-center min-w-0 sm:max-w-[780px]"
-        >
+        class="flex min-w-0 max-w-[448px] flex-col items-center sm:max-w-[780px]"
+      >
         {{> header }}
         <section class="w-full">
           <div class="mb-8 text-justify">
             <p class="mb-4">
-              Srcery is dark syntax highlighting color scheme with clearly defined
-              contrasting colors and a slightly earthy tone.
+              Srcery is dark syntax highlighting color scheme with clearly
+              defined contrasting colors and a slightly earthy tone.
             </p>
             <p>
               Created using colors that logically adheres to the 16 color base
-              palette of a terminal, while trying to retain its own identity. The
-              colors are designed to be easy on the eyes, yet contrast well with
-              the background for long sessions using an editor or terminal
+              palette of a terminal, while trying to retain its own identity.
+              The colors are designed to be easy on the eyes, yet contrast well
+              with the background for long sessions using an editor or terminal
               emulator.
             </p>
           </div>
@@ -49,7 +51,7 @@
             </p>
             <ul
               class="flex overflow-x-auto overflow-y-hidden border-bright_black text-center"
-              >
+            >
               <template x-for="(value, key) in languages">
                 <li class="flex flex-1">
                   <template x-if="key === activeTab">
@@ -62,7 +64,7 @@
                       href="#"
                       class="tab tab-inactive"
                       @click.prevent="handleTab(key)"
-                      >
+                    >
                       <span x-text="value.name"></span>
                     </a>
                   </template>
@@ -71,7 +73,7 @@
             </ul>
             <div
               class="overflow-x-auto border-x-2 border-b-2 border-bright_black"
-              >
+            >
               <pre id="preview" class="flex p-4">
                     <code class="font-iosevka" x-html="languages[activeTab].html">
                     </code>

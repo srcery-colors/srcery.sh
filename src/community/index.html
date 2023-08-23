@@ -11,14 +11,14 @@
     <title>Srcery Theme - Community activities and communications</title>
   </head>
   <body
-    class="w-100 flex-col flex bg-black font-iosevka text-bright_white min-h-screen"
+    class="w-100 flex min-h-screen flex-col bg-black font-iosevka text-bright_white"
   >
     {{> octocat }}
-    <div class="flex p-4 grow justify-center">
+    <div class="flex grow justify-center p-4">
       <main
         x-data="state"
-        class="max-w-[448px] flex flex-col items-center min-w-0 sm:max-w-[780px]"
-        >
+        class="flex min-w-0 max-w-[448px] flex-col items-center sm:max-w-[780px]"
+      >
         {{> header community=true }}
         <section class="w-full">
           <div class="mb-8">
@@ -27,17 +27,18 @@
               Discord
             </h2>
             <p class="mb-3 text-justify">
-              We run a Discord server for those interested. You're welcome to join
-              us there if you have any burning questions or just wanna say hi.
+              We run a Discord server for those interested. You're welcome to
+              join us there if you have any burning questions or just wanna say
+              hi.
             </p>
             <a
               href="https://discord.gg/G6vBMmZ"
               target="_blank"
               class="flex justify-center sm:justify-start"
-              >
+            >
               <img
                 src="https://img.shields.io/discord/714101903377694741?color=%232C78BF&label=discord&logo=discord"
-                />
+              />
             </a>
           </div>
 
@@ -73,18 +74,18 @@
             </h2>
             <div
               class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-              >
+            >
               <template x-for="user in github.members">
                 <a
                   :href="user.html_url"
                   target="_blank"
                   class="flex flex-col items-center border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
-                  >
+                >
                   <img
                     :src="user.avatar_url"
                     alt="github user avatar"
                     class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
-                    />
+                  />
                   <div x-text="user.login"></div>
                 </a>
               </template>
@@ -96,18 +97,18 @@
             </h2>
             <div
               class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-              >
+            >
               <template x-for="user in github.contributors">
                 <a
                   :href="user.html_url"
                   target="_blank"
                   class="flex flex-col items-center break-all border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
-                  >
+                >
                   <img
                     :src="user.avatar_url"
                     alt="github user avatar"
                     class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
-                    />
+                  />
                   <div class="break-word" x-text="user.login"></div>
                 </a>
               </template>

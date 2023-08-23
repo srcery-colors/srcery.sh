@@ -13,14 +13,14 @@
   </head>
 
   <body
-    class="w-100 flex-col flex bg-black font-iosevka text-bright_white min-h-screen"
+    class="w-100 flex min-h-screen flex-col bg-black font-iosevka text-bright_white"
   >
     {{> octocat }}
-    <div class="flex p-4 grow justify-center">
+    <div class="flex grow justify-center p-4">
       <main
         x-data="state"
-        class="max-w-[448px] flex flex-col items-center min-w-0 sm:max-w-[780px]"
-        >
+        class="flex min-w-0 max-w-[448px] flex-col items-center sm:max-w-[780px]"
+      >
         {{> header resources=true }}
         <section class="w-full">
           <div class="mb-8">
@@ -29,8 +29,8 @@
             </h2>
             <p class="text-justify">
               Here are collected miscellaneous Srcery resources. In addition to
-              themes, Srcery has some tools and packages to assist in creating new
-              themes, or things that didn't fit anywhere else.
+              themes, Srcery has some tools and packages to assist in creating
+              new themes, or things that didn't fit anywhere else.
             </p>
           </div>
           <div class="mb-8">
@@ -41,7 +41,7 @@
                 href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
                 class="link"
                 x-text="version"
-                >
+              >
               </a>
             </p>
             <p class="mb-4">
@@ -50,9 +50,9 @@
               contains a JSON with all color information.
             </p>
             <p class="mb-4">
-              It isn't used in every project, but every change to the palette will
-              happen there first, and will produce a new version of this package
-              going forward.
+              It isn't used in every project, but every change to the palette
+              will happen there first, and will produce a new version of this
+              package going forward.
             </p>
             <p class="mb-4">
               Install using this command or check out the links below:
@@ -66,7 +66,7 @@
                   target="_blank"
                   class="link flex items-center"
                   href="https://github.com/srcery-colors/srcery-palette"
-                  >
+                >
                   <div class="svg mr-2 w-5" x-html="icons.github"></div>
                   GitHub repository
                 </a>
@@ -77,13 +77,14 @@
                   target="_blank"
                   class="link flex items-center"
                   href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
-                  >
+                >
                   <div class="svg mr-2 w-8" x-html="icons.npm"></div>
                   <div>
                     <span class="mr-1">npm package</span>
                     <span x-show="version"
-                          >(<strong x-show="version" x-text="version"></strong>)</span
-                        >
+                      >(<strong x-show="version" x-text="version"></strong
+                      >)</span
+                    >
                   </div>
                 </a>
               </li>
@@ -102,7 +103,7 @@
                   target="_blank"
                   class="link"
                   href="https://github.com/srcery-colors/srcery-web/tree/master/tailwind"
-                  >
+                >
                   Tailwind config
                 </a>
               </li>
@@ -114,8 +115,8 @@
                   >Tridactyl theme</a
                 >
                 <span class="text-sm text-white"
-                      >- This will be moved to a new repo soon</span
-                    >
+                  >- This will be moved to a new repo soon</span
+                >
               </li>
               <li class="mb-2">
                 <a
@@ -148,8 +149,9 @@
               Graphic assets
             </h2>
             <p class="mb-4">
-              We keep graphic assets in a separate repo so not to inflate the size
-              of each theme. Source for SVGs of various assets are kept in the
+              We keep graphic assets in a separate repo so not to inflate the
+              size of each theme. Source for SVGs of various assets are kept in
+              the
               <code class="inline-code">src</code> folder.
             </p>
             <p class="mb-4">
@@ -162,7 +164,7 @@
                   target="_blank"
                   class="link"
                   href="https://github.com/srcery-colors/srcery-assets"
-                  >
+                >
                   GitHub repository
                 </a>
               </li>
@@ -173,8 +175,8 @@
               Miscellaneous
             </h2>
             <p class="mb-4">
-              Here are some miscellaneous projects that don't really fit anywhere
-              else. Mostly experiments and and other bits and bobs.
+              Here are some miscellaneous projects that don't really fit
+              anywhere else. Mostly experiments and and other bits and bobs.
             </p>
             <ul class="list-inside list-disc">
               <li class="mb-2">
