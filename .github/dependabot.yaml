@@ -1,5 +1,4 @@
-# .github/dependabot.yaml
-
+---
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -10,3 +9,7 @@ updates:
     directory: /
     schedule:
       interval: daily
+    groups:
+      "@babel":
+        patterns:
+          - "@babel*"
