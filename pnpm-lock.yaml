@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@fortawesome/fontawesome-free':
-    specifier: ^6.5.0
-    version: 6.5.0
+    specifier: ^6.5.1
+    version: 6.5.1
   '@srcery-colors/srcery-palette':
     specifier: ^1.0.4
     version: 1.0.4
@@ -543,8 +543,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fortawesome/fontawesome-free@6.5.0:
-    resolution: {integrity: sha512-npV8sIYN4tQmLkzkWU6Q2Ot8L3XqBzLpS+rGTl96nFM7qbMWIoFqcdp0YrcWlfRDQx5G+gA2sn8uSFNRAYTrrA==}
+  /@fortawesome/fontawesome-free@6.5.1:
+    resolution: {integrity: sha512-CNy5vSwN3fsUStPRLX7fUYojyuzoEMSXPl7zSLJ8TgtRfjv24LOnOWKT2zYwaHZCJGkdyRnTmstR0P+Ah503Gw==}
     engines: {node: '>=6'}
     requiresBuild: true
     dev: false
