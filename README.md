@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg">
-  <a href="https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src?targetFile=package.json">
-    <img src="https://snyk.io/test/github/srcery-colors/srcery-colors.github.io-src/badge.svg?targetFile=package.json">
+  <a href="https://github.com/srcery-colors/srcery.sh/actions/workflows/deploy.yaml">
+    <img src="https://github.com/srcery-colors/srcery-colors.github.io-src/workflows/Build%20&%20Deploy/badge.svg">
   </a>
   <a href="https://github.com/srcery-colors/srcery-colors.github.io-src/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/srcery-colors/srcery-colors.github.io-src.svg">
@@ -23,8 +22,8 @@
 
 ## Introduction
 
-This is the repo for the `srcery` website. All contributions are
-welcome and encouraged.
+This is the repo for the `Srcery` website. All contributions are
+welcomed and encouraged.
 
 [View site](https://srcery.sh)
 
