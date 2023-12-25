@@ -58,7 +58,6 @@ jobs:
     needs: build
 
     permissions:
-      actions: read
       id-token: write
       pages: write
 
