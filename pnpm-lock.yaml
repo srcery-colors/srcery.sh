@@ -15,8 +15,8 @@ dependencies:
     specifier: ^3.13.5
     version: 3.13.5
   devicon:
-    specifier: ^2.15.1
-    version: 2.15.1
+    specifier: ^2.16.0
+    version: 2.16.0
   highlight.js:
     specifier: ^11.9.0
     version: 11.9.0
@@ -1298,8 +1298,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
-  /devicon@2.15.1:
-    resolution: {integrity: sha512-iyapbDVaq1PgMSMZ4IekgjH230aSUU4kHmZ142lQ2TJ+9HB4P4V78eNDkyaQEEoi0KJhxIGPcTSFqxHaZ4OMyw==}
+  /devicon@2.16.0:
+    resolution: {integrity: sha512-PE5a2HBNeN4av+Iu975OiiWEwS8LJPw5HAvlv0JUHb62jZTdYxTpz4ga+cQyvdtb3x1side2P9Sr1mmOmUkO/g==}
     dev: false
 
   /didyoumean@1.2.2:
