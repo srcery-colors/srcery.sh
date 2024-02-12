@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^9.1.0
     version: 9.1.0(eslint@8.56.0)
   globals:
-    specifier: ^13.24.0
-    version: 13.24.0
+    specifier: ^14.0.0
+    version: 14.0.0
   htmlhint:
     specifier: ^1.1.4
     version: 1.1.4
@@ -1642,6 +1642,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+    dev: true
+
+  /globals@14.0.0:
+    resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
     dev: true
 
   /globby@13.2.2:
