@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.0.4
     version: 1.0.4
   alpinejs:
-    specifier: ^3.13.6
-    version: 3.13.6
+    specifier: ^3.13.7
+    version: 3.13.7
   devicon:
     specifier: ^2.16.0
     version: 2.16.0
@@ -1048,8 +1048,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /alpinejs@3.13.6:
-    resolution: {integrity: sha512-/F7pVR+11r1A0KVw+eY1DcjTFlRQn9arD3p5/2Q4vq0N2WDC/dHpg+Pz7ZMiVQlHE7ZmZmcqTRm1wYTdDLMiEg==}
+  /alpinejs@3.13.7:
+    resolution: {integrity: sha512-rcTyjTANbsePq1hb7eSekt3qjI94HLGeO6JaRjCssCVbIIc+qBrc7pO5S/+2JB6oojIibjM6FA+xRI3zhGPZIg==}
     dependencies:
       '@vue/reactivity': 3.1.5
     dev: false
