@@ -27,7 +27,7 @@
     "highlight.js": "^11.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.1",
+    "@babel/core": "^7.24.3",
     "@babel/eslint-parser": "^7.24.1",
     "@types/eslint": "^8.56.6",
     "autoprefixer": "^10.4.19",
