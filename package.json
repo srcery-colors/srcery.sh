@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/eslint-parser": "^7.24.1",
-    "@types/eslint": "^8.56.6",
+    "@types/eslint": "^8.56.7",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
