@@ -31,7 +31,7 @@
     "@babel/eslint-parser": "^7.24.5",
     "@types/eslint": "^8.56.7",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "eslint": "^9.3.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^14.0.0",
     "htmlhint": "^1.1.4",
