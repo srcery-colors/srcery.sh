@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.4.3
     version: 3.4.3
   vite:
-    specifier: ^5.2.11
-    version: 5.2.11
+    specifier: ^5.2.12
+    version: 5.2.12
   vite-plugin-handlebars:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2486,7 +2486,7 @@ packages:
     resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
     dependencies:
       handlebars: 4.7.8
-      vite: 5.2.11
+      vite: 5.2.12
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2497,8 +2497,8 @@ packages:
       - terser
     dev: true
 
-  /vite@5.2.11:
-    resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
+  /vite@5.2.12:
+    resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
