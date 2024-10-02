@@ -33,7 +33,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.9.0",
+    "globals": "^15.10.0",
     "htmlhint": "^1.1.4",
     "lodash": "^4.17.21",
     "octokit": "^4.0.2",
