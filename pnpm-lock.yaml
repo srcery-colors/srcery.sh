@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fortawesome/fontawesome-free':
-        specifier: ^6.6.0
-        version: 6.6.0
+        specifier: ^6.7.0
+        version: 6.7.0
       '@srcery-colors/srcery-palette':
         specifier: ^1.0.4
         version: 1.0.4
@@ -328,8 +328,8 @@ packages:
     resolution: {integrity: sha512-2b/g5hRmpbb1o4GnTZax9N9m0FXzz9OV42ZzI4rDDMDuHUqigAiQCEWChBWCY4ztAGVRjoWT19v0yMmc5/L5kA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fortawesome/fontawesome-free@6.6.0':
-    resolution: {integrity: sha512-60G28ke/sXdtS9KZCpZSHHkCbdsOGEhIUGlwq6yhY74UpTiToIh8np7A8yphhM4BWsvNFtIvLpi4co+h9Mr9Ow==}
+  '@fortawesome/fontawesome-free@6.7.0':
+    resolution: {integrity: sha512-lXTP8oiLGM97Aqjn47nod9awKe574HRfCngFizr7FiHTadKTiPkoVn0Mzg+tZBLD1XpE4CRvcF7/UM3g1jyVYw==}
     engines: {node: '>=6'}
 
   '@humanfs/core@0.19.1':
@@ -1842,7 +1842,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@fortawesome/fontawesome-free@6.6.0': {}
+  '@fortawesome/fontawesome-free@6.7.0': {}
 
   '@humanfs/core@0.19.1': {}
 
