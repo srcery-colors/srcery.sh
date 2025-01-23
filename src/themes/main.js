@@ -5,6 +5,7 @@ import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
 import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
 import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
 import emacssvg from "../svg/emacs.svg?raw";
+import zedsvg from "../svg/zed.svg?raw";
 import tmuxsvg from "../svg/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
 import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
@@ -112,6 +113,15 @@ const themes = [
     download:
       "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
     keywords: ["insomnia", "rest", "api"],
+  },
+  {
+    name: "zed",
+    icon: zedsvg,
+    url: "https://zed.dev/",
+    repo: "https://github.com/srcery-colors/srcery-zed",
+    download:
+    "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
+    keywords: ["zed", "ai", "rust"],
   },
   {
     name: "assorted gui themes",
