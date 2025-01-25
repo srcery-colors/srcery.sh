@@ -1,8 +1,8 @@
-@import 'tailwindcss' source("../src");
+@import "tailwindcss" source("../src");
 
 @theme {
   --font-iosevka: Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --color-black: #1c1b19;
   --color-red: #ef2f27;
@@ -39,7 +39,7 @@
 
   --breakpoint-tiny: 320px;
 
-  --background-image-triangle: url('svg/triangle.svg');
+  --background-image-triangle: url("svg/triangle.svg");
 
   --width-logo: 220px;
   --width-dot: 12px;
@@ -83,7 +83,7 @@
 }
 
 @utility tab-active {
-  @apply border-b-2 border-e-2 border-s-2 border-t-2 border-b-transparent;
+  @apply border-s-2 border-e-2 border-t-2 border-b-2 border-b-transparent;
 }
 
 @utility svg {
@@ -93,11 +93,11 @@
 }
 
 @utility code {
-  @apply mb-3 flex overflow-x-auto whitespace-nowrap bg-hard_black p-4;
+  @apply mb-3 flex overflow-x-auto bg-hard_black p-4 whitespace-nowrap;
 }
 
 @utility inline-code {
-  @apply whitespace-nowrap bg-hard_black p-1;
+  @apply bg-hard_black p-1 whitespace-nowrap;
 }
 
 @utility list-dot {
