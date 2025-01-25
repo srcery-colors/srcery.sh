@@ -1,15 +1,18 @@
 // Vite Config
 
 import { resolve } from "path";
-import handlebars from "vite-plugin-handlebars";
 
-/** @type {import('vite').UserConfig} */
+import { defineConfig } from "vite";
+import handlebars from "vite-plugin-handlebars";
+import tailwindcss from "@tailwindcss/vite";
+
 const config = {
   root: resolve(__dirname, "src"),
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),
     }),
+    tailwindcss(),
   ],
   build: {
     outDir: "../dist",
