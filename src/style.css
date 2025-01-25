@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source("../src");
 
 @theme {
   --font-iosevka: Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
