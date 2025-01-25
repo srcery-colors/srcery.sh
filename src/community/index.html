@@ -11,13 +11,13 @@
     <title>Srcery Theme - Community activities and communications</title>
   </head>
   <body
-    class="w-full flex min-h-screen flex-col bg-black font-iosevka text-bright_white"
+    class="flex min-h-screen w-full flex-col bg-black font-iosevka text-bright_white"
   >
     {{> octocat }}
     <div class="flex grow justify-center p-4">
       <main
         x-data="state"
-        class="flex min-w-0 max-w-[448px] flex-col items-center sm:max-w-[780px]"
+        class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
       >
         {{> header community=true }}
         <section class="w-full">
@@ -102,7 +102,7 @@
                 <a
                   :href="user.html_url"
                   target="_blank"
-                  class="flex flex-col items-center break-all border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
+                  class="flex flex-col items-center border-2 border-bright_black p-4 break-all hover:cursor-pointer hover:border-bright_white"
                 >
                   <img
                     :src="user.avatar_url"

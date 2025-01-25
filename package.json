@@ -19,6 +19,13 @@
     "preview": "vite preview",
     "start": "vite"
   },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-packagejson",
+      "prettier-plugin-tailwindcss"
+    ],
+    "tailwindStylesheet": "src/style.css"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@srcery-colors/srcery-palette": "^1.0.4",

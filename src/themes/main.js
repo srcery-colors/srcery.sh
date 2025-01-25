@@ -120,7 +120,7 @@ const themes = [
     url: "https://zed.dev/",
     repo: "https://github.com/srcery-colors/srcery-zed",
     download:
-    "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
+      "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
     keywords: ["zed", "ai", "rust"],
   },
   {
