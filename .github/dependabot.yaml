@@ -13,3 +13,7 @@ updates:
       "@babel":
         patterns:
           - "@babel*"
+      "@tailwindcss":
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/vite"
