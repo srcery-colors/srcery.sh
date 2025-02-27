@@ -40,7 +40,7 @@
     "@babel/eslint-parser": "^7.26.8",
     "@types/eslint": "^9.6.1",
     "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-prettier": "^10.0.2",
     "globals": "^15.15.0",
     "htmlhint": "^1.1.4",
     "lodash": "^4.17.21",
