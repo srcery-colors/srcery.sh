@@ -48,7 +48,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-packagejson": "^2.5.10",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "vite": "^6.1.1",
+    "vite": "^6.2.0",
     "vite-plugin-handlebars": "^2.0.0"
   }
 }
