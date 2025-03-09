@@ -15,7 +15,6 @@ const config = [
       globals: {
         ...globals.browser,
         ...globals.es2021,
-        ...globals.node,
       },
       parser: babelParser,
       parserOptions: {
