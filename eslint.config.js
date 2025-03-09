@@ -1,7 +1,7 @@
 // ESLint Config
 
 import babelParser from "@babel/eslint-parser";
-import eslintConfigPrettier from "eslint-config-prettier";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import globals from "globals";
 import js from "@eslint/js";
 
