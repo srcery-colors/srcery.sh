@@ -13,6 +13,10 @@ updates:
       "@babel":
         patterns:
           - "@babel*"
+      "@eslint":
+        patterns:
+          - "eslint"
+          - "@eslint/js"
       "@tailwindcss":
         patterns:
           - "tailwindcss"
