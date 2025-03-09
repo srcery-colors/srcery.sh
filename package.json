@@ -42,7 +42,7 @@
     "@types/eslint": "^9.6.1",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
-    "globals": "^15.15.0",
+    "globals": "^16.0.0",
     "htmlhint": "^1.1.4",
     "lodash": "^4.17.21",
     "octokit": "^4.1.2",
