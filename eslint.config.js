@@ -1,11 +1,12 @@
 // ESLint Config
 
 import babelParser from "@babel/eslint-parser";
+import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import globals from "globals";
 import js from "@eslint/js";
 
-const config = [
+export default defineConfig([
   {
     ignores: ["**/dist"],
   },
@@ -27,6 +28,4 @@ const config = [
   js.configs.recommended,
 
   eslintConfigPrettier,
-];
-
-export default config;
+]);

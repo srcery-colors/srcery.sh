@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 import tailwindcss from "@tailwindcss/vite";
 
-const config = {
+export default defineConfig({
   root: resolve(__dirname, "src"),
   plugins: [
     handlebars({
@@ -25,6 +25,4 @@ const config = {
       },
     },
   },
-};
-
-export default config;
+});
