@@ -94,7 +94,11 @@ async function main() {
     contributors: contributors.filter((c) => {
       return (
         !memberIds.includes(c.id) &&
-        !(c.login.includes("dependabot") || c.login.includes("traviscibot"))
+        !(
+          c.login.includes("dependabot") ||
+          c.login.includes("renovate") ||
+          c.login.includes("traviscibot")
+        )
       );
     }),
   };
@@ -110,7 +114,7 @@ async function main() {
     },
   );
   if (error) return 1;
-  console.log("Github organization contribution data written to file!");
+  console.log("GitHub organization contribution data written to file!");
   return 0;
 }
 
