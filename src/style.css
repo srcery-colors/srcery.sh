@@ -1,41 +1,10 @@
 @import "tailwindcss" source("../src");
 
+@config '../tailwind.config.js';
+
 @theme {
   --font-iosevka: Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  --color-black: #1c1b19;
-  --color-red: #ef2f27;
-  --color-green: #519f50;
-  --color-yellow: #fbb829;
-  --color-blue: #2c78bf;
-  --color-magenta: #e02c6d;
-  --color-cyan: #0aaeb3;
-  --color-white: #baa67f;
-  --color-bright_black: #918175;
-  --color-bright_red: #f75341;
-  --color-bright_green: #98bc37;
-  --color-bright_yellow: #fed06e;
-  --color-bright_blue: #68a8e4;
-  --color-bright_magenta: #ff5c8f;
-  --color-bright_cyan: #2be4d0;
-  --color-bright_white: #fce8c3;
-  --color-orange: #ff5f00;
-  --color-bright_orange: #ff8700;
-  --color-hard_black: #121212;
-  --color-teal: #008080;
-  --color-xgray1: #262626;
-  --color-xgray2: #303030;
-  --color-xgray3: #3a3a3a;
-  --color-xgray4: #444444;
-  --color-xgray5: #4e4e4e;
-  --color-xgray6: #585858;
-  --color-xgray7: #626262;
-  --color-xgray8: #6c6c6c;
-  --color-xgray9: #767676;
-  --color-xgray10: #808080;
-  --color-xgray11: #8a8a8a;
-  --color-xgray12: #949494;
 
   --breakpoint-tiny: 320px;
 
