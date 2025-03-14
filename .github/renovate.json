@@ -1,7 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 
-  "extends": ["config:recommended", ":label(dependencies)"],
+  "extends": [
+    "config:recommended",
+    ":label(dependencies)",
+    ":automergePatch",
+    "schedule:automergeNonOfficeHours"
+  ],
 
   "enabledManagers": ["github-actions", "npm"]
 }
