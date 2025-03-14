@@ -15,7 +15,12 @@
   "scripts": {
     "build": "vite build --emptyOutDir",
     "clean": "rm -f src/github.json",
+    "eslint": "eslint . --cache --cache-location .cache/eslint",
+    "eslint-ci": "eslint . --cache --cache-strategy content --cache-location .cache/eslint --format gha",
+    "eslint-fix": "eslint --cache --cache-location .cache/eslint --fix .",
     "fetch": "node scripts/fetch_gh_data.mjs",
+    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css}'",
+    "prettier-fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css}'",
     "preview": "vite preview",
     "start": "vite"
   },
@@ -42,6 +47,7 @@
     "@types/eslint": "^9.6.1",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
+    "eslint-formatter-gha": "^1.5.2",
     "globals": "^16.0.0",
     "htmlhint": "^1.1.4",
     "lodash": "^4.17.21",

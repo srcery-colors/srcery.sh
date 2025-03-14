@@ -1,7 +1,7 @@
 ---
 name: Test
 
-on:
+on: # yamllint disable-line
   pull_request:
 
 jobs:
@@ -33,3 +33,9 @@ jobs:
 
       - name: Run tests (build is okay)
         run: pnpm run build
+
+      - name: Check Prettier
+        run: pnpm run prettier
+
+      - name: Check ESLint
+        run: pnpm run eslint-ci
