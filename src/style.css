@@ -3,7 +3,8 @@
 @config '../tailwind.config.js';
 
 @theme {
-  --font-iosevka: Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
+  --font-iosevka:
+    Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --breakpoint-tiny: 320px;
