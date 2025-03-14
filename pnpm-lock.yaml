@@ -16,7 +16,7 @@ importers:
         version: 6.7.2
       '@srcery-colors/srcery-palette':
         specifier: ^1.0.4
-        version: 1.0.4
+        version: 1.1.0
       '@tailwindcss/vite':
         specifier: ^4.0.12
         version: 4.0.14(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3))
@@ -839,8 +839,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@srcery-colors/srcery-palette@1.0.4':
-    resolution: {integrity: sha512-LJ/a0NqlEjSCzJ7nEoQvcgWs1XWHY6tFGstxRDX81HBnlmzpu2+vVHi1aTtP5hG/M/Z/qSyGiijZdhL4Kvt5Kg==}
+  '@srcery-colors/srcery-palette@1.1.0':
+    resolution: {integrity: sha512-NBYEoTm1A7OMyfF8M88PMfR3g7DhilDFC3KK/ysI1qUSioGTrMNju7iXpzZu0mOsMq15/iXIvl/4SR9jkSEVHw==}
 
   '@tailwindcss/node@4.0.14':
     resolution: {integrity: sha512-Ux9NbFkKWYE4rfUFz6M5JFLs/GEYP6ysxT8uSyPn6aTbh2K3xDE1zz++eVK4Vwx799fzMF8CID9sdHn4j/Ab8w==}
@@ -2347,7 +2347,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.35.0':
     optional: true
 
-  '@srcery-colors/srcery-palette@1.0.4': {}
+  '@srcery-colors/srcery-palette@1.1.0': {}
 
   '@tailwindcss/node@4.0.14':
     dependencies:
