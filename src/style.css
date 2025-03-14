@@ -1,11 +1,43 @@
 @import "tailwindcss" source("../src");
-
-@config '../tailwind.config.js';
+@import "@srcery-colors/srcery-palette";
 
 @theme {
   --font-iosevka:
     Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-black: var(--srcery-palette-primary-black);
+  --color-red: var(--srcery-palette-primary-red);
+  --color-green: var(--srcery-palette-primary-green);
+  --color-yellow: var(--srcery-palette-primary-yellow);
+  --color-blue: var(--srcery-palette-primary-blue);
+  --color-magenta: var(--srcery-palette-primary-magenta);
+  --color-cyan: var(--srcery-palette-primary-cyan);
+  --color-white: var(--srcery-palette-primary-white);
+  --color-bright_black: var(--srcery-palette-primary-bright-black);
+  --color-bright_red: var(--srcery-palette-primary-bright-red);
+  --color-bright_green: var(--srcery-palette-primary-bright-green);
+  --color-bright_yellow: var(--srcery-palette-primary-bright-yellow);
+  --color-bright_blue: var(--srcery-palette-primary-bright-blue);
+  --color-bright_magenta: var(--srcery-palette-primary-bright-magenta);
+  --color-bright_cyan: var(--srcery-palette-primary-bright-cyan);
+  --color-bright_white: var(--srcery-palette-primary-bright-white);
+  --color-orange: var(--srcery-palette-secondary-orange);
+  --color-bright_orange: var(--srcery-palette-secondary-bright-orange);
+  --color-hard_black: var(--srcery-palette-secondary-hard_black);
+  --color-teal: var(--srcery-palette-secondary-teal);
+  --color-xgray1: var(--srcery-palette-secondary-xgray1);
+  --color-xgray2: var(--srcery-palette-secondary-xgray2);
+  --color-xgray3: var(--srcery-palette-secondary-xgray3);
+  --color-xgray4: var(--srcery-palette-secondary-xgray4);
+  --color-xgray5: var(--srcery-palette-secondary-xgray5);
+  --color-xgray6: var(--srcery-palette-secondary-xgray6);
+  --color-xgray7: var(--srcery-palette-secondary-xgray7);
+  --color-xgray8: var(--srcery-palette-secondary-xgray8);
+  --color-xgray9: var(--srcery-palette-secondary-xgray9);
+  --color-xgray10: var(--srcery-palette-secondary-xgray10);
+  --color-xgray11: var(--srcery-palette-secondary-xgray11);
+  --color-xgray12: var(--srcery-palette-secondary-xgray12);
 
   --breakpoint-tiny: 320px;
 
