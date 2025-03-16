@@ -43,19 +43,19 @@ importers:
         specifier: 9.22.0
         version: 9.22.0
       '@octokit/types':
-        specifier: ^13.8.0
+        specifier: 13.8.0
         version: 13.8.0
       '@types/alpinejs':
-        specifier: ^3.13.11
+        specifier: 3.13.11
         version: 3.13.11
       '@types/eslint':
         specifier: 9.6.1
         version: 9.6.1
       '@types/eslint-config-prettier':
-        specifier: ^6.11.3
+        specifier: 6.11.3
         version: 6.11.3
       '@types/lodash':
-        specifier: ^4.17.16
+        specifier: 4.17.16
         version: 4.17.16
       eslint:
         specifier: 9.22.0
