@@ -41,22 +41,22 @@
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/eslint-parser": "^7.26.8",
-    "@eslint/js": "^9.22.0",
-    "@types/eslint": "^9.6.1",
-    "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-formatter-gha": "^1.5.2",
-    "globals": "^16.0.0",
-    "htmlhint": "^1.1.4",
-    "lodash": "^4.17.21",
-    "octokit": "^4.1.2",
-    "prettier": "^3.5.3",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "vite": "^6.2.1",
-    "vite-plugin-handlebars": "^2.0.0"
+    "@babel/core": "7.26.10",
+    "@babel/eslint-parser": "7.26.10",
+    "@eslint/js": "9.22.0",
+    "@types/eslint": "9.6.1",
+    "eslint": "9.22.0",
+    "eslint-config-prettier": "10.1.1",
+    "eslint-formatter-gha": "1.5.2",
+    "globals": "16.0.0",
+    "htmlhint": "1.1.4",
+    "lodash": "4.17.21",
+    "octokit": "4.1.2",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "2.5.10",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "vite": "6.2.2",
+    "vite-plugin-handlebars": "2.0.0"
   },
   "pnpm": {
     "overrides": {
