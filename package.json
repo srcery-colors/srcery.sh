@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
-    "@babel/eslint-parser": "7.26.10",
+    "@babel/eslint-parser": "7.27.0",
     "@eslint/js": "9.23.0",
     "@octokit/types": "13.10.0",
     "@types/alpinejs": "3.13.11",
