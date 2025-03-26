@@ -62,9 +62,12 @@
     "vite-plugin-handlebars": "2.0.0"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ],
     "overrides": {
-      "vite-plugin-handlebars>vite@5": "^5.4.15",
-      "vite@5>esbuild": "^0.25.0"
+      "vite-plugin-handlebars>esbuild": "0.25.1",
+      "vite-plugin-handlebars>vite": "$vite"
     }
   }
 }
