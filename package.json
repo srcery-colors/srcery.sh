@@ -50,7 +50,7 @@
     "@types/eslint-config-prettier": "6.11.3",
     "@types/lodash": "4.17.16",
     "eslint": "9.24.0",
-    "eslint-config-prettier": "10.1.1",
+    "eslint-config-prettier": "10.1.2",
     "eslint-formatter-gha": "1.5.2",
     "globals": "16.0.0",
     "lodash": "4.17.21",
