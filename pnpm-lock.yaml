@@ -6,7 +6,7 @@ settings:
 
 overrides:
   vite-plugin-handlebars>esbuild: 0.25.2
-  vite-plugin-handlebars>vite: 6.2.6
+  vite-plugin-handlebars>vite: 6.3.2
 
 importers:
 
@@ -20,7 +20,7 @@ importers:
         version: 1.1.0
       '@tailwindcss/vite':
         specifier: ^4.0.12
-        version: 4.1.4(vite@6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3))
+        version: 4.1.4(vite@6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3))
       alpinejs:
         specifier: ^3.14.8
         version: 3.14.9
@@ -86,8 +86,8 @@ importers:
         specifier: 0.6.11
         version: 0.6.11(prettier@3.5.3)
       vite:
-        specifier: 6.2.6
-        version: 6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
+        specifier: 6.3.2
+        version: 6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
       vite-plugin-handlebars:
         specifier: 2.0.0
         version: 2.0.0(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
@@ -1418,8 +1418,8 @@ packages:
   vite-plugin-handlebars@2.0.0:
     resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
 
-  vite@6.2.6:
-    resolution: {integrity: sha512-9xpjNl3kR4rVDZgPNdTL0/c6ao4km69a/2ihNQbcANz8RuCOK3hQBmLSJf3bRKVQjVMda+YvizNE8AwvogcPbw==}
+  vite@6.3.2:
+    resolution: {integrity: sha512-ZSvGOXKGceizRQIZSz7TGJ0pS3QLlVY/9hwxVh17W3re67je1RKYzFHivZ/t0tubU78Vkyb9WnHPENSBCzbckg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2070,12 +2070,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.4
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.4
 
-  '@tailwindcss/vite@4.1.4(vite@6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3))':
+  '@tailwindcss/vite@4.1.4(vite@6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3))':
     dependencies:
       '@tailwindcss/node': 4.1.4
       '@tailwindcss/oxide': 4.1.4
       tailwindcss: 4.1.4
-      vite: 6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
+      vite: 6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
 
   '@types/alpinejs@3.13.11': {}
 
@@ -2670,7 +2670,7 @@ snapshots:
   vite-plugin-handlebars@2.0.0(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3):
     dependencies:
       handlebars: 4.7.8
-      vite: 6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
+      vite: 6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -2684,11 +2684,14 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.2.6(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3):
+  vite@6.3.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.4.3):
     dependencies:
       esbuild: 0.25.1
+      fdir: 6.4.3(picomatch@4.0.2)
+      picomatch: 4.0.2
       postcss: 8.5.3
       rollup: 4.35.0
+      tinyglobby: 0.2.12
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 2.4.2
