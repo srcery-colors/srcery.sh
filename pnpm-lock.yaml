@@ -56,8 +56,8 @@ importers:
         specifier: 6.11.3
         version: 6.11.3
       '@types/lodash':
-        specifier: 4.17.16
-        version: 4.17.16
+        specifier: 4.17.17
+        version: 4.17.17
       eslint:
         specifier: 9.27.0
         version: 9.27.0(jiti@2.4.2)
@@ -722,8 +722,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/lodash@4.17.16':
-    resolution: {integrity: sha512-HX7Em5NYQAXKW+1T+FiuG27NGwzJfCX3s1GjOa7ujxZa52kjJLOr4FUxT+giF6Tgxv1e+/czV/iTtBw27WTU9g==}
+  '@types/lodash@4.17.17':
+    resolution: {integrity: sha512-RRVJ+J3J+WmyOTqnz3PiBLA501eKwXl2noseKOrNo/6+XEHjTAxO4xHvxQB6QuNm+s4WRbn6rSiap8+EA+ykFQ==}
 
   '@vue/reactivity@3.1.5':
     resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
@@ -2039,7 +2039,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/lodash@4.17.16': {}
+  '@types/lodash@4.17.17': {}
 
   '@vue/reactivity@3.1.5':
     dependencies:
