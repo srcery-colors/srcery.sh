@@ -53,6 +53,7 @@
               class="flex overflow-x-auto overflow-y-hidden border-bright_black text-center"
             >
               <template x-for="(value, key) in languages">
+                <!-- eslint-disable-next-line @html-eslint/require-li-container -->
                 <li class="flex flex-1">
                   <template x-if="key === activeTab">
                     <a href="#" class="tab tab-active" @click.prevent="">
