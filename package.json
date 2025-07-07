@@ -68,7 +68,7 @@
       "esbuild"
     ],
     "overrides": {
-      "vite-plugin-handlebars>esbuild": "0.25.5",
+      "vite-plugin-handlebars>esbuild": "0.25.6",
       "vite-plugin-handlebars>vite": "$vite"
     }
   }
