@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  vite-plugin-handlebars>esbuild: 0.25.6
+  vite-plugin-handlebars>esbuild: 0.25.7
   vite-plugin-handlebars>vite: 7.0.5
 
 importers:
