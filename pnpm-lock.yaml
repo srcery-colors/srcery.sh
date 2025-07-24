@@ -44,8 +44,8 @@ importers:
         specifier: 9.31.0
         version: 9.31.0
       '@html-eslint/eslint-plugin':
-        specifier: 0.43.0
-        version: 0.43.0(eslint@9.31.0(jiti@2.4.2))
+        specifier: 0.43.1
+        version: 0.43.1(eslint@9.31.0(jiti@2.4.2))
       '@html-eslint/parser':
         specifier: 0.43.0
         version: 0.43.0
@@ -374,8 +374,8 @@ packages:
     resolution: {integrity: sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==}
     engines: {node: '>=6'}
 
-  '@html-eslint/eslint-plugin@0.43.0':
-    resolution: {integrity: sha512-m6OlqAEeRS1Vzwe2Qz4qDwV0MQ8Ov4vjSMbw5XySlHPD/DKr3lKpu3wrjzzB0TrYNPcW1xVQXlL812aTciCaEg==}
+  '@html-eslint/eslint-plugin@0.43.1':
+    resolution: {integrity: sha512-+vuLRT4rgEjRE5/QU8WJ3uvXhxJDFnKa12cGSOupAFy4XAaYEiB8lYH3W1xZ/kK8PEPwZhOhrkCcU6rNLP46Sg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
@@ -1762,7 +1762,7 @@ snapshots:
 
   '@fortawesome/fontawesome-free@6.7.2': {}
 
-  '@html-eslint/eslint-plugin@0.43.0(eslint@9.31.0(jiti@2.4.2))':
+  '@html-eslint/eslint-plugin@0.43.1(eslint@9.31.0(jiti@2.4.2))':
     dependencies:
       '@eslint/plugin-kit': 0.3.1
       '@html-eslint/parser': 0.43.0
