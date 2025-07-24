@@ -6,7 +6,7 @@ settings:
 
 overrides:
   vite-plugin-handlebars>esbuild: 0.25.8
-  vite-plugin-handlebars>vite: 7.0.5
+  vite-plugin-handlebars>vite: 7.0.6
 
 importers:
 
@@ -20,7 +20,7 @@ importers:
         version: 1.1.0
       '@tailwindcss/vite':
         specifier: ^4.0.12
-        version: 4.1.11(vite@7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3))
+        version: 4.1.11(vite@7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3))
       alpinejs:
         specifier: ^3.14.8
         version: 3.14.9
@@ -92,8 +92,8 @@ importers:
         specifier: 0.6.14
         version: 0.6.14(prettier@3.6.2)
       vite:
-        specifier: 7.0.5
-        version: 7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
+        specifier: 7.0.6
+        version: 7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
       vite-plugin-handlebars:
         specifier: 2.0.0
         version: 2.0.0(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
@@ -1257,8 +1257,8 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
-  picomatch@4.0.2:
-    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
+  picomatch@4.0.3:
+    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
   postcss@8.5.6:
@@ -1454,8 +1454,8 @@ packages:
   vite-plugin-handlebars@2.0.0:
     resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
 
-  vite@7.0.5:
-    resolution: {integrity: sha512-1mncVwJxy2C9ThLwz0+2GKZyEXuC3MyWtAAlNftlZZXZDP3AJt5FmwcMit/IGGaNZ8ZOB2BNO/HFUB+CpN0NQw==}
+  vite@7.0.6:
+    resolution: {integrity: sha512-MHFiOENNBd+Bd9uvc8GEsIzdkn1JxMmEeYX35tI3fv0sJBUTfW5tQsoaOwuY4KhBI09A3dUJ/DXf2yxPVPUceg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2104,12 +2104,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.11
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.11
 
-  '@tailwindcss/vite@4.1.11(vite@7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3))':
+  '@tailwindcss/vite@4.1.11(vite@7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3))':
     dependencies:
       '@tailwindcss/node': 4.1.11
       '@tailwindcss/oxide': 4.1.11
       tailwindcss: 4.1.11
-      vite: 7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
+      vite: 7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
 
   '@types/alpinejs@3.13.11': {}
 
@@ -2364,9 +2364,9 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fdir@6.4.6(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.3):
     optionalDependencies:
-      picomatch: 4.0.2
+      picomatch: 4.0.3
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -2586,7 +2586,7 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  picomatch@4.0.2: {}
+  picomatch@4.0.3: {}
 
   postcss@8.5.6:
     dependencies:
@@ -2696,8 +2696,8 @@ snapshots:
 
   tinyglobby@0.2.14:
     dependencies:
-      fdir: 6.4.6(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
 
   toad-cache@3.7.0: {}
 
@@ -2725,7 +2725,7 @@ snapshots:
   vite-plugin-handlebars@2.0.0(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3):
     dependencies:
       handlebars: 4.7.8
-      vite: 7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
+      vite: 7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -2739,11 +2739,11 @@ snapshots:
       - tsx
       - yaml
 
-  vite@7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3):
+  vite@7.0.6(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.4.3):
     dependencies:
       esbuild: 0.25.1
-      fdir: 6.4.6(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.44.1
       tinyglobby: 0.2.14
