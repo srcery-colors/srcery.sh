@@ -44,11 +44,11 @@ importers:
         specifier: 9.34.0
         version: 9.34.0
       '@html-eslint/eslint-plugin':
-        specifier: 0.45.0
-        version: 0.45.0(eslint@9.34.0(jiti@2.5.1))
+        specifier: 0.46.2
+        version: 0.46.2(eslint@9.34.0(jiti@2.5.1))(jiti@2.5.1)
       '@html-eslint/parser':
-        specifier: 0.45.0
-        version: 0.45.0
+        specifier: 0.46.2
+        version: 0.46.2(jiti@2.5.1)
       '@octokit/types':
         specifier: 14.1.0
         version: 14.1.0
@@ -370,20 +370,23 @@ packages:
     resolution: {integrity: sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==}
     engines: {node: '>=6'}
 
-  '@html-eslint/eslint-plugin@0.45.0':
-    resolution: {integrity: sha512-FpECVjHYBOcCwFXffb7lPG2gGnzXMYPxyDrn2hSmkFn6NwZeh9Pda9RSCGuDzYDa+wKcXALkv0PlyHcx1DOEeg==}
+  '@html-eslint/eslint-plugin@0.46.2':
+    resolution: {integrity: sha512-aVn+qo7Akpc/FiJSIg0GbZnlh7Por0xVlxg8lv777xfgRrnvi9JSDir7jJHjYG1LxUyWQwYktnzXwkdquQBXAg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
-  '@html-eslint/parser@0.45.0':
-    resolution: {integrity: sha512-dGU0IMzQTe85xk1Eqqv8H1q/JOM/yVIb4qnwCs2T/indTDUeVkQgzC0UoMoGk4yxu8rpFe2ppDZjH5E90LHzDg==}
+  '@html-eslint/parser@0.46.2':
+    resolution: {integrity: sha512-qjOaNuLqa5rP4awi3269LXul3sB7YeWtpc3Bk8p5ZGxvEovTagV0V5csOnBw3gNhnRrE68F8Gr/IduszV6gvPg==}
 
-  '@html-eslint/template-parser@0.45.0':
-    resolution: {integrity: sha512-YVkFkgBTqT5hW+QWZRGrw2A9ySY04g1Ms+CtDc4TvxHnI2Kh/DUeIYJ2qC0FDgqSuhx74UBdfQLUArWdXLX1Pg==}
+  '@html-eslint/template-parser@0.46.2':
+    resolution: {integrity: sha512-QYB9kJpOIs67kiumafxYxcoUW85w9a5lYYON2a+rWEZYk/IIoicep3HmpwzS6T9RXYFsxlfcbGX5LPO4DqeNFw==}
 
-  '@html-eslint/template-syntax-parser@0.45.0':
-    resolution: {integrity: sha512-yQcvaaZvHBCyt0zNNTDjVsgas1doC1MBaAVHREUbmnRrX3LnEPsGoaU3OBj65ydeX+I2JQBNKAKMwiDTMR6yFA==}
+  '@html-eslint/template-syntax-parser@0.46.2':
+    resolution: {integrity: sha512-1F7ipV/QMpKyYW+joVSQRU8nb8zsC5KhHzNflp0muUoJhhmxxtXuLnovHkCqU1oA1iD9sL5finZ4OJTufE5RGw==}
+
+  '@html-eslint/types@0.46.0':
+    resolution: {integrity: sha512-vEXvucymWh4DVmnpg0oeg2PiGzjRiVLqLwOeJRc4iEbOUo77+VnsSHPOUZOtoeANfgW7abX4YQtOCCIJzbxu0A==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1747,24 +1750,50 @@ snapshots:
 
   '@fortawesome/fontawesome-free@6.7.2': {}
 
-  '@html-eslint/eslint-plugin@0.45.0(eslint@9.34.0(jiti@2.5.1))':
+  '@html-eslint/eslint-plugin@0.46.2(eslint@9.34.0(jiti@2.5.1))(jiti@2.5.1)':
     dependencies:
       '@eslint/plugin-kit': 0.3.5
-      '@html-eslint/parser': 0.45.0
-      '@html-eslint/template-parser': 0.45.0
-      '@html-eslint/template-syntax-parser': 0.45.0
+      '@html-eslint/parser': 0.46.2(jiti@2.5.1)
+      '@html-eslint/template-parser': 0.46.2(jiti@2.5.1)
+      '@html-eslint/template-syntax-parser': 0.46.2(jiti@2.5.1)
+      '@html-eslint/types': 0.46.0(jiti@2.5.1)
       eslint: 9.34.0(jiti@2.5.1)
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
 
-  '@html-eslint/parser@0.45.0':
+  '@html-eslint/parser@0.46.2(jiti@2.5.1)':
     dependencies:
-      '@html-eslint/template-syntax-parser': 0.45.0
+      '@html-eslint/template-syntax-parser': 0.46.2(jiti@2.5.1)
+      '@html-eslint/types': 0.46.0(jiti@2.5.1)
       es-html-parser: 0.3.0
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
 
-  '@html-eslint/template-parser@0.45.0':
+  '@html-eslint/template-parser@0.46.2(jiti@2.5.1)':
     dependencies:
+      '@html-eslint/types': 0.46.0(jiti@2.5.1)
       es-html-parser: 0.3.0
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
 
-  '@html-eslint/template-syntax-parser@0.45.0': {}
+  '@html-eslint/template-syntax-parser@0.46.2(jiti@2.5.1)':
+    dependencies:
+      '@html-eslint/types': 0.46.0(jiti@2.5.1)
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+
+  '@html-eslint/types@0.46.0(jiti@2.5.1)':
+    dependencies:
+      '@types/estree': 1.0.8
+      es-html-parser: 0.3.0
+      eslint: 9.34.0(jiti@2.5.1)
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
 
   '@humanfs/core@0.19.1': {}
 
