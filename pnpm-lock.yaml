@@ -14,7 +14,7 @@ importers:
     dependencies:
       '@fortawesome/fontawesome-free':
         specifier: ^7.0.0
-        version: 7.0.1
+        version: 7.1.0
       '@srcery-colors/srcery-palette':
         specifier: ^1.1.0
         version: 1.1.0
@@ -374,8 +374,8 @@ packages:
     resolution: {integrity: sha512-sB5uyeq+dwCWyPi31B2gQlVlo+j5brPlWx4yZBrEaRo/nhdDE8Xke1gsGgtiBdaBTxuTkceLVuVt/pclrasb0A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fortawesome/fontawesome-free@7.0.1':
-    resolution: {integrity: sha512-RLmb9U6H2rJDnGxEqXxzy7ANPrQz7WK2/eTjdZqyU9uRU5W+FkAec9uU5gTYzFBH7aoXIw2WTJSCJR4KPlReQw==}
+  '@fortawesome/fontawesome-free@7.1.0':
+    resolution: {integrity: sha512-+WxNld5ZCJHvPQCr/GnzCTVREyStrAJjisUPtUxG5ngDA8TMlPnKp6dddlTpai4+1GNmltAeuk1hJEkBohwZYA==}
     engines: {node: '>=6'}
 
   '@html-eslint/eslint-plugin@0.47.0':
@@ -1739,7 +1739,7 @@ snapshots:
       '@eslint/core': 0.16.0
       levn: 0.4.1
 
-  '@fortawesome/fontawesome-free@7.0.1': {}
+  '@fortawesome/fontawesome-free@7.1.0': {}
 
   '@html-eslint/eslint-plugin@0.47.0(eslint@9.38.0(jiti@2.6.1))(jiti@2.6.1)':
     dependencies:
