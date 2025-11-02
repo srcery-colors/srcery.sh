@@ -50,8 +50,8 @@ importers:
         specifier: 0.47.0
         version: 0.47.0(jiti@2.6.1)
       '@octokit/types':
-        specifier: 15.0.2
-        version: 15.0.2
+        specifier: 16.0.0
+        version: 16.0.0
       '@types/alpinejs':
         specifier: 3.13.11
         version: 3.13.11
