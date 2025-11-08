@@ -68,7 +68,8 @@
       "esbuild"
     ],
     "overrides": {
-      "vite-plugin-handlebars>esbuild": "0.25.12",
+      "brace-expansion": "^1.1.0",
+      "vite-plugin-handlebars>esbuild": "^0.25.0",
       "vite-plugin-handlebars>vite": "$vite"
     }
   }
