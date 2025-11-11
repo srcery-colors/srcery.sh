@@ -6,7 +6,7 @@ settings:
 
 overrides:
   brace-expansion: ^1.1.0
-  vite-plugin-handlebars>esbuild: ^0.25.0
+  vite-plugin-handlebars>esbuild: ^0.27.0
   vite-plugin-handlebars>vite: 7.2.2
 
 importers:
