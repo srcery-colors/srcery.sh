@@ -64,9 +64,6 @@
     "vite-plugin-handlebars": "2.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ],
     "overrides": {
       "brace-expansion": "^1.1.0",
       "vite-plugin-handlebars>esbuild": "^0.27.0",
