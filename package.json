@@ -65,8 +65,6 @@
   },
   "pnpm": {
     "overrides": {
-      "brace-expansion": "^1.1.12",
-      "js-yaml": "^4.1.1",
       "vite-plugin-handlebars>vite": "$vite"
     }
   }
