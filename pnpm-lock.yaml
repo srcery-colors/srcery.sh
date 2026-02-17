@@ -43,11 +43,11 @@ importers:
         specifier: 9.39.2
         version: 9.39.2
       '@html-eslint/eslint-plugin':
-        specifier: 0.54.2
-        version: 0.54.2(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)
+        specifier: 0.55.0
+        version: 0.55.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)
       '@html-eslint/parser':
-        specifier: 0.54.0
-        version: 0.54.0(jiti@2.6.1)
+        specifier: 0.55.0
+        version: 0.55.0(jiti@2.6.1)
       '@octokit/types':
         specifier: 16.0.0
         version: 16.0.0
@@ -375,23 +375,23 @@ packages:
     resolution: {integrity: sha512-3DguDv/oUE+7vjMeTSOjCSG+KeawgVQOHrKRnvUuqYh1mfArrh7s+s8hXW3e4RerBA1+Wh+hBqf8sJNpqNrBWg==}
     engines: {node: '>=6'}
 
-  '@html-eslint/eslint-plugin@0.54.2':
-    resolution: {integrity: sha512-C6jhJqVGTS9AW3Z84Ni/Cs6h3XcRHUXi1YkRaAYI08MeNj6ZWIXhwKBEJgEGK2YxzOcM1TpZEvHL4d5z7aC7Eg==}
+  '@html-eslint/eslint-plugin@0.55.0':
+    resolution: {integrity: sha512-mNmw8Eedu1x6ZjstfniqDp4dA70EXzJIfyzxe7X5Olgaih9w4t1CsnH5XJwsWEYMvOheiv71pDsQne+C4EfgDg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.54.0':
-    resolution: {integrity: sha512-ia3I/6jf87679pUrhIDKSgddKbw9GLkvO86fYt7tJQHHRQu+zySErIxuI2b941oeovzOq10dTpC5Hp41qbvPgg==}
+  '@html-eslint/parser@0.55.0':
+    resolution: {integrity: sha512-Pa83FiD56am3NG3mn+L9xDrL4y0HTAcEyWZxETRbIbcfzac5kwUzzWyMl5fSEMbmdSbpB9so0di9OijTXqkEfg==}
 
-  '@html-eslint/template-parser@0.54.0':
-    resolution: {integrity: sha512-gSjgmGwRQehNxZ3XdRUhUoXDFzYc/LYoKA7JwExjdvklGnSh5WkH/CLOlphkDh9jJsC1O/E0I04bVGrzy3idKQ==}
+  '@html-eslint/template-parser@0.55.0':
+    resolution: {integrity: sha512-vxRYwgAxpdLyhS+5lAiYKbQ+ueRS2v2Go8TxatEc6xCasJ9h3snJ8zoe4dj0N3NYxRfW2Vo1FmUoDFkrW7ynhA==}
 
-  '@html-eslint/template-syntax-parser@0.54.0':
-    resolution: {integrity: sha512-7mDM4AWqz42FHwnOt8Lu5xqovaZHlEuBrmwNrMg6VwC9TPaLVyh4j3zNzNnM6tjftaXZzverJup39zGB8mvXjg==}
+  '@html-eslint/template-syntax-parser@0.55.0':
+    resolution: {integrity: sha512-IRle7gxcTZsqQDwWDoWNLVBgX0z9m+PddmK+gYMZTNwrxcwvQEUj3wchhyBhUt4/7ZSvmIttJYQrfG+HbhhE+w==}
 
-  '@html-eslint/types@0.54.0':
-    resolution: {integrity: sha512-bfJolxay0POMYaFWTCH1MBitEaxIEKZOoROGOLZiRBaPvQrzhwYQktuyt5X1PcHqUB4HwEtYgSdpjYGT4JbrvA==}
+  '@html-eslint/types@0.55.0':
+    resolution: {integrity: sha512-jJCy/mazjjVvErlTnRozLThi+T0fHayi6kGYThUzWDVWBGdQTIrrZqbvYSQYnA1i0zAWc+mDa3KyQENjcF3Bdw==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -794,6 +794,9 @@ packages:
   '@types/lodash@4.17.23':
     resolution: {integrity: sha512-RDvF6wTulMPjrNdCoYRC8gNR880JNGT8uB+REUpC2Ns4pRqQJhGz90wh7rgdXDPpCczF3VGktDuFGVnz8zP7HA==}
 
+  '@vscode/l10n@0.0.18':
+    resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
+
   '@vue/reactivity@3.1.5':
     resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
 
@@ -1076,6 +1079,9 @@ packages:
   highlight.js@11.11.1:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
+
+  html-standard@0.0.11:
+    resolution: {integrity: sha512-X5QWANKpR6WNWWqC8Gdhj9QuovKPL0XsPoPMx4XXjpbbOEsUDuARJ9S9bVGn27hrtJM8UlfEghdHkuSu3W8GIg==}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -1514,6 +1520,18 @@ packages:
       yaml:
         optional: true
 
+  vscode-css-languageservice@6.3.9:
+    resolution: {integrity: sha512-1tLWfp+TDM5ZuVWht3jmaY5y7O6aZmpeXLoHl5bv1QtRsRKt4xYGRMmdJa5Pqx/FTkgRbsna9R+Gn2xE+evVuA==}
+
+  vscode-languageserver-textdocument@1.0.12:
+    resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
+
+  vscode-languageserver-types@3.17.5:
+    resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
+
+  vscode-uri@3.1.0:
+    resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
+
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -1774,45 +1792,46 @@ snapshots:
 
   '@fortawesome/fontawesome-free@7.2.0': {}
 
-  '@html-eslint/eslint-plugin@0.54.2(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)':
+  '@html-eslint/eslint-plugin@0.55.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
-      '@html-eslint/parser': 0.54.0(jiti@2.6.1)
-      '@html-eslint/template-parser': 0.54.0(jiti@2.6.1)
-      '@html-eslint/template-syntax-parser': 0.54.0(jiti@2.6.1)
-      '@html-eslint/types': 0.54.0(jiti@2.6.1)
+      '@html-eslint/parser': 0.55.0(jiti@2.6.1)
+      '@html-eslint/template-parser': 0.55.0(jiti@2.6.1)
+      '@html-eslint/template-syntax-parser': 0.55.0(jiti@2.6.1)
+      '@html-eslint/types': 0.55.0(jiti@2.6.1)
       eslint: 9.39.2(jiti@2.6.1)
+      html-standard: 0.0.11
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/parser@0.54.0(jiti@2.6.1)':
+  '@html-eslint/parser@0.55.0(jiti@2.6.1)':
     dependencies:
       '@eslint/css-tree': 3.6.9
-      '@html-eslint/template-syntax-parser': 0.54.0(jiti@2.6.1)
-      '@html-eslint/types': 0.54.0(jiti@2.6.1)
+      '@html-eslint/template-syntax-parser': 0.55.0(jiti@2.6.1)
+      '@html-eslint/types': 0.55.0(jiti@2.6.1)
       css-tree: 3.1.0
       es-html-parser: 0.3.1
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/template-parser@0.54.0(jiti@2.6.1)':
+  '@html-eslint/template-parser@0.55.0(jiti@2.6.1)':
     dependencies:
-      '@html-eslint/types': 0.54.0(jiti@2.6.1)
+      '@html-eslint/types': 0.55.0(jiti@2.6.1)
       es-html-parser: 0.3.1
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/template-syntax-parser@0.54.0(jiti@2.6.1)':
+  '@html-eslint/template-syntax-parser@0.55.0(jiti@2.6.1)':
     dependencies:
-      '@html-eslint/types': 0.54.0(jiti@2.6.1)
+      '@html-eslint/types': 0.55.0(jiti@2.6.1)
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/types@0.54.0(jiti@2.6.1)':
+  '@html-eslint/types@0.55.0(jiti@2.6.1)':
     dependencies:
       '@types/css-tree': 2.3.11
       '@types/estree': 1.0.8
@@ -2167,6 +2186,8 @@ snapshots:
 
   '@types/lodash@4.17.23': {}
 
+  '@vscode/l10n@0.0.18': {}
+
   '@vue/reactivity@3.1.5':
     dependencies:
       '@vue/shared': 3.1.5
@@ -2456,6 +2477,10 @@ snapshots:
   has-flag@4.0.0: {}
 
   highlight.js@11.11.1: {}
+
+  html-standard@0.0.11:
+    dependencies:
+      vscode-css-languageservice: 6.3.9
 
   ignore@5.3.2: {}
 
@@ -2785,6 +2810,19 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.6.1
       lightningcss: 1.30.2
+
+  vscode-css-languageservice@6.3.9:
+    dependencies:
+      '@vscode/l10n': 0.0.18
+      vscode-languageserver-textdocument: 1.0.12
+      vscode-languageserver-types: 3.17.5
+      vscode-uri: 3.1.0
+
+  vscode-languageserver-textdocument@1.0.12: {}
+
+  vscode-languageserver-types@3.17.5: {}
+
+  vscode-uri@3.1.0: {}
 
   which@2.0.2:
     dependencies:
