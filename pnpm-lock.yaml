@@ -69,6 +69,9 @@ importers:
       eslint-config-prettier:
         specifier: 10.1.8
         version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
+      eslint-formatter-gha:
+        specifier: 2.0.1
+        version: 2.0.1
       globals:
         specifier: 17.3.0
         version: 17.3.0
@@ -813,6 +816,10 @@ packages:
   alpinejs@3.15.8:
     resolution: {integrity: sha512-zxIfCRTBGvF1CCLIOMQOxAyBuqibxSEwS6Jm1a3HGA9rgrJVcjEWlwLcQTVGAWGS8YhAsTRLVrtQ5a5QT9bSSQ==}
 
+  ansi-regex@5.0.1:
+    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
+    engines: {node: '>=8'}
+
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
@@ -928,6 +935,17 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
+
+  eslint-formatter-gha@2.0.1:
+    resolution: {integrity: sha512-HbiPXXjIley/JRcQ9zRZ4HJhhU8ZIf0wVLbfyQKm/7HIcbvOsA2xwl/Lblyd8fhYalUWxKcodJOwsOwxw7O0Cw==}
+
+  eslint-formatter-json@9.0.1:
+    resolution: {integrity: sha512-EQ/X+bPjiOUDo4frNbkY+5R6emaHTL7t2jHsJw5s8p8w1BTJ6ao6S7g/PaRyx/CqqaYcjJkWAPHH/onNyFlJBQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  eslint-formatter-stylish@9.0.1:
+    resolution: {integrity: sha512-FlhMRUiDUHztGj+bhm3pYo5DJ6Gbjh/FGPClcDENme7f9+Sc3+HZg6wMq80KJmRD8/oj/Ib6gy4D/ppjmHfGVA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint-scope@5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
@@ -1399,6 +1417,10 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
+  strip-ansi@6.0.1:
+    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
+    engines: {node: '>=8'}
+
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
@@ -1413,6 +1435,9 @@ packages:
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
+
+  text-table@0.2.0:
+    resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
@@ -2165,6 +2190,8 @@ snapshots:
     dependencies:
       '@vue/reactivity': 3.1.5
 
+  ansi-regex@5.0.1: {}
+
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
@@ -2281,6 +2308,19 @@ snapshots:
   eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
+
+  eslint-formatter-gha@2.0.1:
+    dependencies:
+      eslint-formatter-json: 9.0.1
+      eslint-formatter-stylish: 9.0.1
+
+  eslint-formatter-json@9.0.1: {}
+
+  eslint-formatter-stylish@9.0.1:
+    dependencies:
+      chalk: 4.1.2
+      strip-ansi: 6.0.1
+      text-table: 0.2.0
 
   eslint-scope@5.1.1:
     dependencies:
@@ -2672,6 +2712,10 @@ snapshots:
 
   source-map@0.6.1: {}
 
+  strip-ansi@6.0.1:
+    dependencies:
+      ansi-regex: 5.0.1
+
   strip-json-comments@3.1.1: {}
 
   supports-color@7.2.0:
@@ -2681,6 +2725,8 @@ snapshots:
   tailwindcss@4.1.18: {}
 
   tapable@2.3.0: {}
+
+  text-table@0.2.0: {}
 
   tinyglobby@0.2.15:
     dependencies:
