@@ -43,11 +43,11 @@ importers:
         specifier: 9.39.3
         version: 9.39.3
       '@html-eslint/eslint-plugin':
-        specifier: 0.55.0
-        version: 0.55.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)
+        specifier: 0.56.0
+        version: 0.56.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)
       '@html-eslint/parser':
-        specifier: 0.55.0
-        version: 0.55.0(jiti@2.6.1)
+        specifier: 0.56.0
+        version: 0.56.0(jiti@2.6.1)
       '@octokit/types':
         specifier: 16.0.0
         version: 16.0.0
@@ -379,23 +379,27 @@ packages:
     resolution: {integrity: sha512-3DguDv/oUE+7vjMeTSOjCSG+KeawgVQOHrKRnvUuqYh1mfArrh7s+s8hXW3e4RerBA1+Wh+hBqf8sJNpqNrBWg==}
     engines: {node: '>=6'}
 
-  '@html-eslint/eslint-plugin@0.55.0':
-    resolution: {integrity: sha512-mNmw8Eedu1x6ZjstfniqDp4dA70EXzJIfyzxe7X5Olgaih9w4t1CsnH5XJwsWEYMvOheiv71pDsQne+C4EfgDg==}
+  '@html-eslint/core@0.56.0':
+    resolution: {integrity: sha512-xbgEwKMFVZXZdr/43irrXTs6z+lijKDSWt5Zi7CRCyc1cdf7J6dQDT9QDInuwadJJEqc/er+VVjFNY/Ymv9GCA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@html-eslint/eslint-plugin@0.56.0':
+    resolution: {integrity: sha512-CEJDF8O9ObZvRjJm5igNW+th11xvsXVKFXvnWKKnbaXNufPVdKMbC/GA4RoYKKc4R6tI0lhQz5qPEVNWrWiOew==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.55.0':
-    resolution: {integrity: sha512-Pa83FiD56am3NG3mn+L9xDrL4y0HTAcEyWZxETRbIbcfzac5kwUzzWyMl5fSEMbmdSbpB9so0di9OijTXqkEfg==}
+  '@html-eslint/parser@0.56.0':
+    resolution: {integrity: sha512-QpUW88eu/LDws5ImzqoTbZjeQ4xTDlWPoP7IqSxQLSFQa0Ixkyw9x/LN/azJfaJNwCv9U94eNRSDCOjDNAh0gA==}
 
-  '@html-eslint/template-parser@0.55.0':
-    resolution: {integrity: sha512-vxRYwgAxpdLyhS+5lAiYKbQ+ueRS2v2Go8TxatEc6xCasJ9h3snJ8zoe4dj0N3NYxRfW2Vo1FmUoDFkrW7ynhA==}
+  '@html-eslint/template-parser@0.56.0':
+    resolution: {integrity: sha512-zd4IV/PSaiOiS2W7129J+G6QOLfocno8UHAcm/+w/oKrCXr9EyIhJj9bx7ZBYMvLYBSF8hndpIBoBppegIy4iQ==}
 
-  '@html-eslint/template-syntax-parser@0.55.0':
-    resolution: {integrity: sha512-IRle7gxcTZsqQDwWDoWNLVBgX0z9m+PddmK+gYMZTNwrxcwvQEUj3wchhyBhUt4/7ZSvmIttJYQrfG+HbhhE+w==}
+  '@html-eslint/template-syntax-parser@0.56.0':
+    resolution: {integrity: sha512-vH5YGgODce8cUwwgDa0UoAc2Ta4HnAm2mlJ0wuBjbXk6fzE7mkmoyk23k80W79zAssgJ0+r5s7mvAdIFCyAQjw==}
 
-  '@html-eslint/types@0.55.0':
-    resolution: {integrity: sha512-jJCy/mazjjVvErlTnRozLThi+T0fHayi6kGYThUzWDVWBGdQTIrrZqbvYSQYnA1i0zAWc+mDa3KyQENjcF3Bdw==}
+  '@html-eslint/types@0.56.0':
+    resolution: {integrity: sha512-e4mVkBa1/UAO4hWj2xej7UX5Ij0uWyaNpDNPOzuo4ON2ftk80Cz7RobRkd49GQ8pk4WXeIfaXCMU2HeHqz0Jzg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1085,8 +1089,8 @@ packages:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
 
-  html-standard@0.0.11:
-    resolution: {integrity: sha512-X5QWANKpR6WNWWqC8Gdhj9QuovKPL0XsPoPMx4XXjpbbOEsUDuARJ9S9bVGn27hrtJM8UlfEghdHkuSu3W8GIg==}
+  html-standard@0.0.13:
+    resolution: {integrity: sha512-6oNfW3c1t44O7jVXu0tp4E5MbHifWlXrHlZBPt6y7vFdgLOUUh8hyzoRhfUgozlBUK6oLLYhqP1uIqbZ8ggcBA==}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -1802,46 +1806,55 @@ snapshots:
 
   '@fortawesome/fontawesome-free@7.2.0': {}
 
-  '@html-eslint/eslint-plugin@0.55.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)':
+  '@html-eslint/core@0.56.0(jiti@2.6.1)':
     dependencies:
-      '@eslint/plugin-kit': 0.4.1
-      '@html-eslint/parser': 0.55.0(jiti@2.6.1)
-      '@html-eslint/template-parser': 0.55.0(jiti@2.6.1)
-      '@html-eslint/template-syntax-parser': 0.55.0(jiti@2.6.1)
-      '@html-eslint/types': 0.55.0(jiti@2.6.1)
+      '@html-eslint/types': 0.56.0(jiti@2.6.1)
       eslint: 9.39.2(jiti@2.6.1)
-      html-standard: 0.0.11
+      html-standard: 0.0.13
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/parser@0.55.0(jiti@2.6.1)':
+  '@html-eslint/eslint-plugin@0.56.0(eslint@9.39.2(jiti@2.6.1))(jiti@2.6.1)':
+    dependencies:
+      '@eslint/plugin-kit': 0.4.1
+      '@html-eslint/core': 0.56.0(jiti@2.6.1)
+      '@html-eslint/parser': 0.56.0(jiti@2.6.1)
+      '@html-eslint/template-parser': 0.56.0(jiti@2.6.1)
+      '@html-eslint/template-syntax-parser': 0.56.0(jiti@2.6.1)
+      '@html-eslint/types': 0.56.0(jiti@2.6.1)
+      eslint: 9.39.2(jiti@2.6.1)
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+
+  '@html-eslint/parser@0.56.0(jiti@2.6.1)':
     dependencies:
       '@eslint/css-tree': 3.6.9
-      '@html-eslint/template-syntax-parser': 0.55.0(jiti@2.6.1)
-      '@html-eslint/types': 0.55.0(jiti@2.6.1)
+      '@html-eslint/template-syntax-parser': 0.56.0(jiti@2.6.1)
+      '@html-eslint/types': 0.56.0(jiti@2.6.1)
       css-tree: 3.1.0
       es-html-parser: 0.3.1
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/template-parser@0.55.0(jiti@2.6.1)':
+  '@html-eslint/template-parser@0.56.0(jiti@2.6.1)':
     dependencies:
-      '@html-eslint/types': 0.55.0(jiti@2.6.1)
+      '@html-eslint/types': 0.56.0(jiti@2.6.1)
       es-html-parser: 0.3.1
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/template-syntax-parser@0.55.0(jiti@2.6.1)':
+  '@html-eslint/template-syntax-parser@0.56.0(jiti@2.6.1)':
     dependencies:
-      '@html-eslint/types': 0.55.0(jiti@2.6.1)
+      '@html-eslint/types': 0.56.0(jiti@2.6.1)
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/types@0.55.0(jiti@2.6.1)':
+  '@html-eslint/types@0.56.0(jiti@2.6.1)':
     dependencies:
       '@types/css-tree': 2.3.11
       '@types/estree': 1.0.8
@@ -2489,9 +2502,10 @@ snapshots:
 
   highlight.js@11.11.1: {}
 
-  html-standard@0.0.11:
+  html-standard@0.0.13:
     dependencies:
       vscode-css-languageservice: 6.3.9
+      vscode-languageserver-textdocument: 1.0.12
 
   ignore@5.3.2: {}
 
