@@ -50,7 +50,7 @@
     "@types/alpinejs": "3.13.11",
     "@types/eslint": "9.6.1",
     "@types/eslint-config-prettier": "6.11.3",
-    "@types/lodash": "4.17.23",
+    "@types/lodash": "4.17.24",
     "eslint": "9.39.3",
     "eslint-config-prettier": "10.1.8",
     "eslint-formatter-gha": "2.0.1",
