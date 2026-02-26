@@ -43,11 +43,11 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.0.2(jiti@2.6.1))
       '@html-eslint/eslint-plugin':
-        specifier: 0.57.0
-        version: 0.57.0(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)
+        specifier: 0.57.1
+        version: 0.57.1(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)
       '@html-eslint/parser':
-        specifier: 0.57.0
-        version: 0.57.0(jiti@2.6.1)
+        specifier: 0.57.1
+        version: 0.57.1(jiti@2.6.1)
       '@octokit/types':
         specifier: 16.0.0
         version: 16.0.0
@@ -403,14 +403,14 @@ packages:
     resolution: {integrity: sha512-X/cKrOmXrxZSdgyKwtbaCuuJ1k/u82MK58Q6p1TzfwPatwIYx+icfBv1Vp1dLui0L0y1fwBW4H+TKhBf7mMKmg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@html-eslint/eslint-plugin@0.57.0':
-    resolution: {integrity: sha512-9/sjZ2KHsZmco45Z9rGySOocJ734rhjjt1ofXJve7lzzBY+t8FF7fwVp9EmcXSer+0zDUb5hGBHWbgIZ0SEnJA==}
+  '@html-eslint/eslint-plugin@0.57.1':
+    resolution: {integrity: sha512-IDfdk3V27eebNpdXD2NLy/lnTSbUuKrro/6YJICBn/9aiXPXagNqWJB38qcSWEoxADbXfSSn17DJWcXvQTkHBg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.57.0':
-    resolution: {integrity: sha512-guzD7QJFM0UOGnOZco7I9WEZOBQCmXR3abt6sIhznq4x7Ws6l/KwnNo7im6r0g7/ftLTmuKnLjyNEbW8seQyMQ==}
+  '@html-eslint/parser@0.57.1':
+    resolution: {integrity: sha512-nQ5vw7Os+Snjxq9hLLBak2bv502Obn77BNOWfGK2+GIrShxtGd8w1ehlKW3EB5/RQzqBk6VDK8nPfexlR3M7kg==}
 
   '@html-eslint/template-parser@0.57.0':
     resolution: {integrity: sha512-tddyBo4dEl4W4Ehxuyd6H4jsSqvsfL5F7Bj9/aFfdQyv36q7BGWM2BRHb6FMmYKAPGZ3VzyEbUlcqIwXpDkY3w==}
@@ -1877,21 +1877,22 @@ snapshots:
       - jiti
       - supports-color
 
-  '@html-eslint/eslint-plugin@0.57.0(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)':
+  '@html-eslint/eslint-plugin@0.57.1(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
       '@html-eslint/core': 0.57.0(jiti@2.6.1)
-      '@html-eslint/parser': 0.57.0(jiti@2.6.1)
+      '@html-eslint/parser': 0.57.1(jiti@2.6.1)
       '@html-eslint/template-parser': 0.57.0(jiti@2.6.1)
       '@html-eslint/template-syntax-parser': 0.57.0(jiti@2.6.1)
       '@html-eslint/types': 0.57.0(jiti@2.6.1)
       '@rviscomi/capo.js': 2.1.0
       eslint: 10.0.2(jiti@2.6.1)
+      html-standard: 0.0.13
     transitivePeerDependencies:
       - jiti
       - supports-color
 
-  '@html-eslint/parser@0.57.0(jiti@2.6.1)':
+  '@html-eslint/parser@0.57.1(jiti@2.6.1)':
     dependencies:
       '@eslint/css-tree': 3.6.9
       '@html-eslint/template-syntax-parser': 0.57.0(jiti@2.6.1)
