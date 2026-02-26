@@ -38,13 +38,13 @@ importers:
         version: 8.0.0-rc.2
       '@babel/eslint-parser':
         specifier: 8.0.0-rc.2
-        version: 8.0.0-rc.2(@babel/core@8.0.0-rc.2)(eslint@10.0.1(jiti@2.6.1))
+        version: 8.0.0-rc.2(@babel/core@8.0.0-rc.2)(eslint@10.0.2(jiti@2.6.1))
       '@eslint/js':
         specifier: 10.0.1
-        version: 10.0.1(eslint@10.0.1(jiti@2.6.1))
+        version: 10.0.1(eslint@10.0.2(jiti@2.6.1))
       '@html-eslint/eslint-plugin':
         specifier: 0.57.0
-        version: 0.57.0(eslint@10.0.1(jiti@2.6.1))(jiti@2.6.1)
+        version: 0.57.0(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)
       '@html-eslint/parser':
         specifier: 0.57.0
         version: 0.57.0(jiti@2.6.1)
@@ -64,11 +64,11 @@ importers:
         specifier: 4.17.24
         version: 4.17.24
       eslint:
-        specifier: 10.0.1
-        version: 10.0.1(jiti@2.6.1)
+        specifier: 10.0.2
+        version: 10.0.2(jiti@2.6.1)
       eslint-config-prettier:
         specifier: 10.1.8
-        version: 10.1.8(eslint@10.0.1(jiti@2.6.1))
+        version: 10.1.8(eslint@10.0.2(jiti@2.6.1))
       eslint-formatter-gha:
         specifier: 2.0.1
         version: 2.0.1
@@ -1016,8 +1016,8 @@ packages:
     resolution: {integrity: sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint@10.0.1:
-    resolution: {integrity: sha512-20MV9SUdeN6Jd84xESsKhRly+/vxI+hwvpBMA93s+9dAcjdCuCojn4IqUGS3lvVaqjVYGYHSRMCpeFtF2rQYxQ==}
+  eslint@10.0.2:
+    resolution: {integrity: sha512-uYixubwmqJZH+KLVYIVKY1JQt7tysXhtj21WSvjcSmU5SVNzMus1bgLe+pAt816yQ8opKfheVVoPLqvVMGejYw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -1642,10 +1642,10 @@ snapshots:
       obug: 2.1.1
       semver: 7.7.4
 
-  '@babel/eslint-parser@8.0.0-rc.2(@babel/core@8.0.0-rc.2)(eslint@10.0.1(jiti@2.6.1))':
+  '@babel/eslint-parser@8.0.0-rc.2(@babel/core@8.0.0-rc.2)(eslint@10.0.2(jiti@2.6.1))':
     dependencies:
       '@babel/core': 8.0.0-rc.2
-      eslint: 10.0.1(jiti@2.6.1)
+      eslint: 10.0.2(jiti@2.6.1)
       eslint-scope: 9.1.1
       eslint-visitor-keys: 5.0.1
       semver: 7.7.4
@@ -1783,9 +1783,9 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
-  '@eslint-community/eslint-utils@4.9.1(eslint@10.0.1(jiti@2.6.1))':
+  '@eslint-community/eslint-utils@4.9.1(eslint@10.0.2(jiti@2.6.1))':
     dependencies:
-      eslint: 10.0.1(jiti@2.6.1)
+      eslint: 10.0.2(jiti@2.6.1)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/eslint-utils@4.9.1(eslint@9.39.3(jiti@2.6.1))':
@@ -1846,9 +1846,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/js@10.0.1(eslint@10.0.1(jiti@2.6.1))':
+  '@eslint/js@10.0.1(eslint@10.0.2(jiti@2.6.1))':
     optionalDependencies:
-      eslint: 10.0.1(jiti@2.6.1)
+      eslint: 10.0.2(jiti@2.6.1)
 
   '@eslint/js@9.39.3': {}
 
@@ -1877,7 +1877,7 @@ snapshots:
       - jiti
       - supports-color
 
-  '@html-eslint/eslint-plugin@0.57.0(eslint@10.0.1(jiti@2.6.1))(jiti@2.6.1)':
+  '@html-eslint/eslint-plugin@0.57.0(eslint@10.0.2(jiti@2.6.1))(jiti@2.6.1)':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
       '@html-eslint/core': 0.57.0(jiti@2.6.1)
@@ -1886,7 +1886,7 @@ snapshots:
       '@html-eslint/template-syntax-parser': 0.57.0(jiti@2.6.1)
       '@html-eslint/types': 0.57.0(jiti@2.6.1)
       '@rviscomi/capo.js': 2.1.0
-      eslint: 10.0.1(jiti@2.6.1)
+      eslint: 10.0.2(jiti@2.6.1)
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -2423,9 +2423,9 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.8(eslint@10.0.1(jiti@2.6.1)):
+  eslint-config-prettier@10.1.8(eslint@10.0.2(jiti@2.6.1)):
     dependencies:
-      eslint: 10.0.1(jiti@2.6.1)
+      eslint: 10.0.2(jiti@2.6.1)
 
   eslint-formatter-gha@2.0.1:
     dependencies:
@@ -2458,9 +2458,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.0.1(jiti@2.6.1):
+  eslint@10.0.2(jiti@2.6.1):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@10.0.1(jiti@2.6.1))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@10.0.2(jiti@2.6.1))
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.2
       '@eslint/config-helpers': 0.5.2
