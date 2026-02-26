@@ -41,8 +41,8 @@
     "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@babel/eslint-parser": "7.28.6",
+    "@babel/core": "8.0.0-rc.2",
+    "@babel/eslint-parser": "8.0.0-rc.2",
     "@eslint/js": "10.0.1",
     "@html-eslint/eslint-plugin": "0.57.0",
     "@html-eslint/parser": "0.57.0",
