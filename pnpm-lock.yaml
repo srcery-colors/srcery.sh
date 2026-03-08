@@ -43,11 +43,11 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.0.2(jiti@2.6.1))
       '@html-eslint/eslint-plugin':
-        specifier: 0.58.0
-        version: 0.58.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 0.58.1
+        version: 0.58.1(eslint@10.0.2(jiti@2.6.1))
       '@html-eslint/parser':
-        specifier: 0.58.0
-        version: 0.58.0
+        specifier: 0.58.1
+        version: 0.58.1
       '@octokit/types':
         specifier: 16.0.0
         version: 16.0.0
@@ -379,14 +379,14 @@ packages:
     resolution: {integrity: sha512-GHYDt2Q3ws9aa0/bmMhkv21ExQJnrjKY/iByjdBVp3lBq49wlzIzvAfcx4Bsp+RMV3oPZhzlnLhPpXLuVYt2mQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@html-eslint/eslint-plugin@0.58.0':
-    resolution: {integrity: sha512-4jWOtW2D0Lg3Or89olbbGWkP0wH2SloRIrmV7pI2IZCB+fK3e3ZL1EkKHabsBzSuC8h2Bx4WBHwSADZ8QpbrSQ==}
+  '@html-eslint/eslint-plugin@0.58.1':
+    resolution: {integrity: sha512-aizTTKbNF2sW+lXWP+uWBoo5Ud9xtUkr70+0pYhItwJF0yhRqLQ91PhW+9afC0daymQjn13MunzDPwGPG0seDg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.58.0':
-    resolution: {integrity: sha512-4g/Kl7uRAxkV9RR8C4F41m2dUpjVC5Kjf3m2ezlooH4hPHJiegyRN1iLoMUfIThsDxyEvdM50hhJMVSdkjVlJQ==}
+  '@html-eslint/parser@0.58.1':
+    resolution: {integrity: sha512-a87peH9HcVDrKZZIYdfMlPZ+72nIktAitKcdoHQevuaXWsgvDtClKihJyy5dZS9md6hIbCh62Og5gQRhl85ZMg==}
 
   '@html-eslint/template-parser@0.58.1':
     resolution: {integrity: sha512-qo6jTc4Y6vVgwPc2w+EQigH7uCAn+LExxE5oG1URRT98UiJ7dItX0Qk44r/+5XQwSS1TsdvBNLxM2NAktETSWA==}
@@ -1738,11 +1738,11 @@ snapshots:
       '@html-eslint/types': 0.58.1
       html-standard: 0.0.13
 
-  '@html-eslint/eslint-plugin@0.58.0(eslint@10.0.2(jiti@2.6.1))':
+  '@html-eslint/eslint-plugin@0.58.1(eslint@10.0.2(jiti@2.6.1))':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
       '@html-eslint/core': 0.58.1
-      '@html-eslint/parser': 0.58.0
+      '@html-eslint/parser': 0.58.1
       '@html-eslint/template-parser': 0.58.1
       '@html-eslint/template-syntax-parser': 0.58.1
       '@html-eslint/types': 0.58.1
@@ -1750,7 +1750,7 @@ snapshots:
       eslint: 10.0.2(jiti@2.6.1)
       html-standard: 0.0.13
 
-  '@html-eslint/parser@0.58.0':
+  '@html-eslint/parser@0.58.1':
     dependencies:
       '@html-eslint/template-syntax-parser': 0.58.1
       '@html-eslint/types': 0.58.1
