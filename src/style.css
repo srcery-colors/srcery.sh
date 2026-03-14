@@ -68,6 +68,10 @@
   }
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 @utility dot {
   @apply mr-2 hidden h-dot w-dot rounded-full tiny:block;
 }
