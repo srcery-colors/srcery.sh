@@ -12,6 +12,8 @@ import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
 import insomniasvg from "simple-icons/icons/insomnia.svg?raw";
 import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
 import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
+import obsidiansvg from "simple-icons/icons/obsidian.svg?raw"
+import novasvg from "../svg/nova.svg?raw";
 
 const themes = [
   {
@@ -122,6 +124,24 @@ const themes = [
     download:
       "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
     keywords: ["zed", "ai", "rust"],
+  },
+  {
+    name: "obsidian",
+    icon: obsidiansvg,
+    url: "https://obsidian.md/",
+    repo: "https://github.com/srcery-colors/srcery-obsidian",
+    download:
+      "https://github.com/srcery-colors/srcery-obsidian/archive/refs/heads/main.zip",
+    keywords: ["obsidian", "note", "markdown", "md"],
+  },
+  {
+    name: "nova",
+    icon: novasvg,
+    url: "https://nova.app/",
+    repo: "https://github.com/srcery-colors/srcery-nova",
+    download:
+      "https://github.com/srcery-colors/srcery-nova/archive/refs/heads/main.zip",
+    keywords: ["nova", "panic", "apple", "macos"],
   },
   {
     name: "assorted gui themes",
