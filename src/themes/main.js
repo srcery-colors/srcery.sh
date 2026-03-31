@@ -3,13 +3,13 @@ import Alpine from "alpinejs";
 // icons
 import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
 import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
-import intellijsvg from "devicon/icons/intellij/intellij-plain.svg?raw";
-import emacssvg from "../svg/emacs.svg?raw";
-import zedsvg from "../svg/zed.svg?raw";
-import tmuxsvg from "../svg/tmux.svg?raw";
+import intellijsvg from "simple-icons/icons/intellijidea.svg?raw";
+import emacssvg from "simple-icons/icons/gnuemacs.svg?raw";
+import zedsvg from "simple-icons/icons/zedindustries.svg?raw";
+import tmuxsvg from "simple-icons/icons/tmux.svg?raw";
 import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
 import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
-import insomniasvg from "../svg/insomnia.svg?raw";
+import insomniasvg from "simple-icons/icons/insomnia.svg?raw";
 import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
 import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
 
