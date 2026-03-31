@@ -12,7 +12,7 @@ import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
 import insomniasvg from "simple-icons/icons/insomnia.svg?raw";
 import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
 import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
-import obsidiansvg from "simple-icons/icons/obsidian.svg?raw"
+import obsidiansvg from "simple-icons/icons/obsidian.svg?raw";
 import novasvg from "../svg/nova.svg?raw";
 
 const themes = [
