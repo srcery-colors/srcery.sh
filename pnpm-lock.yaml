@@ -22,7 +22,7 @@ importers:
         version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(jiti@2.6.1))
       alpinejs:
         specifier: ^3.14.8
-        version: 3.15.10
+        version: 3.15.11
       devicon:
         specifier: ^2.16.0
         version: 2.17.0
@@ -657,8 +657,8 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  alpinejs@3.15.10:
-    resolution: {integrity: sha512-WIWpBws5uNQlrqDf791PPbArItCsY4itOMnI3xk9vCwpNgcsa10ek2sBQsLNTdvWq2LOv12A6GZXMUqu5JDJXw==}
+  alpinejs@3.15.11:
+    resolution: {integrity: sha512-m26gkTg/MId8O+F4jHKK3vB3SjbFxxk/JHP+qzmw1H6aQrZuPAg4CUoAefnASzzp/eNroBjrRQe7950bNeaBJw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1905,7 +1905,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  alpinejs@3.15.10:
+  alpinejs@3.15.11:
     dependencies:
       '@vue/reactivity': 3.1.5
 
