@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  vite-plugin-handlebars>vite: 8.0.3
+  vite-plugin-handlebars>vite: 8.0.5
 
 importers:
 
@@ -19,7 +19,7 @@ importers:
         version: 1.1.0
       '@tailwindcss/vite':
         specifier: ^4.0.12
-        version: 4.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1))
+        version: 4.2.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1))
       alpinejs:
         specifier: ^3.14.8
         version: 3.15.11
@@ -94,8 +94,8 @@ importers:
         specifier: 0.7.2
         version: 0.7.2(prettier@3.8.1)
       vite:
-        specifier: 8.0.3
-        version: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
+        specifier: 8.0.5
+        version: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
       vite-plugin-handlebars:
         specifier: 2.0.0
         version: 2.0.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
@@ -1281,14 +1281,14 @@ packages:
   vite-plugin-handlebars@2.0.0:
     resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
 
-  vite@8.0.3:
-    resolution: {integrity: sha512-B9ifbFudT1TFhfltfaIPgjo9Z3mDynBTJSUYxTjOQruf/zHH+ezCQKcoqO+h7a9Pw9Nm/OtlXAiGT1axBgwqrQ==}
+  vite@8.0.5:
+    resolution: {integrity: sha512-nmu43Qvq9UopTRfMx2jOYW5l16pb3iDC1JH6yMuPkpVbzK0k+L7dfsEDH4jRgYFmsg0sTAqkojoZgzLMlwHsCQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
       '@vitejs/devtools': ^0.1.0
-      esbuild: ^0.27.0
+      esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
       sass: ^1.70.0
@@ -1847,12 +1847,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.2.2
       '@tailwindcss/oxide-win32-x64-msvc': 4.2.2
 
-  '@tailwindcss/vite@4.2.2(vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1))':
+  '@tailwindcss/vite@4.2.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1))':
     dependencies:
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
       tailwindcss: 4.2.2
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
+      vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
@@ -2413,7 +2413,7 @@ snapshots:
   vite-plugin-handlebars@2.0.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1):
     dependencies:
       handlebars: 4.7.9
-      vite: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
+      vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1)
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -2430,7 +2430,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite@8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1):
+  vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(jiti@2.6.1):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
