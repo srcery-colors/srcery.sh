@@ -97,8 +97,8 @@ importers:
         specifier: 8.0.8
         version: 8.0.8(jiti@2.6.1)
       vite-plugin-handlebars:
-        specifier: 2.0.0
-        version: 2.0.0(jiti@2.6.1)
+        specifier: 2.0.2
+        version: 2.0.2(vite@8.0.8(jiti@2.6.1))
 
 packages:
 
@@ -1278,8 +1278,10 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite-plugin-handlebars@2.0.0:
-    resolution: {integrity: sha512-+J3It0nyhPzx4nT1I+fnWH+jShTEXzm6X0Tgsggdm9IYFD7/eJ6a3ROI13HTe0CVoyaxm/fPxH5HDAKyfz7T0g==}
+  vite-plugin-handlebars@2.0.2:
+    resolution: {integrity: sha512-31yKb2/JEjkteuhbF77iVlv9TDeRhL1TNnkNO999AiikblIwfugppsE2/e77AMOOatf8j95UNCG197+6eJJHVg==}
+    peerDependencies:
+      vite: 8.0.8
 
   vite@8.0.8:
     resolution: {integrity: sha512-dbU7/iLVa8KZALJyLOBOQ88nOXtNG8vxKuOT4I2mD+Ya70KPceF4IAmDsmU0h1Qsn5bPrvsY9HJstCRh3hG6Uw==}
@@ -2406,23 +2408,10 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-handlebars@2.0.0(jiti@2.6.1):
+  vite-plugin-handlebars@2.0.2(vite@8.0.8(jiti@2.6.1)):
     dependencies:
       handlebars: 4.7.9
       vite: 8.0.8(jiti@2.6.1)
-    transitivePeerDependencies:
-      - '@types/node'
-      - '@vitejs/devtools'
-      - esbuild
-      - jiti
-      - less
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - terser
-      - tsx
-      - yaml
 
   vite@8.0.8(jiti@2.6.1):
     dependencies:
