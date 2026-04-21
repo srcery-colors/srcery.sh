@@ -1,3 +1,12 @@
+---
+import Glyph from "./Glyph.astro";
+interface Props {
+  activePage?: "themes" | "resources" | "community";
+}
+
+const { activePage } = Astro.props;
+---
+
 <header class="mb-8 min-w-auto sm:max-w-[640px] sm:min-w-[640px]">
   <a
     href="/"
@@ -6,20 +15,23 @@
     <div
       class="flex items-center justify-center rounded-full border-2 border-bright_black p-5 sm:hidden"
     >
-      <img
-        alt="Srcery glyph"
-        src="/svg/glyph.svg"
-        class="glyph h-logo w-logo"
-      />
+      <!-- <img -->
+      <!--   alt="Srcery glyph" -->
+      <!--   src="/svg/glyph.svg" -->
+      <!--   class="glyph h-logo w-logo" -->
+      <!-- /> -->
+      <Glyph />
     </div>
     <div
       class="align-center hidden min-h-[546px] min-w-full justify-center bg-triangle bg-center bg-no-repeat pt-[30%] sm:flex"
     >
-      <img
-        alt="Srcery glyph"
-        src="/svg/glyph.svg"
-        class="glyph h-logo w-logo"
-      />
+      <!-- <img -->
+      <!--   alt="Srcery glyph" -->
+      <!--   src="/svg/glyph.svg" -->
+      <!--   class="glyph h-logo w-logo" -->
+      <!-- /> -->
+
+      <Glyph />
     </div>
     <div class="mt-4 flex items-center sm:mt-[-18%]">
       <div class="mr-2 flex">
@@ -39,20 +51,25 @@
     class="flex max-w-[384px] grow justify-between justify-center sm:max-w-full"
   >
     <span class="w-full text-left">
-      <a href="/themes/" class="link uppercase {{#if themes}}sel{{/if}}"
+      <a
+        href="/themes/"
+        class:list={["link uppercase", { sel: activePage === "themes" }]}
         >themes</a
       >
     </span>
     <span class="w-full text-center">
-      <a href="/resources/" class="link uppercase {{#if resources}}sel{{/if}}"
+      <a
+        href="/resources/"
+        class:list={["link uppercase", { sel: activePage === "resources" }]}
         >resources</a
       >
     </span>
     <span class="w-full text-right">
-      <a href="/community/" class="link uppercase {{#if community}}sel{{/if}}"
+      <a
+        href="/community/"
+        class:list={["link uppercase", { sel: activePage === "community" }]}
         >community</a
       >
     </span>
   </nav>
 </header>
-{{!-- vim: set ts=2 sw=2 tw=0 et ft=handlebars : --}}
