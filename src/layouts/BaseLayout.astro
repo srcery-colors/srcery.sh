@@ -1,0 +1,26 @@
+---
+import "../style.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="flex min-h-screen w-full flex-col bg-black font-iosevka text-bright_white"
+  >
+    <slot />
+  </body>
+</html>

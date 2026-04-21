@@ -13,60 +13,42 @@
   "type": "module",
   "browser": true,
   "scripts": {
-    "build": "vite build --emptyOutDir",
+    "build": "astro build",
     "clean": "rm -f src/github.json",
-    "eslint": "eslint . --cache --cache-location .cache/eslint",
-    "eslint-ci": "eslint . --cache --cache-strategy content --cache-location .cache/eslint --format gha",
-    "eslint-fix": "eslint --cache --cache-location .cache/eslint --fix .",
+    "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
-    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css}'",
-    "prettier-fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css}'",
-    "preview": "vite preview",
-    "start": "vite"
+    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "prettier-fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "preview": "astro preview",
+    "start": "astro dev"
   },
   "prettier": {
     "plugins": [
       "prettier-plugin-packagejson",
-      "prettier-plugin-tailwindcss"
+      "prettier-plugin-tailwindcss",
+      "prettier-plugin-astro"
     ],
     "tailwindStylesheet": "src/style.css"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "@srcery-colors/srcery-palette": "^1.1.0",
-    "@tailwindcss/vite": "^4.0.12",
-    "alpinejs": "^3.14.8",
-    "devicon": "^2.16.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.8",
+    "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
-    "simple-icons": "^16.14.0",
-    "tailwindcss": "^4.0.12"
+    "simple-icons": "^16.17.0",
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@babel/core": "8.0.0-rc.3",
-    "@babel/eslint-parser": "8.0.0-rc.3",
-    "@eslint/js": "10.0.1",
-    "@html-eslint/eslint-plugin": "0.59.0",
-    "@html-eslint/parser": "0.59.0",
     "@octokit/types": "16.0.0",
-    "@types/alpinejs": "3.13.11",
-    "@types/eslint": "9.6.1",
-    "@types/eslint-config-prettier": "6.11.3",
     "@types/lodash": "4.17.24",
-    "eslint": "10.2.1",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-formatter-gha": "2.0.1",
     "globals": "17.5.0",
     "lodash": "4.18.1",
     "octokit": "5.0.5",
     "prettier": "3.8.3",
+    "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-packagejson": "3.0.2",
-    "prettier-plugin-tailwindcss": "0.8.0",
-    "vite": "8.0.10",
-    "vite-plugin-handlebars": "2.0.3"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite-plugin-handlebars>vite": "$vite"
-    }
+    "prettier-plugin-tailwindcss": "0.7.2"
   }
 }

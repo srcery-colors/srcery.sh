@@ -1,0 +1,206 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Octocat from "../../components/Octocat.astro";
+
+import vimsvg from "devicon/icons/vim/vim-plain.svg?raw";
+import vscodesvg from "devicon/icons/vscode/vscode-plain.svg?raw";
+import intellijsvg from "simple-icons/icons/intellijidea.svg?raw";
+import emacssvg from "simple-icons/icons/gnuemacs.svg?raw";
+import zedsvg from "simple-icons/icons/zedindustries.svg?raw";
+import tmuxsvg from "simple-icons/icons/tmux.svg?raw";
+import bashsvg from "devicon/icons/bash/bash-plain.svg?raw";
+import steamsvg from "@fortawesome/fontawesome-free/svgs/brands/steam.svg?raw";
+import insomniasvg from "simple-icons/icons/insomnia.svg?raw";
+import guisvg from "@fortawesome/fontawesome-free/svgs/solid/image.svg?raw";
+import shellsvg from "@fortawesome/fontawesome-free/svgs/solid/file-invoice-dollar.svg?raw";
+import obsidiansvg from "simple-icons/icons/obsidian.svg?raw";
+import novasvg from "../../svg/nova.svg?raw";
+
+const themes = [
+  {
+    name: "vim",
+    icon: vimsvg,
+    url: "https://www.vim.org/",
+    repo: "https://github.com/srcery-colors/srcery-vim",
+    download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
+    keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"],
+  },
+  {
+    name: "emacs",
+    icon: emacssvg,
+    url: "https://www.gnu.org/software/emacs/",
+    repo: "https://github.com/srcery-colors/srcery-emacs",
+    download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
+    keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"],
+  },
+  {
+    name: "vscode",
+    icon: vscodesvg,
+    url: "https://code.visualstudio.com/",
+    repo: "https://github.com/srcery-colors/srcery-vscode",
+    download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
+    keywords: ["visual studio", "vscode", "microsoft", "code", "windows"],
+  },
+  {
+    name: "intellij",
+    icon: intellijsvg,
+    url: "https://www.jetbrains.com/idea/",
+    repo: "https://github.com/srcery-colors/srcery-intellij",
+    download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
+    keywords: ["idea", "java", "intellij", "ide"],
+  },
+  {
+    name: "tmux",
+    icon: tmuxsvg,
+    url: "https://github.com/tmux/tmux",
+    repo: "https://github.com/srcery-colors/srcery-tmux",
+    download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
+    keywords: ["tmux", "terminal", "multiplexer"],
+  },
+  {
+    name: "terminals",
+    icon: bashsvg,
+    url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
+    repo: "https://github.com/srcery-colors/srcery-terminal",
+    download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
+    keywords: ["terminal","alacritty","blink","chrome secure shell","foot","genode","16 colors","gnome","guake","iterm","kitty","konsole","linux","virtual console","lxterminal","mintty","pantheon","putty","st","terminator","termite","termux","tilix","windows","xfce","xresources","x11","xorg"],
+  },
+  {
+    name: "steam",
+    icon: steamsvg,
+    url: "https://www.steampowered.com",
+    repo: "https://github.com/srcery-colors/srcery-steam-themes",
+    download: "https://github.com/srcery-colors/srcery-steam-themes/archive/refs/heads/main.zip",
+    keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"],
+  },
+  {
+    name: "insomnia",
+    icon: insomniasvg,
+    url: "https://insomnia.rest/",
+    repo: "https://github.com/srcery-colors/srcery-insomnia",
+    download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
+    keywords: ["insomnia", "rest", "api"],
+  },
+  {
+    name: "zed",
+    icon: zedsvg,
+    url: "https://zed.dev/",
+    repo: "https://github.com/srcery-colors/srcery-zed",
+    download: "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
+    keywords: ["zed", "ai", "rust"],
+  },
+  {
+    name: "obsidian",
+    icon: obsidiansvg,
+    url: "https://obsidian.md/",
+    repo: "https://github.com/srcery-colors/srcery-obsidian",
+    download: "https://github.com/srcery-colors/srcery-obsidian/archive/refs/heads/main.zip",
+    keywords: ["obsidian", "note", "markdown", "md"],
+  },
+  {
+    name: "nova",
+    icon: novasvg,
+    url: "https://nova.app/",
+    repo: "https://github.com/srcery-colors/srcery-nova",
+    download: "https://github.com/srcery-colors/srcery-nova/archive/refs/heads/main.zip",
+    keywords: ["nova", "panic", "apple", "macos"],
+  },
+  {
+    name: "assorted gui themes",
+    icon: guisvg,
+    url: undefined,
+    repo: "https://github.com/srcery-colors/srcery-gui",
+    download: "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
+    keywords: ["awesomewm","bspwm","i3wm","oomox","polybar","qutebrowser","rofi","slack","zathura"],
+  },
+  {
+    name: "assorted shell themes",
+    icon: shellsvg,
+    url: undefined,
+    repo: "https://github.com/srcery-colors/srcery-shell",
+    download: "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
+    keywords: ["broot", "cmus", "mutt", "newsboat", "vifm", "zellij"],
+  },
+];
+---
+
+<BaseLayout
+  title="Srcery Theme - Themes and configurations"
+  description="Search for Srcery implementations, themes, and configurations"
+>
+  <Octocat />
+  <div class="flex grow justify-center p-4">
+    <main class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]">
+      <Header activePage="themes" />
+      <section class="flex w-full flex-col">
+        <form class="flex justify-center">
+          <div class="relative mb-8 w-full max-w-sm sm:max-w-full">
+            <div
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5 text-bright_black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <input
+              id="theme-search"
+              type="search"
+              class="block w-full border-2 border-bright_black bg-black p-4 pl-10 text-sm text-bright_white placeholder-bright_black focus:border-bright_white focus:outline-hidden"
+              placeholder="Search for a theme, configuration, or application..."
+            />
+          </div>
+        </form>
+        <div
+          class="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3"
+        >
+          {themes.map((theme) => (
+            <div
+              class="theme-card flex w-full max-w-sm flex-col items-center border-2 border-bright_black p-5"
+              data-name={theme.name}
+              data-keywords={theme.keywords.join(",")}
+            >
+              <div
+                class="mb-5 flex h-24 w-24 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
+                set:html={theme.icon}
+              />
+              {theme.url
+                ? <a href={theme.url} target="_blank" class="mb-5 link uppercase">{theme.name}</a>
+                : <span class="mb-5 uppercase">{theme.name}</span>
+              }
+              <a href={theme.repo} target="_blank" class="mb-5 link uppercase">repository</a>
+              <a href={theme.download} target="_blank" class="mb-5 link uppercase">download</a>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  </div>
+  <Footer />
+</BaseLayout>
+
+<script>
+  const input = document.getElementById("theme-search") as HTMLInputElement;
+  const cards = document.querySelectorAll<HTMLElement>(".theme-card");
+
+  input.addEventListener("input", () => {
+    const q = input.value.toLowerCase();
+    cards.forEach((card) => {
+      const name = (card.dataset.name ?? "").toLowerCase();
+      const keywords = (card.dataset.keywords ?? "").toLowerCase();
+      card.hidden = q !== "" && !name.includes(q) && !keywords.includes(q);
+    });
+  });
+</script>

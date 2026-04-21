@@ -14,3 +14,7 @@ dist
 .parcel-cache
 *.tmp
 src/github.json
+
+
+# Astro
+.astro/
