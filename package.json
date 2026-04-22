@@ -38,7 +38,8 @@
     "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
     "simple-icons": "^16.17.0",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@octokit/types": "16.0.0",
