@@ -3,7 +3,6 @@
 .sass-cache
 _site
 node_modules
-public
 assets/css
 assets/js
 vendor
