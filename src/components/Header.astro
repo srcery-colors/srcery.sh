@@ -23,33 +23,32 @@ const { activePage } = Astro.props;
   scheduleBlink();
 </script>
 
-<header class="mb-8 min-w-auto sm:max-w-[640px] sm:min-w-[640px]">
+<header class="mb-8 w-full sm:max-w-[640px] sm:min-w-[640px]">
   <a
     href="/"
     class="mb-2 flex flex-col items-center pt-2 sm:min-h-[546px] sm:pt-0"
     >
-    </div>
     <div
       class="align-center min-h-auto sm:min-h-[546px] sm:min-w-full justify-center border-2 border-bright_black rounded-full sm:rounded-none sm:border-0 sm:bg-triangle bg-center bg-no-repeat p-5 sm:pt-[30%] flex"
       >
-      <Glyph width={220} height={220} />
+      <Glyph class="sm:w-[220px] sm:h-[220px] w-[150px] h-[150px] tiny:w-[190px] tiny:h-[190px] " />
     </div>
-      <div class="mt-4 flex items-center sm:mt-[-18%]">
-        <div class="mr-2 flex">
-          <div class="dot bg-xgray2"></div>
-          <div class="dot bg-xgray7"></div>
-          <div class="dot bg-xgray10"></div>
-        </div>
-        <h1 class="text-6xl uppercase">Srcery</h1>
-        <div class="ml-2 flex">
-          <div class="dot bg-xgray10"></div>
-          <div class="dot bg-xgray7"></div>
-          <div class="dot bg-xgray2"></div>
-        </div>
+    <div class="mt-4 flex items-center sm:mt-[-18%]">
+      <div class="mr-2 flex">
+        <div class="dot bg-xgray2"></div>
+        <div class="dot bg-xgray7"></div>
+        <div class="dot bg-xgray10"></div>
       </div>
+      <h1 class="text-6xl uppercase">Srcery</h1>
+      <div class="ml-2 flex">
+        <div class="dot bg-xgray10"></div>
+        <div class="dot bg-xgray7"></div>
+        <div class="dot bg-xgray2"></div>
+      </div>
+    </div>
   </a>
   <nav
-    class="flex max-w-[384px] grow justify-between sm:max-w-full"
+    class="flex justify-around sm:justify-between sm:max-w-full"
     >
     <span class="text-left">
       <a
