@@ -1,7 +1,7 @@
 ---
 import Glyph from '../svg/glyph.svg';
 interface Props {
-  activePage?: "themes" | "resources" | "community";
+activePage?: "themes" | "resources" | "community";
 }
 
 const { activePage } = Astro.props;
@@ -22,53 +22,50 @@ const { activePage } = Astro.props;
 
   scheduleBlink();
 </script>
+
 <header class="mb-8 min-w-auto sm:max-w-[640px] sm:min-w-[640px]">
   <a
     href="/"
-    class="mb-2 flex min-h-auto flex-col items-center pt-2 sm:min-h-[546px] sm:pt-0"
-  >
-    <div
-      class="flex items-center justify-center rounded-full border-2 border-bright_black p-5 sm:hidden"
+    class="mb-2 flex flex-col items-center pt-2 sm:min-h-[546px] sm:pt-0"
     >
-      <!-- <Glyph width={220} height={220} /> -->
     </div>
     <div
-      class="align-center hidden min-h-[546px] min-w-full justify-center bg-triangle bg-center bg-no-repeat pt-[30%] sm:flex"
-    >
+      class="align-center min-h-auto sm:min-h-[546px] sm:min-w-full justify-center border-2 border-bright_black rounded-full sm:rounded-none sm:border-0 sm:bg-triangle bg-center bg-no-repeat p-5 sm:pt-[30%] flex"
+      >
       <Glyph width={220} height={220} />
     </div>
-    <div class="mt-4 flex items-center sm:mt-[-18%]">
-      <div class="mr-2 flex">
-        <div class="dot bg-xgray2"></div>
-        <div class="dot bg-xgray7"></div>
-        <div class="dot bg-xgray10"></div>
+      <div class="mt-4 flex items-center sm:mt-[-18%]">
+        <div class="mr-2 flex">
+          <div class="dot bg-xgray2"></div>
+          <div class="dot bg-xgray7"></div>
+          <div class="dot bg-xgray10"></div>
+        </div>
+        <h1 class="text-6xl uppercase">Srcery</h1>
+        <div class="ml-2 flex">
+          <div class="dot bg-xgray10"></div>
+          <div class="dot bg-xgray7"></div>
+          <div class="dot bg-xgray2"></div>
+        </div>
       </div>
-      <h1 class="text-6xl uppercase">Srcery</h1>
-      <div class="ml-2 flex">
-        <div class="dot bg-xgray10"></div>
-        <div class="dot bg-xgray7"></div>
-        <div class="dot bg-xgray2"></div>
-      </div>
-    </div>
   </a>
   <nav
-    class="flex max-w-[384px] grow justify-between justify-center sm:max-w-full"
-  >
-    <span class="w-full text-left">
+    class="flex max-w-[384px] grow justify-between sm:max-w-full"
+    >
+    <span class="text-left">
       <a
         href="/themes/"
         class:list={["link uppercase", { sel: activePage === "themes" }]}
         >themes</a
       >
     </span>
-    <span class="w-full text-center">
+    <span class="text-center">
       <a
         href="/resources/"
         class:list={["link uppercase", { sel: activePage === "resources" }]}
         >resources</a
       >
     </span>
-    <span class="w-full text-right">
+    <span class="text-right">
       <a
         href="/community/"
         class:list={["link uppercase", { sel: activePage === "community" }]}
