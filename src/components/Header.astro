@@ -1,5 +1,5 @@
 ---
-import Glyph from "./Glyph.astro";
+import Glyph from '../svg/glyph.svg';
 interface Props {
   activePage?: "themes" | "resources" | "community";
 }
@@ -7,6 +7,21 @@ interface Props {
 const { activePage } = Astro.props;
 ---
 
+<script>
+  function scheduleBlink() {
+    const delay = (Math.random() * 10 + 10) * 1000;
+    setTimeout(() => {
+      const blinkAnim = document.getElementById("blinkAnim") as SVGAnimateElement | null;
+      const clipAnim = document.getElementById("clipAnim") as SVGAnimateElement | null;
+      blinkAnim?.beginElement();
+      clipAnim?.beginElement();
+
+      scheduleBlink();
+    }, delay);
+  }
+
+  scheduleBlink();
+</script>
 <header class="mb-8 min-w-auto sm:max-w-[640px] sm:min-w-[640px]">
   <a
     href="/"
@@ -15,12 +30,12 @@ const { activePage } = Astro.props;
     <div
       class="flex items-center justify-center rounded-full border-2 border-bright_black p-5 sm:hidden"
     >
-      <Glyph />
+      <!-- <Glyph width={220} height={220} /> -->
     </div>
     <div
       class="align-center hidden min-h-[546px] min-w-full justify-center bg-triangle bg-center bg-no-repeat pt-[30%] sm:flex"
     >
-      <Glyph />
+      <Glyph width={220} height={220} />
     </div>
     <div class="mt-4 flex items-center sm:mt-[-18%]">
       <div class="mr-2 flex">
