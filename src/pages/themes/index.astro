@@ -209,7 +209,7 @@ const themes = [
             >
               <svg
                 aria-hidden="true"
-                class="h-5 w-5 text-bright_black"
+                class="h-5 w-5 text-bright-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -225,7 +225,7 @@ const themes = [
             <input
               id="theme-search"
               type="search"
-              class="block w-full border-1 border-bright_black bg-gray2 p-4 pl-10 text-sm text-bright_white placeholder-bright_black focus:border-bright_white focus:outline-hidden"
+              class="block w-full border-1 border-bright-black bg-gray2 p-4 pl-10 text-sm text-bright-white placeholder-bright-black focus:border-bright-white focus:outline-hidden"
               placeholder="Search for a theme, configuration, or application..."
             />
           </div>
@@ -237,7 +237,7 @@ const themes = [
             themes.map((theme) => (
             <Card name={theme.name} keywords={theme.keywords}>
             {theme.new ? (
-            <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright_black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
+            <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright-black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
               New
             </span>
             ) : null}
@@ -253,14 +253,14 @@ const themes = [
                 <a
                   href={theme.repo}
                   target="_blank"
-                  class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1"
+                  class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright-white hover:border-bright-black hover:bg-xgray1"
                   >
                   repository
                 </a>
                   <a
                     href={theme.download}
                     target="_blank"
-                    class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1"
+                    class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright-white hover:border-bright-black hover:bg-xgray1"
                     >
                     download
                   </a>

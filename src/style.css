@@ -14,17 +14,17 @@
   --color-magenta: var(--srcery-palette-primary-magenta);
   --color-cyan: var(--srcery-palette-primary-cyan);
   --color-white: var(--srcery-palette-primary-white);
-  --color-bright_black: var(--srcery-palette-primary-bright-black);
-  --color-bright_red: var(--srcery-palette-primary-bright-red);
-  --color-bright_green: var(--srcery-palette-primary-bright-green);
-  --color-bright_yellow: var(--srcery-palette-primary-bright-yellow);
-  --color-bright_blue: var(--srcery-palette-primary-bright-blue);
-  --color-bright_magenta: var(--srcery-palette-primary-bright-magenta);
-  --color-bright_cyan: var(--srcery-palette-primary-bright-cyan);
-  --color-bright_white: var(--srcery-palette-primary-bright-white);
+  --color-bright-black: var(--srcery-palette-primary-bright-black);
+  --color-bright-red: var(--srcery-palette-primary-bright-red);
+  --color-bright-green: var(--srcery-palette-primary-bright-green);
+  --color-bright-yellow: var(--srcery-palette-primary-bright-yellow);
+  --color-bright-blue: var(--srcery-palette-primary-bright-blue);
+  --color-bright-magenta: var(--srcery-palette-primary-bright-magenta);
+  --color-bright-cyan: var(--srcery-palette-primary-bright-cyan);
+  --color-bright-white: var(--srcery-palette-primary-bright-white);
   --color-orange: var(--srcery-palette-secondary-orange);
-  --color-bright_orange: var(--srcery-palette-secondary-bright-orange);
-  --color-hard_black: var(--srcery-palette-secondary-hard_black);
+  --color-bright-orange: var(--srcery-palette-secondary-bright-orange);
+  --color-hard-black: var(--srcery-palette-secondary-hard-black);
   --color-teal: var(--srcery-palette-secondary-teal);
   --color-xgray1: var(--srcery-palette-secondary-xgray1);
   --color-xgray2: var(--srcery-palette-secondary-xgray2);
@@ -73,11 +73,11 @@
 }
 
 @utility link {
-  @apply border-b border-dotted border-white text-bright_white hover:font-bold;
+  @apply border-b border-dotted border-white text-bright-white hover:font-bold;
 }
 
 @utility tab {
-  @apply flex grow items-end justify-center border-bright_black px-4 pt-1;
+  @apply flex grow items-end justify-center border-bright-black px-4 pt-1;
 }
 
 @utility tab-inactive {
@@ -90,20 +90,20 @@
 
 @utility svg {
   & > svg > * {
-    @apply fill-bright_white;
+    @apply fill-bright-white;
   }
 }
 
 @utility code {
-  @apply mb-3 flex overflow-x-auto bg-hard_black p-4 whitespace-nowrap;
+  @apply mb-3 flex overflow-x-auto bg-hard-black p-4 whitespace-nowrap;
 }
 
 @utility inline-code {
-  @apply bg-hard_black p-1 whitespace-nowrap;
+  @apply bg-hard-black p-1 whitespace-nowrap;
 }
 
 @utility list-dot {
-  @apply mr-2 h-[5px] w-[5px] rounded-full bg-bright_white;
+  @apply mr-2 h-[5px] w-[5px] rounded-full bg-bright-white;
 }
 
 @utility sel {
