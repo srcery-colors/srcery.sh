@@ -3,14 +3,21 @@ interface Props {
   title: string;
   color?: string;
   text_size?: string;
+  subtitle?: boolean;
 }
 
-const { title, color = "color-bright-white", text_size = "text-base" } = Astro.props;
+const {
+  title,
+  color = "color-bright-white",
+  text_size = "text-base",
+  subtitle = false
+} = Astro.props;
+
 ---
 
 <div class="flex items-center gap-2">
   <span class:list={["uppercase font-bold", color, text_size]}>{title}</span>
-  <div class="flex-1 section-line h-[1px]"></div>
+  {!subtitle ? (<div class="flex-1 section-line h-[1px]"></div>) : null}
   <slot></slot>
 </div>
 

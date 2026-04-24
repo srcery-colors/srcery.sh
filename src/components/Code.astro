@@ -8,6 +8,7 @@ import javascript from "highlight.js/lib/languages/javascript";
 import lua from "highlight.js/lib/languages/lua";
 import rust from "highlight.js/lib/languages/rust";
 import vim from "highlight.js/lib/languages/vim";
+import css from "highlight.js/lib/languages/css";
 
 interface Props {
   code: string;
@@ -22,8 +23,9 @@ hljs.registerLanguage("lua", lua);
 hljs.registerLanguage("rust", rust);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("vim", vim);
+hljs.registerLanguage("css", vim);
 
 const html = hljs.highlight(code, { language }).value
 ---
 
-<code class="font-iosevka" set:html={html} />
+<code class="whitespace-pre text-bright-white font-iosevka" set:html={html} />
