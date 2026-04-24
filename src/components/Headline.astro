@@ -18,7 +18,7 @@ const {
 const anchorId = id ?? title.toLowerCase().replace(/\s+/g, "-");
 ---
 
-<div class="flex items-center gap-2" id={anchorId}>
+<div class="flex items-center gap-2 flex-wrap" id={anchorId}>
   <a
     href={`#${anchorId}`}
     class:list={["flex items-center gap-2 uppercase font-bold no-underline hover:opacity-75 transition-opacity", color, text_size]}
