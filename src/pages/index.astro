@@ -1,17 +1,9 @@
 ---
-import hljs from "highlight.js/lib/core";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Octocat from "../components/Octocat.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "highlight.js/styles/srcery.css";
-import bash from "highlight.js/lib/languages/bash";
-import c from "highlight.js/lib/languages/c";
-import clj from "highlight.js/lib/languages/clojure";
-import javascript from "highlight.js/lib/languages/javascript";
-import lua from "highlight.js/lib/languages/lua";
-import rust from "highlight.js/lib/languages/rust";
-import vim from "highlight.js/lib/languages/vim";
+import Code from "../components/Code.astro"
 import bashtxt from "../examples/bash.txt?raw";
 import ctxt from "../examples/c.txt?raw";
 import cljtxt from "../examples/clj.txt?raw";
@@ -21,45 +13,48 @@ import rusttxt from "../examples/rust.txt?raw";
 import vimtxt from "../examples/vim.txt?raw";
 import Headline from "../components/Headline.astro";
 
-hljs.registerLanguage("c", c);
-hljs.registerLanguage("js", javascript);
-hljs.registerLanguage("clj", clj);
-hljs.registerLanguage("lua", lua);
-hljs.registerLanguage("rust", rust);
-hljs.registerLanguage("bash", bash);
-hljs.registerLanguage("vim", vim);
-
 const languages = [
-  { id: "c", name: "C", html: hljs.highlight(ctxt, { language: "c" }).value },
+  {
+    id: "c",
+    name: "C",
+    code: ctxt,
+    language: "c"
+  },
   {
     id: "js",
     name: "JavaScript",
-    html: hljs.highlight(jstxt, { language: "js" }).value,
+    code: jstxt,
+    language: "js"
   },
   {
     id: "clj",
     name: "Clojure",
-    html: hljs.highlight(cljtxt, { language: "clj" }).value,
+    code: cljtxt,
+    language: "clj",
   },
   {
     id: "lua",
     name: "Lua",
-    html: hljs.highlight(luatxt, { language: "lua" }).value,
+    code: luatxt,
+    language: "lua"
   },
   {
     id: "rust",
     name: "Rust",
-    html: hljs.highlight(rusttxt, { language: "rust" }).value,
+    code: rusttxt,
+    language: "rust"
   },
   {
     id: "bash",
     name: "Bash",
-    html: hljs.highlight(bashtxt, { language: "bash" }).value,
+    code: bashtxt,
+    language: "bash"
   },
   {
     id: "vim",
     name: "Vim",
-    html: hljs.highlight(vimtxt, { language: "vim" }).value,
+    code: vimtxt,
+    language: "vim"
   },
 ];
 ---
@@ -129,7 +124,7 @@ const languages = [
                   id={`preview-${lang.id}`}
                   class={`flex p-4${i !== 0 ? " hidden" : ""}`}
                 >
-                  <code class="font-iosevka" set:html={lang.html} />
+                  <Code code={lang.code} language={lang.language} />
                 </pre>
               ))
             }
