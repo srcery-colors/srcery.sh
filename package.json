@@ -24,20 +24,20 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.8",
     "@fortawesome/fontawesome-free": "^7.2.0",
     "@srcery-colors/srcery-palette": "^1.1.0",
     "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.1.8",
     "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
     "simple-icons": "^16.17.0",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.8",
     "@biomejs/biome": "^2.4.13",
     "@octokit/types": "16.0.0",
     "@types/lodash": "4.17.24",
+    "astro": "^6.1.8",
     "globals": "17.5.0",
     "lodash": "4.18.1",
     "octokit": "5.0.5",

@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.8
-        version: 0.9.8(prettier-plugin-astro@0.14.1)(prettier@3.8.3)(typescript@6.0.3)
       '@fortawesome/fontawesome-free':
         specifier: ^7.2.0
         version: 7.2.0
@@ -20,9 +17,6 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.2.4
         version: 4.2.4(vite@8.0.8(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
-      astro:
-        specifier: ^6.1.8
-        version: 6.1.8(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3)
       devicon:
         specifier: ^2.17.0
         version: 2.17.0
@@ -36,6 +30,9 @@ importers:
         specifier: ^4.2.4
         version: 4.2.4
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.8
+        version: 0.9.8(prettier-plugin-astro@0.14.1)(prettier@3.8.3)(typescript@6.0.3)
       '@biomejs/biome':
         specifier: ^2.4.13
         version: 2.4.13
@@ -45,6 +42,9 @@ importers:
       '@types/lodash':
         specifier: 4.17.24
         version: 4.17.24
+      astro:
+        specifier: ^6.1.8
+        version: 6.1.8(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3)
       globals:
         specifier: 17.5.0
         version: 17.5.0
