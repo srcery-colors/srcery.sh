@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  color?: string;
+  text_size: string;
+}
+
+const { title, color = "color-bright_white", text_size = "text-base" } = Astro.props;
+---
+
+<div class="flex items-center gap-2">
+  <span class:list={["uppercase font-bold", color, text_size]}>{title}</span>
+  <div class="flex-1 section-line h-[1px]"></div>
+  <slot></slot>
+</div>
+
+<style>
+  .section-line {
+    background: linear-gradient(90deg, var(--color-bright_black), transparent);
+  }
+</style>
+
