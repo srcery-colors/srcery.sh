@@ -1,9 +1,9 @@
 ---
+import Code from "../components/Code.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Headline from "../components/Headline.astro";
 import Octocat from "../components/Octocat.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Code from "../components/Code.astro"
 import bashtxt from "../examples/bash.txt?raw";
 import ctxt from "../examples/c.txt?raw";
 import cljtxt from "../examples/clj.txt?raw";
@@ -11,20 +11,20 @@ import jstxt from "../examples/js.txt?raw";
 import luatxt from "../examples/lua.txt?raw";
 import rusttxt from "../examples/rust.txt?raw";
 import vimtxt from "../examples/vim.txt?raw";
-import Headline from "../components/Headline.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const languages = [
   {
     id: "c",
     name: "C",
     code: ctxt,
-    language: "c"
+    language: "c",
   },
   {
     id: "js",
     name: "JavaScript",
     code: jstxt,
-    language: "js"
+    language: "js",
   },
   {
     id: "clj",
@@ -36,25 +36,25 @@ const languages = [
     id: "lua",
     name: "Lua",
     code: luatxt,
-    language: "lua"
+    language: "lua",
   },
   {
     id: "rust",
     name: "Rust",
     code: rusttxt,
-    language: "rust"
+    language: "rust",
   },
   {
     id: "bash",
     name: "Bash",
     code: bashtxt,
-    language: "bash"
+    language: "bash",
   },
   {
     id: "vim",
     name: "Vim",
     code: vimtxt,
-    language: "vim"
+    language: "vim",
   },
 ];
 ---
@@ -104,13 +104,12 @@ const languages = [
             {
               languages.map((lang, i) => (
                 <li class="flex flex-1">
-                  <a
-                    href="#"
-                    class={`tab ${i === 0 ? "tab-active" : "tab-inactive"}`}
+                  <button
+                    class={`tab hover:cursor-pointer ${i === 0 ? "tab-active" : "tab-inactive"}`}
                     data-tab={lang.id}
                   >
                     {lang.name}
-                  </a>
+                  </button>
                 </li>
               ))
             }

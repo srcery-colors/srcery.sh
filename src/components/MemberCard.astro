@@ -1,5 +1,6 @@
 ---
 import Card from "./Card.astro";
+import { Image } from 'astro:assets';
 
 interface Props {
   url: string;
@@ -8,7 +9,7 @@ interface Props {
   member?: boolean;
 }
 
-const { name, avatarUrl, url, member = false} = Astro.props;
+const { name, avatarUrl, url, member = false } = Astro.props;
 ---
 
 <a
@@ -24,7 +25,7 @@ const { name, avatarUrl, url, member = false} = Astro.props;
         <div class="absolute -inset-[10px] rounded-full border border-dashed border-xgray5 [animation:spin_20s_linear_infinite] transition-[opacity,inset] duration-300 ease group-hover:border-bright-black group-hover:-inset-[13px] group-hover:rotate-45"></div>
       ): null}
       <div class="absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 ease group-hover:border-bright-white group-hover:-inset-[5px]"></div>
-      <img class="w-18 h-18 rounded-full object-cover block bg--black" src={avatarUrl} alt={name} />
+      <Image width="100" height="100" class="w-18 h-18 rounded-full object-cover block bg--black" src={avatarUrl} alt={name} />
     </div>
     <div class="break-word text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white">{name}</div>
   </div>

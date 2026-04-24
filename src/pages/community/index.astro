@@ -1,18 +1,18 @@
 ---
-import Footer from "../../components/Footer.astro";
-import Header from "../../components/Header.astro";
-import Octocat from "../../components/Octocat.astro";
-import MemberCard from "../../components/MemberCard.astro";
-import github from "../../github.json";
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import sortBy from "lodash/sortBy.js";
 import Discord from "simple-icons/icons/discord.svg";
 import Spring from "simple-icons/icons/spring.svg";
 import Button from "../../components/Button.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
 import Headline from "../../components/Headline.astro";
+import MemberCard from "../../components/MemberCard.astro";
+import Octocat from "../../components/Octocat.astro";
+import github from "../../github.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const members = github.members
-const contributors = sortBy(github.contributors, ["contributions"]).reverse()
+const members = github.members;
+const contributors = sortBy(github.contributors, ["contributions"]).reverse();
 ---
 
 <BaseLayout

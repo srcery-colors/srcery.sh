@@ -12,10 +12,10 @@ const {
   color = "color-bright-white",
   text_size = "text-base",
   subtitle = false,
-  id
+  id,
 } = Astro.props;
 
-const anchorId = id ?? title.toLowerCase().replace(/\s+/g, '-');
+const anchorId = id ?? title.toLowerCase().replace(/\s+/g, "-");
 ---
 
 <div class="flex items-center gap-2" id={anchorId}>
