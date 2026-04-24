@@ -26,6 +26,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-vim",
     download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
     keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"],
+    new: false
   },
   {
     name: "emacs",
@@ -34,6 +35,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-emacs",
     download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
     keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"],
+    new: false
   },
   {
     name: "vscode",
@@ -42,6 +44,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-vscode",
     download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
     keywords: ["visual studio", "vscode", "microsoft", "code", "windows"],
+    new: false
   },
   {
     name: "intellij",
@@ -50,6 +53,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
     keywords: ["idea", "java", "intellij", "ide"],
+    new: false
   },
   {
     name: "tmux",
@@ -58,6 +62,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-tmux",
     download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
     keywords: ["tmux", "terminal", "multiplexer"],
+    new: false
   },
   {
     name: "terminals",
@@ -66,6 +71,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-terminal",
     download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
     keywords: ["terminal","alacritty","blink","chrome secure shell","foot","genode","16 colors","gnome","guake","iterm","kitty","konsole","linux","virtual console","lxterminal","mintty","pantheon","putty","st","terminator","termite","termux","tilix","windows","xfce","xresources","x11","xorg"],
+    new: false
   },
   {
     name: "steam",
@@ -74,6 +80,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-steam-themes",
     download: "https://github.com/srcery-colors/srcery-steam-themes/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"],
+    new: false
   },
   {
     name: "insomnia",
@@ -82,6 +89,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-insomnia",
     download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
     keywords: ["insomnia", "rest", "api"],
+    new: false
   },
   {
     name: "zed",
@@ -90,6 +98,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-zed",
     download: "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
     keywords: ["zed", "ai", "rust"],
+    new: false
   },
   {
     name: "obsidian",
@@ -98,6 +107,7 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-obsidian",
     download: "https://github.com/srcery-colors/srcery-obsidian/archive/refs/heads/main.zip",
     keywords: ["obsidian", "note", "markdown", "md"],
+    new: true
   },
   {
     name: "nova",
@@ -106,22 +116,25 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-nova",
     download: "https://github.com/srcery-colors/srcery-nova/archive/refs/heads/main.zip",
     keywords: ["nova", "panic", "apple", "macos"],
+    new: true
   },
   {
-    name: "assorted gui themes",
+    name: "gui themes",
     icon: guisvg,
     url: undefined,
     repo: "https://github.com/srcery-colors/srcery-gui",
     download: "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
     keywords: ["awesomewm","bspwm","i3wm","oomox","polybar","qutebrowser","rofi","slack","zathura"],
+    new: false
   },
   {
-    name: "assorted shell themes",
+    name: "shell themes",
     icon: shellsvg,
     url: undefined,
     repo: "https://github.com/srcery-colors/srcery-shell",
     download: "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
     keywords: ["broot", "cmus", "mutt", "newsboat", "vifm", "zellij"],
+    new: false
   },
 ];
 ---
@@ -158,7 +171,7 @@ const themes = [
             <input
               id="theme-search"
               type="search"
-              class="block w-full border-2 border-bright_black bg-black p-4 pl-10 text-sm text-bright_white placeholder-bright_black focus:border-bright_white focus:outline-hidden"
+              class="block w-full border-1 border-bright_black bg-gray2 p-4 pl-10 text-sm text-bright_white placeholder-bright_black focus:border-bright_white focus:outline-hidden"
               placeholder="Search for a theme, configuration, or application..."
             />
           </div>
@@ -168,20 +181,24 @@ const themes = [
         >
           {themes.map((theme) => (
             <div
-              class="theme-card flex w-full max-w-sm flex-col items-center border-2 border-bright_black p-5"
+              class="card relative flex w-full max-w-sm flex-col bg-gray2 items-center border-1 border-bright_black p-5"
               data-name={theme.name}
               data-keywords={theme.keywords.join(",")}
             >
+            {theme.new === true ? (
+              <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright_black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">New</span>
+            ): null}
+            <div class="flex flex-col w-full gap-3 items-center">
               <div
-                class="mb-5 flex h-24 w-24 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
+                class="card-icon flex h-18 w-18 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
                 set:html={theme.icon}
-              />
-              {theme.url
-                ? <a href={theme.url} target="_blank" class="mb-5 link uppercase">{theme.name}</a>
-                : <span class="mb-5 uppercase">{theme.name}</span>
-              }
-              <a href={theme.repo} target="_blank" class="mb-5 link uppercase">repository</a>
-              <a href={theme.download} target="_blank" class="mb-5 link uppercase">download</a>
+                >
+              </div>
+              <span class="text-lg font-bold uppercase">{theme.name}</span>
+              <div class="w-full h-px divider"></div>
+              <a href={theme.repo} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray2">repository</a>
+              <a href={theme.download} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray2">download</a>
+            </div>
             </div>
           ))}
         </div>
@@ -191,9 +208,62 @@ const themes = [
   <Footer />
 </BaseLayout>
 
+
+<style>
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .card::before,
+  .card::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: var(--color-white);
+    border-style: solid;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  .card::before {
+    top: 6px;
+    left: 6px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .divider {
+    background: linear-gradient(90deg, transparent, var(--color-white), transparent);
+  }
+
+  .card::after {
+    bottom: 6px;
+    right: 6px;
+    border-width: 0 2px 2px 0;
+  }
+  .card:hover::before,
+  .card:hover::after {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px #a08c6e;
+  }
+
+  .card-icon {
+    transition: transform 0.3s ease;
+  }
+  .card:hover .card-icon {
+    transform: scale(1.08);
+  }
+
+
+</style>
+
 <script>
   const input = document.getElementById("theme-search") as HTMLInputElement;
-  const cards = document.querySelectorAll<HTMLElement>(".theme-card");
+  const cards = document.querySelectorAll<HTMLElement>(".card");
 
   input.addEventListener("input", () => {
     const q = input.value.toLowerCase();
