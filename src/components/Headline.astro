@@ -4,19 +4,25 @@ interface Props {
   color?: string;
   text_size?: string;
   subtitle?: boolean;
+  id?: string;
 }
 
 const {
   title,
   color = "color-bright-white",
   text_size = "text-base",
-  subtitle = false
+  subtitle = false,
+  id
 } = Astro.props;
 
+const anchorId = id ?? title.toLowerCase().replace(/\s+/g, '-');
 ---
 
-<div class="flex items-center gap-2">
-  <span class:list={["uppercase font-bold", color, text_size]}>{title}</span>
+<div class="flex items-center gap-2" id={anchorId}>
+  <a
+    href={`#${anchorId}`}
+    class:list={["flex items-center gap-2 uppercase font-bold no-underline hover:opacity-75 transition-opacity", color, text_size]}
+  ><span>#</span><span>{title}</span></a>
   {!subtitle ? (<div class="flex-1 section-line h-[1px]"></div>) : null}
   <slot></slot>
 </div>
@@ -26,4 +32,3 @@ const {
     background: linear-gradient(90deg, var(--color-bright-black), transparent);
   }
 </style>
-
