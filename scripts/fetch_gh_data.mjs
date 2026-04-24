@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import { Octokit } from "octokit";
-import uniqBy from "lodash/uniqBy.js";
-import flatten from "lodash/flatten.js";
-import ps from "node:process";
 import fs from "node:fs";
-import { resolve, dirname, join } from "path";
-import { fileURLToPath } from "url";
+import { dirname, join, resolve } from "node:path";
+import ps from "node:process";
+import { fileURLToPath } from "node:url";
+import flatten from "lodash/flatten.js";
+import uniqBy from "lodash/uniqBy.js";
+import { Octokit } from "octokit";
 
 // ECMAScript doesn't define __dirname, this is a workaround
 // https://stackoverflow.com/a/64383997/4306379
@@ -78,7 +78,7 @@ async function fetchContributors() {
 
 // Fetch members, used to filter out from contributors
 async function fetchMembers() {
-  let resp = await fetchUrl("GET /orgs/{org}/public_members");
+  const resp = await fetchUrl("GET /orgs/{org}/public_members");
   return resp.data;
 }
 // ENTRY:

@@ -1,7 +1,0 @@
-# .prettierignore
-
-**/pnpm-lock.yaml
-
-dist
-
-src/github.json
