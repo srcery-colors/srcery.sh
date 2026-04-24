@@ -81,11 +81,11 @@
 }
 
 @utility tab-inactive {
-  @apply border-b-2 hover:bg-xgray1;
+  @apply border-b-1 hover:bg-xgray1;
 }
 
 @utility tab-active {
-  @apply border-s-2 border-e-2 border-t-2 border-b-2 border-b-transparent;
+  @apply border-s-1 border-e-1 border-t-1 border-b-1 border-b-transparent;
 }
 
 @utility svg {
