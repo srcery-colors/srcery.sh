@@ -28,9 +28,7 @@
 This is the repository for https://srcery.sh. All contributions are welcomed and encouraged.
 
 
-<a href="https://srcery.sh">
-    <h3>🌐 Visit Website</h3>
-</a>
+### [🌐 Visit Website](https://srcery.sh)
 
 ## Libraries
 
