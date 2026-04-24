@@ -19,6 +19,8 @@
     "fetch": "node scripts/fetch_gh_data.mjs",
     "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "prettier-fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "lint": "biome lint --write .",
+    "lint:fix": "biome check --write .",
     "preview": "astro preview",
     "start": "astro dev"
   },
@@ -38,10 +40,10 @@
     "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
     "simple-icons": "^16.17.0",
-    "tailwindcss": "^4.2.4",
-    "typescript": "^6.0.3"
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.13",
     "@octokit/types": "16.0.0",
     "@types/lodash": "4.17.24",
     "globals": "17.5.0",
@@ -50,6 +52,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-packagejson": "3.0.2",
-    "prettier-plugin-tailwindcss": "0.7.2"
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "typescript": "^6.0.3"
   }
 }
