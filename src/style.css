@@ -107,7 +107,7 @@
 }
 
 @utility sel {
-  @apply border-yellow text-yellow font-bold;
+  @apply border-yellow font-bold text-yellow;
 }
 
 @layer base {

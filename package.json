@@ -14,14 +14,14 @@
   "browser": true,
   "scripts": {
     "build": "astro build",
+    "check": "astro check && tsc --noEmit",
     "clean": "rm -f src/github.json",
     "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
-    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
-    "prettier-fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "lint": "biome lint --write .",
     "lint:fix": "biome check --write .",
-    "check": "astro check && tsc --noEmit",
+    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "prettier:fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "preview": "astro preview",
     "start": "astro dev"
   },

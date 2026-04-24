@@ -1,7 +1,7 @@
 ---
-import Glyph from '../svg/glyph.svg';
+import Glyph from "../svg/glyph.svg";
 interface Props {
-activePage?: "themes" | "resources" | "community";
+  activePage?: "themes" | "resources" | "community";
 }
 
 const { activePage } = Astro.props;
@@ -11,8 +11,12 @@ const { activePage } = Astro.props;
   function scheduleBlink() {
     const delay = (Math.random() * 10 + 10) * 1000;
     setTimeout(() => {
-      const blinkAnim = document.getElementById("blinkAnim") as SVGAnimateElement | null;
-      const clipAnim = document.getElementById("clipAnim") as SVGAnimateElement | null;
+      const blinkAnim = document.getElementById(
+        "blinkAnim",
+      ) as SVGAnimateElement | null;
+      const clipAnim = document.getElementById(
+        "clipAnim",
+      ) as SVGAnimateElement | null;
       blinkAnim?.beginElement();
       clipAnim?.beginElement();
 
@@ -27,11 +31,13 @@ const { activePage } = Astro.props;
   <a
     href="/"
     class="mb-2 flex flex-col items-center pt-2 sm:min-h-[546px] sm:pt-0"
-    >
+  >
     <div
       class="align-center min-h-auto sm:min-h-[546px] sm:min-w-full justify-center border-2 border-bright_black rounded-full sm:rounded-none sm:border-0 sm:bg-triangle bg-center bg-no-repeat p-5 sm:pt-[30%] flex"
-      >
-      <Glyph class="sm:w-[220px] sm:h-[220px] w-[150px] h-[150px] tiny:w-[190px] tiny:h-[190px] " />
+    >
+      <Glyph
+        class="sm:w-[220px] sm:h-[220px] w-[150px] h-[150px] tiny:w-[190px] tiny:h-[190px]"
+      />
     </div>
     <div class="mt-4 flex items-center sm:mt-[-18%]">
       <div class="mr-2 flex">
@@ -47,9 +53,7 @@ const { activePage } = Astro.props;
       </div>
     </div>
   </a>
-  <nav
-    class="flex justify-around sm:justify-between sm:max-w-full"
-    >
+  <nav class="flex justify-around sm:justify-between sm:max-w-full">
     <span class="text-left">
       <a
         href="/themes/"

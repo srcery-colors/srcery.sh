@@ -12,7 +12,9 @@ import github from "../../github.json";
 >
   <Octocat />
   <div class="flex grow justify-center p-4">
-    <main class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]">
+    <main
+      class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
+    >
       <Header activePage="community" />
       <section class="w-full">
         <div class="mb-8">
@@ -72,20 +74,22 @@ import github from "../../github.json";
           <div
             class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
           >
-            {github.members.map((user) => (
-              <a
-                href={user.html_url}
-                target="_blank"
-                class="flex flex-col items-center border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
-              >
-                <img
-                  src={user.avatar_url}
-                  alt="github user avatar"
-                  class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
-                />
-                <div>{user.login}</div>
-              </a>
-            ))}
+            {
+              github.members.map((user) => (
+                <a
+                  href={user.html_url}
+                  target="_blank"
+                  class="flex flex-col items-center border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
+                >
+                  <img
+                    src={user.avatar_url}
+                    alt="github user avatar"
+                    class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
+                  />
+                  <div>{user.login}</div>
+                </a>
+              ))
+            }
           </div>
         </div>
         <div class="mb-8">
@@ -95,20 +99,22 @@ import github from "../../github.json";
           <div
             class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
           >
-            {github.contributors.map((user) => (
-              <a
-                href={user.html_url}
-                target="_blank"
-                class="flex flex-col items-center break-all border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
-              >
-                <img
-                  src={user.avatar_url}
-                  alt="github user avatar"
-                  class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
-                />
-                <div class="break-word">{user.login}</div>
-              </a>
-            ))}
+            {
+              github.contributors.map((user) => (
+                <a
+                  href={user.html_url}
+                  target="_blank"
+                  class="flex flex-col items-center break-all border-2 border-bright_black p-4 hover:cursor-pointer hover:border-bright_white"
+                >
+                  <img
+                    src={user.avatar_url}
+                    alt="github user avatar"
+                    class="mb-2 w-1/2 rounded-full border-4 border-bright_black p-1"
+                  />
+                  <div class="break-word">{user.login}</div>
+                </a>
+              ))
+            }
           </div>
         </div>
       </section>
@@ -116,4 +122,3 @@ import github from "../../github.json";
   </div>
   <Footer />
 </BaseLayout>
-
