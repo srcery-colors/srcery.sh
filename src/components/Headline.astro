@@ -2,7 +2,7 @@
 interface Props {
   title: string;
   color?: string;
-  text_size: string;
+  text_size?: string;
 }
 
 const { title, color = "color-bright_white", text_size = "text-base" } = Astro.props;
