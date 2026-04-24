@@ -76,11 +76,11 @@ background: var(--srcery-palette-primary-black);
           To get started install the package using npm or git:
           </p>
           <div class="flex flex-col gap-2">
-            <div class="bg-hard-black p-2">
+            <div class="bg-hard-black p-2 overflow-x-auto">
               <Code language="bash" code="npm i @srcery-colors/srcery-palette"></Code>
             </div>
 
-            <div class="bg-hard-black p-2">
+            <div class="bg-hard-black p-2 overflow-x-auto">
               <Code language="bash" code="git clone https://github.com/srcery-colors/srcery-palette"></Code>
             </div>
           </div>
@@ -90,7 +90,7 @@ background: var(--srcery-palette-primary-black);
             <p class="text-white">
             Once downloaded, you can there are a few files includes. Here I use <code class="inline-code">jq</code> to grab red from the
             <code class="inline-code">json</code> palette in <code class="inline-code">bash</code>
-            <div class="bg-hard-black p-2">
+            <div class="bg-hard-black p-2 overflow-x-auto">
               <Code language="bash" code="jq < palette.json '.primary.red.hex'"></Code>
             </div>
             <span class="text-white">
@@ -98,7 +98,7 @@ background: var(--srcery-palette-primary-black);
               <code class="inline-code">palette.json</code>, making it available in javascript like this:
             </span>
 
-            <div class="bg-hard-black p-2">
+            <div class="bg-hard-black p-2 overflow-x-auto">
               <Code language="js" code={jsImportCode}></Code>
             </div>
 
@@ -106,7 +106,7 @@ background: var(--srcery-palette-primary-black);
               The package also exports CSS variables that can be imported in your CSS files
             </span>
 
-            <div class="bg-hard-black p-2">
+            <div class="bg-hard-black p-2 overflow-x-auto">
               <Code language="css" code={cssImportCode}></Code>
             </div>
             </p>
