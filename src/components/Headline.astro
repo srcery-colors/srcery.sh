@@ -5,7 +5,7 @@ interface Props {
   text_size?: string;
 }
 
-const { title, color = "color-bright_white", text_size = "text-base" } = Astro.props;
+const { title, color = "color-bright-white", text_size = "text-base" } = Astro.props;
 ---
 
 <div class="flex items-center gap-2">
@@ -16,7 +16,7 @@ const { title, color = "color-bright_white", text_size = "text-base" } = Astro.p
 
 <style>
   .section-line {
-    background: linear-gradient(90deg, var(--color-bright_black), transparent);
+    background: linear-gradient(90deg, var(--color-bright-black), transparent);
   }
 </style>
 
