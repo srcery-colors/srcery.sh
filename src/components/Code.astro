@@ -1,0 +1,29 @@
+---
+import hljs from "highlight.js/lib/core";
+import "highlight.js/styles/srcery.css";
+import bash from "highlight.js/lib/languages/bash";
+import c from "highlight.js/lib/languages/c";
+import clj from "highlight.js/lib/languages/clojure";
+import javascript from "highlight.js/lib/languages/javascript";
+import lua from "highlight.js/lib/languages/lua";
+import rust from "highlight.js/lib/languages/rust";
+import vim from "highlight.js/lib/languages/vim";
+
+interface Props {
+  code: string;
+  language: string;
+}
+const { code, language } = Astro.props;
+
+hljs.registerLanguage("c", c);
+hljs.registerLanguage("js", javascript);
+hljs.registerLanguage("clj", clj);
+hljs.registerLanguage("lua", lua);
+hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("bash", bash);
+hljs.registerLanguage("vim", vim);
+
+const html = hljs.highlight(code, { language }).value
+---
+
+<code class="font-iosevka" set:html={html} />
