@@ -45,9 +45,6 @@ importers:
       astro:
         specifier: ^6.1.8
         version: 6.1.8(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3)
-      globals:
-        specifier: 17.5.0
-        version: 17.5.0
       lodash:
         specifier: 4.18.1
         version: 4.18.1
@@ -1379,10 +1376,6 @@ packages:
 
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
-
-  globals@17.5.0:
-    resolution: {integrity: sha512-qoV+HK2yFl/366t2/Cb3+xxPUo5BuMynomoDmiaZBIdbs+0pYbjfZU+twLhGKp4uCZ/+NbtpVepH5bGCxRyy2g==}
-    engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -3594,8 +3587,6 @@ snapshots:
   get-caller-file@2.0.5: {}
 
   github-slugger@2.0.0: {}
-
-  globals@17.5.0: {}
 
   graceful-fs@4.2.11: {}
 
