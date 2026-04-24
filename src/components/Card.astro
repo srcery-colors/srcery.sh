@@ -1,10 +1,10 @@
 ---
 interface Props {
-  name: string;
-  keywords: Array<string>;
+  name?: string;
+  keywords?: Array<string>;
 }
 
-const { name = "", keywords} = Astro.props;
+const { name = "", keywords = []} = Astro.props;
 ---
 
 <div
