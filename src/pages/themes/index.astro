@@ -236,7 +236,7 @@ const themes = [
           {
             themes.map((theme) => (
             <Card name={theme.name} keywords={theme.keywords}>
-            {theme.new === true ? (
+            {theme.new ? (
             <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright_black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
               New
             </span>

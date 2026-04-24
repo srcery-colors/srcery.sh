@@ -1,0 +1,41 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  url: string;
+  avatarUrl: string;
+  name: string;
+  member?: boolean;
+}
+
+const { name, avatarUrl, url, member = false} = Astro.props;
+---
+
+<div class="group w-[180px]">
+  <Card>
+  <a
+    href={url}
+    target="_blank"
+    class="flex flex-col items-center gap-6"
+    >
+    <div class="relative w-18 h-18 transition-transform duration-300 ease group-hover:scale-[1.06]">
+      {member ? (
+        <div class="absolute -inset-[10px] rounded-full border border-dashed border-xgray5 [animation:spin_20s_linear_infinite] transition-[opacity,inset] duration-300 ease group-hover:border-bright_black group-hover:-inset-[13px] group-hover:rotate-45"></div>
+      ): null}
+      <div class="absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 ease group-hover:border-bright_white group-hover:-inset-[5px]"></div>
+      <img class="w-18 h-18 rounded-full object-cover block bg--black" src={avatarUrl} alt={name} />
+    </div>
+    <div class="break-word text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white">{name}</div>
+  </a>
+  </Card>
+</div>
+
+<style>
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+</style>
+
