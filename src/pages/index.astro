@@ -31,13 +31,37 @@ hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("vim", vim);
 
 const languages = [
-  { id: "c",    name: "C",          html: hljs.highlight(ctxt,    { language: "c"    }).value },
-  { id: "js",   name: "JavaScript", html: hljs.highlight(jstxt,   { language: "js"   }).value },
-  { id: "clj",  name: "Clojure",    html: hljs.highlight(cljtxt,  { language: "clj"  }).value },
-  { id: "lua",  name: "Lua",        html: hljs.highlight(luatxt,  { language: "lua"  }).value },
-  { id: "rust", name: "Rust",       html: hljs.highlight(rusttxt, { language: "rust" }).value },
-  { id: "bash", name: "Bash",       html: hljs.highlight(bashtxt, { language: "bash" }).value },
-  { id: "vim",  name: "Vim",        html: hljs.highlight(vimtxt,  { language: "vim"  }).value },
+  { id: "c", name: "C", html: hljs.highlight(ctxt, { language: "c" }).value },
+  {
+    id: "js",
+    name: "JavaScript",
+    html: hljs.highlight(jstxt, { language: "js" }).value,
+  },
+  {
+    id: "clj",
+    name: "Clojure",
+    html: hljs.highlight(cljtxt, { language: "clj" }).value,
+  },
+  {
+    id: "lua",
+    name: "Lua",
+    html: hljs.highlight(luatxt, { language: "lua" }).value,
+  },
+  {
+    id: "rust",
+    name: "Rust",
+    html: hljs.highlight(rusttxt, { language: "rust" }).value,
+  },
+  {
+    id: "bash",
+    name: "Bash",
+    html: hljs.highlight(bashtxt, { language: "bash" }).value,
+  },
+  {
+    id: "vim",
+    name: "Vim",
+    html: hljs.highlight(vimtxt, { language: "vim" }).value,
+  },
 ];
 ---
 
@@ -47,7 +71,9 @@ const languages = [
 >
   <Octocat />
   <div class="flex grow justify-center p-4">
-    <main class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]">
+    <main
+      class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
+    >
       <Header />
       <section class="w-full">
         <div class="mb-8 text-justify">
@@ -71,35 +97,41 @@ const languages = [
               >Rosetta Code</a
             >
             examples demoed using
-            <a class="link" href="https://highlightjs.org/">highlight.js</a>. It'll
-            give a general impression but see the
+            <a class="link" href="https://highlightjs.org/">highlight.js</a>.
+            It'll give a general impression but see the
             <a href="/themes/" class="link">themes</a>
             for details about a specific editor/IDE.
           </p>
           <ul
             class="flex overflow-x-auto overflow-y-hidden border-bright_black text-center"
           >
-            {languages.map((lang, i) => (
-              <li class="flex flex-1">
-                <a
-                  href="#"
-                  class={`tab ${i === 0 ? "tab-active" : "tab-inactive"}`}
-                  data-tab={lang.id}
-                >
-                  {lang.name}
-                </a>
-              </li>
-            ))}
+            {
+              languages.map((lang, i) => (
+                <li class="flex flex-1">
+                  <a
+                    href="#"
+                    class={`tab ${i === 0 ? "tab-active" : "tab-inactive"}`}
+                    data-tab={lang.id}
+                  >
+                    {lang.name}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
           <div
             class="overflow-x-auto border-x-2 border-b-2 border-bright_black"
           >
-            {languages.map((lang, i) => (
-              <pre
-                id={`preview-${lang.id}`}
-                class={`flex p-4${i !== 0 ? " hidden" : ""}`}
-              ><code class="font-iosevka" set:html={lang.html} /></pre>
-            ))}
+            {
+              languages.map((lang, i) => (
+                <pre
+                  id={`preview-${lang.id}`}
+                  class={`flex p-4${i !== 0 ? " hidden" : ""}`}
+                >
+                  <code class="font-iosevka" set:html={lang.html} />
+                </pre>
+              ))
+            }
           </div>
         </div>
       </section>

@@ -24,27 +24,30 @@ const themes = [
     icon: vimsvg,
     url: "https://www.vim.org/",
     repo: "https://github.com/srcery-colors/srcery-vim",
-    download: "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-vim/archive/refs/heads/master.zip",
     keywords: ["vim", "vimrc", "neovim", "gvim", "terminal"],
-    new: false
+    new: false,
   },
   {
     name: "emacs",
     icon: emacssvg,
     url: "https://www.gnu.org/software/emacs/",
     repo: "https://github.com/srcery-colors/srcery-emacs",
-    download: "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-emacs/archive/refs/heads/master.zip",
     keywords: ["emacs", "gnu", "terminal", "init.el", "lisp"],
-    new: false
+    new: false,
   },
   {
     name: "vscode",
     icon: vscodesvg,
     url: "https://code.visualstudio.com/",
     repo: "https://github.com/srcery-colors/srcery-vscode",
-    download: "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
+    download:
+      "https://marketplace.visualstudio.com/items?itemName=srcery-colors.srcery-colors",
     keywords: ["visual studio", "vscode", "microsoft", "code", "windows"],
-    new: false
+    new: false,
   },
   {
     name: "intellij",
@@ -53,88 +56,136 @@ const themes = [
     repo: "https://github.com/srcery-colors/srcery-intellij",
     download: "https://plugins.jetbrains.com/plugin/18428-srcery-colorscheme/",
     keywords: ["idea", "java", "intellij", "ide"],
-    new: false
+    new: false,
   },
   {
     name: "tmux",
     icon: tmuxsvg,
     url: "https://github.com/tmux/tmux",
     repo: "https://github.com/srcery-colors/srcery-tmux",
-    download: "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-tmux/archive/refs/heads/master.zip",
     keywords: ["tmux", "terminal", "multiplexer"],
-    new: false
+    new: false,
   },
   {
     name: "terminals",
     icon: bashsvg,
     url: "https://en.wikipedia.org/wiki/List_of_terminal_emulators",
     repo: "https://github.com/srcery-colors/srcery-terminal",
-    download: "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
-    keywords: ["terminal","alacritty","blink","chrome secure shell","foot","genode","16 colors","gnome","guake","iterm","kitty","konsole","linux","virtual console","lxterminal","mintty","pantheon","putty","st","terminator","termite","termux","tilix","windows","xfce","xresources","x11","xorg"],
-    new: false
+    download:
+      "https://github.com/srcery-colors/srcery-terminal/archive/refs/heads/master.zip",
+    keywords: [
+      "terminal",
+      "alacritty",
+      "blink",
+      "chrome secure shell",
+      "foot",
+      "genode",
+      "16 colors",
+      "gnome",
+      "guake",
+      "iterm",
+      "kitty",
+      "konsole",
+      "linux",
+      "virtual console",
+      "lxterminal",
+      "mintty",
+      "pantheon",
+      "putty",
+      "st",
+      "terminator",
+      "termite",
+      "termux",
+      "tilix",
+      "windows",
+      "xfce",
+      "xresources",
+      "x11",
+      "xorg",
+    ],
+    new: false,
   },
   {
     name: "steam",
     icon: steamsvg,
     url: "https://www.steampowered.com",
     repo: "https://github.com/srcery-colors/srcery-steam-themes",
-    download: "https://github.com/srcery-colors/srcery-steam-themes/archive/refs/heads/main.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-steam-themes/archive/refs/heads/main.zip",
     keywords: ["steam", "steamos", "valve", "gaming", "steamdeck"],
-    new: false
+    new: false,
   },
   {
     name: "insomnia",
     icon: insomniasvg,
     url: "https://insomnia.rest/",
     repo: "https://github.com/srcery-colors/srcery-insomnia",
-    download: "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-insomnia/archive/refs/heads/main.zip",
     keywords: ["insomnia", "rest", "api"],
-    new: false
+    new: false,
   },
   {
     name: "zed",
     icon: zedsvg,
     url: "https://zed.dev/",
     repo: "https://github.com/srcery-colors/srcery-zed",
-    download: "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-zed/archive/refs/heads/main.zip",
     keywords: ["zed", "ai", "rust"],
-    new: false
+    new: false,
   },
   {
     name: "obsidian",
     icon: obsidiansvg,
     url: "https://obsidian.md/",
     repo: "https://github.com/srcery-colors/srcery-obsidian",
-    download: "https://github.com/srcery-colors/srcery-obsidian/archive/refs/heads/main.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-obsidian/archive/refs/heads/main.zip",
     keywords: ["obsidian", "note", "markdown", "md"],
-    new: true
+    new: true,
   },
   {
     name: "nova",
     icon: novasvg,
     url: "https://nova.app/",
     repo: "https://github.com/srcery-colors/srcery-nova",
-    download: "https://github.com/srcery-colors/srcery-nova/archive/refs/heads/main.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-nova/archive/refs/heads/main.zip",
     keywords: ["nova", "panic", "apple", "macos"],
-    new: true
+    new: true,
   },
   {
     name: "gui themes",
     icon: guisvg,
     url: undefined,
     repo: "https://github.com/srcery-colors/srcery-gui",
-    download: "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
-    keywords: ["awesomewm","bspwm","i3wm","oomox","polybar","qutebrowser","rofi","slack","zathura"],
-    new: false
+    download:
+      "https://github.com/srcery-colors/srcery-gui/archive/refs/heads/master.zip",
+    keywords: [
+      "awesomewm",
+      "bspwm",
+      "i3wm",
+      "oomox",
+      "polybar",
+      "qutebrowser",
+      "rofi",
+      "slack",
+      "zathura",
+    ],
+    new: false,
   },
   {
     name: "shell themes",
     icon: shellsvg,
     url: undefined,
     repo: "https://github.com/srcery-colors/srcery-shell",
-    download: "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
+    download:
+      "https://github.com/srcery-colors/srcery-shell/archive/refs/heads/master.zip",
     keywords: ["broot", "cmus", "mutt", "newsboat", "vifm", "zellij"],
-    new: false
+    new: false,
   },
 ];
 ---
@@ -145,7 +196,9 @@ const themes = [
 >
   <Octocat />
   <div class="flex grow justify-center p-4">
-    <main class="flex max-w-[448px] w-full min-w-0 flex-col items-center sm:max-w-[780px]">
+    <main
+      class="flex max-w-[448px] w-full min-w-0 flex-col items-center sm:max-w-[780px]"
+    >
       <Header activePage="themes" />
       <section class="flex w-full flex-col">
         <form class="flex justify-center">
@@ -179,28 +232,45 @@ const themes = [
         <div
           class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4"
         >
-          {themes.map((theme) => (
-            <div
-              class="card relative flex w-full max-w-sm flex-col items-center border-1 border-bright_black p-5"
-              data-name={theme.name}
-              data-keywords={theme.keywords.join(",")}
-            >
-            {theme.new === true ? (
-              <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright_black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">New</span>
-            ): null}
-            <div class="flex flex-col w-full gap-3 items-center">
+          {
+            themes.map((theme) => (
               <div
-                class="card-icon flex h-18 w-18 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
-                set:html={theme.icon}
-                >
+                class="card relative flex w-full max-w-sm flex-col items-center border-1 border-bright_black p-5"
+                data-name={theme.name}
+                data-keywords={theme.keywords.join(",")}
+              >
+                {theme.new === true ? (
+                  <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright_black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
+                    New
+                  </span>
+                ) : null}
+                <div class="flex flex-col w-full gap-3 items-center">
+                  <div
+                    class="card-icon flex h-18 w-18 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
+                    set:html={theme.icon}
+                  ></div>
+                  <span class="text-lg font-bold uppercase text-yellow">
+                    {theme.name}
+                  </span>
+                  <div class="w-full h-px divider" />
+                  <a
+                    href={theme.repo}
+                    target="_blank"
+                    class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1"
+                  >
+                    repository
+                  </a>
+                  <a
+                    href={theme.download}
+                    target="_blank"
+                    class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1"
+                  >
+                    download
+                  </a>
+                </div>
               </div>
-              <span class="text-lg font-bold uppercase text-yellow">{theme.name}</span>
-              <div class="w-full h-px divider"></div>
-              <a href={theme.repo} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1">repository</a>
-              <a href={theme.download} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1">download</a>
-            </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </section>
     </main>
@@ -208,21 +278,25 @@ const themes = [
   <Footer />
 </BaseLayout>
 
-
 <style>
   .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease;
   }
 
   .card::before,
   .card::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 12px;
     height: 12px;
     border-color: var(--color-white);
     border-style: solid;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition:
+      width 0.3s ease,
+      height 0.3s ease;
   }
   .card::before {
     top: 6px;
@@ -231,7 +305,12 @@ const themes = [
   }
 
   .divider {
-    background: linear-gradient(90deg, transparent, var(--color-white), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-white),
+      transparent
+    );
   }
 
   .card::after {
@@ -248,7 +327,9 @@ const themes = [
   .card:hover {
     transform: translateY(-6px);
     cursor: pointer;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px #a08c6e;
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 1px #a08c6e;
   }
 
   .card-icon {
@@ -257,8 +338,6 @@ const themes = [
   .card:hover .card-icon {
     transform: scale(1.08);
   }
-
-
 </style>
 
 <script>
