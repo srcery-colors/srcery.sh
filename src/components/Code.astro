@@ -4,11 +4,11 @@ import "highlight.js/styles/srcery.css";
 import bash from "highlight.js/lib/languages/bash";
 import c from "highlight.js/lib/languages/c";
 import clj from "highlight.js/lib/languages/clojure";
+import css from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import lua from "highlight.js/lib/languages/lua";
 import rust from "highlight.js/lib/languages/rust";
 import vim from "highlight.js/lib/languages/vim";
-import css from "highlight.js/lib/languages/css";
 
 interface Props {
   code: string;
@@ -23,9 +23,9 @@ hljs.registerLanguage("lua", lua);
 hljs.registerLanguage("rust", rust);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("vim", vim);
-hljs.registerLanguage("css", vim);
+hljs.registerLanguage("css", css);
 
-const html = hljs.highlight(code, { language }).value
+const html = hljs.highlight(code, { language }).value;
 ---
 
 <code class="whitespace-pre text-bright-white font-iosevka" set:html={html} />

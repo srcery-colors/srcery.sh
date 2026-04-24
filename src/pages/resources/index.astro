@@ -2,29 +2,30 @@
 import Github from "@fortawesome/fontawesome-free/svgs/brands/github.svg";
 import Npm from "@fortawesome/fontawesome-free/svgs/brands/npm.svg";
 import Cc from "simple-icons/icons/creativecommons.svg";
-import Code from "../../components/Code.astro"
+import Code from "../../components/Code.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Headline from "../../components/Headline.astro";
 import Octocat from "../../components/Octocat.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-
-const paletteVersion = fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette")
-    .then((res) => res.json())
-    .then((json) => {
-      const version = json?.["dist-tags"]?.latest;
-      if (!version) return;
-      return version
-    });
+const paletteVersion = fetch(
+  "https://registry.npmjs.org/@srcery-colors/srcery-palette",
+)
+  .then((res) => res.json())
+  .then((json) => {
+    const version = json?.["dist-tags"]?.latest;
+    if (!version) return;
+    return version;
+  });
 
 const jsImportCode = `import palette from "@srcery-colors/srcery-palette";
 console.log(palette.primary.red.hex);
-`
+`;
 
 const cssImportCode = `@import "@srcery-colors/srcery-palette";
 background: var(--srcery-palette-primary-black);
-`
+`;
 ---
 
 <BaseLayout
