@@ -1,10 +1,30 @@
 ---
-import githubsvg from "@fortawesome/fontawesome-free/svgs/brands/github.svg?raw";
-import npmsvg from "@fortawesome/fontawesome-free/svgs/brands/npm.svg?raw";
+import Github from "@fortawesome/fontawesome-free/svgs/brands/github.svg";
+import Npm from "@fortawesome/fontawesome-free/svgs/brands/npm.svg";
+import Cc from "simple-icons/icons/creativecommons.svg";
+import Code from "../../components/Code.astro"
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
+import Headline from "../../components/Headline.astro";
 import Octocat from "../../components/Octocat.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+
+const paletteVersion = fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette")
+    .then((res) => res.json())
+    .then((json) => {
+      const version = json?.["dist-tags"]?.latest;
+      if (!version) return;
+      return version
+    });
+
+const jsImportCode = `import palette from "@srcery-colors/srcery-palette";
+console.log(palette.primary.red.hex);
+`
+
+const cssImportCode = `@import "@srcery-colors/srcery-palette";
+background: var(--srcery-palette-primary-black);
+`
 ---
 
 <BaseLayout
@@ -17,189 +37,155 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
     >
       <Header activePage="resources" />
-      <section class="w-full">
-        <div class="mb-8">
-          <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
-            Resources
-          </h2>
-          <p class="text-justify">
-            Here are collected miscellaneous Srcery resources. In addition to
-            themes, Srcery has some tools and packages to assist in creating new
-            themes, or things that didn't fit anywhere else.
+      <section class="w-full flex flex-col gap-10">
+        <div class="flex flex-col gap-4">
+          <Headline title="Resources" />
+          <p class="text-justify text-white">
+            This is a collection Srcery resources to get you started developing a theme. In addition to
+            themes, Srcery has some tools and packages that aid in creating new
+            themes, documentation, and or other related etcetera.
           </p>
         </div>
-        <div class="mb-8">
-          <h3 class="mb-3 text-center uppercase sm:text-left">Palette</h3>
-          <p id="version-block" class="mb-4 hidden">
-            <span class="">Latest version:</span>
-            <a
-              id="version-link"
-              href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
-              class="link"></a>
+        <div class="flex flex-col gap-4">
+          <Headline title="Palette">
+          <a href="https://www.npmjs.com/package/@srcery-colors/srcery-palette" class="flex items-center group" target="_blank">
+            <Npm class="mr-2 text-red group-hover:text-bright-red" width="30px"></Npm>
+            <span class="text-xs text-white font-bold group-hover:text-bright-white">LATEST VERSION [v{paletteVersion}]</span>
+          </a>
+          </Headline>
+          <p class="text-white">
+          The
+          <a class="link inline-block group" href="https://github.com/srcery-colors/srcery-palette">
+            <span class="flex items-center">
+              <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
+              <span class="text-bright-white">palette repository</span>
+            </span>
+          </a>
+          and accompanying
+          <a
+            class="link inline-block group"
+            href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">
+
+            <span class="flex items-center">
+              <Npm class="mr-2 group-hover:text-red" width="20px"></Npm>
+              npm package
+            </span>
+          </a>
+          contains the up-to-date palette used in the Srcery ports.
+          To get started install the package using npm or git:
           </p>
-          <p class="mb-4">
-            In an attempt to create a single source of truth concerning the
-            palette used in various themes, a npm package was created that
-            contains a JSON with all color information.
+          <div class="flex flex-col gap-2">
+            <div class="bg-hard-black p-2">
+              <Code language="bash" code="npm i @srcery-colors/srcery-palette"></Code>
+            </div>
+
+            <div class="bg-hard-black p-2">
+              <Code language="bash" code="git clone https://github.com/srcery-colors/srcery-palette"></Code>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <Headline title="Usage" text_size="text-sm" subtitle></Headline>
+            <p class="text-white">
+            Once downloaded, you can there are a few files includes. Here I use <code class="inline-code">jq</code> to grab red from the
+            <code class="inline-code">json</code> palette in <code class="inline-code">bash</code>
+            <div class="bg-hard-black p-2">
+              <Code language="bash" code="jq < palette.json '.primary.red.hex'"></Code>
+            </div>
+            <span class="text-white">
+              Or if you use the npm package, it exports
+              <code class="inline-code">palette.json</code>, making it available in javascript like this:
+            </span>
+
+            <div class="bg-hard-black p-2">
+              <Code language="js" code={jsImportCode}></Code>
+            </div>
+
+            <span class="text-white">
+              The package also exports CSS variables that can be imported in your CSS files
+            </span>
+
+            <div class="bg-hard-black p-2">
+              <Code language="css" code={cssImportCode}></Code>
+            </div>
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <Headline title="Guidelines" text_size="text-sm" subtitle></Headline>
+            <p class="text-white">
+            If you need guidelines on what color should be used for what types or elements,
+            refering to the
+            <a href="https://github.com/srcery-colors/srcery-vim/blob/master/colors/srcery.vim" class="inline-block link">vim theme</a>
+            would be a good place to start, or pick your favorite port and follow that.
+            </p>
+          </div>
+
+          <p class="text-white">
+          For UI elements, the gray shades, black, and white are most useful, while the other colors works well as accents.
           </p>
-          <p class="mb-4">
-            It isn't used in every project, but every change to the palette will
-            happen there first, and will produce a new version of this package
-            going forward.
-          </p>
-          <p class="mb-4">
-            Install using this command or check out the links below:
-          </p>
-          <code class="code"> npm i @srcery-colors/srcery-palette </code>
-          <ul class="">
-            <li class="mb-2 flex items-center">
-              <div class="list-dot"></div>
-              <a
-                target="_blank"
-                class="flex items-center link"
-                href="https://github.com/srcery-colors/srcery-palette"
-              >
-                <div class="mr-2 w-5 svg" set:html={githubsvg} />
-                GitHub repository
-              </a>
-            </li>
-            <li class="flex items-center">
-              <div class="list-dot"></div>
-              <a
-                target="_blank"
-                class="flex items-center link"
-                href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
-              >
-                <div class="mr-2 w-8 svg" set:html={npmsvg} />
-                <div>
-                  <span class="mr-1">npm package</span>
-                  <span id="version-inline" class="hidden"
-                    >(<strong id="version-inline-text"></strong>)</span
-                  >
-                </div>
-              </a>
-            </li>
-          </ul>
+
         </div>
-        <div class="mb-8">
-          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
-            Web assets
-          </h2>
-          <p class="mb-4">
-            Aside from the palette itself, here are some useful web assets.
+        <div class="flex flex-col gap-4">
+          <Headline title="Graphic assets">
+          <a href="https://creativecommons.org/licenses/by/4.0/" class="flex items-center group" target="_blank">
+            <Cc class="mr-2 fill-white group-hover:fill-bright-white" width="16px"></Cc>
+            <span class="text-xs text-white font-bold group-hover:text-bright-white">LICENSE CC-BY-4.0</span>
+          </a>
+          </Headline>
+          <p class="text-white">
+          We keep graphic assets in a separate repo so not to inflate the size
+          of each theme.
+
+          If you are looking for icons, logo, screenshots, etcetera, this is
+          the place.
+          All assets are under a permissive license for easy distribution.
           </p>
           <ul class="list-inside list-disc">
             <li class="mb-2">
               <a
                 target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-web/tree/master/tailwind"
-              >
-                Tailwind config
-              </a>
-            </li>
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-web/tree/master/tridactyl"
-                >Tridactyl theme</a
-              >
-              <span class="text-sm text-white"
-                >- This will be moved to a new repo soon</span
-              >
-            </li>
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-web/tree/master/userstyles"
-                >User styles</a
-              >
-              <span class="text-sm text-white"
-                >- Using stylish extension for example</span
-              >
-            </li>
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-web/tree/master/palette"
-                >Palette</a
-              >
-              <span class="text-sm text-white"
-                >this is deprecated for the palette above, kept for
-                compatibility</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="mb-8">
-          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
-            Graphic assets
-          </h2>
-          <p class="mb-4">
-            We keep graphic assets in a separate repo so not to inflate the size
-            of each theme. Source for SVGs of various assets are kept in the
-            <code class="inline-code">src</code> folder.
-          </p>
-          <p class="mb-4">
-            If you are looking for icons, logo, screenshots, etcetera, this is
-            the place.
-          </p>
-          <ul class="list-inside list-disc">
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
+                class="link inline-block group"
                 href="https://github.com/srcery-colors/srcery-assets"
-              >
-                GitHub repository
+                >
+
+                <span class="flex items-center">
+                  <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
+                  <span class="text-bright-white">Github repository</span>
+                </span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                target="_blank"
+                class="link inline-block group"
+                href="https://creativecommons.org/licenses/by/4.0/"
+                >
+
+                <span class="flex items-center">
+                  <Cc class="mr-2 fill-bright-white group-hover:fill-green" width="16px"></Cc>
+                  <span class="text-bright-white">License deed</span>
+                </span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="mb-8">
-          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
-            Miscellaneous
-          </h2>
-          <p class="mb-4">
-            Here are some miscellaneous projects that don't really fit anywhere
-            else. Mostly experiments and and other bits and bobs.
-          </p>
+        <div class="flex flex-col gap-4">
+          <Headline title="Miscellaneous">
+          </Headline>
           <ul class="list-inside list-disc">
-            <li class="mb-2">
+            <li class="">
               <a
                 target="_blank"
-                class="link"
+                class="link inline-block group"
                 href="https://github.com/srcery-colors/srcery.sh"
-                >Srcery Website</a
-              >
-              <span class="text-sm text-white">- Source code for this site</span
-              >
-            </li>
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-convert"
-                >Srcery Convert</a
-              >
-              <span class="text-sm text-white"
-                >- Rust program to convert an input image palette to Srcery
-                colors, your mileage may vary</span
-              >
-            </li>
-            <li class="mb-2">
-              <a
-                target="_blank"
-                class="link"
-                href="https://github.com/srcery-colors/srcery-misc"
-                >Srcery Miscellaneous</a
-              >
-              <span class="text-sm text-white"
-                >- Mostly unused files in here</span
-              >
+                >
+
+                <span class="flex items-center">
+                  <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
+                  <span class="text-bright-white">Website source code</span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -208,20 +194,3 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </div>
   <Footer />
 </BaseLayout>
-
-<script>
-  fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette")
-    .then((res) => res.json())
-    .then((json) => {
-      const version = json?.["dist-tags"]?.latest;
-      if (!version) return;
-
-      const link = document.getElementById("version-link") as HTMLAnchorElement;
-      link.textContent = version;
-      document.getElementById("version-block")!.classList.remove("hidden");
-
-      const inlineText = document.getElementById("version-inline-text")!;
-      inlineText.textContent = version;
-      document.getElementById("version-inline")!.classList.remove("hidden");
-    });
-</script>
