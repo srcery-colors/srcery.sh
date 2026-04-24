@@ -23,7 +23,7 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse()
     >
       <Header activePage="community" />
       <section class="w-full">
-        <div class="mb-8">
+        <div class="mb-10">
           <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
             Discord
           </h2>
@@ -43,7 +43,7 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse()
           </a>
         </div>
 
-        <div class="mb-8">
+        <div class="mb-10">
           <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
             Merchandise
           </h2>
@@ -63,7 +63,7 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse()
             </a>
           </div>
         </div>
-        <div class="mb-8">
+        <div class="mb-10">
           <h2 class="mb-3 text-center text-xl uppercase sm:text-left">
             Community
           </h2>
@@ -73,33 +73,37 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse()
             contributors, so thanks to everyone listed below.
           </p>
         </div>
-        <div class="mb-8">
-          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
-            Core team
-          </h2>
+        <div class="mb-10 flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <span class="uppercase font-bold">Core Team</span>
+            <div class="flex-1 section-line h-[1px]"></div>
+            <span class="text-xs text-white tracking-[2px]">{members.length} members</span>
+          </div>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-          >
+            >
             {
-              members.map((user) => (
-                <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login} member={true}>
-                </MemberCard>
-              ))
+            members.map((user) => (
+            <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login} member={true}>
+            </MemberCard>
+            ))
             }
           </div>
         </div>
-        <div class="mb-8">
-          <h2 class="mb-4 text-center text-xl uppercase sm:text-left">
-            Contributors
-          </h2>
+        <div class="mb-10 flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <span class="uppercase font-bold">Contributors</span>
+            <div class="flex-1 section-line h-[1px]"></div>
+            <span class="text-xs text-white tracking-[2px]">{contributors.length} members</span>
+          </div>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-          >
+            >
             {
-              contributors.map((user) => (
-                <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login}>
-                </MemberCard>
-              ))
+            contributors.map((user) => (
+            <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login}>
+            </MemberCard>
+            ))
             }
           </div>
         </div>
@@ -110,9 +114,7 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse()
 </BaseLayout>
 
 <style>
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #a08c6e55, transparent);
+  .section-line {
+    background: linear-gradient(90deg, var(--color-bright_black), transparent);
   }
 </style>
