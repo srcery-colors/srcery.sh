@@ -11,11 +11,12 @@ interface Props {
 const { name, avatarUrl, url, member = false} = Astro.props;
 ---
 
-<div class="group w-full flex justify-center">
+<a 
+  href={url}
+  target="_blank"
+  class="group w-full flex justify-center">
   <Card>
-  <a
-    href={url}
-    target="_blank"
+  <div
     class="flex flex-col items-center gap-6"
     >
     <div class="relative w-18 h-18 transition-transform duration-300 ease group-hover:scale-[1.06]">
@@ -26,9 +27,9 @@ const { name, avatarUrl, url, member = false} = Astro.props;
       <img class="w-18 h-18 rounded-full object-cover block bg--black" src={avatarUrl} alt={name} />
     </div>
     <div class="break-word text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white">{name}</div>
-  </a>
+  </div>
   </Card>
-</div>
+</a>
 
 <style>
 
