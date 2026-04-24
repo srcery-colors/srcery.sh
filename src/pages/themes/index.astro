@@ -132,7 +132,7 @@ const themes = [
 >
   <Octocat />
   <div class="flex grow justify-center p-4">
-    <main class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]">
+    <main class="flex max-w-[448px] w-full min-w-0 flex-col items-center sm:max-w-[780px]">
       <Header activePage="themes" />
       <section class="flex w-full flex-col">
         <form class="flex justify-center">
@@ -164,7 +164,7 @@ const themes = [
           </div>
         </form>
         <div
-          class="grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 md:grid-cols-3"
+          class="grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4"
         >
           {themes.map((theme) => (
             <div
