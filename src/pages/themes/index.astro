@@ -181,7 +181,7 @@ const themes = [
         >
           {themes.map((theme) => (
             <div
-              class="card relative flex w-full max-w-sm flex-col bg-gray2 items-center border-1 border-bright_black p-5"
+              class="card relative flex w-full max-w-sm flex-col items-center border-1 border-bright_black p-5"
               data-name={theme.name}
               data-keywords={theme.keywords.join(",")}
             >
@@ -196,8 +196,8 @@ const themes = [
               </div>
               <span class="text-lg font-bold uppercase">{theme.name}</span>
               <div class="w-full h-px divider"></div>
-              <a href={theme.repo} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray2">repository</a>
-              <a href={theme.download} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray2">download</a>
+              <a href={theme.repo} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1">repository</a>
+              <a href={theme.download} target="_blank" class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright_white hover:border-bright_black hover:bg-xgray1">download</a>
             </div>
             </div>
           ))}
