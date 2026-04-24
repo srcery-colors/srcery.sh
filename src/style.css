@@ -73,7 +73,7 @@
 }
 
 @utility link {
-  @apply border-b border-dotted border-white hover:text-white;
+  @apply border-b border-dotted border-white text-bright_white hover:font-bold;
 }
 
 @utility tab {
