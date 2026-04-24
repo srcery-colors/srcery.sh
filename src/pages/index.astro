@@ -1,25 +1,23 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Octocat from "../components/Octocat.astro";
-
 import hljs from "highlight.js/lib/core";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Octocat from "../components/Octocat.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "highlight.js/styles/srcery.css";
-import javascript from "highlight.js/lib/languages/javascript";
+import bash from "highlight.js/lib/languages/bash";
 import c from "highlight.js/lib/languages/c";
 import clj from "highlight.js/lib/languages/clojure";
+import javascript from "highlight.js/lib/languages/javascript";
 import lua from "highlight.js/lib/languages/lua";
 import rust from "highlight.js/lib/languages/rust";
-import bash from "highlight.js/lib/languages/bash";
 import vim from "highlight.js/lib/languages/vim";
-
+import bashtxt from "../examples/bash.txt?raw";
 import ctxt from "../examples/c.txt?raw";
-import jstxt from "../examples/js.txt?raw";
 import cljtxt from "../examples/clj.txt?raw";
+import jstxt from "../examples/js.txt?raw";
 import luatxt from "../examples/lua.txt?raw";
 import rusttxt from "../examples/rust.txt?raw";
-import bashtxt from "../examples/bash.txt?raw";
 import vimtxt from "../examples/vim.txt?raw";
 
 hljs.registerLanguage("c", c);
