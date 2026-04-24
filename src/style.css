@@ -39,6 +39,9 @@
   --color-xgray11: var(--srcery-palette-secondary-xgray11);
   --color-xgray12: var(--srcery-palette-secondary-xgray12);
 
+  /* until we move to the next palette, I need this darker gray */
+  --color-gray2: #202020;
+
   --breakpoint-tiny: 320px;
 
   --background-image-triangle: url("svg/triangle.svg");
