@@ -235,36 +235,36 @@ const themes = [
         >
           {
             themes.map((theme) => (
-            <Card name={theme.name} keywords={theme.keywords}>
-            {theme.new ? (
-            <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright-black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
-              New
-            </span>
-            ) : null}
-            <div class="flex flex-col w-full gap-3 items-center">
-              <div
-                class="theme-icon flex h-18 w-18 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
-                set:html={theme.icon}
-                ></div>
-              <span class="text-sm font-bold uppercase text-bright-yellow">
-                {theme.name}
-              </span>
-              <div class="w-full h-px divider" />
-                <a
-                  href={theme.repo}
-                  target="_blank"
-                  class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright-white hover:border-bright-black hover:bg-xgray1"
+              <Card name={theme.name} keywords={theme.keywords}>
+                {theme.new ? (
+                  <span class="absolute top-2.5 right-2.5 text-[9px] uppercase text-[#1e1e1e] bg-bright-black py-0.5 px-1.5 -translate-y-1 transition-all duration-300">
+                    New
+                  </span>
+                ) : null}
+                <div class="flex flex-col w-full gap-3 items-center">
+                  <div
+                    class="theme-icon flex h-18 w-18 justify-center svg [&>svg]:max-h-full [&>svg]:max-w-full"
+                    set:html={theme.icon}
+                  />
+                  <span class="text-sm font-bold uppercase text-bright-yellow">
+                    {theme.name}
+                  </span>
+                  <div class="w-full h-px divider" />
+                  <a
+                    href={theme.repo}
+                    target="_blank"
+                    class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright-white hover:border-bright-black hover:bg-xgray1"
                   >
-                  repository
-                </a>
+                    repository
+                  </a>
                   <a
                     href={theme.download}
                     target="_blank"
                     class="text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border border-transparent w-full text-center text-white transition-[color,border-color,background-color] duration-200 relative hover:text-bright-white hover:border-bright-black hover:bg-xgray1"
-                    >
+                  >
                     download
                   </a>
-              </div>
+                </div>
               </Card>
             ))
           }
@@ -282,9 +282,8 @@ const themes = [
       transparent,
       var(--color-white),
       transparent
-        );
+    );
   }
-
 </style>
 
 <script>

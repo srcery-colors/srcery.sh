@@ -9,57 +9,59 @@ const { name = "", keywords = [], width = "w-full" } = Astro.props;
 ---
 
 <div
-  class:list={["card relative flex max-w-sm flex-col items-center border-1 border-bright-black p-5", width]}
+  class:list={[
+    "card relative flex max-w-sm flex-col items-center border-1 border-bright-black p-5",
+    width,
+  ]}
   data-name={name}
   data-keywords={keywords.join(",")}
-  >
-    <slot />
-  </div>
+>
+  <slot />
+</div>
 
 <style>
-.card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
-}
+  .card {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease;
+  }
 
-.card::after {
-  bottom: 6px;
-  right: 6px;
-  border-width: 0 2px 2px 0;
-}
-.card:hover::before,
-.card:hover::after {
-  width: 20px;
-  height: 20px;
-}
+  .card::after {
+    bottom: 6px;
+    right: 6px;
+    border-width: 0 2px 2px 0;
+  }
+  .card:hover::before,
+  .card:hover::after {
+    width: 20px;
+    height: 20px;
+  }
 
-.card:hover {
-  transform: translateY(-6px);
-  /* transform: scale(1.08); */
-  cursor: pointer;
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.5),
-    0 0 0 1px #a08c6e;
-}
+  .card:hover {
+    transform: translateY(-6px);
+    /* transform: scale(1.08); */
+    cursor: pointer;
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 1px #a08c6e;
+  }
 
-.card::before,
-.card::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-color: var(--color-white);
-  border-style: solid;
-  transition:
-    width 0.3s ease,
-  height 0.3s ease;
-}
-.card::before {
-  top: 6px;
-  left: 6px;
-  border-width: 2px 0 0 2px;
-}
-
+  .card::before,
+  .card::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: var(--color-white);
+    border-style: solid;
+    transition:
+      width 0.3s ease,
+      height 0.3s ease;
+  }
+  .card::before {
+    top: 6px;
+    left: 6px;
+    border-width: 2px 0 0 2px;
+  }
 </style>

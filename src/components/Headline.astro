@@ -21,12 +21,20 @@ const anchorId = id ?? title.toLowerCase().replace(/\s+/g, "-");
 <div class="flex items-center gap-2 flex-wrap" id={anchorId}>
   <a
     href={`#${anchorId}`}
-    class="flex items-center gap-2 uppercase font-bold no-underline transition-opacity group">
-    <span class:list={["text-bright-black group-hover:text-bright-yellow", text_size]}>#</span>
-    <span class:list={["group-hover:text-bright-yellow", text_size, color]}>{title}</span>
+    class="flex items-center gap-2 uppercase font-bold no-underline transition-opacity group"
+  >
+    <span
+      class:list={[
+        "text-bright-black group-hover:text-bright-yellow",
+        text_size,
+      ]}>#</span
+    >
+    <span class:list={["group-hover:text-bright-yellow", text_size, color]}
+      >{title}</span
+    >
   </a>
-  {!subtitle ? (<div class="flex-1 section-line h-[1px]"></div>) : null}
-  <slot></slot>
+  {!subtitle ? <div class="flex-1 section-line h-[1px]" /> : null}
+  <slot />
 </div>
 
 <style>
