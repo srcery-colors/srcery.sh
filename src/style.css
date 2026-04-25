@@ -1,4 +1,4 @@
-@import "tailwindcss" source("../src");
+@import "tailwindcss";
 @import "@srcery-colors/srcery-palette";
 
 @theme {
