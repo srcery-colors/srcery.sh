@@ -20,9 +20,20 @@
     "astro:check": "astro check && tsc --noEmit",
     "biome:lint": "biome lint --write .",
     "biome:check": "biome check --write .",
+    "biome:format": "biome format --write .",
     "biome:ci": "biome ci",
+    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "prettier:fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "preview": "astro preview",
     "start": "astro dev"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-packagejson",
+      "prettier-plugin-tailwindcss",
+      "prettier-plugin-astro"
+    ],
+    "tailwindStylesheet": "src/style.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
@@ -41,6 +52,10 @@
     "astro": "^6.1.9",
     "lodash": "4.18.1",
     "octokit": "5.0.5",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "prettier": "3.8.3",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-packagejson": "3.0.2",
+    "prettier-plugin-tailwindcss": "0.7.2"
   }
 }
