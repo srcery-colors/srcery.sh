@@ -62,7 +62,7 @@
     "prettier-plugin-packagejson": "3.0.2",
     "prettier-plugin-tailwindcss": "0.7.2",
     "vite": "8.0.9",
-    "vite-plugin-handlebars": "2.0.2"
+    "vite-plugin-handlebars": "2.0.3"
   },
   "pnpm": {
     "overrides": {
