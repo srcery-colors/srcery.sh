@@ -14,12 +14,13 @@
   "browser": true,
   "scripts": {
     "build": "astro build",
-    "check": "astro check && tsc --noEmit",
     "clean": "rm -f src/github.json",
     "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
-    "lint": "biome lint --write .",
-    "lint:fix": "biome check --write .",
+    "astro:check": "astro check && tsc --noEmit",
+    "biome:lint": "biome lint --write .",
+    "biome:check": "biome check --write .",
+    "biome:ci": "biome ci",
     "preview": "astro preview",
     "start": "astro dev"
   },

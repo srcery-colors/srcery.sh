@@ -34,8 +34,8 @@ jobs:
       - name: Run tests (build is okay)
         run: pnpm run build
 
-      - name: Check Prettier
-        run: pnpm run prettier
+      - name: Check for astro issues
+        run: pnpm run astro:check
 
-      - name: Check ESLint
-        run: pnpm run eslint-ci
+      - name: Check for biome issues
+        run: pnpm run biome:ci
