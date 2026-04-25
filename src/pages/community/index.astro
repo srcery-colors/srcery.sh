@@ -28,18 +28,19 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse();
       <section class="w-full flex flex-col gap-10">
         <div class="flex flex-col gap-4">
           <Headline title="Discord">
-            <span id="discord-online" class="text-xs text-white tracking-[2px] flex items-center gap-1"></span>
+            <span
+              id="discord-online"
+              class="text-xs text-white tracking-[2px] flex items-center gap-1"
+            ></span>
           </Headline>
           <p class="text-justify text-white">
             We run a Discord server for those interested. You're welcome to join
             us there if you have any burning questions or just wanna say hi.
           </p>
           <div>
-            <Button
-              url="https://discord.gg/G6vBMmZ"
-              >
+            <Button url="https://discord.gg/G6vBMmZ">
               <div class="flex">
-                <Discord class="fill-bright-white mr-4" width="16px"></Discord>
+                <Discord class="fill-bright-white mr-4" width="16px" />
                 Go to Discord
               </div>
             </Button>
@@ -47,28 +48,24 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse();
         </div>
 
         <div class="flex flex-col gap-4">
-          <Headline title="Merchandise"></Headline>
+          <Headline title="Merchandise" />
           <p class="text-justify text-white">
-            Get our merchandise featuring the Srcery color scheme!
-            We're not making any profit from the sales, so you are instead
-            showing your support by wearing and using the merch. Thank you for
-            helping us develop and improve our color scheme.
+            Get our merchandise featuring the Srcery color scheme! We're not
+            making any profit from the sales, so you are instead showing your
+            support by wearing and using the merch. Thank you for helping us
+            develop and improve our color scheme.
           </p>
           <div class="">
-            <Button
-              url="https://srcery-colors.creator-spring.com"
-            >
-            <div class="flex">
-
-              <Spring class="fill-bright-white mr-4" width="16px"></Spring>
-              Go to the store
-            </div>
+            <Button url="https://srcery-colors.creator-spring.com">
+              <div class="flex">
+                <Spring class="fill-bright-white mr-4" width="16px" />
+                Go to the store
+              </div>
             </Button>
           </div>
         </div>
         <div class="flex flex-col gap-4">
-          <Headline title="Community">
-          </Headline>
+          <Headline title="Community" />
           <p class="text-justify text-white">
             Srcery is, by and large, a community effort. There's been numerous
             contributions and themes created by industrious maintainers and
@@ -78,31 +75,42 @@ const contributors = sortBy(github.contributors, ["contributions"]).reverse();
 
         <div class="flex flex-col gap-4">
           <Headline title="Core team" text_size="text-sm">
-          <span class="text-xs text-white tracking-[2px]">{members.length} members</span>
+            <span class="text-xs text-white tracking-[2px]"
+              >{members.length} members</span
+            >
           </Headline>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
+          >
             {
-            members.map((user) => (
-            <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login} member={true}>
-            </MemberCard>
-            ))
+              members.map((user) => (
+                <MemberCard
+                  url={user.html_url}
+                  avatarUrl={user.avatar_url}
+                  name={user.login}
+                  member={true}
+                ></MemberCard>
+              ))
             }
           </div>
         </div>
         <div class="flex flex-col gap-4">
           <Headline title="Contributors" text_size="text-sm">
-            <span class="text-xs text-white tracking-[2px]">{contributors.length} members</span>
+            <span class="text-xs text-white tracking-[2px]"
+              >{contributors.length} members</span
+            >
           </Headline>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
+          >
             {
-            contributors.map((user) => (
-            <MemberCard url={user.html_url} avatarUrl={user.avatar_url} name={user.login}>
-            </MemberCard>
-            ))
+              contributors.map((user) => (
+                <MemberCard
+                  url={user.html_url}
+                  avatarUrl={user.avatar_url}
+                  name={user.login}
+                ></MemberCard>
+              ))
             }
           </div>
         </div>

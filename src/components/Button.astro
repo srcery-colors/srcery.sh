@@ -5,12 +5,13 @@ interface Props {
 
 const { url } = Astro.props;
 ---
+
 <a
   href={url}
   target="_blank"
   class="inline-block text-[11px] tracking-[2px] uppercase no-underline py-1.5 px-4 border text-center text-white transition-[color,border-color,background-color] duration-200 relative text-bright-white border-bright-black bg-xgray1 hover:border-bright-white hover:text-bright-white"
-  >
-  <slot></slot>
+>
+  <slot />
   <!-- <img -->
   <!--   src="https://img.shields.io/discord/714101903377694741?color=%232C78BF&label=discord&logo=discord" -->
   <!--   alt="Join our discord server" -->

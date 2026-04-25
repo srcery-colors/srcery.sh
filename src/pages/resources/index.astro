@@ -32,106 +32,143 @@ background: var(--srcery-palette-primary-black);
         <div class="flex flex-col gap-4">
           <Headline title="Resources" />
           <p class="text-justify text-white">
-            This is a collection Srcery resources to get you started developing a theme. In addition to
-            themes, Srcery has some tools and packages that aid in creating new
-            themes, documentation, and or other related etcetera.
+            This is a collection Srcery resources to get you started developing
+            a theme. In addition to themes, Srcery has some tools and packages
+            that aid in creating new themes, documentation, and or other related
+            etcetera.
           </p>
         </div>
         <div class="flex flex-col gap-4">
           <Headline title="Palette">
-          <a href="https://www.npmjs.com/package/@srcery-colors/srcery-palette" class="flex items-center group" target="_blank">
-            <Npm class="mr-2 text-white group-hover:text-red" width="30px"></Npm>
-            <span class="text-xs text-white font-bold group-hover:text-bright-white" id="palette-version"></span>
-          </a>
+            <a
+              href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
+              class="flex items-center group"
+              target="_blank"
+            >
+              <Npm class="mr-2 text-white group-hover:text-red" width="30px" />
+              <span
+                class="text-xs text-white font-bold group-hover:text-bright-white"
+                id="palette-version"></span>
+            </a>
           </Headline>
           <p class="text-white">
-          The
-          <a class="link inline-block group" href="https://github.com/srcery-colors/srcery-palette">
-            <span class="flex items-center">
-              <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
-              <span class="text-bright-white">palette repository</span>
-            </span>
-          </a>
-          and accompanying
-          <a
-            class="link inline-block group"
-            href="https://www.npmjs.com/package/@srcery-colors/srcery-palette">
-
-            <span class="flex items-center">
-              <Npm class="mr-2 group-hover:text-red" width="20px"></Npm>
-              npm package
-            </span>
-          </a>
-          contains the up-to-date palette used in the Srcery ports.
-          To get started install the package using npm or git:
+            The
+            <a
+              class="link inline-block group"
+              href="https://github.com/srcery-colors/srcery-palette"
+            >
+              <span class="flex items-center">
+                <Github class="mr-1 group-hover:text-blue" width="16px" />
+                <span class="text-bright-white">palette repository</span>
+              </span>
+            </a>
+            and accompanying
+            <a
+              class="link inline-block group"
+              href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
+            >
+              <span class="flex items-center">
+                <Npm class="mr-2 group-hover:text-red" width="20px" />
+                npm package
+              </span>
+            </a>
+            contains the up-to-date palette used in the Srcery ports. To get started
+            install the package using npm or git:
           </p>
           <div class="flex flex-col gap-2">
             <div class="bg-hard-black p-2 overflow-x-auto">
-              <Code language="bash" code="npm i @srcery-colors/srcery-palette"></Code>
+              <Code
+                language="bash"
+                code="npm i @srcery-colors/srcery-palette"
+              />
             </div>
 
             <div class="bg-hard-black p-2 overflow-x-auto">
-              <Code language="bash" code="git clone https://github.com/srcery-colors/srcery-palette"></Code>
+              <Code
+                language="bash"
+                code="git clone https://github.com/srcery-colors/srcery-palette"
+              />
             </div>
           </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <Headline title="Usage" text_size="text-sm" subtitle></Headline>
-            <p class="text-white">
-            Once downloaded, you can there are a few files includes. Here I use <code class="inline-code">jq</code> to grab red from the
-            <code class="inline-code">json</code> palette in <code class="inline-code">bash</code>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Headline title="Usage" text_size="text-sm" subtitle />
+          <p class="text-white">
+            Once downloaded, you can there are a few files includes. Here I use <code
+              class="inline-code">jq</code
+            > to grab red from the
+            <code class="inline-code">json</code> palette in <code
+              class="inline-code">bash</code
+            >
             <div class="bg-hard-black p-2 overflow-x-auto">
-              <Code language="bash" code="jq < palette.json '.primary.red.hex'"></Code>
+              <Code
+                language="bash"
+                code="jq < palette.json '.primary.red.hex'"
+              />
             </div>
             <span class="text-white">
               Or if you use the npm package, it exports
-              <code class="inline-code">palette.json</code>, making it available in javascript like this:
+              <code class="inline-code">palette.json</code>, making it available
+              in javascript like this:
             </span>
 
             <div class="bg-hard-black p-2 overflow-x-auto">
-              <Code language="js" code={jsImportCode}></Code>
+              <Code language="js" code={jsImportCode} />
             </div>
 
             <span class="text-white">
-              The package also exports CSS variables that can be imported in your CSS files
+              The package also exports CSS variables that can be imported in
+              your CSS files
             </span>
 
             <div class="bg-hard-black p-2 overflow-x-auto">
-              <Code language="css" code={cssImportCode}></Code>
+              <Code language="css" code={cssImportCode} />
             </div>
-            </p>
-          </div>
+          </p>
+        </div>
 
-          <div class="flex flex-col gap-4">
-            <Headline title="Guidelines" text_size="text-sm" subtitle></Headline>
-            <p class="text-white">
+        <div class="flex flex-col gap-4">
+          <Headline title="Guidelines" text_size="text-sm" subtitle />
+          <p class="text-white">
             No formal design guidelines exist, but a good reference point is the
-            <a href="https://github.com/srcery-colors/srcery-vim/blob/master/colors/srcery.vim" class="inline-block link">vim theme</a>,
-            or pick your favorite port and follow that. This
-            <a class="link" href="https://github.com/srcery-colors/srcery.sh">website</a>
+            <a
+              href="https://github.com/srcery-colors/srcery-vim/blob/master/colors/srcery.vim"
+              class="inline-block link">vim theme</a
+            >, or pick your favorite port and follow that. This
+            <a class="link" href="https://github.com/srcery-colors/srcery.sh"
+              >website</a
+            >
             also gives some idea of which colors goes where.
-            </p>
-            <p class="text-white">
+          </p>
+          <p class="text-white">
             For UI elements, the gray shades, black, and white are very useful,
             while the 16 base colors work well as accents for important
             information.
-            </p>
-          </div>
+          </p>
+        </div>
 
         <div class="flex flex-col gap-4">
           <Headline title="Graphic assets">
-          <a href="https://creativecommons.org/licenses/by/4.0/" class="flex items-center group" target="_blank">
-            <Cc class="mr-2 fill-white group-hover:fill-bright-white" width="16px"></Cc>
-            <span class="text-xs text-white font-bold group-hover:text-bright-white">LICENSE CC-BY-4.0</span>
-          </a>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              class="flex items-center group"
+              target="_blank"
+            >
+              <Cc
+                class="mr-2 fill-white group-hover:fill-bright-white"
+                width="16px"
+              />
+              <span
+                class="text-xs text-white font-bold group-hover:text-bright-white"
+                >LICENSE CC-BY-4.0</span
+              >
+            </a>
           </Headline>
           <p class="text-white">
-          We keep graphic assets in a separate repo so not to inflate the size
-          of each theme.
-
-          If you are looking for icons, logo, screenshots, etcetera, this is
-          the place.
-          All assets are under a permissive license for easy distribution.
+            We keep graphic assets in a separate repo so not to inflate the size
+            of each theme. If you are looking for icons, logo, screenshots,
+            etcetera, this is the place. All assets are under a permissive
+            license for easy distribution.
           </p>
           <ul class="list-inside list-disc">
             <li class="mb-2">
@@ -139,10 +176,9 @@ background: var(--srcery-palette-primary-black);
                 target="_blank"
                 class="link inline-block group"
                 href="https://github.com/srcery-colors/srcery-assets"
-                >
-
+              >
                 <span class="flex items-center">
-                  <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
+                  <Github class="mr-1 group-hover:text-blue" width="16px" />
                   <span class="text-bright-white">Github repository</span>
                 </span>
               </a>
@@ -152,10 +188,12 @@ background: var(--srcery-palette-primary-black);
                 target="_blank"
                 class="link inline-block group"
                 href="https://creativecommons.org/licenses/by/4.0/"
-                >
-
+              >
                 <span class="flex items-center">
-                  <Cc class="mr-2 fill-bright-white group-hover:fill-green" width="16px"></Cc>
+                  <Cc
+                    class="mr-2 fill-bright-white group-hover:fill-green"
+                    width="16px"
+                  />
                   <span class="text-bright-white">License deed</span>
                 </span>
               </a>
@@ -163,18 +201,16 @@ background: var(--srcery-palette-primary-black);
           </ul>
         </div>
         <div class="flex flex-col gap-4">
-          <Headline title="Miscellaneous">
-          </Headline>
+          <Headline title="Miscellaneous" />
           <ul class="list-inside list-disc">
             <li class="">
               <a
                 target="_blank"
                 class="link inline-block group"
                 href="https://github.com/srcery-colors/srcery.sh"
-                >
-
+              >
                 <span class="flex items-center">
-                  <Github class="mr-1 group-hover:text-blue" width="16px"></Github>
+                  <Github class="mr-1 group-hover:text-blue" width="16px" />
                   <span class="text-bright-white">Website source code</span>
                 </span>
               </a>
@@ -190,7 +226,9 @@ background: var(--srcery-palette-primary-black);
 <script>
   async function fetchVersion() {
     try {
-      const res = await fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette");
+      const res = await fetch(
+        "https://registry.npmjs.org/@srcery-colors/srcery-palette",
+      );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const json = await res.json();

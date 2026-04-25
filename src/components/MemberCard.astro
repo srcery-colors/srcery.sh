@@ -12,32 +12,45 @@ interface Props {
 const { name, avatarUrl, url, member = false } = Astro.props;
 ---
 
-<a
-  href={url}
-  target="_blank"
-  class="group w-full flex justify-center">
+<a href={url} target="_blank" class="group w-full flex justify-center">
   <Card>
-  <div
-    class="flex flex-col items-center gap-6"
-    >
-    <div class="relative w-18 h-18 transition-transform duration-300 ease group-hover:scale-[1.06]">
-      {member ? (
-        <div class="absolute -inset-[10px] rounded-full border border-dashed border-xgray5 [animation:spin_20s_linear_infinite] transition-[opacity,inset] duration-300 ease group-hover:border-bright-black group-hover:-inset-[13px] group-hover:rotate-45"></div>
-      ): null}
-      <div class="absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 ease group-hover:border-bright-white group-hover:-inset-[5px]"></div>
-      <Image width="100" height="100" class="w-18 h-18 rounded-full object-cover block bg--black" src={avatarUrl} alt={name} />
+    <div class="flex flex-col items-center gap-6">
+      <div
+        class="relative w-18 h-18 transition-transform duration-300 ease group-hover:scale-[1.06]"
+      >
+        {
+          member ? (
+            <div class="absolute -inset-[10px] rounded-full border border-dashed border-xgray5 [animation:spin_20s_linear_infinite] transition-[opacity,inset] duration-300 ease group-hover:border-bright-black group-hover:-inset-[13px] group-hover:rotate-45" />
+          ) : null
+        }
+        <div
+          class="absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 ease group-hover:border-bright-white group-hover:-inset-[5px]"
+        >
+        </div>
+        <Image
+          width="100"
+          height="100"
+          class="w-18 h-18 rounded-full object-cover block bg--black"
+          src={avatarUrl}
+          alt={name}
+        />
+      </div>
+      <div
+        class="break-word text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white"
+      >
+        {name}
+      </div>
     </div>
-    <div class="break-word text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white">{name}</div>
-  </div>
   </Card>
 </a>
 
 <style>
-
   @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-
 </style>
-
