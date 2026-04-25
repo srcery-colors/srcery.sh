@@ -9,16 +9,6 @@ import Headline from "../../components/Headline.astro";
 import Octocat from "../../components/Octocat.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const paletteVersion = fetch(
-  "https://registry.npmjs.org/@srcery-colors/srcery-palette",
-)
-  .then((res) => res.json())
-  .then((json) => {
-    const version = json?.["dist-tags"]?.latest;
-    if (!version) return;
-    return version;
-  });
-
 const jsImportCode = `import palette from "@srcery-colors/srcery-palette";
 console.log(palette.primary.red.hex);
 `;
@@ -51,7 +41,7 @@ background: var(--srcery-palette-primary-black);
           <Headline title="Palette">
           <a href="https://www.npmjs.com/package/@srcery-colors/srcery-palette" class="flex items-center group" target="_blank">
             <Npm class="mr-2 text-red group-hover:text-bright-red" width="30px"></Npm>
-            <span class="text-xs text-white font-bold group-hover:text-bright-white">LATEST VERSION [v{paletteVersion}]</span>
+            <span class="text-xs text-white font-bold group-hover:text-bright-white" id="palette-version"></span>
           </a>
           </Headline>
           <p class="text-white">
@@ -195,3 +185,22 @@ background: var(--srcery-palette-primary-black);
   </div>
   <Footer />
 </BaseLayout>
+
+<script>
+  async function fetchVersion() {
+    try {
+      const res = await fetch("https://registry.npmjs.org/@srcery-colors/srcery-palette");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const json = await res.json();
+      const version = json?.["dist-tags"]?.latest;
+      if (!version) throw new Error("No version found in response");
+
+      const el = document.getElementById("palette-version");
+      if (el) el.textContent = `LATEST VERSION [v${version}]`;
+    } catch (err) {
+      console.warn("Failed to fetch palette version:", err);
+    }
+  }
+  fetchVersion();
+</script>
