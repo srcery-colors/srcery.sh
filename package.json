@@ -61,7 +61,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-packagejson": "3.0.2",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "vite": "8.0.9",
+    "vite": "8.0.10",
     "vite-plugin-handlebars": "2.0.3"
   },
   "pnpm": {
