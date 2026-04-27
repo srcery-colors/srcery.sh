@@ -41,7 +41,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
-    "simple-icons": "^16.17.0",
+    "simple-icons": "^16.18.0",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-packagejson": "3.0.2",
-    "prettier-plugin-tailwindcss": "0.7.2",
+    "prettier-plugin-tailwindcss": "0.7.3",
     "typescript": "^6.0.3"
   }
 }
