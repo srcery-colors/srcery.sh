@@ -45,17 +45,17 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@biomejs/biome": "^2.4.14",
+    "@astrojs/check": "0.9.9",
+    "@biomejs/biome": "2.4.14",
     "@octokit/types": "16.0.0",
     "@types/lodash": "4.17.24",
-    "astro": "^6.2.1",
+    "astro": "6.2.1",
     "lodash": "4.18.1",
     "octokit": "5.0.5",
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-packagejson": "3.0.2",
     "prettier-plugin-tailwindcss": "0.8.0",
-    "typescript": "^6.0.3"
+    "typescript": "6.0.3"
   }
 }
