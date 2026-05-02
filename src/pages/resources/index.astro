@@ -16,6 +16,18 @@ console.log(palette.primary.red.hex);
 const cssImportCode = `@import "@srcery-colors/srcery-palette";
 background: var(--srcery-palette-primary-black);
 `;
+
+let version: string | null = null;
+try {
+  const res = await fetch(
+    "https://registry.npmjs.org/@srcery-colors/srcery-palette",
+  );
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const json = await res.json();
+  version = json?.["dist-tags"]?.latest ?? null;
+} catch (err) {
+  console.warn("Failed to fetch palette version:", err);
+}
 ---
 
 <BaseLayout
@@ -48,7 +60,7 @@ background: var(--srcery-palette-primary-black);
               <Npm class="mr-2 text-white group-hover:text-red" width="30px" />
               <span
                 class="text-xs text-white font-bold group-hover:text-bright-white"
-                id="palette-version"></span>
+              >{version ? `LATEST VERSION [v${version}]` : ""}</span>
             </a>
           </Headline>
           <p class="text-white">
@@ -222,23 +234,3 @@ background: var(--srcery-palette-primary-black);
   <Footer />
 </BaseLayout>
 
-<script>
-  async function fetchVersion() {
-    try {
-      const res = await fetch(
-        "https://registry.npmjs.org/@srcery-colors/srcery-palette",
-      );
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-      const json = await res.json();
-      const version = json?.["dist-tags"]?.latest;
-      if (!version) throw new Error("No version found in response");
-
-      const el = document.getElementById("palette-version");
-      if (el) el.textContent = `LATEST VERSION [v${version}]`;
-    } catch (err) {
-      console.warn("Failed to fetch palette version:", err);
-    }
-  }
-  fetchVersion();
-</script>
