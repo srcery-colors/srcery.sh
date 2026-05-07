@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
-    "@srcery-colors/srcery-palette": "^1.1.0",
+    "@srcery-colors/srcery-palette": "^2.0.0",
     "@tailwindcss/vite": "^4.2.4",
     "devicon": "^2.17.0",
     "highlight.js": "^11.11.1",
