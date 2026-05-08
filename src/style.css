@@ -71,7 +71,7 @@
 }
 
 @utility tab-inactive {
-  @apply border-b-1 hover:bg-gray1;
+  @apply border-b-1 hover:bg-gray1 hover:cursor-pointer;
 }
 
 @utility tab-active {
