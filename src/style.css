@@ -6,41 +6,31 @@
     Iosevka Custom Web, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-black: var(--srcery-palette-primary-black);
-  --color-red: var(--srcery-palette-primary-red);
-  --color-green: var(--srcery-palette-primary-green);
-  --color-yellow: var(--srcery-palette-primary-yellow);
-  --color-blue: var(--srcery-palette-primary-blue);
-  --color-magenta: var(--srcery-palette-primary-magenta);
-  --color-cyan: var(--srcery-palette-primary-cyan);
-  --color-white: var(--srcery-palette-primary-white);
-  --color-bright-black: var(--srcery-palette-primary-bright-black);
-  --color-bright-red: var(--srcery-palette-primary-bright-red);
-  --color-bright-green: var(--srcery-palette-primary-bright-green);
-  --color-bright-yellow: var(--srcery-palette-primary-bright-yellow);
-  --color-bright-blue: var(--srcery-palette-primary-bright-blue);
-  --color-bright-magenta: var(--srcery-palette-primary-bright-magenta);
-  --color-bright-cyan: var(--srcery-palette-primary-bright-cyan);
-  --color-bright-white: var(--srcery-palette-primary-bright-white);
+  --color-black: var(--srcery-palette-black);
+  --color-red: var(--srcery-palette-red);
+  --color-green: var(--srcery-palette-green);
+  --color-yellow: var(--srcery-palette-yellow);
+  --color-blue: var(--srcery-palette-blue);
+  --color-magenta: var(--srcery-palette-magenta);
+  --color-cyan: var(--srcery-palette-cyan);
+  --color-white: var(--srcery-palette-white);
+  --color-bright-black: var(--srcery-palette-bright-black);
+  --color-bright-red: var(--srcery-palette-bright-red);
+  --color-bright-green: var(--srcery-palette-bright-green);
+  --color-bright-yellow: var(--srcery-palette-bright-yellow);
+  --color-bright-blue: var(--srcery-palette-bright-blue);
+  --color-bright-magenta: var(--srcery-palette-bright-magenta);
+  --color-bright-cyan: var(--srcery-palette-bright-cyan);
+  --color-bright-white: var(--srcery-palette-bright-white);
   --color-orange: var(--srcery-palette-secondary-orange);
   --color-bright-orange: var(--srcery-palette-secondary-bright-orange);
-  --color-hard-black: var(--srcery-palette-secondary-hard-black);
   --color-teal: var(--srcery-palette-secondary-teal);
-  --color-xgray1: var(--srcery-palette-secondary-xgray1);
-  --color-xgray2: var(--srcery-palette-secondary-xgray2);
-  --color-xgray3: var(--srcery-palette-secondary-xgray3);
-  --color-xgray4: var(--srcery-palette-secondary-xgray4);
-  --color-xgray5: var(--srcery-palette-secondary-xgray5);
-  --color-xgray6: var(--srcery-palette-secondary-xgray6);
-  --color-xgray7: var(--srcery-palette-secondary-xgray7);
-  --color-xgray8: var(--srcery-palette-secondary-xgray8);
-  --color-xgray9: var(--srcery-palette-secondary-xgray9);
-  --color-xgray10: var(--srcery-palette-secondary-xgray10);
-  --color-xgray11: var(--srcery-palette-secondary-xgray11);
-  --color-xgray12: var(--srcery-palette-secondary-xgray12);
-
-  /* until we move to the next palette, I need this darker gray */
-  --color-gray2: #202020;
+  --color-gray1: var(--srcery-palette-gray1);
+  --color-gray2: var(--srcery-palette-gray2);
+  --color-gray3: var(--srcery-palette-gray3);
+  --color-gray4: var(--srcery-palette-gray4);
+  --color-gray5: var(--srcery-palette-gray5);
+  --color-gray6: var(--srcery-palette-gray6);
 
   --breakpoint-tiny: 320px;
 
@@ -81,7 +71,7 @@
 }
 
 @utility tab-inactive {
-  @apply border-b-1 hover:bg-xgray1;
+  @apply border-b-1 hover:bg-gray1;
 }
 
 @utility tab-active {
@@ -95,11 +85,11 @@
 }
 
 @utility code {
-  @apply mb-3 flex overflow-x-auto bg-hard-black p-4 whitespace-nowrap;
+  @apply mb-3 flex overflow-x-auto bg-gray1 p-4 whitespace-nowrap;
 }
 
 @utility inline-code {
-  @apply bg-hard-black p-1 whitespace-nowrap;
+  @apply bg-gray1 p-1 whitespace-nowrap;
 }
 
 @utility list-dot {
