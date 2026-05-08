@@ -12,8 +12,8 @@ importers:
         specifier: ^7.2.0
         version: 7.2.0
       '@srcery-colors/srcery-palette':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^2.0.0
+        version: 2.0.0
       '@tailwindcss/vite':
         specifier: ^4.2.4
         version: 4.2.4(vite@7.3.2(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.4))
@@ -837,8 +837,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@srcery-colors/srcery-palette@1.1.0':
-    resolution: {integrity: sha512-NBYEoTm1A7OMyfF8M88PMfR3g7DhilDFC3KK/ysI1qUSioGTrMNju7iXpzZu0mOsMq15/iXIvl/4SR9jkSEVHw==}
+  '@srcery-colors/srcery-palette@2.0.0':
+    resolution: {integrity: sha512-zHA3+qSa9gwkaulNNCKE49dqQnxfDIHoHG3Ij3prRtVkQZqIjoGWxKZdjEIPuiy6yyTXoSRv5iq9UxqhrEwQlw==}
 
   '@tailwindcss/node@4.2.4':
     resolution: {integrity: sha512-Ai7+yQPxz3ddrDQzFfBKdHEVBg0w3Zl83jnjuwxnZOsnH9pGn93QHQtpU0p/8rYWxvbFZHneni6p1BSLK4DkGA==}
@@ -2951,7 +2951,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@srcery-colors/srcery-palette@1.1.0': {}
+  '@srcery-colors/srcery-palette@2.0.0': {}
 
   '@tailwindcss/node@4.2.4':
     dependencies:
