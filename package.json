@@ -14,6 +14,8 @@
   "browser": true,
   "scripts": {
     "build": "astro build",
+    "prebuild:ci": "node scripts/fetch_gh_data.mjs",
+    "build:ci": "astro build",
     "clean": "rm -f src/github.json",
     "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
