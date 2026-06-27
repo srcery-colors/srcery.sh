@@ -10,11 +10,11 @@ import Octocat from "../../components/Octocat.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const jsImportCode = `import palette from "@srcery-colors/srcery-palette";
-console.log(palette.primary.red.hex);
+console.log(palette.red.hex);
 `;
 
 const cssImportCode = `@import "@srcery-colors/srcery-palette";
-background: var(--srcery-palette-primary-black);
+background: var(--srcery-palette-black);
 `;
 
 let version: string | null = null;
@@ -115,7 +115,7 @@ try {
             <div class="bg-gray1 p-2 overflow-x-auto">
               <Code
                 language="bash"
-                code="jq < palette.json '.primary.red.hex'"
+                code="jq < palette.json '.red.hex'"
               />
             </div>
             <span class="text-white">
