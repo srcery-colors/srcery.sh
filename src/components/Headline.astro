@@ -29,9 +29,7 @@ const anchorId = id ?? title.toLowerCase().replace(/\s+/g, "-");
         text_size,
       ]}>#</span
     >
-    <span class:list={[text_size, color]}
-      >{title}</span
-    >
+    <span class:list={[text_size, color]}>{title}</span>
   </a>
   {!subtitle ? <div class="flex-1 section-line h-[1px]" /> : null}
   <slot />
