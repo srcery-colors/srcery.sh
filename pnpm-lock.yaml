@@ -221,7 +221,7 @@ importers:
         version: 11.11.1
       simple-icons:
         specifier: ^16.18.0
-        version: 16.24.0
+        version: 16.24.1
       tailwindcss:
         specifier: ^4.2.4
         version: 4.3.2
@@ -2015,8 +2015,8 @@ packages:
     resolution: {integrity: sha512-NKKjWzR6LIGL3sXBrWDw9sDS9cxx42/DkysaNqJEeOWE8Kix5gpak0bc00OfDVEO4oyXSyz8+aRaqKoBD1yo7A==}
     engines: {node: '>=20'}
 
-  simple-icons@16.24.0:
-    resolution: {integrity: sha512-lAPW1rqgwPQ4tdIY15TtcKSgSelvJexz8q/B+a7Igg1dJoXR0LPjScLkLMI8UbLSkS41/fLVZWIhsH7HPUwAgQ==}
+  simple-icons@16.24.1:
+    resolution: {integrity: sha512-AnDQPrZAVzYSym7cBVIrnbhLk9auWGgkl+9hKvkbTqGEfH6TU7WKgumEXYYaJuM1Ib87+cnzr881UZniCM7t+A==}
     engines: {node: '>=0.12.18'}
 
   sisteransi@1.0.5:
@@ -4086,7 +4086,7 @@ snapshots:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
 
-  simple-icons@16.24.0: {}
+  simple-icons@16.24.1: {}
 
   sisteransi@1.0.5: {}
 
