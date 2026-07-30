@@ -46,12 +46,12 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.9",
+    "@astrojs/check": "0.9.10",
     "@biomejs/biome": "2.5.5",
     "@octokit/types": "16.0.0",
     "@tailwindcss/vite": "4.3.3",
     "@types/lodash": "4.17.24",
-    "astro": "7.1.3",
+    "astro": "7.1.4",
     "lodash": "4.18.1",
     "octokit": "5.0.5",
     "prettier": "3.9.6",
