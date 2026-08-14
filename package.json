@@ -48,7 +48,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@biomejs/biome": "2.5.8",
-    "@octokit/types": "16.0.0",
+    "@octokit/types": "17.0.0",
     "@tailwindcss/vite": "4.3.3",
     "@types/lodash": "4.17.25",
     "astro": "7.1.6",
