@@ -233,8 +233,8 @@ importers:
         specifier: 2.5.11
         version: 2.5.11
       '@octokit/types':
-        specifier: 17.0.0
-        version: 17.0.0
+        specifier: 18.0.0
+        version: 18.0.0
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
