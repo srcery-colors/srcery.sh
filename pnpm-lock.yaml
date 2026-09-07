@@ -116,7 +116,7 @@ importers:
         specifier: 2.5.12
         version: 2.5.12
       '@fortawesome/fontawesome-free':
-        specifier: ^7.3.1
+        specifier: 7.3.1
         version: 7.3.1
       '@srcery-colors/srcery-palette':
         specifier: 2.0.0
