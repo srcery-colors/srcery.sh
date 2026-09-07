@@ -119,7 +119,7 @@ importers:
         specifier: ^7.3.1
         version: 7.3.1
       '@srcery-colors/srcery-palette':
-        specifier: ^2.0.0
+        specifier: 2.0.0
         version: 2.0.0
       '@tailwindcss/vite':
         specifier: 4.3.3
@@ -131,10 +131,10 @@ importers:
         specifier: 7.3.1
         version: 7.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0)(yaml@2.9.0)
       devicon:
-        specifier: ^2.17.0
+        specifier: 2.17.0
         version: 2.17.0
       highlight.js:
-        specifier: ^11.12.0
+        specifier: 11.12.0
         version: 11.12.0
       lodash:
         specifier: 4.18.1
@@ -155,10 +155,10 @@ importers:
         specifier: 0.8.1
         version: 0.8.1(prettier-plugin-astro@0.14.1)(prettier@3.9.6)
       simple-icons:
-        specifier: ^16.30.0
+        specifier: 16.30.0
         version: 16.30.0
       tailwindcss:
-        specifier: ^4.3.3
+        specifier: 4.3.3
         version: 4.3.3
       typescript:
         specifier: 6.0.3
