@@ -6,5 +6,56 @@
     "customManagers:biomeVersions"
   ],
 
-  "enabledManagers": ["custom.jsonata", "github-actions", "npm"]
+  "enabledManagers": ["custom.jsonata", "github-actions", "npm"],
+
+  "packageRules": [
+    {
+      "description": "Automerge npm dependency pins",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["pin"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge stable non-major npm updates",
+      "matchManagers": ["npm"],
+      "matchCurrentVersion": "!/^0/",
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge non-major GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge npm lock file maintenance",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "automerge": true
+    },
+    {
+      "description": "Group Astro packages",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["astro", "@astrojs/**"],
+      "groupName": "astro"
+    },
+    {
+      "description": "Group Tailwind packages",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"],
+      "groupName": "tailwindcss"
+    },
+    {
+      "description": "Group Prettier packages",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["prettier", "prettier-plugin-**"],
+      "groupName": "prettier"
+    },
+    {
+      "description": "Require approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
