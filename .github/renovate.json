@@ -23,6 +23,14 @@
       "automerge": true
     },
     {
+      "description": "Automerge stable Biome schema updates",
+      "matchManagers": ["custom.jsonata"],
+      "matchPackageNames": ["@biomejs/biome"],
+      "matchCurrentVersion": "!/^0/",
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
       "description": "Automerge non-major GitHub Actions updates",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["digest", "patch", "minor"],
