@@ -10,36 +10,11 @@
 
   "packageRules": [
     {
-      "description": "Automerge npm dependency pins",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["pin"],
-      "automerge": true
-    },
-    {
-      "description": "Automerge stable non-major npm updates",
-      "matchManagers": ["npm"],
-      "matchCurrentVersion": "!/^0/",
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true
-    },
-    {
       "description": "Automerge stable Biome schema updates",
       "matchManagers": ["custom.jsonata"],
       "matchPackageNames": ["@biomejs/biome"],
       "matchCurrentVersion": "!/^0/",
       "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true
-    },
-    {
-      "description": "Automerge non-major GitHub Actions updates",
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["digest", "patch", "minor"],
-      "automerge": true
-    },
-    {
-      "description": "Automerge npm lock file maintenance",
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["lockFileMaintenance"],
       "automerge": true
     },
     {
@@ -59,11 +34,6 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["prettier", "prettier-plugin-**"],
       "groupName": "prettier"
-    },
-    {
-      "description": "Require approval for major updates",
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
     }
   ]
 }
