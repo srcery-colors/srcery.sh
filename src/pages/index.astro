@@ -105,7 +105,7 @@ const languages = [
           >
             {
               languages.map((lang, i) => (
-                <li class="flex flex-1">
+                <li class="flex flex-1" role="presentation">
                   <button
                     id={`tab-${lang.id}`}
                     class={`tab hover:cursor-pointer ${i === 0 ? "tab-active" : "tab-inactive"}`}
@@ -130,6 +130,7 @@ const languages = [
                   id={`preview-${lang.id}`}
                   class={`flex p-4${i !== 0 ? " hidden" : ""}`}
                   role="tabpanel"
+                  tabindex="0"
                   aria-labelledby={`tab-${lang.id}`}
                 >
                   <Code code={lang.code} language={lang.language} />
