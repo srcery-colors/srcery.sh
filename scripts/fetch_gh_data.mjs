@@ -12,6 +12,12 @@ const options = {
   },
 };
 
+if (!process.env.GH_TOKEN) {
+  console.warn(
+    "GH_TOKEN is not set; using unauthenticated GitHub API requests with lower rate limits.",
+  );
+}
+
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 async function fetchContributors() {
