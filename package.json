@@ -14,10 +14,8 @@
   "browser": true,
   "scripts": {
     "astro:check": "astro check && tsc --noEmit",
-    "biome:check": "biome check --write .",
+    "biome:check": "biome check .",
     "biome:ci": "biome ci",
-    "biome:format": "biome format --write .",
-    "biome:lint": "biome lint --write .",
     "build": "astro build",
     "prebuild:ci": "node scripts/fetch_gh_data.mjs",
     "build:ci": "astro build",
@@ -27,7 +25,8 @@
     "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "prettier:fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "biome:fix": "biome check --write ."
   },
   "prettier": {
     "plugins": [
