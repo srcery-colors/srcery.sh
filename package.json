@@ -16,17 +16,17 @@
     "astro:check": "astro check && tsc --noEmit",
     "biome:check": "biome check .",
     "biome:ci": "biome ci",
+    "biome:fix": "biome check --write .",
     "build": "astro build",
-    "prebuild:ci": "node scripts/fetch_gh_data.mjs",
     "build:ci": "astro build",
     "clean": "rm -f src/github.json",
     "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
+    "prebuild:ci": "node scripts/fetch_gh_data.mjs",
     "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "prettier:fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
     "preview": "astro preview",
-    "start": "astro dev",
-    "biome:fix": "biome check --write ."
+    "start": "astro dev"
   },
   "prettier": {
     "plugins": [
