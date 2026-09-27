@@ -29,7 +29,10 @@ async function fetchContributors() {
     )
   ).flat();
 
-  return [...new Map(contributors.map((user) => [user.login, user])).values()];
+  return contributors.filter(
+    (user, index) =>
+      contributors.findIndex(({ login }) => login === user.login) === index,
+  );
 }
 
 function fetchMembers() {
