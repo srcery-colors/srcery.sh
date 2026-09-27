@@ -20,6 +20,7 @@ if (!process.env.GH_TOKEN) {
 
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
+/** Fetch and deduplicate contributors across all public organization repositories. */
 async function fetchContributors() {
   const repos = await octokit.paginate("GET /orgs/{org}/repos", options);
   const contributors = (
@@ -41,10 +42,12 @@ async function fetchContributors() {
   );
 }
 
+/** Fetch all public organization members. */
 function fetchMembers() {
   return octokit.paginate("GET /orgs/{org}/public_members", options);
 }
 
+/** Fetch GitHub organization data and write it to the generated data file. */
 async function main() {
   const [contributors, members] = await Promise.all([
     fetchContributors(),
