@@ -108,8 +108,8 @@
     font-stretch: normal;
     font-style: normal;
     src:
-      url("fonts/iosevka-custom-regular.ttf") format("truetype"),
-      url("fonts/iosevka-custom-regular.woff2") format("woff2");
+      url("fonts/iosevka-custom-regular.woff2") format("woff2"),
+      url("fonts/iosevka-custom-regular.ttf") format("truetype");
   }
   @font-face {
     font-family: "Iosevka Custom Web";
@@ -118,8 +118,8 @@
     font-stretch: normal;
     font-style: normal;
     src:
-      url("fonts/iosevka-custom-bold.ttf") format("truetype"),
-      url("fonts/iosevka-custom-bold.woff2") format("woff2");
+      url("fonts/iosevka-custom-bold.woff2") format("woff2"),
+      url("fonts/iosevka-custom-bold.ttf") format("truetype");
   }
 }
 
@@ -150,5 +150,11 @@
 
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .github-corner:hover .octo-arm {
+    animation: none;
   }
 }
