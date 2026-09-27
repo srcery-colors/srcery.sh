@@ -100,13 +100,20 @@ const languages = [
           </div>
           <ul
             class="flex overflow-x-auto overflow-y-hidden border-bright-black text-center"
+            role="tablist"
+            aria-label="Code preview language"
           >
             {
               languages.map((lang, i) => (
                 <li class="flex flex-1">
                   <button
+                    id={`tab-${lang.id}`}
                     class={`tab hover:cursor-pointer ${i === 0 ? "tab-active" : "tab-inactive"}`}
                     data-tab={lang.id}
+                    role="tab"
+                    aria-selected={i === 0 ? "true" : "false"}
+                    aria-controls={`preview-${lang.id}`}
+                    tabindex={i === 0 ? 0 : -1}
                   >
                     {lang.name}
                   </button>
@@ -122,6 +129,8 @@ const languages = [
                 <pre
                   id={`preview-${lang.id}`}
                   class={`flex p-4${i !== 0 ? " hidden" : ""}`}
+                  role="tabpanel"
+                  aria-labelledby={`tab-${lang.id}`}
                 >
                   <Code code={lang.code} language={lang.language} />
                 </pre>
@@ -136,21 +145,46 @@ const languages = [
 </BaseLayout>
 
 <script>
-  const tabs = document.querySelectorAll<HTMLAnchorElement>("[data-tab]");
+  const tabs = document.querySelectorAll<HTMLButtonElement>("[data-tab]");
   const previews = document.querySelectorAll<HTMLElement>("[id^='preview-']");
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", (e) => {
-      e.preventDefault();
-      const id = tab.dataset.tab;
+  function activateTab(tab: HTMLButtonElement) {
+    const id = tab.dataset.tab;
 
-      tabs.forEach((t) => {
-        t.className = t === tab ? "tab tab-active" : "tab tab-inactive";
-      });
+    tabs.forEach((item) => {
+      const active = item === tab;
+      item.classList.toggle("tab-active", active);
+      item.classList.toggle("tab-inactive", !active);
+      item.setAttribute("aria-selected", String(active));
+      item.tabIndex = active ? 0 : -1;
+    });
 
-      previews.forEach((p) => {
-        p.classList.toggle("hidden", p.id !== `preview-${id}`);
-      });
+    previews.forEach((preview) => {
+      preview.classList.toggle("hidden", preview.id !== `preview-${id}`);
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) {
+        return;
+      }
+
+      event.preventDefault();
+      const last = tabs.length - 1;
+      const nextIndex =
+        event.key === "Home"
+          ? 0
+          : event.key === "End"
+            ? last
+            : event.key === "ArrowRight"
+              ? (index + 1) % tabs.length
+              : (index - 1 + tabs.length) % tabs.length;
+      const nextTab = tabs[nextIndex];
+
+      nextTab?.focus();
+      if (nextTab) activateTab(nextTab);
     });
   });
 </script>
