@@ -54,7 +54,6 @@
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@12.8.1",
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -63,7 +62,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.8.1",
+      "version": ">=12.0.0 <13.0.0",
       "onFail": "download"
     }
   }
