@@ -9,23 +9,21 @@ const { activePage } = Astro.props;
 ---
 
 <script>
-  function scheduleBlink() {
-    const delay = (Math.random() * 10 + 10) * 1000;
-    setTimeout(() => {
-      const blinkAnim = document.getElementById(
-        "blinkAnim",
-      ) as SVGAnimateElement | null;
-      const clipAnim = document.getElementById(
-        "clipAnim",
-      ) as SVGAnimateElement | null;
-      blinkAnim?.beginElement();
-      clipAnim?.beginElement();
+  const svg = document.getElementById("glyph") as SVGSVGElement | null;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-      scheduleBlink();
-    }, delay);
+  function applyMotionPreference() {
+    if (!svg) return;
+    if (reducedMotion.matches) {
+      svg.setCurrentTime(0); // rest pose: gems start at >0s, blink at 5s
+      svg.pauseAnimations();
+    } else {
+      svg.unpauseAnimations();
+    }
   }
 
-  scheduleBlink();
+  applyMotionPreference();
+  reducedMotion.addEventListener("change", applyMotionPreference);
 </script>
 
 <header class="mb-8 w-full sm:max-w-[640px] sm:min-w-[640px]">
