@@ -39,37 +39,101 @@
     <path id="lashes" d="m 119.76994,64.855118 0.016,0.310184 8.12923,23.180019 0.97821,-0.201647 -8.91791,-23.061014 z m 24.17145,0 -0.2055,0.227542 -8.91792,23.061014 0.97794,0.201647 8.1295,-23.180019 z m -41.26295,17.091497 0.2303,0.208259 17.8036,9.169421 1.19583,-0.745157 -18.92367,-8.616821 z m 58.35445,0 -0.30633,0.0157 -18.9234,8.616821 1.19584,0.745157 17.80332,-9.169421 z" transform="matrix(2.8310554,0,0,2.8310554,-241.63121,-172.17833)" style="display:inline;fill:#121110"/>
   </g>
   <g stroke-linejoin="round" stroke-width="0.037962" transform="matrix(6.6179866,0,0,6.6179877,-671.31985,-422.30454)" id="gems">
-    <g transform="matrix(1.4300403,1.430039,-1.430039,1.4300403,232.32587,-171.07318)" id="blue">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#68a8e4" id="path15"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#2c78bf" id="path16"/>
+
+    <!-- blue: (1,-1) -->
+    <g id="blue-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 1 -1; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="1.2s" repeatCount="indefinite"/>
+      <g transform="matrix(1.4300403,1.430039,-1.430039,1.4300403,232.32587,-171.07318)" id="blue">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#68a8e4" id="path15"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#2c78bf" id="path16"/>
+      </g>
     </g>
-    <g transform="matrix(2.0223815,0,0,2.0223815,15.38356,-164.60761)" id="magenta">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#e02c6d" id="path17"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ff5c8f" id="path18"/>
+
+    <!-- magenta: (0,-2) -->
+    <g id="magenta-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 -2; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="3.7s" repeatCount="indefinite"/>
+      <g transform="matrix(2.0223815,0,0,2.0223815,15.38356,-164.60761)" id="magenta">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#e02c6d" id="path17"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ff5c8f" id="path18"/>
+      </g>
     </g>
-    <g transform="matrix(1.4300396,-1.4300398,1.4300398,1.4300396,-133.44608,-6.634324)" id="cyan">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#0aaeb3" id="path19"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#2be4d0" id="path20"/>
+
+    <!-- cyan: (-1,-1) -->
+    <g id="cyan-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; -1 -1; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="2.1s" repeatCount="indefinite"/>
+      <g transform="matrix(1.4300396,-1.4300398,1.4300398,1.4300396,-133.44608,-6.634324)" id="cyan">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#0aaeb3" id="path19"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#2be4d0" id="path20"/>
+      </g>
     </g>
-    <g transform="matrix(0,-2.0223815,2.0223815,0,-126.98055,210.30808)" id="white">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#c5b088" id="path21"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#fce8c3" id="path22"/>
+
+    <!-- white: (-2,0) -->
+    <g id="white-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; -2 0; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="4.6s" repeatCount="indefinite"/>
+      <g transform="matrix(0,-2.0223815,2.0223815,0,-126.98055,210.30808)" id="white">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#c5b088" id="path21"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#fce8c3" id="path22"/>
+      </g>
     </g>
-    <g transform="matrix(-1.4300388,-1.4300405,1.4300405,-1.4300388,30.992576,359.13766)" id="orange">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#ff8700" id="path23"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ff5f00" id="path24"/>
+
+    <!-- orange: (-1,1) -->
+    <g id="orange-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; -1 1; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="0.4s" repeatCount="indefinite"/>
+      <g transform="matrix(-1.4300388,-1.4300405,1.4300405,-1.4300388,30.992576,359.13766)" id="orange">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#ff8700" id="path23"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ff5f00" id="path24"/>
+      </g>
     </g>
-    <g transform="matrix(-2.0223815,0,0,-2.0223815,247.93514,352.67219)" id="red">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#f75341" id="path25"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ef2f27" id="path26"/>
+
+    <!-- red: (0,2) -->
+    <g id="red-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 2; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="3.1s" repeatCount="indefinite"/>
+      <g transform="matrix(-2.0223815,0,0,-2.0223815,247.93514,352.67219)" id="red">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#f75341" id="path25"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#ef2f27" id="path26"/>
+      </g>
     </g>
-    <g transform="matrix(-1.4300405,1.4300388,-1.4300388,-1.4300405,396.76473,194.69906)" id="green">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#98bc37" id="path27"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#519f50" id="path28"/>
+
+    <!-- green: (1,1) -->
+    <g id="green-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 1 1; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="1.8s" repeatCount="indefinite"/>
+      <g transform="matrix(-1.4300405,1.4300388,-1.4300388,-1.4300405,396.76473,194.69906)" id="green">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#98bc37" id="path27"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#519f50" id="path28"/>
+      </g>
     </g>
-    <g transform="matrix(0,2.0223815,-2.0223815,0,390.29926,-22.243502)" id="yellow" style="display:inline">
-      <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#fed06e" id="path29"/>
-      <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#fbb829" id="path30" style="stroke:none"/>
+
+    <!-- yellow: (2,0) -->
+    <g id="yellow-bob">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 2 0; 0 0" keyTimes="0; 0.5; 1"
+        calcMode="spline" keySplines="0.455 0.03 0.515 0.955; 0.455 0.03 0.515 0.955"
+        dur="6s" begin="4.2s" repeatCount="indefinite"/>
+      <g transform="matrix(0,2.0223815,-2.0223815,0,390.29926,-22.243502)" id="yellow" style="display:inline">
+        <path d="m 57.494489,119.15378 -2.225367,-3.10406 2.225366,-3.10405" fill="#fed06e" id="path29"/>
+        <path d="m 57.494488,112.94567 2.225367,3.10406 -2.225366,3.10405" fill="#fbb829" id="path30" style="stroke:none"/>
+      </g>
     </g>
   </g>
 </svg>
