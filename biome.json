@@ -6,7 +6,17 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!!**/dist"]
+    "includes": [
+      ".github/**",
+      "scripts/**",
+      "src/**",
+      "astro.config.mjs",
+      "biome.json",
+      "package.json",
+      "pnpm-workspace.yaml",
+      "tsconfig.json",
+      "README.md"
+    ]
   },
   "formatter": {
     "enabled": true,
