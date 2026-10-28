@@ -185,8 +185,8 @@ importers:
         specifier: 7.4.2
         version: 7.4.2(jiti@2.7.0)(yaml@2.9.1)
       devicon:
-        specifier: 2.17.0
-        version: 2.17.0
+        specifier: 2.18.0
+        version: 2.18.0
       highlight.js:
         specifier: 11.12.0
         version: 11.12.0
@@ -1295,8 +1295,8 @@ packages:
     resolution: {integrity: sha512-3woMEITftG1wKeO/4d/QXH1DVKctTSZg3jNGPpjp9hNr5Hos8MCFF5McTML5ZtgKDObm2R591B0spRp2IVernA==}
     engines: {node: '>=18'}
 
-  devicon@2.17.0:
-    resolution: {integrity: sha512-2nKUdjobJlmRSaCHa50PGsVq0VDURnq9gVzQoJggsM/NKN0tLhC/Uq2zmy2pH36Q/1q3gvYwp/GjTgv/R0Ysbg==}
+  devicon@2.18.0:
+    resolution: {integrity: sha512-jmLZPdTfO9d0GlnTX8Qw2SxZj71My6WAVEZtgmWErVju/uSUqmk2hxKzXo9Pw7IfqV9PEwcOKrywZA1etryRPA==}
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -3356,7 +3356,7 @@ snapshots:
 
   devalue@6.0.3: {}
 
-  devicon@2.17.0: {}
+  devicon@2.18.0: {}
 
   devlop@1.1.0:
     dependencies:
