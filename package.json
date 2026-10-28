@@ -48,7 +48,7 @@
     "octokit": "5.0.5",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
-    "prettier-plugin-packagejson": "3.0.2",
+    "prettier-plugin-packagejson": "3.0.3",
     "prettier-plugin-tailwindcss": "0.8.1",
     "simple-icons": "16.35.0",
     "tailwindcss": "4.3.3",
