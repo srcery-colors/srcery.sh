@@ -14,10 +14,10 @@ const { activePage } = Astro.props;
     class="mb-2 flex flex-col items-center pt-2 sm:min-h-[546px] sm:pt-0"
   >
     <div
-      class="min-h-auto sm:min-h-[546px] sm:min-w-full justify-center border-2 border-bright-black rounded-full sm:rounded-none sm:border-0 sm:bg-triangle bg-center bg-no-repeat p-5 sm:pt-[29%] flex"
+      class="flex min-h-auto justify-center rounded-full border-2 border-bright-black bg-center bg-no-repeat p-5 sm:min-h-[546px] sm:min-w-full sm:rounded-none sm:border-0 sm:bg-triangle sm:pt-[29%]"
     >
       <Glyph
-        class="sm:w-[234px] sm:h-[234px] w-[150px] h-[150px] tiny:w-[190px] tiny:h-[190px]"
+        class="h-[150px] w-[150px] tiny:h-[190px] tiny:w-[190px] sm:h-[234px] sm:w-[234px]"
       />
     </div>
     <div class="mt-4 flex items-center sm:mt-[-18%]">
@@ -34,7 +34,7 @@ const { activePage } = Astro.props;
       </div>
     </div>
   </a>
-  <nav class="flex justify-around sm:justify-between sm:max-w-full">
+  <nav class="flex justify-around sm:max-w-full sm:justify-between">
     <span class="text-left">
       <a
         href="/themes/"

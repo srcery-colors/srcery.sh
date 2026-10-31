@@ -40,7 +40,7 @@ try {
       class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
     >
       <Header activePage="resources" />
-      <section class="w-full flex flex-col gap-10">
+      <section class="flex w-full flex-col gap-10">
         <div class="flex flex-col gap-4">
           <Headline title="Resources" />
           <p class="text-justify text-white">
@@ -54,12 +54,12 @@ try {
           <Headline title="Palette">
             <a
               href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
-              class="flex items-center group"
+              class="group flex items-center"
               target="_blank"
             >
               <Npm class="mr-2 text-white group-hover:text-red" width="30px" />
               <span
-                class="text-xs text-white font-bold group-hover:text-bright-white"
+                class="text-xs font-bold text-white group-hover:text-bright-white"
                 >{version ? `LATEST VERSION [v${version}]` : ""}</span
               >
             </a>
@@ -67,7 +67,7 @@ try {
           <p class="text-white">
             The
             <a
-              class="link inline-block group"
+              class="group inline-block link"
               href="https://github.com/srcery-colors/srcery-palette"
             >
               <span class="flex items-center">
@@ -77,7 +77,7 @@ try {
             </a>
             and accompanying
             <a
-              class="link inline-block group"
+              class="group inline-block link"
               href="https://www.npmjs.com/package/@srcery-colors/srcery-palette"
             >
               <span class="flex items-center">
@@ -85,18 +85,18 @@ try {
                 npm package
               </span>
             </a>
-            contains the up-to-date palette used in the Srcery ports. To get started
-            install the package using npm or git:
+            contains the up-to-date palette used in the Srcery ports. To get
+            started install the package using npm or git:
           </p>
           <div class="flex flex-col gap-2">
-            <div class="bg-gray1 p-2 overflow-x-auto">
+            <div class="overflow-x-auto bg-gray1 p-2">
               <Code
                 language="bash"
                 code="npm i @srcery-colors/srcery-palette"
               />
             </div>
 
-            <div class="bg-gray1 p-2 overflow-x-auto">
+            <div class="overflow-x-auto bg-gray1 p-2">
               <Code
                 language="bash"
                 code="git clone https://github.com/srcery-colors/srcery-palette"
@@ -109,31 +109,30 @@ try {
           <p class="text-white">
             Once downloaded, you can access the colors however you prefer. Here
             I use <code class="inline-code">jq</code> to grab red from the
-            <code class="inline-code">json</code> palette in <code
-              class="inline-code">bash</code
-            >:
+            <code class="inline-code">json</code> palette in
+            <code class="inline-code">bash</code>:
           </p>
-          <div class="bg-gray1 p-2 overflow-x-auto">
-              <Code language="bash" code="jq < palette.json '.red.hex'" />
-            </div>
+          <div class="overflow-x-auto bg-gray1 p-2">
+            <Code language="bash" code="jq < palette.json '.red.hex'" />
+          </div>
           <p class="text-white">
-              Or if you use the npm package, it exports
-              <code class="inline-code">palette.json</code>, making it available
-              in javascript like this:
-            </p>
+            Or if you use the npm package, it exports
+            <code class="inline-code">palette.json</code>, making it available
+            in javascript like this:
+          </p>
 
-            <div class="bg-gray1 p-2 overflow-x-auto">
-              <Code language="js" code={jsImportCode} />
-            </div>
+          <div class="overflow-x-auto bg-gray1 p-2">
+            <Code language="js" code={jsImportCode} />
+          </div>
 
-            <p class="text-white">
-              The package also exports CSS variables that can be imported in
-              your CSS files.
-            </p>
+          <p class="text-white">
+            The package also exports CSS variables that can be imported in your
+            CSS files.
+          </p>
 
-            <div class="bg-gray1 p-2 overflow-x-auto">
-              <Code language="css" code={cssImportCode} />
-            </div>
+          <div class="overflow-x-auto bg-gray1 p-2">
+            <Code language="css" code={cssImportCode} />
+          </div>
         </div>
 
         <div class="flex flex-col gap-4">
@@ -142,7 +141,8 @@ try {
             No formal design guidelines exist, but a good reference point is the
             <a
               href="https://github.com/srcery-colors/srcery-vim/blob/master/colors/srcery.vim"
-              class="inline-block link">Vim theme</a
+              class="inline-block link"
+              >Vim theme</a
             >, or pick your favorite port and follow that. This
             <a class="link" href="https://github.com/srcery-colors/srcery.sh"
               >website</a
@@ -160,7 +160,7 @@ try {
           <Headline title="Graphic assets">
             <a
               href="https://creativecommons.org/licenses/by/4.0/"
-              class="flex items-center group"
+              class="group flex items-center"
               target="_blank"
             >
               <Cc
@@ -168,7 +168,7 @@ try {
                 width="16px"
               />
               <span
-                class="text-xs text-white font-bold group-hover:text-bright-white"
+                class="text-xs font-bold text-white group-hover:text-bright-white"
                 >LICENSE CC-BY-4.0</span
               >
             </a>
@@ -183,7 +183,7 @@ try {
             <li class="mb-2">
               <a
                 target="_blank"
-                class="link inline-block group"
+                class="group inline-block link"
                 href="https://github.com/srcery-colors/srcery-assets"
               >
                 <span class="flex items-center">
@@ -195,7 +195,7 @@ try {
             <li class="mb-2">
               <a
                 target="_blank"
-                class="link inline-block group"
+                class="group inline-block link"
                 href="https://creativecommons.org/licenses/by/4.0/"
               >
                 <span class="flex items-center">
@@ -215,7 +215,7 @@ try {
             <li class="">
               <a
                 target="_blank"
-                class="link inline-block group"
+                class="group inline-block link"
                 href="https://github.com/srcery-colors/srcery.sh"
               >
                 <span class="flex items-center">

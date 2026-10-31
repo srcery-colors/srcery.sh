@@ -69,7 +69,7 @@ const languages = [
       class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
     >
       <Header />
-      <section class="w-full flex flex-col gap-10">
+      <section class="flex w-full flex-col gap-10">
         <div class="text-justify">
           <p class="mb-4">
             Srcery is dark syntax highlighting color scheme with clearly defined
@@ -84,7 +84,7 @@ const languages = [
           </p>
         </div>
         <div class="w-full">
-          <div class="flex flex-col gap-2 mb-8">
+          <div class="mb-8 flex flex-col gap-2">
             <Headline title="Preview" />
             <p class="text-white">
               Here's a few
@@ -103,40 +103,35 @@ const languages = [
             role="tablist"
             aria-label="Code preview language"
           >
-            {
-              languages.map((lang, i) => (
-                <li class="flex flex-1" role="presentation">
-                  <button
-                    id={`tab-${lang.id}`}
-                    class={`tab hover:cursor-pointer ${i === 0 ? "tab-active" : "tab-inactive"}`}
-                    data-tab={lang.id}
-                    role="tab"
-                    aria-selected={i === 0 ? "true" : "false"}
-                    aria-controls={`preview-${lang.id}`}
-                    tabindex={i === 0 ? 0 : -1}
-                  >
-                    {lang.name}
-                  </button>
-                </li>
-              ))
-            }
+            {languages.map((lang, i) => <li
+              class="flex flex-1"
+              role="presentation"
+            >
+              <button
+                id={`tab-${lang.id}`}
+                class={`tab hover:cursor-pointer ${i === 0 ? "tab-active" : "tab-inactive"}`}
+                data-tab={lang.id}
+                role="tab"
+                aria-selected={i === 0 ? "true" : "false"}
+                aria-controls={`preview-${lang.id}`}
+                tabindex={i === 0 ? 0 : -1}
+              >
+                {lang.name}
+              </button>
+            </li>)}
           </ul>
           <div
             class="overflow-x-auto border-x-1 border-b-1 border-bright-black"
           >
-            {
-              languages.map((lang, i) => (
-                <pre
-                  id={`preview-${lang.id}`}
-                  class={`flex p-4${i !== 0 ? " hidden" : ""}`}
-                  role="tabpanel"
-                  tabindex="0"
-                  aria-labelledby={`tab-${lang.id}`}
-                >
+            {languages.map((lang, i) => <pre
+              id={`preview-${lang.id}`}
+              class={`flex p-4${i !== 0 ? " hidden" : ""}`}
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby={`tab-${lang.id}`}
+            >
                   <Code code={lang.code} language={lang.language} />
-                </pre>
-              ))
-            }
+                </pre>)}
           </div>
         </div>
       </section>
