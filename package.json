@@ -50,7 +50,7 @@
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "prettier-plugin-packagejson": "3.0.3",
-    "prettier-plugin-tailwindcss": "0.0.0-insiders.5b27f94",
+    "prettier-plugin-tailwindcss": "0.8.1",
     "simple-icons": "16.36.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
