@@ -30,4 +30,7 @@ jobs:
         run: pnpm run astro:check
 
       - name: Check for biome issues
-        run: pnpm run biome:ci
+        run: pnpm run lint:ci
+
+      - name: Check formatting
+        run: pnpm run fmt:check

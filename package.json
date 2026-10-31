@@ -14,25 +14,26 @@
   "browser": true,
   "scripts": {
     "astro:check": "astro check && tsc --noEmit",
-    "biome:check": "biome check .",
-    "biome:ci": "biome ci",
-    "biome:fix": "biome check --write .",
     "build": "astro build",
+    "prebuild:ci": "node scripts/fetch_gh_data.mjs",
     "build:ci": "astro build",
     "clean": "rm -f src/github.json",
     "dev": "astro dev",
     "fetch": "node scripts/fetch_gh_data.mjs",
-    "prebuild:ci": "node scripts/fetch_gh_data.mjs",
-    "prettier": "prettier --cache --check '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
-    "prettier:fix": "prettier --write --cache '**/*.{ts,js,mjs,json,md,yml,html,css,astro}'",
+    "fmt": "prettier --write --cache '**/*.{ts,mjs,json,md,yaml,css,astro}'",
+    "fmt:check": "prettier --cache --check '**/*.{ts,mjs,json,md,yaml,css,astro}'",
+    "lint": "biome check .",
+    "lint:ci": "biome ci",
+    "lint:fix": "biome check --write .",
     "preview": "astro preview",
     "start": "astro dev"
   },
   "prettier": {
+    "astroCompressHTML": false,
     "plugins": [
+      "prettier-plugin-astro",
       "prettier-plugin-packagejson",
-      "prettier-plugin-tailwindcss",
-      "prettier-plugin-astro"
+      "prettier-plugin-tailwindcss"
     ],
     "tailwindStylesheet": "src/style.css"
   },
@@ -49,7 +50,7 @@
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "prettier-plugin-packagejson": "3.0.3",
-    "prettier-plugin-tailwindcss": "0.8.1",
+    "prettier-plugin-tailwindcss": "0.0.0-insiders.5b27f94",
     "simple-icons": "16.36.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"

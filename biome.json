@@ -19,23 +19,12 @@
     ]
   },
   "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineWidth": 80
+    "enabled": false
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "preset": "recommended",
-      "nursery": {
-        "useTailwindSortedClasses": "error"
-      }
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double"
+      "preset": "recommended"
     }
   },
   "assist": {
