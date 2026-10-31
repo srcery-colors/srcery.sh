@@ -12,31 +12,30 @@ interface Props {
 const { name, avatarUrl, url, member = false } = Astro.props;
 ---
 
-<a href={url} target="_blank" class="group w-full flex justify-center">
+<a href={url} target="_blank" class="group flex w-full justify-center">
   <Card>
     <div class="flex flex-col items-center gap-6">
       <div
-        class="relative w-18 h-18 transition-transform duration-300 ease group-hover:scale-[1.06]"
+        class="ease relative h-18 w-18 transition-transform duration-300 group-hover:scale-[1.06]"
       >
-        {
-          member ? (
-            <div class="absolute -inset-[10px] rounded-full border border-dashed border-gray6 [animation:spin_50s_linear_infinite] motion-reduce:animate-none transition-[opacity,inset] duration-300 ease group-hover:border-bright-black group-hover:-inset-[13px]" />
-          ) : null
-        }
+        {member ? (
+          <div
+            class="ease absolute -inset-[10px] [animation:spin_50s_linear_infinite] rounded-full border border-dashed border-gray6 transition-[opacity,inset] duration-300 group-hover:-inset-[13px] group-hover:border-bright-black motion-reduce:animate-none"
+          />
+        ) : null}
         <div
-          class="absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 ease group-hover:border-bright-white group-hover:-inset-[5px]"
-        >
-        </div>
+          class="ease absolute -inset-1 rounded-full border border-white transition-[border-color,inset] duration-300 group-hover:-inset-[5px] group-hover:border-bright-white"
+        ></div>
         <Image
           width="100"
           height="100"
-          class="w-18 h-18 rounded-full object-cover block bg-black"
+          class="block h-18 w-18 rounded-full bg-black object-cover"
           src={avatarUrl}
           alt={name}
         />
       </div>
       <div
-        class="break-words text-white text-sm tracking-[2px] text-center transition-[letter-spacing] duration-300 ease group-hover:tracking-[3px] group-hover:text-bright-white"
+        class="ease text-center text-sm tracking-[2px] break-words text-white transition-[letter-spacing] duration-300 group-hover:tracking-[3px] group-hover:text-bright-white"
       >
         {name}
       </div>

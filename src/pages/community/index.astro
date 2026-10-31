@@ -26,12 +26,12 @@ const contributors = github.contributors.toSorted(
       class="flex max-w-[448px] min-w-0 flex-col items-center sm:max-w-[780px]"
     >
       <Header activePage="community" />
-      <section class="w-full flex flex-col gap-10">
+      <section class="flex w-full flex-col gap-10">
         <div class="flex flex-col gap-4">
           <Headline title="Discord">
             <span
               id="discord-online"
-              class="text-xs text-white tracking-[2px] flex items-center gap-1"
+              class="flex items-center gap-1 text-xs tracking-[2px] text-white"
             ></span>
           </Headline>
           <p class="text-justify text-white">
@@ -41,7 +41,7 @@ const contributors = github.contributors.toSorted(
           <div>
             <Button url="https://discord.gg/G6vBMmZ">
               <div class="flex">
-                <Discord class="fill-white mr-4" width="16px" />
+                <Discord class="mr-4 fill-white" width="16px" />
                 Go to Discord
               </div>
             </Button>
@@ -59,7 +59,7 @@ const contributors = github.contributors.toSorted(
           <div class="">
             <Button url="https://srcery-colors.creator-spring.com">
               <div class="flex">
-                <Spring class="fill-white mr-4" width="16px" />
+                <Spring class="mr-4 fill-white" width="16px" />
                 Go to the store
               </div>
             </Button>
@@ -76,43 +76,39 @@ const contributors = github.contributors.toSorted(
 
         <div class="flex flex-col gap-4">
           <Headline title="Core team" text_size="text-sm">
-            <span class="text-xs text-white tracking-[2px]"
+            <span class="text-xs tracking-[2px] text-white"
               >{members.length} members</span
             >
           </Headline>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
-            {
-              members.map((user) => (
-                <MemberCard
-                  url={user.html_url}
-                  avatarUrl={user.avatar_url}
-                  name={user.login}
-                  member={true}
-                />
-              ))
-            }
+            {members.map((user) => (
+              <MemberCard
+                url={user.html_url}
+                avatarUrl={user.avatar_url}
+                name={user.login}
+                member={true}
+              />
+            ))}
           </div>
         </div>
         <div class="flex flex-col gap-4">
           <Headline title="Contributors" text_size="text-sm">
-            <span class="text-xs text-white tracking-[2px]"
+            <span class="text-xs tracking-[2px] text-white"
               >{contributors.length} members</span
             >
           </Headline>
           <div
             class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
-            {
-              contributors.map((user) => (
-                <MemberCard
-                  url={user.html_url}
-                  avatarUrl={user.avatar_url}
-                  name={user.login}
-                />
-              ))
-            }
+            {contributors.map((user) => (
+              <MemberCard
+                url={user.html_url}
+                avatarUrl={user.avatar_url}
+                name={user.login}
+              />
+            ))}
           </div>
         </div>
       </section>
