@@ -25,8 +25,7 @@
     "lint": "biome check .",
     "lint:ci": "biome ci",
     "lint:fix": "biome check --write .",
-    "preview": "astro preview",
-    "start": "astro dev"
+    "preview": "astro preview"
   },
   "prettier": {
     "astroCompressHTML": false,
