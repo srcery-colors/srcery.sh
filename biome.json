@@ -21,20 +21,6 @@
   "formatter": {
     "enabled": false
   },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "preset": "recommended"
-    }
-  },
-  "assist": {
-    "enabled": true,
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
-  },
   "css": {
     "parser": {
       "tailwindDirectives": true
@@ -42,7 +28,7 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.svelte", "**/*.astro", "**/*.vue"],
+      "includes": ["**/*.astro"],
       "linter": {
         "rules": {
           "style": {
