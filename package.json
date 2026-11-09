@@ -41,7 +41,7 @@
     "@biomejs/biome": "2.6.5",
     "@fortawesome/fontawesome-free": "7.3.1",
     "@srcery-colors/srcery-palette": "2.0.0",
-    "@tailwindcss/vite": "4.3.4",
+    "@tailwindcss/vite": "4.3.5",
     "astro": "7.4.7",
     "devicon": "2.18.0",
     "highlight.js": "11.12.0",
@@ -51,7 +51,7 @@
     "prettier-plugin-packagejson": "3.0.3",
     "prettier-plugin-tailwindcss": "0.0.0-insiders.5b27f94",
     "simple-icons": "16.36.0",
-    "tailwindcss": "4.3.4",
+    "tailwindcss": "4.3.5",
     "typescript": "6.0.3"
   },
   "devEngines": {
