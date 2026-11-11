@@ -52,7 +52,7 @@
     "prettier-plugin-tailwindcss": "0.0.0-insiders.5b27f94",
     "simple-icons": "16.37.0",
     "tailwindcss": "4.3.5",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "devEngines": {
     "runtime": {
