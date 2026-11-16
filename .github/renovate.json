@@ -23,6 +23,12 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["prettier", "prettier-plugin-**"],
       "groupName": "prettier"
+    },
+    {
+      "description": "Keep prettier-plugin-tailwindcss on the insiders build: it has the Astro v1 compatibility fix (#1307), which no stable release has yet. Renovate reads 0.0.0-insiders as older than 0.8.x and would downgrade it. Remove this rule once a stable release has the fix.",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["prettier-plugin-tailwindcss"],
+      "enabled": false
     }
   ]
 }
