@@ -12,6 +12,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+permissions: {}
+
 jobs:
   build:
     name: Compile Source Files
@@ -19,10 +21,11 @@ jobs:
 
     permissions:
       contents: read
-      id-token: write
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Install, build, and upload your site
         uses: withastro/action@a8b97df764791eb61fbf3338ef713b0e61ae05c5 # v6.1.4
