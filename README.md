@@ -82,3 +82,7 @@ before opening a pull request.
 ## License
 
 [MIT](LICENSE)
+
+The bundled [Iosevka](https://github.com/be5invis/Iosevka) fonts in
+`src/fonts/` are licensed under the SIL Open Font License 1.1. See
+[`src/fonts/OFL-Iosevka.txt`](src/fonts/OFL-Iosevka.txt).
